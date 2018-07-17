@@ -180,6 +180,18 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\release_pot_high.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\release_pot_high_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\release_pot_high_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\trigger_switch.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\trigger_switch.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\trigger_switch_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\trigger_switch_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\envelope_trigger.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\envelope_trigger.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_2.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

@@ -28,6 +28,10 @@ CY_ISR(ADC_EOC) {
     ADC_EOC_INT_ClearPending();
 }
 
+CY_ISR(envelope_trigger_vector){
+    led_Write(~led_Read());
+}
+
 
 int main(void)
 {
@@ -35,6 +39,7 @@ int main(void)
 
     InitOscillator();
     InitEnvelopeGenerator();
+    envelope_trigger_StartEx(envelope_trigger_vector);
     
     ADC_SAR_Seq_1_Start();
     ADC_SAR_Seq_1_StartConvert();
@@ -43,7 +48,14 @@ int main(void)
        
     for(;;)
     {
-       
+        /*
+        if (attack_pot_value > 1000){
+             led_Write(0); 
+        }    
+        else{
+            led_Write(1);
+        }
+        */
     }
 }
 
