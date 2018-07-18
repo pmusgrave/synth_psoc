@@ -29,14 +29,15 @@ CY_ISR(ADC_EOC) {
 }
 
 CY_ISR(envelope_trigger_vector){
-    led_Write(~led_Read());
+    //led_Write(~led_Read());
+    envelope_triggered = 1;
 }
 
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
-
+    
     InitOscillator();
     InitEnvelopeGenerator();
     envelope_trigger_StartEx(envelope_trigger_vector);
@@ -44,18 +45,24 @@ int main(void)
     ADC_SAR_Seq_1_Start();
     ADC_SAR_Seq_1_StartConvert();
     PWM_1_Start();
+    LED_PWM_Start();
     ADC_EOC_INT_StartEx(ADC_EOC);
        
+    uint16_t pwm_value = 0;
+    envelope_triggered = 0;
+    
     for(;;)
     {
-        /*
-        if (attack_pot_value > 1000){
-             led_Write(0); 
-        }    
-        else{
-            led_Write(1);
+        if(envelope_triggered == 1){
+            pwm_value++;
         }
-        */
+        
+        if(pwm_value > attack_pot_value){
+            pwm_value = 0;
+            envelope_triggered = 0;
+        }
+        LED_PWM_WriteCompare(pwm_value);
+        CyDelay(1); 
     }
 }
 

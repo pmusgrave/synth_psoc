@@ -12,6 +12,8 @@ void InitEnvelopeGenerator(){
     sustain_pot_low_Write(0);
     release_pot_high_Write(1);
     release_pot_low_Write(0);
+    
+    envelope_triggered = 0;
 }
 
 

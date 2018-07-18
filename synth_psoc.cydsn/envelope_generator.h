@@ -11,6 +11,7 @@ static volatile uint16_t attack_pot_value;
 static volatile uint16_t decay_pot_value;
 static volatile uint16_t sustain_pot_value;
 static volatile uint16_t release_pot_value;
+static volatile _Bool envelope_triggered;
 
 void InitEnvelopeGenerator();
 uint16_t GetAttackPotValue();
