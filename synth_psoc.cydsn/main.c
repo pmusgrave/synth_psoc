@@ -54,6 +54,8 @@ int main(void)
     
     for(;;)
     {
+        ENVELOPE_TIMER_WritePeriod(attack_pot_value);
+        ENVELOPE_TIMER_WriteCompare(attack_pot_value);
         pwm_value = (65535 / attack_pot_value) * ENVELOPE_TIMER_ReadCounter();
         LED_PWM_WriteCompare(pwm_value);
         CyDelay(1); 
