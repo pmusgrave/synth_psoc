@@ -197,6 +197,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_PWM.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LED_PWM_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ENVELOPE_TIMER.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ENVELOPE_TIMER.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ENVELOPE_TIMER_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

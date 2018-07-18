@@ -45,22 +45,16 @@ int main(void)
     ADC_SAR_Seq_1_Start();
     ADC_SAR_Seq_1_StartConvert();
     PWM_1_Start();
-    LED_PWM_Start();
+    LED_PWM_Start();    
     ADC_EOC_INT_StartEx(ADC_EOC);
+    ENVELOPE_TIMER_Start();
        
     uint16_t pwm_value = 0;
     envelope_triggered = 0;
     
     for(;;)
     {
-        if(envelope_triggered == 1){
-            pwm_value++;
-        }
-        
-        if(pwm_value > attack_pot_value){
-            pwm_value = 0;
-            envelope_triggered = 0;
-        }
+        pwm_value = (65535 / attack_pot_value) * ENVELOPE_TIMER_ReadCounter();
         LED_PWM_WriteCompare(pwm_value);
         CyDelay(1); 
     }
