@@ -32,6 +32,7 @@ CY_ISR(envelope_trigger_vector){
     switch(current_mode){
     case NOT_TRIGGERED:
         current_mode = ATTACK_MODE;
+        pwm_value = 0;
         break;
     case SUSTAIN_MODE:
         current_mode = RELEASE_MODE;
@@ -109,6 +110,7 @@ int main(void)
             switch(current_mode){
             case NOT_TRIGGERED:
                 pwm_value = 0;
+                ENVELOPE_TIMER_WriteCounter(0);
                 break;
             case ATTACK_MODE:
                 ENVELOPE_TIMER_WritePeriod(attack_pot_value);
@@ -121,6 +123,7 @@ int main(void)
                 pwm_value = (double)((sustain_pot_value - 65535)/ decay_pot_value) * ENVELOPE_TIMER_ReadCounter() + 65535;
                 break;
             case SUSTAIN_MODE:
+                ENVELOPE_TIMER_WriteCounter(0);
                 ENVELOPE_TIMER_Stop();
                 pwm_value = sustain_pot_value;
                 break;
