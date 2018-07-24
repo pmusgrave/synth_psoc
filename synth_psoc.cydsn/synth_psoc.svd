@@ -22305,7 +22305,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>ENVELOPE_TIMER</name>
+      <name>LED_PWM</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -22362,7 +22362,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>LED_PWM</name>
+      <name>ENVELOPE_TIMER</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>

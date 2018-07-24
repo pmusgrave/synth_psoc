@@ -7,10 +7,11 @@
 #define SUSTAIN_POT_ADC_CHANNEL 4
 #define RELEASE_POT_ADC_CHANNEL 5
 
-#define ATTACK_MODE 0
-#define DECAY_MODE 1
-#define SUSTAIN_MODE 2
-#define RELEASE_MODE 3
+#define NOT_TRIGGERED 0
+#define ATTACK_MODE 1
+#define DECAY_MODE 2
+#define SUSTAIN_MODE 3
+#define RELEASE_MODE 4
 
 static volatile uint16_t attack_pot_value;
 static volatile uint16_t decay_pot_value;

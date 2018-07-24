@@ -200,6 +200,12 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ENVELOPE_TIMER.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ENVELOPE_TIMER.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ENVELOPE_TIMER_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ENVELOPE_TIMER_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ENVELOPE_TIMER_INT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_1_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

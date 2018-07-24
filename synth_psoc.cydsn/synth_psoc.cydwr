@@ -34,6 +34,7 @@
       <Data key="cd668327-35c3-4a2b-b9fe-31b790a2f43c" value="pulse_width_pot_low" />
       <Data key="d851249e-0075-48bb-8565-52968ae3d519" value="trigger_switch" />
       <Data key="e1d96cca-d0fe-4dd6-b0f3-dfa46e3efbea" value="sustain_pot_wiper" />
+      <Data key="e3b5eb51-e0fa-4229-b961-fbf951b1f978" value="led_1" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="freq_pot_high" />
     </Group>
   </Group>
@@ -3759,6 +3760,11 @@
     <Group key="e1d96cca-d0fe-4dd6-b0f3-dfa46e3efbea">
       <Group key="0">
         <Data key="Port Format" value="2,2" />
+      </Group>
+    </Group>
+    <Group key="e3b5eb51-e0fa-4229-b961-fbf951b1f978">
+      <Group key="0">
+        <Data key="Port Format" value="5,3" />
       </Group>
     </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
