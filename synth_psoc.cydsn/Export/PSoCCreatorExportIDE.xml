@@ -56,9 +56,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cydisabledsheets.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_high.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_high.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_high_aliases.h</File>
@@ -206,6 +203,16 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\led_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LFO_PWM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LFO_PWM.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LFO_PWM_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LFO_output.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LFO_output.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LFO_output_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\LFO_output_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
