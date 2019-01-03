@@ -255,6 +255,22 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\green_led.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\green_led_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\green_led_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\attack_debug_led.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\attack_debug_led.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\attack_debug_led_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\attack_debug_led_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\decay_debug_led.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\decay_debug_led.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\decay_debug_led_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\decay_debug_led_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\sustain_debug_led.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\sustain_debug_led.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\sustain_debug_led_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\sustain_debug_led_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\release_debug_led.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\release_debug_led.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\release_debug_led_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\release_debug_led_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">

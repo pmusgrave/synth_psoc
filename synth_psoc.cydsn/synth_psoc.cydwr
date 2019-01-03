@@ -29,6 +29,7 @@
       <Data key="2e09fcc0-a725-4288-9e4b-e97721f29ae6" value="decay_pot_wiper" />
       <Data key="3c61664b-2ce5-4a2c-89b5-3f48d38d5bf2" value="pulse_width_pot_wiper_2" />
       <Data key="3d1adcfe-6bf9-44f9-af73-2ea89c7a00e7" value="sustain_pot_low" />
+      <Data key="3f407de2-c4af-436f-bbca-1673c0e7ae58" value="release_debug_led" />
       <Data key="3fcc6371-f613-4467-856e-25f93a6af2c0" value="pulse_width_pot_wiper_3" />
       <Data key="4b55b201-776d-453a-b86a-1e9b2d6fd673" value="decay_pot_high" />
       <Data key="4c0b4fc7-d7f2-40be-99d7-e14340068c72" value="freq_pot_wiper_1" />
@@ -38,27 +39,30 @@
       <Data key="7d8a3052-f9a5-4802-b8ac-12b7014d3d6e" value="pulse_width_pot_high" />
       <Data key="9c6afe0c-9597-4db3-ad96-ae64f7285e31" value="square_wave_output" />
       <Data key="9de8c580-865f-4418-8b0a-0786d7f78fba" value="attack_pot_high" />
+      <Data key="16e01202-37b8-4178-9fb1-fb53785bf8c2" value="sustain_debug_led" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc" value="UART_1_tx" />
       <Data key="52da76ba-c05b-495d-a5c6-b5894dcf304a" value="freq_pot_wiper_2" />
       <Data key="58e0af67-661d-4a79-a4ee-c15150f8a9b0" value="freq_cv" />
       <Data key="72e3312a-f1ba-4164-8827-f1381fbff8b2" value="release_pot_low" />
       <Data key="91b0d968-f954-4f9e-a212-5aa3438a8a6e" value="release_pot_wiper" />
+      <Data key="0332ac87-48d3-427f-9440-020e3dc12f82" value="attack_debug_led" />
       <Data key="0930a535-931e-45a4-b323-7e1415dfb9d4" value="freq_cv_1" />
       <Data key="6743e496-c1f6-43f8-a77b-a430cb0c2fe9" value="freq_cv_3" />
       <Data key="1881354c-def2-4d86-bdde-d62f11e29d7c" value="Pin_1" />
       <Data key="26585482-08b0-44e8-83f2-b5f9340f2ba6" value="pulse_width_pot_wiper" />
       <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="freq_pot_wiper" />
+      <Data key="ac0f011c-9906-450c-8f43-4f8ef4e508ce" value="decay_debug_led" />
       <Data key="ae2a3e3c-c2d8-4086-a80c-3e27bce724fd" value="freq_pot_wiper_3" />
       <Data key="aecd5528-a069-4ee4-933f-83bd73ccbe18" value="freq_pot_low" />
       <Data key="b319848d-adf1-4c94-b1fc-57b7a9f3e814" value="attack_pot_low" />
       <Data key="c6bd3d13-0dd0-4c0e-baf9-6deb7e464849" value="pulse_width_pot_wiper_1" />
-      <Data key="c89eee7a-1c4b-4924-9c80-99b259e31b45" value="led" />
+      <Data key="c89eee7a-1c4b-4924-9c80-99b259e31b45" value="blue_led" />
       <Data key="ca4b461b-3332-4128-99b1-5da292959722" value="freq_cv_2" />
       <Data key="cd668327-35c3-4a2b-b9fe-31b790a2f43c" value="pulse_width_pot_low" />
       <Data key="d851249e-0075-48bb-8565-52968ae3d519" value="trigger_switch" />
       <Data key="da431711-aba8-4321-b11a-d1d18a004b25" value="LFO_output" />
       <Data key="e1d96cca-d0fe-4dd6-b0f3-dfa46e3efbea" value="sustain_pot_wiper" />
-      <Data key="e3b5eb51-e0fa-4229-b961-fbf951b1f978" value="led_1" />
+      <Data key="e3b5eb51-e0fa-4229-b961-fbf951b1f978" value="green_led" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="freq_pot_high" />
       <Data key="f304443d-4ae6-4fb6-8bc1-9028109aa14d" value="led_scope_probe" />
     </Group>
@@ -3819,6 +3823,11 @@
         <Data key="Port Format" value="9,5" />
       </Group>
     </Group>
+    <Group key="3f407de2-c4af-436f-bbca-1673c0e7ae58">
+      <Group key="0">
+        <Data key="Port Format" value="9,3" />
+      </Group>
+    </Group>
     <Group key="4b55b201-776d-453a-b86a-1e9b2d6fd673">
       <Group key="0">
         <Data key="Port Format" value="10,3" />
@@ -3854,6 +3863,11 @@
         <Data key="Port Format" value="10,2" />
       </Group>
     </Group>
+    <Group key="16e01202-37b8-4178-9fb1-fb53785bf8c2">
+      <Group key="0">
+        <Data key="Port Format" value="9,2" />
+      </Group>
+    </Group>
     <Group key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc">
       <Group key="0">
         <Data key="Port Format" value="3,1" />
@@ -3869,6 +3883,11 @@
         <Data key="Port Format" value="2,3" />
       </Group>
     </Group>
+    <Group key="0332ac87-48d3-427f-9440-020e3dc12f82">
+      <Group key="0">
+        <Data key="Port Format" value="9,0" />
+      </Group>
+    </Group>
     <Group key="1881354c-def2-4d86-bdde-d62f11e29d7c">
       <Group key="0">
         <Data key="Port Format" value="5,4" />
@@ -3882,6 +3901,11 @@
     <Group key="77715107-f8d5-47e5-a629-0fb83101ac6b">
       <Group key="0">
         <Data key="Port Format" value="8,6" />
+      </Group>
+    </Group>
+    <Group key="ac0f011c-9906-450c-8f43-4f8ef4e508ce">
+      <Group key="0">
+        <Data key="Port Format" value="9,1" />
       </Group>
     </Group>
     <Group key="aecd5528-a069-4ee4-933f-83bd73ccbe18">
