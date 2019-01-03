@@ -1,6 +1,7 @@
---------------- Rebuild Started: 08/18/2018 12:58:16 Project: synth_psoc, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Rebuild Started: 01/03/2019 14:57:13 Project: synth_psoc, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\main.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\envelope_generator.o"
+Deleting file ".\CortexM0\ARM_GCC_541\Debug\interrupts.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\cymetadata.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\freq_pot_high.o"
@@ -93,8 +94,8 @@ Deleting file ".\CortexM0\ARM_GCC_541\Debug\freq_cv_2.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\freq_cv_2_PM.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_2.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_2_PM.o"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\synth_psoc.hex"
-Deleting file ".\CortexM0\ARM_GCC_541\Debug\synth_psoc.elf"
+Deleting file ".\CortexM0\ARM_GCC_541\Debug\led_scope_probe.o"
+Deleting file ".\CortexM0\ARM_GCC_541\Debug\led_scope_probe_PM.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\synth_psoc.map"
 Deleting file ".\synth_psoc.cycdx"
 Deleting file ".\synth_psoc.svd"
@@ -104,45 +105,33 @@ Deleting file ".\CortexM0\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
 cydsfit.exe -.appdatapath "C:\Users\psmus\AppData\Local\Cypress Semiconductor\PSoC Creator\4.2" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\synth_psoc.cyprj -d CY8C4248BZI-L489 -s E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
+ADD: sdb.M0065: information: Analog terminal "pulse_width_pot_wiper_2.analog_0" on TopDesign is unconnected.
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1092)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_413.1)
 ADD: sdb.M0065: information: Analog terminal "freq_cv_3.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1035)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1097)
  * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_423.1)
-ADD: sdb.M0065: information: Analog terminal "attack_pot_wiper.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1036)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_70.1)
-ADD: sdb.M0065: information: Analog terminal "freq_pot_wiper_3.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1037)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_422.1)
-ADD: sdb.M0065: information: Analog terminal "freq_cv_2.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1038)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_414.1)
-ADD: sdb.M0065: information: Analog terminal "decay_pot_wiper.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1039)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_71.1)
-ADD: sdb.M0065: information: Analog terminal "pulse_width_pot_wiper_3.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1034)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_424.1)
-ADD: sdb.M0065: information: Analog terminal "pulse_width_pot_wiper_1.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1032)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_199.1)
-ADD: sdb.M0065: information: Analog terminal "release_pot_wiper.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1041)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_73.1)
-ADD: sdb.M0065: information: Analog terminal "sustain_pot_wiper.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1040)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_72.1)
-ADD: sdb.M0065: information: Analog terminal "freq_cv_1.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1031)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_198.1)
 ADD: sdb.M0065: information: Analog terminal "freq_pot_wiper_1.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1033)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1096)
  * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_197.1)
 ADD: sdb.M0065: information: Analog terminal "freq_pot_wiper_2.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1030)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1095)
  * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_415.1)
-ADD: sdb.M0065: information: Analog terminal "pulse_width_pot_wiper_2.analog_0" on TopDesign is unconnected.
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1042)
- * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_413.1)
+ADD: sdb.M0065: information: Analog terminal "freq_pot_wiper_3.analog_0" on TopDesign is unconnected.
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1094)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_422.1)
+ADD: sdb.M0065: information: Analog terminal "freq_cv_2.analog_0" on TopDesign is unconnected.
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1098)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_414.1)
+ADD: sdb.M0065: information: Analog terminal "pulse_width_pot_wiper_1.analog_0" on TopDesign is unconnected.
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1093)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_199.1)
+ADD: sdb.M0065: information: Analog terminal "freq_cv_1.analog_0" on TopDesign is unconnected.
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1099)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_198.1)
+ADD: sdb.M0065: information: Analog terminal "pulse_width_pot_wiper_3.analog_0" on TopDesign is unconnected.
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Signal: Net_1091)
+ * E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\TopDesign\TopDesign.cysch (Shape_424.1)
 HDL Generation...
 Synthesis...
 Tech Mapping...
@@ -160,6 +149,7 @@ Dependency Generation...
 Cleanup...
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/envelope_generator.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c envelope_generator.c -o .\CortexM0\ARM_GCC_541\Debug\envelope_generator.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/interrupts.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c interrupts.c -o .\CortexM0\ARM_GCC_541\Debug\interrupts.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/cyfitter_cfg.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\cyfitter_cfg.c -o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/cymetadata.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\cymetadata.c -o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/freq_pot_high.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\freq_pot_high.c -o .\CortexM0\ARM_GCC_541\Debug\freq_pot_high.o
@@ -251,15 +241,21 @@ arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/freq_cv_2_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\freq_cv_2_PM.c -o .\CortexM0\ARM_GCC_541\Debug\freq_cv_2_PM.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/pulse_width_pot_wiper_2.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\pulse_width_pot_wiper_2.c -o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_2.o
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/pulse_width_pot_wiper_2_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\pulse_width_pot_wiper_2_PM.c -o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_2_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/led_scope_probe.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\led_scope_probe.c -o .\CortexM0\ARM_GCC_541\Debug\led_scope_probe.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/led_scope_probe_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC4\led_scope_probe_PM.c -o .\CortexM0\ARM_GCC_541\Debug\led_scope_probe_PM.o
 arm-none-eabi-as.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -alh=.\CortexM0\ARM_GCC_541\Debug/CyBootAsmGnu.lst -g -W -o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o Generated_Source\PSoC4\CyBootAsmGnu.s
-arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\synth_psoc.a .\CortexM0\ARM_GCC_541\Debug\freq_pot_high.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_INT.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_high.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_1.o .\CortexM0\ARM_GCC_541\Debug\square_wave_output.o .\CortexM0\ARM_GCC_541\Debug\square_wave_output_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_low.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_EOC_INT.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_IRQ.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_intClock.o .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyDMA.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\release_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\release_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_low.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_low.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_low.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_low.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\release_pot_low.o .\CortexM0\ARM_GCC_541\Debug\release_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_high.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_high.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_high.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\release_pot_high.o .\CortexM0\ARM_GCC_541\Debug\release_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\led.o .\CortexM0\ARM_GCC_541\Debug\led_PM.o .\CortexM0\ARM_GCC_541\Debug\trigger_switch.o .\CortexM0\ARM_GCC_541\Debug\trigger_switch_PM.o .\CortexM0\ARM_GCC_541\Debug\envelope_trigger.o .\CortexM0\ARM_GCC_541\Debug\Clock_2.o .\CortexM0\ARM_GCC_541\Debug\Clock_3.o .\CortexM0\ARM_GCC_541\Debug\LED_PWM.o .\CortexM0\ARM_GCC_541\Debug\LED_PWM_PM.o .\CortexM0\ARM_GCC_541\Debug\ENVELOPE_TIMER.o .\CortexM0\ARM_GCC_541\Debug\ENVELOPE_TIMER_PM.o .\CortexM0\ARM_GCC_541\Debug\ENVELOPE_TIMER_INT.o .\CortexM0\ARM_GCC_541\Debug\led_1.o .\CortexM0\ARM_GCC_541\Debug\led_1_PM.o .\CortexM0\ARM_GCC_541\Debug\main_osc_PWM.o .\CortexM0\ARM_GCC_541\Debug\main_osc_PWM_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_cv.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_2.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_2_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_1.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_1_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_1.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_1_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_1.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_1_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_3.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_3_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_3.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_3_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_3.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_3_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_2.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_2_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_2.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_2_PM.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\synth_psoc.a .\CortexM0\ARM_GCC_541\Debug\freq_pot_high.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_INT.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_high.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_1.o .\CortexM0\ARM_GCC_541\Debug\square_wave_output.o .\CortexM0\ARM_GCC_541\Debug\square_wave_output_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_low.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\ADC_EOC_INT.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_IRQ.o .\CortexM0\ARM_GCC_541\Debug\ADC_SAR_Seq_1_intClock.o .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyDMA.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\release_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\release_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_wiper.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_wiper_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_low.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_low.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_low.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_low.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\release_pot_low.o .\CortexM0\ARM_GCC_541\Debug\release_pot_low_PM.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_high.o .\CortexM0\ARM_GCC_541\Debug\attack_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_high.o .\CortexM0\ARM_GCC_541\Debug\decay_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_high.o .\CortexM0\ARM_GCC_541\Debug\sustain_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\release_pot_high.o .\CortexM0\ARM_GCC_541\Debug\release_pot_high_PM.o .\CortexM0\ARM_GCC_541\Debug\led.o .\CortexM0\ARM_GCC_541\Debug\led_PM.o .\CortexM0\ARM_GCC_541\Debug\trigger_switch.o .\CortexM0\ARM_GCC_541\Debug\trigger_switch_PM.o .\CortexM0\ARM_GCC_541\Debug\envelope_trigger.o .\CortexM0\ARM_GCC_541\Debug\Clock_2.o .\CortexM0\ARM_GCC_541\Debug\Clock_3.o .\CortexM0\ARM_GCC_541\Debug\LED_PWM.o .\CortexM0\ARM_GCC_541\Debug\LED_PWM_PM.o .\CortexM0\ARM_GCC_541\Debug\ENVELOPE_TIMER.o .\CortexM0\ARM_GCC_541\Debug\ENVELOPE_TIMER_PM.o .\CortexM0\ARM_GCC_541\Debug\ENVELOPE_TIMER_INT.o .\CortexM0\ARM_GCC_541\Debug\led_1.o .\CortexM0\ARM_GCC_541\Debug\led_1_PM.o .\CortexM0\ARM_GCC_541\Debug\main_osc_PWM.o .\CortexM0\ARM_GCC_541\Debug\main_osc_PWM_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_cv.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_2.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_2_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_1.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_1_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_1.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_1_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_1.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_1_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_3.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_3_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_3.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_3_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_3.o .\CortexM0\ARM_GCC_541\Debug\freq_pot_wiper_3_PM.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_2.o .\CortexM0\ARM_GCC_541\Debug\freq_cv_2_PM.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_2.o .\CortexM0\ARM_GCC_541\Debug\pulse_width_pot_wiper_2_PM.o .\CortexM0\ARM_GCC_541\Debug\led_scope_probe.o .\CortexM0\ARM_GCC_541\Debug\led_scope_probe_PM.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_541\Debug\synth_psoc.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\CortexM0\ARM_GCC_541\Debug\synth_psoc.elf .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\envelope_generator.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\synth_psoc.a -mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/synth_psoc.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
-cyelftool.exe -C E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\CortexM0\ARM_GCC_541\Debug\synth_psoc.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
-No ELF section .cychecksum found, creating one
-Application checksum calculated and stored in ELF section .cychecksum
-Checksum calculated and stored in ELF section .cymeta
-cyelftool.exe -S E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\CortexM0\ARM_GCC_541\Debug\synth_psoc.elf
-Flash used: 6248 of 262144 bytes (2.4%).
-SRAM used: 2664 of 32768 bytes (8.1%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Rebuild Succeeded: 08/18/2018 12:58:34 ---------------
+arm-none-eabi-gcc.exe -Wl,--start-group -o E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\CortexM0\ARM_GCC_541\Debug\synth_psoc.elf .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\envelope_generator.o .\CortexM0\ARM_GCC_541\Debug\interrupts.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\synth_psoc.a -mcpu=cortex-m0 -mthumb -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/synth_psoc.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+.\CortexM0\ARM_GCC_541\Debug\interrupts.o: In function `ADC_EOC':
+E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn/interrupts.c:23: undefined reference to `pwm_update_flag'
+E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn/interrupts.c:23: undefined reference to `freq'
+E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn/interrupts.c:23: undefined reference to `pulse_width'
+.\CortexM0\ARM_GCC_541\Debug\interrupts.o: In function `envelope_trigger_vector':
+E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn/interrupts.c:39: undefined reference to `current_mode'
+E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn/interrupts.c:39: undefined reference to `pwm_value'
+.\CortexM0\ARM_GCC_541\Debug\interrupts.o: In function `envelope_timer_vect':
+E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn/interrupts.c:63: undefined reference to `current_mode'
+collect2.exe: error: ld returned 1 exit status
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 01/03/2019 14:57:31 ---------------

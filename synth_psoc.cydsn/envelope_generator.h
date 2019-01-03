@@ -1,6 +1,9 @@
 /* ========================================
  *
 */
+#ifndef ENVELOPE_GENERATOR_H
+#define ENVELOPE_GENERATOR_H
+    
 #include "project.h"
 #define ATTACK_POT_ADC_CHANNEL 3
 #define DECAY_POT_ADC_CHANNEL 4
@@ -23,4 +26,5 @@ static volatile _Bool envelope_triggered;
 void InitEnvelopeGenerator();
 uint16_t CalculateNewPwmValue(uint8_t);
 
+#endif
 /* [] END OF FILE */
