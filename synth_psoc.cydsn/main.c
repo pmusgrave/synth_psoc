@@ -15,7 +15,7 @@ int main(void)
 {
     CyGlobalIntEnable;
 
-    //InitOscillator();
+    InitOscillator();
     InitEnvelopeGenerator();
     envelope_trigger_StartEx(envelope_trigger_vector);
     
