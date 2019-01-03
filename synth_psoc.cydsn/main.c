@@ -1,9 +1,8 @@
 #include "project.h"
-#include "envelope_generator.h"
 #include "interrupts.h"
 #include "globals.h"
-
-void InitOscillator();
+#include "envelope_generator.h"
+#include "oscillator.h"
 
 volatile uint8_t current_mode = NOT_TRIGGERED;
 volatile uint8_t pwm_update_flag = 0;
@@ -15,30 +14,31 @@ int main(void)
 {
     CyGlobalIntEnable;
 
-    InitOscillator();
     InitEnvelopeGenerator();
     envelope_trigger_StartEx(envelope_trigger_vector);
-    
-    ADC_SAR_Seq_1_Start();
-    ADC_SAR_Seq_1_StartConvert();
-    main_osc_PWM_Start();
-    //LFO_PWM_Start();
-    LED_PWM_Start();    
-    ADC_EOC_INT_StartEx(ADC_EOC);
     ENVELOPE_TIMER_Start();
     ENVELOPE_TIMER_INT_StartEx(envelope_timer_vect);
     
+    ADC_SAR_Seq_1_Start();
+    ADC_SAR_Seq_1_StartConvert();
+    ADC_EOC_INT_StartEx(ADC_EOC);
+    
+    InitOscillator();
+    main_osc_PWM_Start();
+    //LFO_PWM_Start();
+    LED_PWM_Start();    
+    
     current_mode = NOT_TRIGGERED;
     
-    led_1_Write(1);
+    green_led_Write(1);
 
     for(;;)
     {
         //if(current_mode == SUSTAIN_MODE){
-            //led_1_Write(0);
+            //green_led_Write(0);
         //}
         //else{
-            //led_1_Write(1);
+            //green_led_Write(1);
         //}
         
         
@@ -94,12 +94,5 @@ int main(void)
             LED_PWM_WriteCompare(pwm_value);
         }
     }
-}
-
-void InitOscillator(){
-    freq_pot_low_Write(0);
-    freq_pot_high_Write(1);    
-    pulse_width_pot_high_Write(1);
-    pulse_width_pot_low_Write(0);
 }
 /* [] END OF FILE */

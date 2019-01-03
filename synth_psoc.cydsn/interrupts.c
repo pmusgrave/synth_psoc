@@ -18,7 +18,7 @@ CY_ISR(ADC_EOC) {
 }
 
 CY_ISR(envelope_trigger_vector){
-    //led_1_Write(~led_1_Read());
+    // green_led_Write(~green_led_Read());
     
     switch(current_mode){
     case NOT_TRIGGERED:
@@ -34,7 +34,7 @@ CY_ISR(envelope_trigger_vector){
 }
 
 CY_ISR(envelope_timer_vect){  
-    //led_1_Write(~led_1_Read());
+    //green_led_Write(~green_led_Read());
     
     switch(current_mode){
     case NOT_TRIGGERED:
