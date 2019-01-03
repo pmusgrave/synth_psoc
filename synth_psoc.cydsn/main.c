@@ -13,21 +13,18 @@ CY_ISR(ADC_EOC) {
     pwm_update_flag = 1;
    
     freq = ADC_SAR_Seq_1_GetResult16(0);
-    pulse_width = ADC_SAR_Seq_1_GetResult16(1);  
+    pulse_width = ADC_SAR_Seq_1_GetResult16(2);  
     
     attack_pot_value = ADC_SAR_Seq_1_GetResult16(ATTACK_POT_ADC_CHANNEL);
     decay_pot_value = ADC_SAR_Seq_1_GetResult16(DECAY_POT_ADC_CHANNEL);
     sustain_pot_value = ADC_SAR_Seq_1_GetResult16(SUSTAIN_POT_ADC_CHANNEL);
     release_pot_value = ADC_SAR_Seq_1_GetResult16(RELEASE_POT_ADC_CHANNEL);
-
-    LED_PWM_WriteCompare(pwm_value);
     
     ADC_EOC_INT_ClearPending();
 }
 
 CY_ISR(envelope_trigger_vector){
-    // led_Write(~led_Read());
-    // envelope_triggered = 1;
+    //led_1_Write(~led_1_Read());
     
     switch(current_mode){
     case NOT_TRIGGERED:
@@ -38,8 +35,8 @@ CY_ISR(envelope_trigger_vector){
         current_mode = RELEASE_MODE;
         break;
     }
-    
-    envelope_trigger_ClearPending();
+
+    envelope_trigger_ClearPending();    
 }
 
 CY_ISR(envelope_timer_vect){  
@@ -69,15 +66,15 @@ CY_ISR(envelope_timer_vect){
 int main(void)
 {
     CyGlobalIntEnable;
-    
-    InitOscillator();
+
+    //InitOscillator();
     InitEnvelopeGenerator();
     envelope_trigger_StartEx(envelope_trigger_vector);
     
     ADC_SAR_Seq_1_Start();
     ADC_SAR_Seq_1_StartConvert();
     main_osc_PWM_Start();
-    LFO_PWM_Start();
+    //LFO_PWM_Start();
     LED_PWM_Start();    
     ADC_EOC_INT_StartEx(ADC_EOC);
     ENVELOPE_TIMER_Start();
@@ -85,16 +82,17 @@ int main(void)
     
     current_mode = NOT_TRIGGERED;
     
-    //led_1_Write(1);
+    led_1_Write(1);
 
     for(;;)
     {
-        if(current_mode == SUSTAIN_MODE){
-            led_1_Write(0);
-        }
-        else{
-            led_1_Write(1);
-        }
+        //if(current_mode == SUSTAIN_MODE){
+            //led_1_Write(0);
+        //}
+        //else{
+            //led_1_Write(1);
+        //}
+        
         
         if(pwm_update_flag != 0){ 
             pwm_update_flag = 0;
@@ -108,10 +106,10 @@ int main(void)
             // fix this later
             main_osc_PWM_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
       
-            LFO_PWM_WritePeriod((uint16) 65535/freq);
-            LFO_PWM_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
+            //LFO_PWM_WritePeriod((uint16) 65535/freq);
+            //LFO_PWM_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
             
-            
+            /*
             switch(current_mode){
             case NOT_TRIGGERED:
                 pwm_value = 0;
@@ -138,14 +136,21 @@ int main(void)
                 ENVELOPE_TIMER_WriteCompare(release_pot_value);
                 pwm_value = (double)((-sustain_pot_value * ENVELOPE_TIMER_ReadCounter() / release_pot_value)) + sustain_pot_value;
                 break;
-            }            
+            }
+            */
+            
+            pwm_value+=100;
+            if (pwm_value >= 1000){
+                pwm_value = 0;
+            }
+            LED_PWM_WriteCompare(pwm_value);
         }
     }
 }
 
 void InitOscillator(){
     freq_pot_low_Write(0);
-    // freq_pot_high_Write(1);
+    freq_pot_high_Write(1);    
     pulse_width_pot_high_Write(1);
     pulse_width_pot_low_Write(0);
 }

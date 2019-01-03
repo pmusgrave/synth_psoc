@@ -13,3 +13,9 @@
 *.cydsn/codegentemp*
 *codegentemp*
 *.cydsn/CortexM0/*
+
+*GENERATE_API.log*
+*BUILD.log
+*Export/PSoCCreatorExportIDE.xml
+*REBUILD.log
+*Backup*

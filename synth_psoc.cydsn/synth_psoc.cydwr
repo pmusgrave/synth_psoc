@@ -18,11 +18,20 @@
       <Data key="ead37e88-2af3-47d5-b02f-9aa19608325a" value="Clock_1" />
       <Data key="f0b83bb4-6a5d-4d8f-b978-af230014ad49" value="Clock_3" />
     </Group>
+    <Group key="Interrupt">
+      <Data key="4b7c57e2-8943-4cd0-ba2f-bd457f186ba3/a1033dc5-f595-4313-8eee-ea9108ee36fd" value="ADC_SAR_Seq_1_IRQ" />
+      <Data key="22ecc0b6-c062-4a9d-9b43-9708d9ad45c4" value="ENVELOPE_TIMER_INT" />
+      <Data key="3041a701-60d0-4f56-b4b9-aa76895c128b" value="envelope_trigger" />
+      <Data key="e1c31990-955b-4af0-8326-8711d5b2b7dc" value="ADC_EOC_INT" />
+    </Group>
     <Group key="Pin">
       <Data key="0ca51a06-405f-4abb-a557-2e4f77482a9f" value="release_pot_high" />
       <Data key="2e09fcc0-a725-4288-9e4b-e97721f29ae6" value="decay_pot_wiper" />
+      <Data key="3c61664b-2ce5-4a2c-89b5-3f48d38d5bf2" value="pulse_width_pot_wiper_2" />
       <Data key="3d1adcfe-6bf9-44f9-af73-2ea89c7a00e7" value="sustain_pot_low" />
+      <Data key="3fcc6371-f613-4467-856e-25f93a6af2c0" value="pulse_width_pot_wiper_3" />
       <Data key="4b55b201-776d-453a-b86a-1e9b2d6fd673" value="decay_pot_high" />
+      <Data key="4c0b4fc7-d7f2-40be-99d7-e14340068c72" value="freq_pot_wiper_1" />
       <Data key="5aef3121-67fa-4ea2-88a7-8a1948209399" value="sustain_pot_high" />
       <Data key="5b190ab3-74d5-49d3-aef8-00adbdc2422c" value="decay_pot_low" />
       <Data key="7b9e4797-5d77-41e1-87b9-9b761cb06b5a" value="attack_pot_wiper" />
@@ -30,20 +39,28 @@
       <Data key="9c6afe0c-9597-4db3-ad96-ae64f7285e31" value="square_wave_output" />
       <Data key="9de8c580-865f-4418-8b0a-0786d7f78fba" value="attack_pot_high" />
       <Data key="43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/23b8206d-1c77-4e61-be4a-b4037d5de5fc" value="UART_1_tx" />
+      <Data key="52da76ba-c05b-495d-a5c6-b5894dcf304a" value="freq_pot_wiper_2" />
+      <Data key="58e0af67-661d-4a79-a4ee-c15150f8a9b0" value="freq_cv" />
       <Data key="72e3312a-f1ba-4164-8827-f1381fbff8b2" value="release_pot_low" />
       <Data key="91b0d968-f954-4f9e-a212-5aa3438a8a6e" value="release_pot_wiper" />
+      <Data key="0930a535-931e-45a4-b323-7e1415dfb9d4" value="freq_cv_1" />
+      <Data key="6743e496-c1f6-43f8-a77b-a430cb0c2fe9" value="freq_cv_3" />
       <Data key="1881354c-def2-4d86-bdde-d62f11e29d7c" value="Pin_1" />
       <Data key="26585482-08b0-44e8-83f2-b5f9340f2ba6" value="pulse_width_pot_wiper" />
       <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="freq_pot_wiper" />
+      <Data key="ae2a3e3c-c2d8-4086-a80c-3e27bce724fd" value="freq_pot_wiper_3" />
       <Data key="aecd5528-a069-4ee4-933f-83bd73ccbe18" value="freq_pot_low" />
       <Data key="b319848d-adf1-4c94-b1fc-57b7a9f3e814" value="attack_pot_low" />
+      <Data key="c6bd3d13-0dd0-4c0e-baf9-6deb7e464849" value="pulse_width_pot_wiper_1" />
       <Data key="c89eee7a-1c4b-4924-9c80-99b259e31b45" value="led" />
+      <Data key="ca4b461b-3332-4128-99b1-5da292959722" value="freq_cv_2" />
       <Data key="cd668327-35c3-4a2b-b9fe-31b790a2f43c" value="pulse_width_pot_low" />
       <Data key="d851249e-0075-48bb-8565-52968ae3d519" value="trigger_switch" />
       <Data key="da431711-aba8-4321-b11a-d1d18a004b25" value="LFO_output" />
       <Data key="e1d96cca-d0fe-4dd6-b0f3-dfa46e3efbea" value="sustain_pot_wiper" />
       <Data key="e3b5eb51-e0fa-4229-b961-fbf951b1f978" value="led_1" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="freq_pot_high" />
+      <Data key="f304443d-4ae6-4fb6-8bc1-9028109aa14d" value="led_scope_probe" />
     </Group>
   </Group>
   <Group key="FlashSecurity">
@@ -3125,6 +3142,15 @@
       </Group>
     </Group>
   </Group>
+  <Group key="Interrupt">
+    <Group key="22ecc0b6-c062-4a9d-9b43-9708d9ad45c4">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="3" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+  </Group>
   <Group key="M0S8Clock">
     <Group key="LocalClks">
       <Group key="4b7c57e2-8943-4cd0-ba2f-bd457f186ba3/5c71752a-e182-47ca-942c-9cb20adbdf2f">
@@ -3820,7 +3846,7 @@
     </Group>
     <Group key="9c6afe0c-9597-4db3-ad96-ae64f7285e31">
       <Group key="0">
-        <Data key="Port Format" value="1,0" />
+        <Data key="Port Format" value="3,6" />
       </Group>
     </Group>
     <Group key="9de8c580-865f-4418-8b0a-0786d7f78fba">
@@ -3855,12 +3881,12 @@
     </Group>
     <Group key="77715107-f8d5-47e5-a629-0fb83101ac6b">
       <Group key="0">
-        <Data key="Port Format" value="4,1" />
+        <Data key="Port Format" value="8,6" />
       </Group>
     </Group>
     <Group key="aecd5528-a069-4ee4-933f-83bd73ccbe18">
       <Group key="0">
-        <Data key="Port Format" value="4,0" />
+        <Data key="Port Format" value="8,7" />
       </Group>
     </Group>
     <Group key="b319848d-adf1-4c94-b1fc-57b7a9f3e814">
@@ -3900,7 +3926,12 @@
     </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
       <Group key="0">
-        <Data key="Port Format" value="3,4" />
+        <Data key="Port Format" value="8,5" />
+      </Group>
+    </Group>
+    <Group key="f304443d-4ae6-4fb6-8bc1-9028109aa14d">
+      <Group key="0">
+        <Data key="Port Format" value="3,0" />
       </Group>
     </Group>
     <Group key="UnAssigned Pins" />
