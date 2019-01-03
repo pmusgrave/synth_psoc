@@ -1,12 +1,7 @@
 #include "project.h"
 #include "envelope_generator.h"
 #include "interrupts.h"
-
-extern uint8_t current_mode;
-extern uint8_t pwm_update_flag;
-extern uint16_t pwm_value;
-extern float freq;
-extern float pulse_width;
+#include "globals.h"
 
 CY_ISR(ADC_EOC) {
     pwm_update_flag = 1;

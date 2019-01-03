@@ -38,10 +38,11 @@
         <Files Root="E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">envelope_generator.c</File>
-          <File BuildType="BUILD" Toolchain="">envelope_generator.h</File>
           <File BuildType="BUILD" Toolchain="">interrupts.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">interrupts.h</File>
+          <File BuildType="BUILD" Toolchain="">envelope_generator.h</File>
+          <File BuildType="BUILD" Toolchain="">globals.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\Documents\Engineering\Code\synth_psoc\synth_psoc.cydsn\Generated_Source\PSoC4">

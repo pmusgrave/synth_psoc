@@ -1,6 +1,7 @@
 #include "project.h"
 #include "envelope_generator.h"
 #include "interrupts.h"
+#include "globals.h"
 
 void InitOscillator();
 
