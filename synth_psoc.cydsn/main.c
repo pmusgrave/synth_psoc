@@ -4,6 +4,8 @@
 #include "envelope_generator.h"
 #include "oscillator.h"
 
+#define ENVELOPE_MAX_PERIOD 2048
+
 volatile uint8_t current_mode = NOT_TRIGGERED;
 volatile uint8_t pwm_update_flag = 0;
 volatile uint16_t pwm_value = 0;
@@ -64,7 +66,7 @@ int main(void)
                 ENVELOPE_TIMER_Enable();
                 ENVELOPE_TIMER_WritePeriod(attack_pot_value);
                 ENVELOPE_TIMER_WriteCompare(attack_pot_value);
-                pwm_value = (65535 / attack_pot_value) * ENVELOPE_TIMER_ReadCounter();
+                pwm_value = (ENVELOPE_MAX_PERIOD / attack_pot_value) * ENVELOPE_TIMER_ReadCounter();
                 break;
             case DECAY_MODE:
                 attack_debug_led_Write(0);
@@ -74,7 +76,7 @@ int main(void)
                 
                 ENVELOPE_TIMER_WritePeriod(decay_pot_value);
                 ENVELOPE_TIMER_WriteCompare(decay_pot_value);
-                pwm_value = (double)((sustain_pot_value - 65535)/ decay_pot_value) * ENVELOPE_TIMER_ReadCounter() + 65535;
+                pwm_value = (double)((sustain_pot_value - ENVELOPE_MAX_PERIOD)/ decay_pot_value) * ENVELOPE_TIMER_ReadCounter() + ENVELOPE_MAX_PERIOD;
                 break;
             case SUSTAIN_MODE:
                 attack_debug_led_Write(0);
@@ -82,7 +84,7 @@ int main(void)
                 sustain_debug_led_Write(1);
                 release_debug_led_Write(0);
                 
-                ENVELOPE_TIMER_WriteCounter(0);
+                //ENVELOPE_TIMER_WriteCounter(0);
                 ENVELOPE_TIMER_Stop();
                 pwm_value = sustain_pot_value;
                 break;
@@ -95,9 +97,12 @@ int main(void)
                 ENVELOPE_TIMER_Enable();
                 ENVELOPE_TIMER_WritePeriod(release_pot_value);
                 ENVELOPE_TIMER_WriteCompare(release_pot_value);
-                pwm_value = (double)((-sustain_pot_value * ENVELOPE_TIMER_ReadCounter() / release_pot_value)) + sustain_pot_value;
+                //pwm_value = (double)((-sustain_pot_value * ENVELOPE_TIMER_ReadCounter() / release_pot_value)) + ENVELOPE_MAX_PERIOD;
+                pwm_value = (double)((0- sustain_pot_value)/ release_pot_value) * ENVELOPE_TIMER_ReadCounter() + sustain_pot_value;
                 break;
             }
+            
+            LED_PWM_WriteCompare(pwm_value);
             
             /*
             pwm_value+=100;

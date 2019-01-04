@@ -12,6 +12,9 @@ CY_ISR(ADC_EOC) {
     attack_pot_value = ADC_SAR_Seq_1_GetResult16(ATTACK_POT_ADC_CHANNEL);
     decay_pot_value = ADC_SAR_Seq_1_GetResult16(DECAY_POT_ADC_CHANNEL);
     sustain_pot_value = ADC_SAR_Seq_1_GetResult16(SUSTAIN_POT_ADC_CHANNEL);
+    if(sustain_pot_value < 100){
+        sustain_pot_value = 0;
+    }    
     release_pot_value = ADC_SAR_Seq_1_GetResult16(RELEASE_POT_ADC_CHANNEL);
     
     ADC_EOC_INT_ClearPending();
@@ -60,10 +63,11 @@ CY_ISR(envelope_trigger_vector){
 }
 
 CY_ISR(envelope_timer_vect){  
-    green_led_Write(~green_led_Read());
+    //green_led_Write(~green_led_Read());
     
     switch(current_mode){
     case NOT_TRIGGERED:
+        current_mode = NOT_TRIGGERED;
         break;
     case ATTACK_MODE:
         current_mode = DECAY_MODE;
