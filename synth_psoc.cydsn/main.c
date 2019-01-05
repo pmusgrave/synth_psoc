@@ -27,11 +27,14 @@ int main(void)
     ADC_SAR_Seq_1_StartConvert();
     ADC_EOC_INT_StartEx(ADC_EOC);
     
-    // Init main oscillator, LFO
+    // Init main oscillator, triangle, saw wave PWM, and LFO components
     InitOscillator();
     main_osc_PWM_Start();
     //LFO_PWM_Start();
-    LED_PWM_Start();    
+    LED_PWM_Start();
+    RAMP_PWM_Start();
+    RAMP_TIMER_Start();
+    RAMP_TIMER_INT_StartEx(ramp_timer_vect);
     
     current_mode = NOT_TRIGGERED;
     
@@ -114,14 +117,11 @@ int main(void)
             
             LED_PWM_WriteCompare(pwm_value);
             
-            /*
-            pwm_value+=100;
-            if (pwm_value >= 1000){
-                pwm_value = 0;
-            }
-            LED_PWM_WriteCompare(pwm_value);
-            */
+            RAMP_TIMER_WritePeriod(freq);
+            RAMP_TIMER_WriteCompare(freq);
         }
+        
+        RAMP_PWM_WriteCompare((ENVELOPE_MAX_PERIOD / freq) * RAMP_TIMER_ReadCounter());
     }
 }
 /* [] END OF FILE */

@@ -94,4 +94,9 @@ CY_ISR(envelope_timer_vect){
     ENVELOPE_TIMER_ReadStatus();
     ENVELOPE_TIMER_ClearInterrupt(ENVELOPE_TIMER_INTR_MASK_TC);
 }
+
+CY_ISR(ramp_timer_vect){
+    RAMP_TIMER_ReadStatus();
+    RAMP_TIMER_ClearInterrupt(RAMP_TIMER_INTR_MASK_TC);
+}
 /* [] END OF FILE */
