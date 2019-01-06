@@ -26,6 +26,7 @@
     </Group>
     <Group key="Pin">
       <Data key="0ca51a06-405f-4abb-a557-2e4f77482a9f" value="release_pot_high" />
+      <Data key="1c4dfa51-67bf-4861-aa40-7bf6a8310231" value="square_wave_output_1" />
       <Data key="2e09fcc0-a725-4288-9e4b-e97721f29ae6" value="decay_pot_wiper" />
       <Data key="3c61664b-2ce5-4a2c-89b5-3f48d38d5bf2" value="pulse_width_pot_wiper_2" />
       <Data key="3d1adcfe-6bf9-44f9-af73-2ea89c7a00e7" value="sustain_pot_low" />
@@ -3814,6 +3815,11 @@
         <Data key="Port Format" value="7,2" />
       </Group>
     </Group>
+    <Group key="1c4dfa51-67bf-4861-aa40-7bf6a8310231">
+      <Group key="0">
+        <Data key="Port Format" value="2,4" />
+      </Group>
+    </Group>
     <Group key="2e09fcc0-a725-4288-9e4b-e97721f29ae6">
       <Group key="0">
         <Data key="Port Format" value="2,1" />
@@ -3961,7 +3967,7 @@
     </Group>
     <Group key="UnAssigned Pins">
       <Group key="500664dd-8932-4785-bd80-ac30134c8ae6">
-        <Data key="0" value="131911870173438761" />
+        <Data key="0" value="131912865013789846" />
       </Group>
     </Group>
   </Group>

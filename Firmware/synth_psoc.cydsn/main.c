@@ -30,6 +30,7 @@ int main(void)
     // Init main oscillator, triangle, saw wave PWM, and LFO components
     InitOscillator();
     main_osc_PWM_Start();
+    main_osc_PWM_1_Start();
     //LFO_PWM_Start();
     LED_PWM_Start();
     RAMP_PWM_Start();
@@ -45,6 +46,8 @@ int main(void)
             pwm_update_flag = 0;
             
             SetMainOscValue(freq, pulse_width);
+            main_osc_PWM_1_WritePeriod((uint16) 65535/attack_pot_value);
+            main_osc_PWM_1_WriteCompare((uint16) (65535/attack_pot_value)/2);
       
             //LFO_PWM_WritePeriod((uint16) 65535/freq);
             //LFO_PWM_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
