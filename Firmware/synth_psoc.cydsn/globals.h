@@ -9,4 +9,11 @@ extern volatile uint16_t attack_pot_value;
 extern volatile uint16_t decay_pot_value;
 extern volatile uint16_t sustain_pot_value;
 extern volatile uint16_t release_pot_value;
+
+
+
+extern volatile uint8_t triggered;
+extern volatile uint8_t triggered_1;
+
+
 /* [] END OF FILE */
