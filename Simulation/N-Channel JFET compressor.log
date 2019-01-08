@@ -1,0 +1,28 @@
+Circuit: * C:\Users\psmus\OneDrive\Documents\LTspiceXVII\N-Channel JFET compressor.asc
+
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v2.  Increasing period to 0.4
+Limiting fall time of source v2 to 8.04912e-017
+Limiting rise time of source v1 to 0.0001
+Limiting fall time of source v1 to 0.0001
+u1:vx1: Missing value, assumed 0V @ DC
+Direct Newton iteration for .op point succeeded.
+
+
+
+Date: Mon Jan 07 15:07:58 2019
+Total elapsed time: 1.747 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 324266
+traniter = 324234
+tranpoints = 118321
+accept = 88261
+rejected = 30060
+matrix size = 79
+fillins = 61
+solver = Normal
+Matrix Compiler1: 6.75 KB object code size  0.9/0.5/[0.2]
+Matrix Compiler2: 7.13 KB object code size  0.5/0.7/[0.3]
+

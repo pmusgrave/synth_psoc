@@ -1,0 +1,27 @@
+Circuit: * C:\Users\psmus\OneDrive\Documents\LTspiceXVII\PWM_filtering.asc
+
+Limiting rise time of source v5 to 1e-005
+Limiting fall time of source v5 to 1e-005
+WARNING: Less than two connections to node -15V.  This node is used by V4.
+u2:vx1: Missing value, assumed 0V @ DC
+Direct Newton iteration for .op point succeeded.
+
+
+
+Date: Mon Jan 07 21:26:22 2019
+Total elapsed time: 0.464 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 71973
+traniter = 71948
+tranpoints = 35946
+accept = 28484
+rejected = 7462
+matrix size = 77
+fillins = 59
+solver = Normal
+Matrix Compiler1: 6.52 KB object code size  0.9/0.6/[0.3]
+Matrix Compiler2: 6.69 KB object code size  0.4/0.6/[0.2]
+
