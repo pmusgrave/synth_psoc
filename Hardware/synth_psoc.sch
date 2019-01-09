@@ -35,7 +35,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -46,47 +46,77 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 900  750  650  800 
+S 3250 3250 650  800 
 U 5C3546FC
 F0 "Microcontroller" 60
 F1 "mcu.sch" 60
-F2 "osc1" O R 1550 800 60 
-F3 "osc2" O R 1550 900 60 
-F4 "osc3" O R 1550 1000 60 
-F5 "osc4" O R 1550 1100 60 
-F6 "osc5" O R 1550 1200 60 
-F7 "osc6" O R 1550 1300 60 
-F8 "osc7" O R 1550 1400 60 
-F9 "osc8" O R 1550 1500 60 
+F2 "osc1" O R 3900 3300 60 
+F3 "osc2" O R 3900 3400 60 
+F4 "osc3" O R 3900 3500 60 
+F5 "osc4" O R 3900 3600 60 
+F6 "osc5" O R 3900 3700 60 
+F7 "osc6" O R 3900 3800 60 
+F8 "osc7" O R 3900 3900 60 
+F9 "osc8" O R 3900 4000 60 
 $EndSheet
 $Sheet
-S 1950 750  550  800 
+S 4300 3250 550  800 
 U 5C355489
 F0 "Filters" 60
 F1 "vcf.sch" 60
-F2 "osc1" I L 1950 800 60 
-F3 "osc2" I L 1950 900 60 
-F4 "osc3" I L 1950 1000 60 
-F5 "osc4" I L 1950 1100 60 
-F6 "osc5" I L 1950 1200 60 
-F7 "osc6" I L 1950 1300 60 
-F8 "osc7" I L 1950 1400 60 
-F9 "osc8" I L 1950 1500 60 
+F2 "osc1" I L 4300 3300 60 
+F3 "osc2" I L 4300 3400 60 
+F4 "osc3" I L 4300 3500 60 
+F5 "osc4" I L 4300 3600 60 
+F6 "osc5" I L 4300 3700 60 
+F7 "osc6" I L 4300 3800 60 
+F8 "osc7" I L 4300 3900 60 
+F9 "osc8" I L 4300 4000 60 
 $EndSheet
 Wire Wire Line
-	1550 800  1950 800 
+	3900 3300 4300 3300
 Wire Wire Line
-	1550 900  1950 900 
+	3900 3400 4300 3400
 Wire Wire Line
-	1550 1000 1950 1000
+	3900 3500 4300 3500
 Wire Wire Line
-	1550 1100 1950 1100
+	3900 3600 4300 3600
 Wire Wire Line
-	1550 1200 1950 1200
+	3900 3700 4300 3700
 Wire Wire Line
-	1550 1300 1950 1300
+	3900 3800 4300 3800
 Wire Wire Line
-	1550 1400 1950 1400
+	3900 3900 4300 3900
 Wire Wire Line
-	1550 1500 1950 1500
+	3900 4000 4300 4000
+$Sheet
+S 650  650  800  700 
+U 5C356C07
+F0 "Power" 60
+F1 "power.sch" 60
+$EndSheet
+$Sheet
+S 5200 3250 600  800 
+U 5C356D9E
+F0 "Envelope" 60
+F1 "vca.sch" 60
+$EndSheet
+$Sheet
+S 6300 3250 600  800 
+U 5C357081
+F0 "Mixer" 60
+F1 "mixer.sch" 60
+$EndSheet
+$Sheet
+S 3450 700  600  800 
+U 5C35738C
+F0 "LFO Modulation and Routing" 60
+F1 "lfo.sch" 60
+$EndSheet
+$Sheet
+S 7200 3250 600  800 
+U 5C357E40
+F0 "Output and Connectors" 60
+F1 "out.sch" 60
+$EndSheet
 $EndSCHEMATC

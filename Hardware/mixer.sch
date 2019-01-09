@@ -35,7 +35,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 7
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -45,20 +45,20 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 9050 1900 2    60   Output ~ 0
+Text HLabel 2200 2150 0    60   Input ~ 0
 osc1
-Text HLabel 9050 2000 2    60   Output ~ 0
+Text HLabel 2200 2250 0    60   Input ~ 0
 osc2
-Text HLabel 9050 2100 2    60   Output ~ 0
+Text HLabel 2200 2350 0    60   Input ~ 0
 osc3
-Text HLabel 9050 2200 2    60   Output ~ 0
+Text HLabel 2200 2450 0    60   Input ~ 0
 osc4
-Text HLabel 9050 2300 2    60   Output ~ 0
+Text HLabel 2200 2550 0    60   Input ~ 0
 osc5
-Text HLabel 9050 2400 2    60   Output ~ 0
+Text HLabel 2200 2650 0    60   Input ~ 0
 osc6
-Text HLabel 9050 2500 2    60   Output ~ 0
+Text HLabel 2200 2750 0    60   Input ~ 0
 osc7
-Text HLabel 9050 2600 2    60   Output ~ 0
+Text HLabel 2200 2850 0    60   Input ~ 0
 osc8
 $EndSCHEMATC
