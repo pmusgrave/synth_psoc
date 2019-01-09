@@ -31,6 +31,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:synth_psoc-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -96,25 +97,25 @@ F0 "Power" 60
 F1 "power.sch" 60
 $EndSheet
 $Sheet
-S 5200 3250 600  800 
+S 5350 3250 600  800 
 U 5C356D9E
 F0 "Envelope" 60
 F1 "vca.sch" 60
 $EndSheet
 $Sheet
-S 6300 3250 600  800 
+S 6450 3250 600  800 
 U 5C357081
 F0 "Mixer" 60
 F1 "mixer.sch" 60
 $EndSheet
 $Sheet
-S 3450 700  600  800 
+S 4300 1750 600  800 
 U 5C35738C
 F0 "LFO Modulation and Routing" 60
 F1 "lfo.sch" 60
 $EndSheet
 $Sheet
-S 7200 3250 600  800 
+S 7350 3250 600  800 
 U 5C357E40
 F0 "Output and Connectors" 60
 F1 "out.sch" 60
