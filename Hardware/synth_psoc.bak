@@ -64,29 +64,5 @@ S 1950 750  550  800
 U 5C355489
 F0 "Filters" 60
 F1 "vcf.sch" 60
-F2 "osc1" I L 1950 800 60 
-F3 "osc2" I L 1950 900 60 
-F4 "osc3" I L 1950 1000 60 
-F5 "osc4" I L 1950 1100 60 
-F6 "osc5" I L 1950 1200 60 
-F7 "osc6" I L 1950 1300 60 
-F8 "osc7" I L 1950 1400 60 
-F9 "osc8" I L 1950 1500 60 
 $EndSheet
-Wire Wire Line
-	1550 800  1950 800 
-Wire Wire Line
-	1550 900  1950 900 
-Wire Wire Line
-	1550 1000 1950 1000
-Wire Wire Line
-	1550 1100 1950 1100
-Wire Wire Line
-	1550 1200 1950 1200
-Wire Wire Line
-	1550 1300 1950 1300
-Wire Wire Line
-	1550 1400 1950 1400
-Wire Wire Line
-	1550 1500 1950 1500
 $EndSCHEMATC
