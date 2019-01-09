@@ -96,9 +96,7 @@ F 3 "" H 5900 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6150 1050 6300 1050
-Wire Wire Line
-	6300 1050 6800 1050
+	6150 1050 6800 1050
 Wire Wire Line
 	6300 1050 6300 1600
 Wire Wire Line
@@ -119,9 +117,7 @@ F 3 "" H 4550 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4250 950  4550 950 
-Wire Wire Line
-	4550 950  5550 950 
+	4250 950  5550 950 
 Wire Wire Line
 	3950 950  3250 950 
 Wire Wire Line
@@ -143,7 +139,7 @@ Connection ~ 4550 950
 Text HLabel 3250 1300 0    60   Input ~ 0
 lfo1
 Text HLabel 3250 1500 0    60   Input ~ 0
-adsr1
+level1
 $Comp
 L SW_DPDT_x2 SW?
 U 1 1 5C35A0BC
