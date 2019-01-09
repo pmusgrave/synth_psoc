@@ -1,0 +1,19 @@
+* E:\Dropbox\PSYNTH\Simulation\P-Channel JFET compressor.asc
+R1 N002 N001 22k
+R3 N005 N006 1Meg
+V1 N001 0 PULSE(0 3.3 0 0 0 .001 .002)
+V2 N005 0 PULSE(0 3.3 0 .3 0 .1 .2)
+V3 15 0 15
+V4 0 -15 15
+XU1 N002 N003 15 -15 N003 AD795
+R4 0 N003 10k
+C1 N004 N003 220µ
+R5 N004 0 100k
+J1 N002 N006 0 PJF
+.model NJF NJF
+.model PJF PJF
+.lib C:\Users\psmus\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.jft
+.tran 0 1 0 .01
+.lib ADI1.lib
+.backanno
+.end
