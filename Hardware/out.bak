@@ -189,4 +189,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 1550 1650 0    60   Input ~ 0
+main_output
 $EndSCHEMATC
