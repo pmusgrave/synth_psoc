@@ -19,3 +19,7 @@
 *Export/PSoCCreatorExportIDE.xml
 *REBUILD.log
 *Backup*
+Simulation/*.raw
+Simulation/*.log
+Simulation/*.defs
+Hardware/*.tmp
