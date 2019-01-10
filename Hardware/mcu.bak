@@ -179,7 +179,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 8
+Sheet 8 7
 Title ""
 Date ""
 Rev ""
@@ -793,4 +793,6 @@ Text HLabel 10400 3750 2    60   Output ~ 0
 envelope_pwm_3
 Text HLabel 10400 3850 2    60   Output ~ 0
 envelope_pwm_4
+Text Notes 7650 1250 0    60   ~ 0
+If I go with that key selector idea, \nthen all the frequency knobs \nshould have center detents. The \nothers should not.
 $EndSCHEMATC

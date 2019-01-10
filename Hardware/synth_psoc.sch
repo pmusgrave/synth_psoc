@@ -179,7 +179,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 8
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -234,7 +234,7 @@ $EndSheet
 $Sheet
 S 6900 3400 600  800 
 U 5C357081
-F0 "Mixer" 60
+F0 "Mixer and output connectors" 60
 F1 "mixer.sch" 60
 F2 "osc1" I L 6900 3450 60 
 F3 "osc2" I L 6900 3550 60 
@@ -251,13 +251,6 @@ F2 "lfo1" O R 4000 5000 60
 F3 "lfo2" O R 4000 5100 60 
 F4 "lfo3" O R 4000 5200 60 
 F5 "lfo4" O R 4000 5300 60 
-$EndSheet
-$Sheet
-S 7950 3400 700  800 
-U 5C357E40
-F0 "Output and Connectors" 60
-F1 "out.sch" 60
-F2 "main_output" I L 7950 3900 60 
 $EndSheet
 Wire Wire Line
 	3250 3450 3850 3450
@@ -329,6 +322,4 @@ Wire Wire Line
 	3250 4500 5500 4500
 Wire Wire Line
 	5500 4750 3250 4750
-Wire Wire Line
-	7950 3900 7500 3900
 $EndSCHEMATC

@@ -179,7 +179,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 8
+Sheet 3 7
 Title ""
 Date ""
 Rev ""
@@ -312,13 +312,13 @@ F 3 "" H 1550 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 3200 1550 3100
+	1550 3100 1550 3200
 Wire Wire Line
 	1900 2950 1900 3300
 Wire Wire Line
 	1900 3150 1550 3150
 Connection ~ 1550 3150
-Text GLabel 2000 2950 2    60   Input ~ 0
+Text GLabel 2900 2850 2    60   Input ~ 0
 VREF
 Wire Wire Line
 	2000 2950 1900 2950
@@ -433,4 +433,57 @@ F 3 "" H 5950 3100 50  0001 C CNN
 	1    5950 3100
 	1    0    0    -1  
 $EndComp
+$Comp
+L TL074CN U?
+U 1 1 5C39B9EB
+P 2300 2850
+F 0 "U?" H 2100 3100 60  0000 C CNN
+F 1 "TL074CN" H 2500 2650 60  0000 L CNN
+F 2 "digikey-footprints:DIP-14_W3mm" H 2500 3050 60  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071a.pdf" H 2500 3150 60  0001 L CNN
+F 4 "296-1777-5-ND" H 2500 3250 60  0001 L CNN "Digi-Key_PN"
+F 5 "TL074CN" H 2500 3350 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 2500 3450 60  0001 L CNN "Category"
+F 7 "Linear - Amplifiers - Instrumentation, OP Amps, Buffer Amps" H 2500 3550 60  0001 L CNN "Family"
+F 8 "http://www.ti.com/lit/ds/symlink/tl071a.pdf" H 2500 3650 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/texas-instruments/TL074CN/296-1777-5-ND/277423" H 2500 3750 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC OPAMP JFET 3MHZ 14DIP" H 2500 3850 60  0001 L CNN "Description"
+F 11 "Texas Instruments" H 2500 3950 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2500 4050 60  0001 L CNN "Status"
+	1    2300 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C39BA81
+P 2300 3050
+F 0 "#PWR?" H 2300 2800 50  0001 C CNN
+F 1 "GND" H 2300 2900 50  0000 C CNN
+F 2 "" H 2300 3050 50  0001 C CNN
+F 3 "" H 2300 3050 50  0001 C CNN
+	1    2300 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +15V #PWR?
+U 1 1 5C39BAA7
+P 2300 2650
+F 0 "#PWR?" H 2300 2500 50  0001 C CNN
+F 1 "+15V" H 2300 2790 50  0000 C CNN
+F 2 "" H 2300 2650 50  0001 C CNN
+F 3 "" H 2300 2650 50  0001 C CNN
+	1    2300 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2850 2900 2850
+Wire Wire Line
+	2700 2850 2700 2400
+Wire Wire Line
+	2700 2400 1900 2400
+Wire Wire Line
+	1900 2400 1900 2750
+Wire Wire Line
+	1900 2750 2000 2750
+Connection ~ 2700 2850
 $EndSCHEMATC
