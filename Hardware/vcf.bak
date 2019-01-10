@@ -197,12 +197,12 @@ Text HLabel 1700 1550 0    60   Input ~ 0
 osc3
 Text HLabel 1700 1650 0    60   Input ~ 0
 osc4
-Text HLabel 1700 1750 0    60   Input ~ 0
-osc5
-Text HLabel 1700 1850 0    60   Input ~ 0
-osc6
-Text HLabel 1700 1950 0    60   Input ~ 0
-osc7
-Text HLabel 1700 2050 0    60   Input ~ 0
-osc8
+Text HLabel 8800 1350 2    60   Input ~ 0
+filter_out_1
+Text HLabel 8800 1450 2    60   Input ~ 0
+filter_out_2
+Text HLabel 8800 1550 2    60   Input ~ 0
+filter_out_3
+Text HLabel 8800 1650 2    60   Input ~ 0
+filter_out_4
 $EndSCHEMATC

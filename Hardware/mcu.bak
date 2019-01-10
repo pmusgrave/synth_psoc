@@ -793,4 +793,12 @@ Wire Wire Line
 	10850 3250 10650 3250
 Wire Wire Line
 	10650 3350 10850 3350
+Text HLabel 10400 3550 2    60   Output ~ 0
+envelope_pwm_1
+Text HLabel 10400 3650 2    60   Output ~ 0
+envelope_pwm_2
+Text HLabel 10400 3750 2    60   Output ~ 0
+envelope_pwm_3
+Text HLabel 10400 3850 2    60   Output ~ 0
+envelope_pwm_4
 $EndSCHEMATC

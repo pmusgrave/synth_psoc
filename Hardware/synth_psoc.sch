@@ -190,33 +190,19 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 3250 3250 650  800 
-U 5C3546FC
-F0 "Microcontroller" 60
-F1 "mcu.sch" 60
-F2 "osc1" O R 3900 3300 60 
-F3 "osc2" O R 3900 3400 60 
-F4 "osc3" O R 3900 3500 60 
-F5 "osc4" O R 3900 3600 60 
-$EndSheet
-$Sheet
-S 4300 3250 550  800 
+S 3850 3400 1000 450 
 U 5C355489
 F0 "Filters" 60
 F1 "vcf.sch" 60
-F2 "osc1" I L 4300 3300 60 
-F3 "osc2" I L 4300 3400 60 
-F4 "osc3" I L 4300 3500 60 
-F5 "osc4" I L 4300 3600 60 
+F2 "osc1" I L 3850 3450 60 
+F3 "osc2" I L 3850 3550 60 
+F4 "osc3" I L 3850 3650 60 
+F5 "osc4" I L 3850 3750 60 
+F6 "filter_out_1" I R 4850 3450 60 
+F7 "filter_out_2" I R 4850 3550 60 
+F8 "filter_out_3" I R 4850 3650 60 
+F9 "filter_out_4" I R 4850 3750 60 
 $EndSheet
-Wire Wire Line
-	3900 3300 4300 3300
-Wire Wire Line
-	3900 3400 4300 3400
-Wire Wire Line
-	3900 3500 4300 3500
-Wire Wire Line
-	3900 3600 4300 3600
 $Sheet
 S 650  650  800  700 
 U 5C356C07
@@ -224,27 +210,125 @@ F0 "Power" 60
 F1 "power.sch" 60
 $EndSheet
 $Sheet
-S 5350 3250 600  800 
+S 5500 3400 900  1450
 U 5C356D9E
 F0 "Envelope" 60
 F1 "vca.sch" 60
+F2 "osc1" I L 5500 3450 60 
+F3 "osc2" I L 5500 3550 60 
+F4 "osc3" I L 5500 3650 60 
+F5 "osc4" I L 5500 3750 60 
+F6 "lfo1" I L 5500 3900 60 
+F7 "level1" I L 5500 4000 60 
+F8 "env_out_1" O R 6400 3450 60 
+F9 "lfo2" I L 5500 4150 60 
+F10 "level2" I L 5500 4250 60 
+F11 "env_out_2" O R 6400 3550 60 
+F12 "lfo3" I L 5500 4400 60 
+F13 "level3" I L 5500 4500 60 
+F14 "env_out_3" O R 6400 3650 60 
+F15 "lfo4" I L 5500 4650 60 
+F16 "level4" I L 5500 4750 60 
+F17 "env_out_4" O R 6400 3750 60 
 $EndSheet
 $Sheet
-S 6450 3250 600  800 
+S 6900 3400 600  800 
 U 5C357081
 F0 "Mixer" 60
 F1 "mixer.sch" 60
+F2 "osc1" I L 6900 3450 60 
+F3 "osc2" I L 6900 3550 60 
+F4 "osc3" I L 6900 3650 60 
+F5 "osc4" I L 6900 3750 60 
+F6 "mix_out" O R 7500 3900 60 
 $EndSheet
 $Sheet
-S 4300 1750 600  800 
+S 3400 4900 600  800 
 U 5C35738C
 F0 "LFO Modulation and Routing" 60
 F1 "lfo.sch" 60
+F2 "lfo1" O R 4000 5000 60 
+F3 "lfo2" O R 4000 5100 60 
+F4 "lfo3" O R 4000 5200 60 
+F5 "lfo4" O R 4000 5300 60 
 $EndSheet
 $Sheet
-S 7350 3250 600  800 
+S 7950 3400 700  800 
 U 5C357E40
 F0 "Output and Connectors" 60
 F1 "out.sch" 60
+F2 "main_output" I L 7950 3900 60 
 $EndSheet
+Wire Wire Line
+	3250 3450 3850 3450
+Wire Wire Line
+	3250 3550 3850 3550
+Wire Wire Line
+	3250 3650 3850 3650
+Wire Wire Line
+	3250 3750 3850 3750
+Wire Wire Line
+	4850 3450 5500 3450
+Wire Wire Line
+	4850 3550 5500 3550
+Wire Wire Line
+	4850 3650 5500 3650
+Wire Wire Line
+	4850 3750 5500 3750
+Wire Wire Line
+	6400 3450 6900 3450
+Wire Wire Line
+	6400 3550 6900 3550
+Wire Wire Line
+	6400 3650 6900 3650
+Wire Wire Line
+	6400 3750 6900 3750
+Wire Wire Line
+	4000 5000 5050 5000
+Wire Wire Line
+	5050 5000 5050 3900
+Wire Wire Line
+	5050 3900 5500 3900
+Wire Wire Line
+	5500 4150 5150 4150
+Wire Wire Line
+	5150 4150 5150 5100
+Wire Wire Line
+	5150 5100 4000 5100
+Wire Wire Line
+	5500 4400 5250 4400
+Wire Wire Line
+	5250 4400 5250 5200
+Wire Wire Line
+	5250 5200 4000 5200
+Wire Wire Line
+	5500 4650 5350 4650
+Wire Wire Line
+	5350 4650 5350 5300
+Wire Wire Line
+	5350 5300 4000 5300
+$Sheet
+S 2350 3400 900  1400
+U 5C3546FC
+F0 "Microcontroller" 60
+F1 "mcu.sch" 60
+F2 "osc1" O R 3250 3450 60 
+F3 "osc2" O R 3250 3550 60 
+F4 "osc3" O R 3250 3650 60 
+F5 "osc4" O R 3250 3750 60 
+F6 "envelope_pwm_1" O R 3250 4000 60 
+F7 "envelope_pwm_2" O R 3250 4250 60 
+F8 "envelope_pwm_3" O R 3250 4500 60 
+F9 "envelope_pwm_4" O R 3250 4750 60 
+$EndSheet
+Wire Wire Line
+	3250 4000 5500 4000
+Wire Wire Line
+	5500 4250 3250 4250
+Wire Wire Line
+	3250 4500 5500 4500
+Wire Wire Line
+	5500 4750 3250 4750
+Wire Wire Line
+	7950 3900 7500 3900
 $EndSCHEMATC

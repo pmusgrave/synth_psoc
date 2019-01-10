@@ -179,7 +179,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 8
+Sheet 4 8
 Title ""
 Date ""
 Rev ""
@@ -191,20 +191,6 @@ Comment4 ""
 $EndDescr
 Text HLabel 3250 950  0    60   Input ~ 0
 osc1
-Text HLabel 950  750  0    60   Input ~ 0
-osc2
-Text HLabel 950  850  0    60   Input ~ 0
-osc3
-Text HLabel 950  950  0    60   Input ~ 0
-osc4
-Text HLabel 950  1050 0    60   Input ~ 0
-osc5
-Text HLabel 950  1150 0    60   Input ~ 0
-osc6
-Text HLabel 950  1250 0    60   Input ~ 0
-osc7
-Text HLabel 950  1350 0    60   Input ~ 0
-osc8
 $Comp
 L Q_PJFET_DSG Q?
 U 1 1 5C359797
@@ -301,4 +287,298 @@ Wire Wire Line
 Text HLabel 6800 1050 2    60   Output ~ 0
 env_out_1
 Connection ~ 6300 1050
+Text HLabel 3250 2350 0    60   Input ~ 0
+osc2
+$Comp
+L Q_PJFET_DSG Q?
+U 1 1 5C36E8D9
+P 4450 2800
+F 0 "Q?" H 4650 2850 50  0000 L CNN
+F 1 "MMBFJ177" H 4650 2750 50  0000 L CNN
+F 2 "" H 4650 2900 50  0001 C CNN
+F 3 "" H 4450 2800 50  0001 C CNN
+	1    4450 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5C36E8DF
+P 4100 2350
+F 0 "R?" V 4180 2350 50  0000 C CNN
+F 1 "22k" V 4100 2350 50  0000 C CNN
+F 2 "" V 4030 2350 50  0001 C CNN
+F 3 "" H 4100 2350 50  0001 C CNN
+	1    4100 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L TL074 U?
+U 1 1 5C36E8E5
+P 5850 2450
+F 0 "U?" H 5850 2650 50  0000 L CNN
+F 1 "TL074" H 5850 2250 50  0000 L CNN
+F 2 "" H 5800 2550 50  0001 C CNN
+F 3 "" H 5900 2650 50  0001 C CNN
+	1    5850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2450 6800 2450
+Wire Wire Line
+	6300 2450 6300 3000
+Wire Wire Line
+	6300 3000 5400 3000
+Wire Wire Line
+	5400 3000 5400 2550
+Wire Wire Line
+	5400 2550 5550 2550
+$Comp
+L GNDA #PWR?
+U 1 1 5C36E8F0
+P 4550 3000
+F 0 "#PWR?" H 4550 2750 50  0001 C CNN
+F 1 "GNDA" H 4550 2850 50  0000 C CNN
+F 2 "" H 4550 3000 50  0001 C CNN
+F 3 "" H 4550 3000 50  0001 C CNN
+	1    4550 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2350 5550 2350
+Wire Wire Line
+	3950 2350 3250 2350
+Wire Wire Line
+	4550 2600 4550 2350
+$Comp
+L R R?
+U 1 1 5C36E8F9
+P 4000 2800
+F 0 "R?" V 4080 2800 50  0000 C CNN
+F 1 "1MEG" V 4000 2800 50  0000 C CNN
+F 2 "" V 3930 2800 50  0001 C CNN
+F 3 "" H 4000 2800 50  0001 C CNN
+	1    4000 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 2800 4250 2800
+Connection ~ 4550 2350
+Text HLabel 3250 2700 0    60   Input ~ 0
+lfo2
+Text HLabel 3250 2900 0    60   Input ~ 0
+level2
+$Comp
+L SW_DPDT_x2 SW?
+U 1 1 5C36E903
+P 3650 2800
+F 0 "SW?" H 3650 2970 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 3650 2600 50  0000 C CNN
+F 2 "" H 3650 2800 50  0001 C CNN
+F 3 "" H 3650 2800 50  0001 C CNN
+	1    3650 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3250 2700 3450 2700
+Wire Wire Line
+	3250 2900 3450 2900
+Text HLabel 6800 2450 2    60   Output ~ 0
+env_out_2
+Connection ~ 6300 2450
+Text HLabel 3250 3600 0    60   Input ~ 0
+osc3
+$Comp
+L Q_PJFET_DSG Q?
+U 1 1 5C36E9D1
+P 4450 4050
+F 0 "Q?" H 4650 4100 50  0000 L CNN
+F 1 "MMBFJ177" H 4650 4000 50  0000 L CNN
+F 2 "" H 4650 4150 50  0001 C CNN
+F 3 "" H 4450 4050 50  0001 C CNN
+	1    4450 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5C36E9D7
+P 4100 3600
+F 0 "R?" V 4180 3600 50  0000 C CNN
+F 1 "22k" V 4100 3600 50  0000 C CNN
+F 2 "" V 4030 3600 50  0001 C CNN
+F 3 "" H 4100 3600 50  0001 C CNN
+	1    4100 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L TL074 U?
+U 1 1 5C36E9DD
+P 5850 3700
+F 0 "U?" H 5850 3900 50  0000 L CNN
+F 1 "TL074" H 5850 3500 50  0000 L CNN
+F 2 "" H 5800 3800 50  0001 C CNN
+F 3 "" H 5900 3900 50  0001 C CNN
+	1    5850 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3700 6800 3700
+Wire Wire Line
+	6300 3700 6300 4250
+Wire Wire Line
+	6300 4250 5400 4250
+Wire Wire Line
+	5400 4250 5400 3800
+Wire Wire Line
+	5400 3800 5550 3800
+$Comp
+L GNDA #PWR?
+U 1 1 5C36E9E8
+P 4550 4250
+F 0 "#PWR?" H 4550 4000 50  0001 C CNN
+F 1 "GNDA" H 4550 4100 50  0000 C CNN
+F 2 "" H 4550 4250 50  0001 C CNN
+F 3 "" H 4550 4250 50  0001 C CNN
+	1    4550 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3600 5550 3600
+Wire Wire Line
+	3950 3600 3250 3600
+Wire Wire Line
+	4550 3850 4550 3600
+$Comp
+L R R?
+U 1 1 5C36E9F1
+P 4000 4050
+F 0 "R?" V 4080 4050 50  0000 C CNN
+F 1 "1MEG" V 4000 4050 50  0000 C CNN
+F 2 "" V 3930 4050 50  0001 C CNN
+F 3 "" H 4000 4050 50  0001 C CNN
+	1    4000 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 4050 4250 4050
+Connection ~ 4550 3600
+Text HLabel 3250 3950 0    60   Input ~ 0
+lfo3
+Text HLabel 3250 4150 0    60   Input ~ 0
+level3
+$Comp
+L SW_DPDT_x2 SW?
+U 1 1 5C36E9FB
+P 3650 4050
+F 0 "SW?" H 3650 4220 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 3650 3850 50  0000 C CNN
+F 2 "" H 3650 4050 50  0001 C CNN
+F 3 "" H 3650 4050 50  0001 C CNN
+	1    3650 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3250 3950 3450 3950
+Wire Wire Line
+	3250 4150 3450 4150
+Text HLabel 6800 3700 2    60   Output ~ 0
+env_out_3
+Connection ~ 6300 3700
+Text HLabel 3250 4950 0    60   Input ~ 0
+osc4
+$Comp
+L Q_PJFET_DSG Q?
+U 1 1 5C36EAC9
+P 4450 5400
+F 0 "Q?" H 4650 5450 50  0000 L CNN
+F 1 "MMBFJ177" H 4650 5350 50  0000 L CNN
+F 2 "" H 4650 5500 50  0001 C CNN
+F 3 "" H 4450 5400 50  0001 C CNN
+	1    4450 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5C36EACF
+P 4100 4950
+F 0 "R?" V 4180 4950 50  0000 C CNN
+F 1 "22k" V 4100 4950 50  0000 C CNN
+F 2 "" V 4030 4950 50  0001 C CNN
+F 3 "" H 4100 4950 50  0001 C CNN
+	1    4100 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L TL074 U?
+U 1 1 5C36EAD5
+P 5850 5050
+F 0 "U?" H 5850 5250 50  0000 L CNN
+F 1 "TL074" H 5850 4850 50  0000 L CNN
+F 2 "" H 5800 5150 50  0001 C CNN
+F 3 "" H 5900 5250 50  0001 C CNN
+	1    5850 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 5050 6800 5050
+Wire Wire Line
+	6300 5050 6300 5600
+Wire Wire Line
+	6300 5600 5400 5600
+Wire Wire Line
+	5400 5600 5400 5150
+Wire Wire Line
+	5400 5150 5550 5150
+$Comp
+L GNDA #PWR?
+U 1 1 5C36EAE0
+P 4550 5600
+F 0 "#PWR?" H 4550 5350 50  0001 C CNN
+F 1 "GNDA" H 4550 5450 50  0000 C CNN
+F 2 "" H 4550 5600 50  0001 C CNN
+F 3 "" H 4550 5600 50  0001 C CNN
+	1    4550 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4950 5550 4950
+Wire Wire Line
+	3950 4950 3250 4950
+Wire Wire Line
+	4550 5200 4550 4950
+$Comp
+L R R?
+U 1 1 5C36EAE9
+P 4000 5400
+F 0 "R?" V 4080 5400 50  0000 C CNN
+F 1 "1MEG" V 4000 5400 50  0000 C CNN
+F 2 "" V 3930 5400 50  0001 C CNN
+F 3 "" H 4000 5400 50  0001 C CNN
+	1    4000 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 5400 4250 5400
+Connection ~ 4550 4950
+Text HLabel 3250 5300 0    60   Input ~ 0
+lfo4
+Text HLabel 3250 5500 0    60   Input ~ 0
+level4
+$Comp
+L SW_DPDT_x2 SW?
+U 1 1 5C36EAF3
+P 3650 5400
+F 0 "SW?" H 3650 5570 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 3650 5200 50  0000 C CNN
+F 2 "" H 3650 5400 50  0001 C CNN
+F 3 "" H 3650 5400 50  0001 C CNN
+	1    3650 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3250 5300 3450 5300
+Wire Wire Line
+	3250 5500 3450 5500
+Text HLabel 6800 5050 2    60   Output ~ 0
+env_out_4
+Connection ~ 6300 5050
 $EndSCHEMATC
