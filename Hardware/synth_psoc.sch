@@ -240,7 +240,6 @@ F2 "osc1" I L 7500 3050 60
 F3 "osc2" I L 7500 3150 60 
 F4 "osc3" I L 7500 3250 60 
 F5 "osc4" I L 7500 3350 60 
-F6 "mix_out" O R 8100 3500 60 
 $EndSheet
 $Sheet
 S 4000 4500 600  800 
