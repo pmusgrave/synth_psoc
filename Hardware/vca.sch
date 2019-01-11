@@ -248,7 +248,7 @@ F 3 "" H 4000 1400 50  0001 C CNN
 $EndComp
 Text HLabel 2850 1300 0    60   Input ~ 0
 lfo1
-Text HLabel 3250 1500 0    60   Input ~ 0
+Text HLabel 2900 1500 0    60   Input ~ 0
 level1
 $Comp
 L SW_DPDT_x2 SW1
@@ -322,7 +322,7 @@ F 3 "" H 4000 2800 50  0001 C CNN
 $EndComp
 Text HLabel 2950 2700 0    60   Input ~ 0
 lfo2
-Text HLabel 3250 2900 0    60   Input ~ 0
+Text HLabel 2950 2900 0    60   Input ~ 0
 level2
 $Comp
 L SW_DPDT_x2 SW1
@@ -396,7 +396,7 @@ F 3 "" H 4000 4050 50  0001 C CNN
 $EndComp
 Text HLabel 2850 3950 0    60   Input ~ 0
 lfo3
-Text HLabel 3250 4150 0    60   Input ~ 0
+Text HLabel 2850 4150 0    60   Input ~ 0
 level3
 $Comp
 L SW_DPDT_x2 SW2
@@ -470,7 +470,7 @@ F 3 "" H 4000 5400 50  0001 C CNN
 $EndComp
 Text HLabel 2850 5300 0    60   Input ~ 0
 lfo4
-Text HLabel 3250 5500 0    60   Input ~ 0
+Text HLabel 2850 5500 0    60   Input ~ 0
 level4
 $Comp
 L SW_DPDT_x2 SW2
@@ -867,7 +867,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 1300 3450 1300
 Wire Wire Line
-	3250 1500 3450 1500
+	2900 1500 3450 1500
 Connection ~ 6300 1050
 Wire Wire Line
 	6300 2450 6300 3000
@@ -889,7 +889,7 @@ Wire Wire Line
 Wire Wire Line
 	3400 2700 3450 2700
 Wire Wire Line
-	3250 2900 3450 2900
+	2950 2900 3450 2900
 Connection ~ 6300 2450
 Wire Wire Line
 	6300 3700 6300 4250
@@ -911,7 +911,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 3950 3450 3950
 Wire Wire Line
-	3250 4150 3450 4150
+	2850 4150 3450 4150
 Connection ~ 6300 3700
 Wire Wire Line
 	6300 5050 6300 5600
@@ -933,7 +933,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 5300 3450 5300
 Wire Wire Line
-	3250 5500 3450 5500
+	2850 5500 3450 5500
 Connection ~ 6300 5050
 Wire Wire Line
 	5200 900  5200 950 
