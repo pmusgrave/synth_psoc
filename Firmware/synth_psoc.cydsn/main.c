@@ -22,42 +22,51 @@ int main(void)
 {
     CyGlobalIntEnable;
 
-    // Start all ADSR components
-    InitEnvelopeGenerator();
-    envelope_trigger_StartEx(envelope_trigger_vector);
-    ENVELOPE_TIMER_Start();
-    ENVELOPE_TIMER_INT_StartEx(envelope_timer_vect);
-    
     // Start all ADC components
-    ADC_SAR_Seq_1_Start();
-    ADC_SAR_Seq_1_StartConvert();
+    ADC_SAR_Seq_Start();
+    ADC_SAR_Seq_StartConvert();
     ADC_EOC_INT_StartEx(ADC_EOC);
+    CyDelayUs(10);
     
     // Init main oscillator, triangle, saw wave PWM, and LFO components
     InitOscillator();
-    main_osc_PWM_Start();
+    main_osc_PWM_0_Start();
     main_osc_PWM_1_Start();
     main_osc_PWM_2_Start();
     main_osc_PWM_3_Start();
-    //LFO_PWM_Start();
-    LED_PWM_Start();
-    RAMP_PWM_Start();
-    RAMP_TIMER_Start();
-    RAMP_TIMER_INT_StartEx(ramp_timer_vect);
+    
+    // and interrupts to change PWM values on overflow
+    osc_0_ovf_StartEx(OSC_0_OVF_VECT);
+    osc_1_ovf_StartEx(OSC_1_OVF_VECT);
+    osc_2_ovf_StartEx(OSC_2_OVF_VECT);
+    osc_3_ovf_StartEx(OSC_3_OVF_VECT);
     
     current_mode = NOT_TRIGGERED;
     
-    green_led_Write(1);
-
     while(1){
         if(pwm_update_flag != 0){ 
             pwm_update_flag = 0;
             
+               
+            freq = ADC_SAR_Seq_GetResult16(0);
+            pulse_width = ADC_SAR_Seq_GetResult16(1);  
+            
+            freq_1 = ADC_SAR_Seq_GetResult16(2);
+            pulse_width_1 = ADC_SAR_Seq_GetResult16(3);  
+            
+            freq_2 = ADC_SAR_Seq_GetResult16(4);
+            pulse_width_2 = ADC_SAR_Seq_GetResult16(5);  
+            
+            freq_3 = ADC_SAR_Seq_GetResult16(6);
+            pulse_width_3 = ADC_SAR_Seq_GetResult16(7);  
+            
+    
             SetMainOscValue();
       
             //LFO_PWM_WritePeriod((uint16) 65535/freq);
             //LFO_PWM_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
             
+            /*
             switch(current_mode){
             case NOT_TRIGGERED:
                 attack_debug_led_Write(0);
@@ -128,9 +137,10 @@ int main(void)
             
             RAMP_TIMER_WritePeriod(freq);
             RAMP_TIMER_WriteCompare(freq);
+            */
         }
         
-        RAMP_PWM_WriteCompare((ENVELOPE_MAX_PERIOD / freq) * RAMP_TIMER_ReadCounter());
+        //RAMP_PWM_WriteCompare((ENVELOPE_MAX_PERIOD / freq) * RAMP_TIMER_ReadCounter());
     }
 }
 /* [] END OF FILE */

@@ -4,9 +4,10 @@
 #include "cytypes.h"
 
 CY_ISR_PROTO(ADC_EOC);
-CY_ISR_PROTO(envelope_trigger_vector);
-CY_ISR_PROTO(envelope_timer_vect);
-CY_ISR_PROTO(ramp_timer_vect);
+CY_ISR_PROTO(OSC_0_OVF_VECT);
+CY_ISR_PROTO(OSC_1_OVF_VECT);
+CY_ISR_PROTO(OSC_2_OVF_VECT);
+CY_ISR_PROTO(OSC_3_OVF_VECT);
 
 #endif
 /* [] END OF FILE */
