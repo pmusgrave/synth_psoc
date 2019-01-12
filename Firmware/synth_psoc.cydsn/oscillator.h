@@ -2,7 +2,7 @@
 #define OSCILLATOR_H
     
 void InitOscillator();
-void SetMainOscValue(float freq, float pulse_width);
+void SetMainOscValue(void);
 
 #endif
 /* [] END OF FILE */

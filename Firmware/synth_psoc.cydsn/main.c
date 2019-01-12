@@ -11,6 +11,12 @@ volatile uint8_t pwm_update_flag = 0;
 volatile uint16_t pwm_value = 0;
 volatile float freq = 0;
 volatile float pulse_width = 0;
+volatile float freq_1 = 0;
+volatile float pulse_width_1 = 0;
+volatile float freq_2 = 0;
+volatile float pulse_width_2 = 0;
+volatile float freq_3 = 0;
+volatile float pulse_width_3 = 0;
 
 int main(void)
 {
@@ -30,6 +36,9 @@ int main(void)
     // Init main oscillator, triangle, saw wave PWM, and LFO components
     InitOscillator();
     main_osc_PWM_Start();
+    main_osc_PWM_1_Start();
+    main_osc_PWM_2_Start();
+    main_osc_PWM_3_Start();
     //LFO_PWM_Start();
     LED_PWM_Start();
     RAMP_PWM_Start();
@@ -44,7 +53,7 @@ int main(void)
         if(pwm_update_flag != 0){ 
             pwm_update_flag = 0;
             
-            SetMainOscValue(freq, pulse_width);
+            SetMainOscValue();
       
             //LFO_PWM_WritePeriod((uint16) 65535/freq);
             //LFO_PWM_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
