@@ -973,8 +973,6 @@ F 3 "" H 4050 4050 50  0001 C CNN
 	1    4050 4050
 	1    0    0    -1  
 $EndComp
-Text Label 4250 3700 0    60   ~ 0
-main_lfo
 Text Label 4050 2800 0    60   ~ 0
 main_lfo
 Text Label 4050 5050 0    60   ~ 0
@@ -987,6 +985,39 @@ Text GLabel 900  3500 0    60   Input ~ 0
 VREF
 Text GLabel 2650 4250 0    60   Input ~ 0
 VREF
+$Comp
+L D_Zener D?
+U 1 1 5C38F192
+P 2300 2850
+F 0 "D?" H 2300 2950 50  0000 C CNN
+F 1 "D_Zener" H 2300 2750 50  0000 C CNN
+F 2 "" H 2300 2850 50  0001 C CNN
+F 3 "" H 2300 2850 50  0001 C CNN
+	1    2300 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C38F259
+P 2300 3000
+F 0 "#PWR?" H 2300 2750 50  0001 C CNN
+F 1 "GND" H 2300 2850 50  0000 C CNN
+F 2 "" H 2300 3000 50  0001 C CNN
+F 3 "" H 2300 3000 50  0001 C CNN
+	1    2300 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5C38F2FA
+P 2300 2350
+F 0 "R?" V 2380 2350 50  0000 C CNN
+F 1 "860" V 2300 2350 50  0000 C CNN
+F 2 "" V 2230 2350 50  0001 C CNN
+F 3 "" H 2300 2350 50  0001 C CNN
+	1    2300 2350
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
 	4750 2800 5100 2800
 Wire Wire Line
@@ -1157,12 +1188,12 @@ Wire Wire Line
 Wire Wire Line
 	3000 3100 2750 3100
 Wire Wire Line
-	2750 3100 2750 3600
+	2750 3600 2750 3100
 Connection ~ 2750 3600
 Wire Wire Line
 	2700 3850 2700 3800
 Wire Wire Line
-	1900 3600 1900 4250
+	1900 2100 1900 4250
 Wire Wire Line
 	1900 4250 1600 4250
 Connection ~ 1900 3600
@@ -1208,4 +1239,40 @@ Wire Wire Line
 	2650 3600 2850 3600
 Wire Wire Line
 	2700 3800 2850 3800
+Wire Wire Line
+	2300 2500 2300 2700
+Wire Wire Line
+	1900 2100 2300 2100
+Wire Wire Line
+	2300 2100 2300 2200
+Text Label 2500 2600 0    60   ~ 0
+lfo_square
+Wire Wire Line
+	2500 2600 2300 2600
+Connection ~ 2300 2600
+Text Label 4250 3700 0    60   ~ 0
+lfo_tri
+$Comp
+L SW_DPDT_x2 SW?
+U 1 1 5C38FB5B
+P 3600 2150
+F 0 "SW?" H 3600 2320 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 3600 1950 50  0000 C CNN
+F 2 "" H 3600 2150 50  0001 C CNN
+F 3 "" H 3600 2150 50  0001 C CNN
+	1    3600 2150
+	-1   0    0    1   
+$EndComp
+Text Label 2800 2250 0    60   ~ 0
+lfo_tri
+Wire Wire Line
+	2800 2250 3400 2250
+Text Label 2800 2050 0    60   ~ 0
+lfo_square
+Wire Wire Line
+	2800 2050 3400 2050
+Text Label 4000 2150 0    60   ~ 0
+main_lfo
+Wire Wire Line
+	4000 2150 3800 2150
 $EndSCHEMATC
