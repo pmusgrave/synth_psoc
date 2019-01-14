@@ -41,6 +41,11 @@ int main(void)
     osc_2_ovf_StartEx(OSC_2_OVF_VECT);
     osc_3_ovf_StartEx(OSC_3_OVF_VECT);
     
+    // Init Capsense
+    CapSense_Buttons_Start();	
+	CapSense_Buttons_InitializeAllBaselines();
+    CapSense_Buttons_ScanEnabledWidgets();
+    
     current_mode = NOT_TRIGGERED;
     
     while(1){
@@ -140,7 +145,16 @@ int main(void)
             */
         }
         
-        //RAMP_PWM_WriteCompare((ENVELOPE_MAX_PERIOD / freq) * RAMP_TIMER_ReadCounter());
+        if(!CapSense_Buttons_IsBusy()) {
+            CapSense_Buttons_UpdateEnabledBaselines();
+            
+            if(CapSense_Buttons_CheckIsAnyWidgetActive()){
+                led_Write(~led_Read());
+            }
+            
+            CapSense_Buttons_ScanEnabledWidgets();
+        }
+        
     }
 }
 /* [] END OF FILE */
