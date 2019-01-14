@@ -239,18 +239,7 @@ Text HLabel 2850 1300 0    60   Input ~ 0
 lfo1
 Text HLabel 2900 1500 0    60   Input ~ 0
 level1
-$Comp
-L SW_DPDT_x2 SW1
-U 1 1 5C35A0BC
-P 3650 1400
-F 0 "SW1" H 3650 1570 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 3650 1200 50  0000 C CNN
-F 2 "" H 3650 1400 50  0001 C CNN
-F 3 "" H 3650 1400 50  0001 C CNN
-	1    3650 1400
-	-1   0    0    1   
-$EndComp
-Text HLabel 6800 1050 2    60   Output ~ 0
+Text HLabel 6950 1300 2    60   Output ~ 0
 env_out_1
 Text HLabel 3250 2350 0    60   Input ~ 0
 osc2
@@ -302,18 +291,7 @@ Text HLabel 2950 2700 0    60   Input ~ 0
 lfo2
 Text HLabel 2950 2900 0    60   Input ~ 0
 level2
-$Comp
-L SW_DPDT_x2 SW1
-U 2 1 5C36E903
-P 3650 2800
-F 0 "SW1" H 3650 2970 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 3650 2600 50  0000 C CNN
-F 2 "" H 3650 2800 50  0001 C CNN
-F 3 "" H 3650 2800 50  0001 C CNN
-	2    3650 2800
-	-1   0    0    1   
-$EndComp
-Text HLabel 6800 2450 2    60   Output ~ 0
+Text HLabel 6950 2700 2    60   Output ~ 0
 env_out_2
 Text HLabel 3250 3600 0    60   Input ~ 0
 osc3
@@ -365,18 +343,7 @@ Text HLabel 2850 3950 0    60   Input ~ 0
 lfo3
 Text HLabel 2850 4150 0    60   Input ~ 0
 level3
-$Comp
-L SW_DPDT_x2 SW2
-U 1 1 5C36E9FB
-P 3650 4050
-F 0 "SW2" H 3650 4220 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 3650 3850 50  0000 C CNN
-F 2 "" H 3650 4050 50  0001 C CNN
-F 3 "" H 3650 4050 50  0001 C CNN
-	1    3650 4050
-	-1   0    0    1   
-$EndComp
-Text HLabel 6800 3700 2    60   Output ~ 0
+Text HLabel 6950 4000 2    60   Output ~ 0
 env_out_3
 Text HLabel 3250 4950 0    60   Input ~ 0
 osc4
@@ -417,18 +384,7 @@ Text HLabel 2850 5300 0    60   Input ~ 0
 lfo4
 Text HLabel 2850 5500 0    60   Input ~ 0
 level4
-$Comp
-L SW_DPDT_x2 SW2
-U 2 1 5C36EAF3
-P 3650 5400
-F 0 "SW2" H 3650 5570 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 3650 5200 50  0000 C CNN
-F 2 "" H 3650 5400 50  0001 C CNN
-F 3 "" H 3650 5400 50  0001 C CNN
-	2    3650 5400
-	-1   0    0    1   
-$EndComp
-Text HLabel 6800 5050 2    60   Output ~ 0
+Text HLabel 6950 5300 2    60   Output ~ 0
 env_out_4
 $Comp
 L GND #PWR?
@@ -660,50 +616,6 @@ F 3 "" H 6550 5050 50  0001 C CNN
 $EndComp
 $Comp
 L R R?
-U 1 1 5C37B8E3
-P 6700 1300
-F 0 "R?" V 6780 1300 50  0000 C CNN
-F 1 "100k" V 6700 1300 50  0000 C CNN
-F 2 "" V 6630 1300 50  0001 C CNN
-F 3 "" H 6700 1300 50  0001 C CNN
-	1    6700 1300
-	-1   0    0    1   
-$EndComp
-$Comp
-L R R?
-U 1 1 5C37B9C7
-P 6700 2700
-F 0 "R?" V 6780 2700 50  0000 C CNN
-F 1 "100k" V 6700 2700 50  0000 C CNN
-F 2 "" V 6630 2700 50  0001 C CNN
-F 3 "" H 6700 2700 50  0001 C CNN
-	1    6700 2700
-	-1   0    0    1   
-$EndComp
-$Comp
-L R R?
-U 1 1 5C37BADF
-P 6700 4000
-F 0 "R?" V 6780 4000 50  0000 C CNN
-F 1 "100k" V 6700 4000 50  0000 C CNN
-F 2 "" V 6630 4000 50  0001 C CNN
-F 3 "" H 6700 4000 50  0001 C CNN
-	1    6700 4000
-	-1   0    0    1   
-$EndComp
-$Comp
-L R R?
-U 1 1 5C37BBB7
-P 6700 5300
-F 0 "R?" V 6780 5300 50  0000 C CNN
-F 1 "100k" V 6700 5300 50  0000 C CNN
-F 2 "" V 6630 5300 50  0001 C CNN
-F 3 "" H 6700 5300 50  0001 C CNN
-	1    6700 5300
-	-1   0    0    1   
-$EndComp
-$Comp
-L R R?
 U 1 1 5C3881CE
 P 1000 1000
 F 0 "R?" V 1080 1000 50  0000 C CNN
@@ -825,8 +737,6 @@ Wire Wire Line
 Connection ~ 4550 4950
 Wire Wire Line
 	3200 5300 3450 5300
-Wire Wire Line
-	2850 5500 3450 5500
 Connection ~ 6300 5050
 Wire Wire Line
 	5200 900  5200 950 
@@ -875,31 +785,19 @@ Wire Wire Line
 Wire Wire Line
 	6150 1050 6450 1050
 Wire Wire Line
-	6650 1050 6800 1050
-Wire Wire Line
 	6700 1150 6700 1050
-Connection ~ 6700 1050
 Wire Wire Line
 	6150 2450 6450 2450
 Wire Wire Line
-	6650 2450 6800 2450
-Wire Wire Line
 	6700 2550 6700 2450
-Connection ~ 6700 2450
 Wire Wire Line
 	6150 3700 6450 3700
 Wire Wire Line
-	6650 3700 6800 3700
-Wire Wire Line
 	6700 3850 6700 3700
-Connection ~ 6700 3700
 Wire Wire Line
 	6150 5050 6450 5050
 Wire Wire Line
-	6650 5050 6800 5050
-Wire Wire Line
 	6700 5150 6700 5050
-Connection ~ 6700 5050
 Wire Wire Line
 	1000 1550 1000 1550
 Wire Wire Line
@@ -1262,4 +1160,83 @@ Wire Wire Line
 Wire Wire Line
 	3850 1050 3850 950 
 Connection ~ 3850 950 
+$Comp
+L CP1_Small C?
+U 1 1 5C3CFE7B
+P 3100 5500
+F 0 "C?" H 3110 5570 50  0000 L CNN
+F 1 "220u" H 3110 5420 50  0000 L CNN
+F 2 "" H 3100 5500 50  0001 C CNN
+F 3 "" H 3100 5500 50  0001 C CNN
+	1    3100 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L POT RV?
+U 1 1 5C3D05BD
+P 6700 1300
+F 0 "RV?" V 6525 1300 50  0000 C CNN
+F 1 "100k" V 6600 1300 50  0000 C CNN
+F 2 "" H 6700 1300 50  0001 C CNN
+F 3 "" H 6700 1300 50  0001 C CNN
+	1    6700 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 1300 6850 1300
+Wire Wire Line
+	6700 1050 6650 1050
+$Comp
+L POT RV?
+U 1 1 5C3D0AB4
+P 6700 2700
+F 0 "RV?" V 6525 2700 50  0000 C CNN
+F 1 "100k" V 6600 2700 50  0000 C CNN
+F 2 "" H 6700 2700 50  0001 C CNN
+F 3 "" H 6700 2700 50  0001 C CNN
+	1    6700 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV?
+U 1 1 5C3D0C1E
+P 6700 4000
+F 0 "RV?" V 6525 4000 50  0000 C CNN
+F 1 "100k" V 6600 4000 50  0000 C CNN
+F 2 "" H 6700 4000 50  0001 C CNN
+F 3 "" H 6700 4000 50  0001 C CNN
+	1    6700 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV?
+U 1 1 5C3D0DC0
+P 6700 5300
+F 0 "RV?" V 6525 5300 50  0000 C CNN
+F 1 "100k" V 6600 5300 50  0000 C CNN
+F 2 "" H 6700 5300 50  0001 C CNN
+F 3 "" H 6700 5300 50  0001 C CNN
+	1    6700 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2700 6850 2700
+Wire Wire Line
+	6700 2450 6650 2450
+Wire Wire Line
+	6950 4000 6850 4000
+Wire Wire Line
+	6700 3700 6650 3700
+Wire Wire Line
+	6950 5300 6850 5300
+Wire Wire Line
+	6700 5050 6650 5050
+Text Notes 6850 1450 0    60   ~ 0
+Volume
+Text Notes 6850 2850 0    60   ~ 0
+Volume
+Text Notes 6850 4150 0    60   ~ 0
+Volume
+Text Notes 6850 5450 0    60   ~ 0
+Volume
 $EndSCHEMATC
