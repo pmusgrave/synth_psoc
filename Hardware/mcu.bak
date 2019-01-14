@@ -721,54 +721,44 @@ F 3 "" H 2900 3200 60  0000 C CNN
 	1    2800 3250
 	-1   0    0    -1  
 $EndComp
-Text Label 4400 2900 0    60   ~ 0
+Text Label 4400 3400 0    60   ~ 0
 osc1_freq_wiper
 Wire Wire Line
 	4400 2900 4200 2900
-Text Label 4400 2700 0    60   ~ 0
+Text Label 4400 3300 0    60   ~ 0
 osc1_pwm_wiper
 Wire Wire Line
 	4400 2700 4200 2700
-Text Label 4400 2600 0    60   ~ 0
+Text Label 4400 3200 0    60   ~ 0
 osc2_freq_wiper
 Wire Wire Line
 	4400 2600 4200 2600
-Text Label 4400 2400 0    60   ~ 0
+Text Label 4400 3100 0    60   ~ 0
 osc2_pwm_wiper
 Wire Wire Line
 	4400 2400 4200 2400
-Text Label 4400 2300 0    60   ~ 0
+Text Label 4400 3000 0    60   ~ 0
 osc3_freq_wiper
 Wire Wire Line
 	4400 2300 4200 2300
-Text Label 4400 2100 0    60   ~ 0
+Text Label 4400 2900 0    60   ~ 0
 osc3_pwm_wiper
 Wire Wire Line
 	4400 2100 4200 2100
-Text Label 4400 2000 0    60   ~ 0
+Text Label 4400 2800 0    60   ~ 0
 osc4_freq_wiper
 Wire Wire Line
 	4400 2000 4200 2000
-Text Label 4450 5200 0    60   ~ 0
+Text Label 4400 2700 0    60   ~ 0
 osc4_pwm_wiper
-Wire Wire Line
-	4450 5200 4200 5200
-Text Label 4400 1100 0    60   ~ 0
+Text Label 4200 5500 0    60   ~ 0
 osc1
-Text Label 4400 1200 0    60   ~ 0
+Text Label 4200 5600 0    60   ~ 0
 osc2
-Text Label 4400 1300 0    60   ~ 0
+Text Label 4400 3500 0    60   ~ 0
 osc3
-Text Label 4400 1400 0    60   ~ 0
+Text Label 4400 3900 0    60   ~ 0
 osc4
-Wire Wire Line
-	4400 1100 4200 1100
-Wire Wire Line
-	4400 1200 4200 1200
-Wire Wire Line
-	4200 1300 4400 1300
-Wire Wire Line
-	4400 1400 4200 1400
 Text Label 10650 3050 2    60   ~ 0
 osc1
 Text Label 10650 3150 2    60   ~ 0
@@ -979,4 +969,30 @@ F 3 "" H 9100 4550 50  0001 C CNN
 	1    9100 4550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4400 3400 4200 3400
+Wire Wire Line
+	4400 3300 4200 3300
+Wire Wire Line
+	4400 3200 4200 3200
+Wire Wire Line
+	4400 3100 4200 3100
+Wire Wire Line
+	4400 3000 4200 3000
+Wire Wire Line
+	4400 2800 4200 2800
+Text Label 4400 2600 0    60   ~ 0
+osc1_speed
+Text Label 4400 2500 0    60   ~ 0
+osc2_speed
+Text Label 4400 2400 0    60   ~ 0
+osc3_speed
+Text Label 4400 2300 0    60   ~ 0
+osc4_speed
+Wire Wire Line
+	4400 2500 4200 2500
+Wire Wire Line
+	4400 3500 4200 3500
+Wire Wire Line
+	4400 3900 4200 3900
 $EndSCHEMATC
