@@ -5,98 +5,30 @@
 
 CY_ISR(ADC_EOC) {
     pwm_update_flag = 1;
-   
-    freq = ADC_SAR_Seq_1_GetResult16(0);
-    pulse_width = ADC_SAR_Seq_1_GetResult16(2);  
-    
-    attack_pot_value = ADC_SAR_Seq_1_GetResult16(ATTACK_POT_ADC_CHANNEL);
-    if(attack_pot_value < 100){
-        attack_pot_value = 1;
-    }    
-    decay_pot_value = ADC_SAR_Seq_1_GetResult16(DECAY_POT_ADC_CHANNEL);
-    if(decay_pot_value < 100){
-        decay_pot_value = 1;
-    }    
-    sustain_pot_value = ADC_SAR_Seq_1_GetResult16(SUSTAIN_POT_ADC_CHANNEL);
-    if(sustain_pot_value < 100){
-        sustain_pot_value = 1;
-    }    
-    release_pot_value = ADC_SAR_Seq_1_GetResult16(RELEASE_POT_ADC_CHANNEL);
-    if(release_pot_value < 100){
-        release_pot_value = 5;
-    }    
+
     ADC_EOC_INT_ClearPending();
 }
 
-CY_ISR(envelope_trigger_vector){
-    //green_led_Write(~green_led_Read());
-    
-    /*
-    switch(current_mode){
-    case NOT_TRIGGERED:
-        current_mode = ATTACK_MODE;
-        pwm_value = 0;
-        break;
-    case SUSTAIN_MODE:
-        current_mode = RELEASE_MODE;
-        break;
-    default:
-        current_mode = current_mode;
-    }
-    */
-    
-    
-    switch(current_mode){
-    case NOT_TRIGGERED:
-        current_mode = ATTACK_MODE;
-        break;
-    case ATTACK_MODE:
-        current_mode = DECAY_MODE;
-        break;
-    case DECAY_MODE:
-        
-        current_mode = SUSTAIN_MODE;
-        break;
-    case SUSTAIN_MODE:
-        
-        current_mode = RELEASE_MODE;
-        break;
-    case RELEASE_MODE:
-        current_mode = NOT_TRIGGERED;
-        break;
-    }
-    
-    
-    envelope_trigger_ClearPending();    
+CY_ISR_PROTO(OSC_0_OVF_VECT){
+    main_osc_PWM_0_WritePeriod((uint16) 65535/freq);
+    main_osc_PWM_0_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
 }
 
-CY_ISR(envelope_timer_vect){  
-    //green_led_Write(~green_led_Read());
+CY_ISR_PROTO(OSC_1_OVF_VECT){
+    main_osc_PWM_1_WritePeriod((uint16) 65535/freq_1);
+    main_osc_PWM_1_WriteCompare((uint16) (65535/freq_1)/(2000/pulse_width_1));
     
-    switch(current_mode){
-    case NOT_TRIGGERED:
-        current_mode = NOT_TRIGGERED;
-        break;
-    case ATTACK_MODE:
-        current_mode = DECAY_MODE;
-        break;
-    case DECAY_MODE:
-        current_mode = SUSTAIN_MODE;
-        break;
-    case SUSTAIN_MODE:
-        current_mode = SUSTAIN_MODE;
-        break;
-    case RELEASE_MODE:
-        current_mode = NOT_TRIGGERED;
-        break;
-    }
-    
-    ENVELOPE_TIMER_ReadStatus();
-    ENVELOPE_TIMER_ClearInterrupt(ENVELOPE_TIMER_INTR_MASK_TC);
 }
 
-CY_ISR(ramp_timer_vect){
-    RAMP_TIMER_ReadStatus();
-    RAMP_TIMER_ClearInterrupt(RAMP_TIMER_INTR_MASK_TC);
+CY_ISR_PROTO(OSC_2_OVF_VECT){
+    main_osc_PWM_2_WritePeriod((uint16) 65535/freq_2);
+    main_osc_PWM_2_WriteCompare((uint16) (65535/freq_2)/(2000/pulse_width_2));
 }
+
+CY_ISR_PROTO(OSC_3_OVF_VECT){
+    main_osc_PWM_3_WritePeriod((uint16) 65535/freq_3);
+    main_osc_PWM_3_WriteCompare((uint16) (65535/freq_3)/(2000/pulse_width_3));
+}
+
+
 /* [] END OF FILE */
