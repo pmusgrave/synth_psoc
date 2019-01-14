@@ -19,4 +19,18 @@ void SetMainOscValue(){
     
 }
 
+void EnableOscillators(){
+    main_osc_PWM_0_Start();
+    main_osc_PWM_1_Start();
+    main_osc_PWM_2_Start();
+    main_osc_PWM_3_Start();
+}
+
+void DisableOscillators(){
+    main_osc_PWM_0_Stop();
+    main_osc_PWM_1_Stop();
+    main_osc_PWM_2_Stop();
+    main_osc_PWM_3_Stop();
+}
+
 /* [] END OF FILE */

@@ -18,6 +18,8 @@ volatile float pulse_width_2 = 0;
 volatile float freq_3 = 0;
 volatile float pulse_width_3 = 0;
 
+volatile uint8_t NOTE_ENABLE = 0; 
+
 int main(void)
 {
     CyGlobalIntEnable;
@@ -30,10 +32,7 @@ int main(void)
     
     // Init main oscillator, triangle, saw wave PWM, and LFO components
     InitOscillator();
-    main_osc_PWM_0_Start();
-    main_osc_PWM_1_Start();
-    main_osc_PWM_2_Start();
-    main_osc_PWM_3_Start();
+    EnableOscillators();
     
     // and interrupts to change PWM values on overflow
     osc_0_ovf_StartEx(OSC_0_OVF_VECT);
@@ -52,6 +51,12 @@ int main(void)
         if(pwm_update_flag != 0){ 
             pwm_update_flag = 0;
             
+            if (NOTE_ENABLE == 1){
+                EnableOscillators();
+            }
+            else{
+                DisableOscillators();
+            }
                
             freq = ADC_SAR_Seq_GetResult16(0);
             pulse_width = ADC_SAR_Seq_GetResult16(1);  
@@ -65,8 +70,8 @@ int main(void)
             freq_3 = ADC_SAR_Seq_GetResult16(6);
             pulse_width_3 = ADC_SAR_Seq_GetResult16(7);  
             
-    
-            SetMainOscValue();
+            
+            
       
             //LFO_PWM_WritePeriod((uint16) 65535/freq);
             //LFO_PWM_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
@@ -149,7 +154,12 @@ int main(void)
             CapSense_Buttons_UpdateEnabledBaselines();
             
             if(CapSense_Buttons_CheckIsAnyWidgetActive()){
-                led_Write(~led_Read());
+                led_Write(0);
+                NOTE_ENABLE = 1;
+            }
+            else{
+                led_Write(1);
+                NOTE_ENABLE = 0;
             }
             
             CapSense_Buttons_ScanEnabledWidgets();
