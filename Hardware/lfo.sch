@@ -796,28 +796,6 @@ F 3 "" H 8350 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TL072 U7
-U 2 1 5C37EB80
-P 1550 3600
-F 0 "U7" H 1550 3800 50  0000 L CNN
-F 1 "TL074" H 1550 3400 50  0000 L CNN
-F 2 "digikey-footprints:Humidity_SHT15" H 1550 3600 50  0001 C CNN
-F 3 "" H 1550 3600 50  0001 C CNN
-	2    1550 3600
-	1    0    0    1   
-$EndComp
-$Comp
-L TL072 U8
-U 1 1 5C37EC7E
-P 3150 3700
-F 0 "U8" H 3150 3900 50  0000 L CNN
-F 1 "TL074" H 3150 3500 50  0000 L CNN
-F 2 "digikey-footprints:SMD-5-6_R_3.83x2.79mm" H 3150 3700 50  0001 C CNN
-F 3 "" H 3150 3700 50  0001 C CNN
-	1    3150 3700
-	1    0    0    1   
-$EndComp
-$Comp
 L GND #PWR085
 U 1 1 5C37F537
 P 1450 3300
@@ -1256,7 +1234,7 @@ U 1 1 5C38FB5B
 P 3600 2150
 F 0 "SW1" H 3600 2320 50  0000 C CNN
 F 1 "SW_DPDT_x2" H 3600 1950 50  0000 C CNN
-F 2 "" H 3600 2150 50  0001 C CNN
+F 2 "SparkFun-Electromechanical:SWITCHE-DPDT" H 3600 2150 50  0001 C CNN
 F 3 "" H 3600 2150 50  0001 C CNN
 	1    3600 2150
 	-1   0    0    1   
@@ -1277,4 +1255,26 @@ Text Notes 1550 5050 0    60   ~ 0
 470R and 10k might \nnot be the right values.\nDetermine under test.
 Text Notes 6700 1700 0    60   ~ 0
 33nF and 10k might \nnot be the right values.\nDetermine under test.
+$Comp
+L TL074 U4
+U 1 1 5C3DFB3A
+P 1550 3600
+F 0 "U4" H 1550 3800 50  0000 L CNN
+F 1 "TL074" H 1550 3400 50  0000 L CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 1500 3700 50  0001 C CNN
+F 3 "" H 1600 3800 50  0001 C CNN
+	1    1550 3600
+	1    0    0    1   
+$EndComp
+$Comp
+L TL074 U4
+U 2 1 5C3E0A6C
+P 3150 3700
+F 0 "U4" H 3150 3900 50  0000 L CNN
+F 1 "TL074" H 3150 3500 50  0000 L CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 3100 3800 50  0001 C CNN
+F 3 "" H 3200 3900 50  0001 C CNN
+	2    3150 3700
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC

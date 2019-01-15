@@ -211,8 +211,6 @@ F 3 "" H 2700 1500 50  0001 C CNN
 	1    2700 1500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2100 1600 2300 1600
 Text Notes 1250 1200 0    60   ~ 0
 Check wall wart \npolarity vs DC barrel \njack pinout
 $Comp
@@ -436,24 +434,24 @@ $EndComp
 $Comp
 L GND #PWR047
 U 1 1 5C39BA81
-P 2300 3050
-F 0 "#PWR047" H 2300 2800 50  0001 C CNN
-F 1 "GND" H 2300 2900 50  0000 C CNN
-F 2 "" H 2300 3050 50  0001 C CNN
-F 3 "" H 2300 3050 50  0001 C CNN
-	1    2300 3050
-	1    0    0    -1  
+P 2200 2550
+F 0 "#PWR047" H 2200 2300 50  0001 C CNN
+F 1 "GND" H 2200 2400 50  0000 C CNN
+F 2 "" H 2200 2550 50  0001 C CNN
+F 3 "" H 2200 2550 50  0001 C CNN
+	1    2200 2550
+	-1   0    0    1   
 $EndComp
 $Comp
 L +15V #PWR048
 U 1 1 5C39BAA7
-P 2300 2650
-F 0 "#PWR048" H 2300 2500 50  0001 C CNN
-F 1 "+15V" H 2300 2790 50  0000 C CNN
-F 2 "" H 2300 2650 50  0001 C CNN
-F 3 "" H 2300 2650 50  0001 C CNN
-	1    2300 2650
-	1    0    0    -1  
+P 2200 3150
+F 0 "#PWR048" H 2200 3000 50  0001 C CNN
+F 1 "+15V" H 2200 3290 50  0000 C CNN
+F 2 "" H 2200 3150 50  0001 C CNN
+F 3 "" H 2200 3150 50  0001 C CNN
+	1    2200 3150
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	2600 2850 2900 2850
@@ -466,24 +464,17 @@ Wire Wire Line
 Wire Wire Line
 	1900 2750 2000 2750
 Connection ~ 2700 2850
+Wire Wire Line
+	2300 1600 2100 1600
 $Comp
-L TL074CN U4
-U 1 1 5C39B9EB
+L TL074 U4
+U 4 1 5C3D82DF
 P 2300 2850
-F 0 "U4" H 2100 3100 60  0000 C CNN
-F 1 "TL074" H 2500 2650 60  0000 L CNN
-F 2 "digikey-footprints:SOIC-14_W3.9mm" H 2500 3050 60  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071a.pdf" H 2500 3150 60  0001 L CNN
-F 4 "296-1777-5-ND" H 2500 3250 60  0001 L CNN "Digi-Key_PN"
-F 5 "TL074CN" H 2500 3350 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 2500 3450 60  0001 L CNN "Category"
-F 7 "Linear - Amplifiers - Instrumentation, OP Amps, Buffer Amps" H 2500 3550 60  0001 L CNN "Family"
-F 8 "http://www.ti.com/lit/ds/symlink/tl071a.pdf" H 2500 3650 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/texas-instruments/TL074CN/296-1777-5-ND/277423" H 2500 3750 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC OPAMP JFET 3MHZ 14DIP" H 2500 3850 60  0001 L CNN "Description"
-F 11 "Texas Instruments" H 2500 3950 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 2500 4050 60  0001 L CNN "Status"
-	1    2300 2850
-	1    0    0    -1  
+F 0 "U4" H 2300 3050 50  0000 L CNN
+F 1 "TL074" H 2300 2650 50  0000 L CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 2250 2950 50  0001 C CNN
+F 3 "" H 2350 3050 50  0001 C CNN
+	4    2300 2850
+	1    0    0    1   
 $EndComp
 $EndSCHEMATC
