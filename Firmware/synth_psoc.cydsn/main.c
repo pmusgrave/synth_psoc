@@ -154,11 +154,11 @@ int main(void)
             CapSense_Buttons_UpdateEnabledBaselines();
             
             if(CapSense_Buttons_CheckIsAnyWidgetActive()){
-                led_Write(0);
+                //led_Write(0);
                 NOTE_ENABLE = 1;
             }
             else{
-                led_Write(1);
+                //led_Write(1);
                 NOTE_ENABLE = 0;
             }
             
