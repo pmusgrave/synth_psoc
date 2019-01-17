@@ -1404,4 +1404,6 @@ Wire Wire Line
 Wire Wire Line
 	3750 5300 3800 5300
 Connection ~ 3800 5400
+Wire Wire Line
+	2850 5500 3000 5500
 $EndSCHEMATC

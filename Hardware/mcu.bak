@@ -687,21 +687,21 @@ F 3 "" H 3650 3300 60  0000 C CNN
 	1    3550 3350
 	-1   0    0    -1  
 $EndComp
-Text Label 5150 3500 0    60   ~ 0
-osc1_freq_wiper
-Text Label 5150 3400 0    60   ~ 0
-osc1_pwm_wiper
-Text Label 5150 3300 0    60   ~ 0
-osc2_freq_wiper
-Text Label 5150 3200 0    60   ~ 0
-osc2_pwm_wiper
-Text Label 5150 3100 0    60   ~ 0
-osc3_freq_wiper
-Text Label 5150 3000 0    60   ~ 0
-osc3_pwm_wiper
-Text Label 5150 2900 0    60   ~ 0
-osc4_freq_wiper
 Text Label 5150 2800 0    60   ~ 0
+osc1_freq_wiper
+Text Label 5150 2900 0    60   ~ 0
+osc1_pwm_wiper
+Text Label 5150 3000 0    60   ~ 0
+osc2_freq_wiper
+Text Label 5150 3100 0    60   ~ 0
+osc2_pwm_wiper
+Text Label 5150 3200 0    60   ~ 0
+osc3_freq_wiper
+Text Label 5150 3300 0    60   ~ 0
+osc3_pwm_wiper
+Text Label 5150 3400 0    60   ~ 0
+osc4_freq_wiper
+Text Label 5150 3500 0    60   ~ 0
 osc4_pwm_wiper
 Text Label 5150 5600 0    60   ~ 0
 osc1
@@ -989,7 +989,7 @@ U 1 1 5C3F1461
 P 2850 6700
 F 0 "R107" V 2930 6700 50  0000 C CNN
 F 1 "R" V 2850 6700 50  0000 C CNN
-F 2 "" V 2780 6700 50  0001 C CNN
+F 2 "digikey-footprints:0805" V 2780 6700 50  0001 C CNN
 F 3 "" H 2850 6700 50  0001 C CNN
 	1    2850 6700
 	0    1    1    0   

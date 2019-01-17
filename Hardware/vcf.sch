@@ -753,7 +753,7 @@ F 1 "TL074" H 2600 5600 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 2550 5900 50  0001 C CNN
 F 3 "" H 2650 6000 50  0001 C CNN
 	1    2600 5800
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L C_Small C1
