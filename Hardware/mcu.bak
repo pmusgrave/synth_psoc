@@ -1359,4 +1359,56 @@ Wire Wire Line
 	1600 3650 1600 3950
 Wire Wire Line
 	1600 3950 1050 3950
+$Comp
+L Conn_01x01 J4
+U 1 1 5C3FE394
+P 5350 1200
+F 0 "J4" H 5350 1300 50  0000 C CNN
+F 1 "Capsense_0" H 5350 1100 50  0000 C CNN
+F 2 "Cypress_capsense:Capsense_button" H 5350 1200 50  0001 C CNN
+F 3 "" H 5350 1200 50  0001 C CNN
+	1    5350 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J5
+U 1 1 5C3FE689
+P 5350 1300
+F 0 "J5" H 5350 1400 50  0000 C CNN
+F 1 "Capsense_1" H 5350 1200 50  0000 C CNN
+F 2 "Cypress_capsense:Capsense_button" H 5350 1300 50  0001 C CNN
+F 3 "" H 5350 1300 50  0001 C CNN
+	1    5350 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J6
+U 1 1 5C3FE726
+P 5350 1400
+F 0 "J6" H 5350 1500 50  0000 C CNN
+F 1 "Capsense_2" H 5350 1300 50  0000 C CNN
+F 2 "Cypress_capsense:Capsense_button" H 5350 1400 50  0001 C CNN
+F 3 "" H 5350 1400 50  0001 C CNN
+	1    5350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J7
+U 1 1 5C3FE7BA
+P 5350 1500
+F 0 "J7" H 5350 1600 50  0000 C CNN
+F 1 "Capsense_3" H 5350 1400 50  0000 C CNN
+F 2 "Cypress_capsense:Capsense_button" H 5350 1500 50  0001 C CNN
+F 3 "" H 5350 1500 50  0001 C CNN
+	1    5350 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 1500 4950 1500
+Wire Wire Line
+	4950 1400 5150 1400
+Wire Wire Line
+	5150 1300 4950 1300
+Wire Wire Line
+	4950 1200 5150 1200
 $EndSCHEMATC

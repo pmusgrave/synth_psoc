@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Cypress_capsense)(type KiCad)(uri E:/Documents/Engineering/Electronics/kicad_libs/Cypress_capsense.pretty)(options "")(descr ""))
+)

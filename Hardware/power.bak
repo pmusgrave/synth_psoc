@@ -228,17 +228,6 @@ Wire Wire Line
 	2150 1850 2150 1800
 Wire Wire Line
 	2150 1800 2100 1800
-$Comp
-L D D1
-U 1 1 5C392341
-P 2450 1600
-F 0 "D1" H 2450 1700 50  0000 C CNN
-F 1 "D" H 2450 1500 50  0000 C CNN
-F 2 "digikey-footprints:TO-252-3" H 2450 1600 50  0001 C CNN
-F 3 "" H 2450 1600 50  0001 C CNN
-	1    2450 1600
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	2700 1500 2700 1600
 Wire Wire Line
@@ -476,5 +465,16 @@ F 2 "digikey-footprints:SOIC-14_W3.9mm" H 2250 2950 50  0001 C CNN
 F 3 "" H 2350 3050 50  0001 C CNN
 	4    2300 2850
 	1    0    0    1   
+$EndComp
+$Comp
+L D_Schottky D1
+U 1 1 5C40562C
+P 2450 1600
+F 0 "D1" H 2450 1700 50  0000 C CNN
+F 1 "D_Schottky" H 2450 1500 50  0000 C CNN
+F 2 "Diodes_SMD:D_SMB" H 2450 1600 50  0001 C CNN
+F 3 "" H 2450 1600 50  0001 C CNN
+	1    2450 1600
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
