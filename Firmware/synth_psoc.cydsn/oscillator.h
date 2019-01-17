@@ -1,9 +1,7 @@
 #ifndef OSCILLATOR_H
 #define OSCILLATOR_H
     
-void InitOscillator();
-void SetMainOscValue(void);
-void EnableOscillators(void);
-void DisableOscillators(void);
+void EnableAllOscillators(void);
+void DisableAllOscillators(void);
 #endif
 /* [] END OF FILE */

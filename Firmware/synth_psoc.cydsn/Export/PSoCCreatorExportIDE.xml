@@ -195,6 +195,22 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_0.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_0_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_0_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_1_speed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_1_speed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_1_speed_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_1_speed_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_0_speed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_0_speed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_0_speed_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_0_speed_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_3_speed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_3_speed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_3_speed_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_3_speed_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_2_speed.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_2_speed.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_2_speed_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_2_speed_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60">

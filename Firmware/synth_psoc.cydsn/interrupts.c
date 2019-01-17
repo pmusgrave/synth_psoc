@@ -4,14 +4,14 @@
 #include "globals.h"
 
 CY_ISR(ADC_EOC) {
-    pwm_update_flag = 1;
+    adc_update_flag = 1;
 
     ADC_EOC_INT_ClearPending();
 }
 
 CY_ISR_PROTO(OSC_0_OVF_VECT){
-    main_osc_PWM_0_WritePeriod((uint16) 65535/freq);
-    main_osc_PWM_0_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
+    main_osc_PWM_0_WritePeriod((uint16) 65535/freq_0);
+    main_osc_PWM_0_WriteCompare((uint16) (65535/freq_0)/(2000/pulse_width_0));
 }
 
 CY_ISR_PROTO(OSC_1_OVF_VECT){
