@@ -3,6 +3,7 @@
 #include "globals.h"
 #include "envelope_generator.h"
 #include "oscillator.h"
+#include "buttons.h"
 
 #define ENVELOPE_MAX_PERIOD 2048
 
@@ -43,7 +44,7 @@ int main(void)
     CapSense_Buttons_ScanEnabledWidgets();
     
     current_mode = NOT_TRIGGERED;
-    volatile uint8_t NOTE_ENABLE = 0; 
+    // volatile uint8_t NOTE_ENABLE = 0; 
     
     while(1){
         // update all ADC values when the end of conversion interrupt triggers
@@ -68,42 +69,24 @@ int main(void)
         if(!CapSense_Buttons_IsBusy()) {
             CapSense_Buttons_UpdateEnabledBaselines();
             
-            /*
+            /* 
+            ////////////////////////////////////////////////////
+            // only keeping this here because it definitely works. 
+            // Refactoring this to other code below
+            
             if(CapSense_Buttons_CheckIsAnyWidgetActive()){
                 NOTE_ENABLE = 1;
             }
             else{
                 NOTE_ENABLE = 0;
             }
+            ////////////////////////////////////////////////////
             */
             
-            if(CapSense_Buttons_CheckIsWidgetActive(CapSense_Buttons_BUTTON0__BTN)){
-                main_osc_PWM_0_Start();
-            }
-            else{
-                main_osc_PWM_0_Stop();
-            }
-            
-            if(CapSense_Buttons_CheckIsWidgetActive(CapSense_Buttons_BUTTON1__BTN)){
-                main_osc_PWM_1_Start();
-            }
-            else{
-                main_osc_PWM_1_Stop();
-            }
-            
-            if(CapSense_Buttons_CheckIsWidgetActive(CapSense_Buttons_BUTTON2__BTN)){
-                main_osc_PWM_2_Start();
-            }
-            else{
-                main_osc_PWM_2_Stop();
-            }
-            
-            if(CapSense_Buttons_CheckIsWidgetActive(CapSense_Buttons_BUTTON3__BTN)){
-                main_osc_PWM_3_Start();
-            }
-            else{
-                main_osc_PWM_3_Stop();
-            }
+            HandleButton(CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop);
+            HandleButton(CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop);
+            HandleButton(CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop);
+            HandleButton(CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop);
             
             CapSense_Buttons_ScanEnabledWidgets();
         }

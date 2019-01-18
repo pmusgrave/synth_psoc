@@ -23,4 +23,16 @@ void DisableAllOscillators(){
     main_osc_PWM_3_Stop();
 }
 
+void EnableSingleOscillator(void (*osc_enable_function)(void)){
+    // I don't think these have to be separate functions,
+    // unless I want to do something more complicated than call the function pointer.
+    // It might be good to check the state of the oscillator before calling the
+    // enable function? Otherwise, I could probably get rid of this function
+    // and the disable single oscillator function.
+    (*osc_enable_function)();
+}
+
+void DisableSingleOscillator(void (*osc_disable_function)(void)){
+    (*osc_disable_function)();
+}
 /* [] END OF FILE */
