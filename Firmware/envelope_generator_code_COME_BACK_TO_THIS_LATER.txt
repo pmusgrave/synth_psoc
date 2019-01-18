@@ -1,3 +1,19 @@
+// put this in globals.h
+extern volatile uint16_t attack_pot_value;
+extern volatile uint16_t decay_pot_value;
+extern volatile uint16_t sustain_pot_value;
+extern volatile uint16_t release_pot_value;
+
+// and this in main
+
+#include "envelope_generator.h"
+volatile uint8_t current_mode = NOT_TRIGGERED;
+
+//initialize above event loop
+// current_mode = NOT_TRIGGERED;
+
+
+// within event loop
             /*
             switch(current_mode){
             case NOT_TRIGGERED:
