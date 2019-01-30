@@ -16,7 +16,10 @@
 #define PW_3_ADC_CHAN 7
 
 volatile uint8_t adc_update_flag = 0;
-volatile uint16_t pwm_value = 0;
+volatile float env0_pwm = 0;
+volatile float env1_pwm = 0;
+volatile float env2_pwm = 0;
+volatile float env3_pwm = 0;
 volatile float freq_0 = 0;
 volatile float pulse_width_0 = 0;
 volatile float freq_1 = 0;
@@ -88,54 +91,56 @@ int main(void)
         }
 
         
-        system_tick = system_tick + 0.1;
-        pwm_value = (uint16_t)system_tick;
+        // system_tick = system_tick + 0.1;
+
+        if(Osc_0_Button.note_triggered == 1){
+            env0_pwm = env0_pwm + 0.1;
+        }
+        else {
+            if(env0_pwm > 0.1){
+                env0_pwm = env0_pwm - 0.1;
+            }
+            if (env0_pwm < 0.5){
+                main_osc_PWM_0_Stop();
+            }
+        }
         
-        /*
-        if(Osc_0_Button.note_triggered){
-            
+        if(Osc_1_Button.note_triggered == 1){
+            env1_pwm = env1_pwm + 0.1;
         }
         else{
-            if(pwm_value > 0){
-                pwm_value--;
+            if(env1_pwm > 0.1){
+                env1_pwm = env1_pwm - 0.1;
             }
-            envelope_PWM_0_WriteCompare(pwm_value);
+            if (env1_pwm < 0.5){
+                main_osc_PWM_1_Stop();
+            }
         }
         
-        
-        if(Osc_1_Button.note_triggered){
-            pwm_value = (uint16_t)system_tick;
-            envelope_PWM_1_WriteCompare(pwm_value);
+        if(Osc_2_Button.note_triggered == 1){
+            env2_pwm = env2_pwm + 0.1;
         }
         else{
-            if(pwm_value > 0){
-                pwm_value--;
+            if(env2_pwm > 0){
+                env2_pwm = env2_pwm - 0.1;
             }
-            envelope_PWM_1_WriteCompare(pwm_value);
+            if (env2_pwm < 0.5){
+                main_osc_PWM_2_Stop();
+            }
         }
         
-        if(Osc_2_Button.note_triggered){
-            pwm_value = (uint16_t)system_tick;
-            envelope_PWM_2_WriteCompare(pwm_value);
+        if(Osc_3_Button.note_triggered == 1){
+            env3_pwm = env3_pwm + 0.1;
         }
         else{
-            if(pwm_value > 0){
-                pwm_value--;
+            if(env3_pwm > 0){
+                env3_pwm = env3_pwm - 0.1;
             }
-            envelope_PWM_2_WriteCompare(pwm_value);
-        }
-        
-        if(Osc_3_Button.note_triggered){
-            pwm_value = (uint16_t)system_tick;
-            envelope_PWM_3_WriteCompare(pwm_value);
-        }
-        else{
-            if(pwm_value > 0){
-                pwm_value--;
+            if (env3_pwm < 0.5){
+                main_osc_PWM_3_Stop();
             }
-            envelope_PWM_3_WriteCompare(pwm_value);
         }
-        */
+       
         
         
         // scan all CapSense buttons sequentially,
@@ -143,10 +148,10 @@ int main(void)
         if(!CapSense_Buttons_IsBusy()) {
             CapSense_Buttons_UpdateEnabledBaselines();
             
-            HandleButton(Osc_0_Button);
-            HandleButton(Osc_1_Button);
-            HandleButton(Osc_2_Button);
-            HandleButton(Osc_3_Button);
+            HandleButton(&Osc_0_Button);
+            HandleButton(&Osc_1_Button);
+            HandleButton(&Osc_2_Button);
+            HandleButton(&Osc_3_Button);
             
             CapSense_Buttons_ScanEnabledWidgets();
         }

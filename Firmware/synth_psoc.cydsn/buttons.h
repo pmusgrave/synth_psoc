@@ -3,7 +3,7 @@
 #include "project.h"
 #include "globals.h"
     
-void HandleButton(struct button);    
+void HandleButton(struct button *);    
 
 #endif
 /* [] END OF FILE */
