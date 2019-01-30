@@ -40,6 +40,9 @@ void DisableSingleOscillator(void (*osc_disable_function)(void)){
 }
 
 double Quantize(float unquantized_freq){
+    // music_notes frequencies are based on 
+    // the equal tempered scale found here:
+    // http://pages.mtu.edu/~suits/notefreqs.html
     volatile double music_notes[99] = {
         27.50,
         29.14,	
