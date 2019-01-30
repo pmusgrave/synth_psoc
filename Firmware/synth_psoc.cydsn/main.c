@@ -45,12 +45,25 @@ int main(void)
     osc_2_ovf_StartEx(OSC_2_OVF_VECT);
     osc_3_ovf_StartEx(OSC_3_OVF_VECT);
     
+    // Init envelope components and PWM interrupts
+    /*
+    envelope_PWM_0_Start();
+    envelope_PWM_1_Start();
+    envelope_PWM_2_Start();
+    envelope_PWM_3_Start();
+    
+    envelope_0_ovf_StartEx(ENV_0_OVF_VECT);
+    envelope_1_ovf_StartEx(ENV_1_OVF_VECT);
+    envelope_2_ovf_StartEx(ENV_2_OVF_VECT);
+    envelope_3_ovf_StartEx(ENV_3_OVF_VECT);
+    
+    float system_tick = 0;
+    */
+    
     // Init Capsense
     CapSense_Buttons_Start();	
 	CapSense_Buttons_InitializeAllBaselines();
     CapSense_Buttons_ScanEnabledWidgets();
-    
-    
     
     while(1){
         // update all ADC values when the end of conversion interrupt triggers
@@ -69,6 +82,16 @@ int main(void)
             freq_3 = ADC_SAR_Seq_GetResult16(FREQ_3_ADC_CHAN);
             pulse_width_3 = ADC_SAR_Seq_GetResult16(PW_3_ADC_CHAN);  
         }
+
+        
+        
+        // system_tick = system_tick + 0.1;
+        
+        // pwm_value = (uint16_t)system_tick;
+        // envelope_PWM_0_WriteCompare(pwm_value);
+        
+
+        
         
         // scan all CapSense buttons sequentially,
         // and start oscillator if button is pressed

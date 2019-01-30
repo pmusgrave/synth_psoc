@@ -263,7 +263,7 @@ F 3 "" H 7850 2100 50  0001 C CNN
 	1    7850 2100
 	1    0    0    -1  
 $EndComp
-Text Label 7700 2150 0    60   ~ 0
+Text Label 6850 1950 0    60   ~ 0
 osc1_freq_wiper
 $Comp
 L POT RV19
@@ -399,7 +399,7 @@ F 3 "" H 7850 4150 50  0001 C CNN
 	1    7850 4150
 	1    0    0    -1  
 $EndComp
-Text Label 7700 4200 0    60   ~ 0
+Text Label 6850 4000 0    60   ~ 0
 osc3_freq_wiper
 $Comp
 L POT RV21
@@ -467,15 +467,15 @@ F 3 "" H 7850 5150 50  0001 C CNN
 	1    7850 5150
 	1    0    0    -1  
 $EndComp
-Text Label 7700 5200 0    60   ~ 0
+Text Label 6850 5000 0    60   ~ 0
 osc4_freq_wiper
-Text Label 8850 2150 0    60   ~ 0
+Text Label 8000 1950 0    60   ~ 0
 osc1_pwm_wiper
 Text Label 8000 3000 0    60   ~ 0
 osc2_pwm_wiper
-Text Label 8850 4200 0    60   ~ 0
+Text Label 8000 4000 0    60   ~ 0
 osc3_pwm_wiper
-Text Label 8850 5200 0    60   ~ 0
+Text Label 8000 5000 0    60   ~ 0
 osc4_pwm_wiper
 $Comp
 L +3.3V #PWR099
