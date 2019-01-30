@@ -1164,12 +1164,12 @@ Wire Wire Line
 Wire Wire Line
 	3000 3100 2750 3100
 Wire Wire Line
-	2750 3600 2750 3100
+	2750 3100 2750 3600
 Connection ~ 2750 3600
 Wire Wire Line
 	2700 3850 2700 3800
 Wire Wire Line
-	1900 2100 1900 4250
+	1900 3050 1900 4250
 Wire Wire Line
 	1900 4250 1600 4250
 Connection ~ 1900 3600
@@ -1221,10 +1221,10 @@ Wire Wire Line
 	1900 2100 2300 2100
 Wire Wire Line
 	2300 2100 2300 2200
-Text Label 2500 2600 0    60   ~ 0
+Text Label 2700 2600 0    60   ~ 0
 lfo_square
 Wire Wire Line
-	2500 2600 2300 2600
+	2300 2600 2700 2600
 Connection ~ 2300 2600
 Text Label 4250 3700 0    60   ~ 0
 lfo_tri
@@ -1277,4 +1277,44 @@ F 3 "" H 3200 3900 50  0001 C CNN
 	2    3150 3700
 	1    0    0    1   
 $EndComp
+$Comp
+L R R?
+U 1 1 5C50BA99
+P 2550 2850
+F 0 "R?" V 2630 2850 50  0000 C CNN
+F 1 "100k" V 2550 2850 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 2480 2850 50  0001 C CNN
+F 3 "" H 2550 2850 50  0001 C CNN
+	1    2550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2700 2550 2700
+Wire Wire Line
+	2550 2700 2550 2600
+Connection ~ 2550 2600
+$Comp
+L GND #PWR?
+U 1 1 5C50BC49
+P 2550 3000
+F 0 "#PWR?" H 2550 2750 50  0001 C CNN
+F 1 "GND" H 2550 2850 50  0000 C CNN
+F 2 "" H 2550 3000 50  0001 C CNN
+F 3 "" H 2550 3000 50  0001 C CNN
+	1    2550 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5C50BEF7
+P 1900 2900
+F 0 "C?" H 1925 3000 50  0000 L CNN
+F 1 "220uF" H 1925 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10" H 1900 2900 50  0001 C CNN
+F 3 "" H 1900 2900 50  0001 C CNN
+	1    1900 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 2750 1900 2100
 $EndSCHEMATC
