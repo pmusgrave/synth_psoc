@@ -30,6 +30,7 @@ CY_ISR_PROTO(OSC_3_OVF_VECT){
 }
 
 CY_ISR_PROTO(ENV_0_OVF_VECT){
+    envelope_PWM_0_WriteCompare(pwm_value);
 }
 
 CY_ISR_PROTO(ENV_1_OVF_VECT){

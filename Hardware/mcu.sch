@@ -719,13 +719,13 @@ Text Label 10650 3250 2    60   ~ 0
 osc3
 Text Label 10650 3350 2    60   ~ 0
 osc4
-Text HLabel 10150 5800 2    60   Output ~ 0
+Text HLabel 9900 5250 2    60   Output ~ 0
 envelope_pwm_1
-Text HLabel 10400 3650 2    60   Output ~ 0
+Text HLabel 10300 5650 2    60   Output ~ 0
 envelope_pwm_2
-Text HLabel 10400 3750 2    60   Output ~ 0
+Text HLabel 9900 6250 2    60   Output ~ 0
 envelope_pwm_3
-Text HLabel 10400 3850 2    60   Output ~ 0
+Text HLabel 10350 6400 2    60   Output ~ 0
 envelope_pwm_4
 Text Notes 7650 1250 0    60   ~ 0
 If I go with that key selector idea, \nthen all the frequency knobs \nshould have center detents. The \nothers should not.
@@ -929,13 +929,13 @@ Text Label 5150 5100 0    60   ~ 0
 envelope_pwm_3
 Text Label 5150 5200 0    60   ~ 0
 envelope_pwm_4
-Text Label 9750 5800 2    60   ~ 0
+Text Label 9100 5800 2    60   ~ 0
 envelope_pwm_1
-Text Label 9750 5900 2    60   ~ 0
+Text Label 9100 5900 2    60   ~ 0
 envelope_pwm_2
-Text Label 9750 6000 2    60   ~ 0
+Text Label 9100 6000 2    60   ~ 0
 envelope_pwm_3
-Text Label 9750 6100 2    60   ~ 0
+Text Label 9100 6100 2    60   ~ 0
 envelope_pwm_4
 Text Notes 9700 1500 0    60   ~ 0
 Check tapers of speed control.\nI believe these should be linear.
@@ -1060,6 +1060,314 @@ F 3 "" H 2100 4200 50  0001 C CNN
 	1    2100 4200
 	-1   0    0    -1  
 $EndComp
+$Comp
+L +3.3V #PWR0125
+U 1 1 5C3FE256
+P 1150 3750
+F 0 "#PWR0125" H 1150 3600 50  0001 C CNN
+F 1 "+3.3V" H 1150 3890 50  0000 C CNN
+F 2 "" H 1150 3750 50  0001 C CNN
+F 3 "" H 1150 3750 50  0001 C CNN
+	1    1150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDD #PWR0126
+U 1 1 5C3FE25C
+P 1150 3950
+F 0 "#PWR0126" H 1150 3700 50  0001 C CNN
+F 1 "GNDD" H 1150 3825 50  0000 C CNN
+F 2 "" H 1150 3950 50  0001 C CNN
+F 3 "" H 1150 3950 50  0001 C CNN
+	1    1150 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C_Small C77
+U 1 1 5C3FE262
+P 1250 3850
+F 0 "C77" H 1260 3920 50  0000 L CNN
+F 1 "0.1uF" H 1260 3770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1250 3850 50  0001 C CNN
+F 3 "" H 1250 3850 50  0001 C CNN
+	1    1250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C75
+U 1 1 5C3FE268
+P 1050 3850
+F 0 "C75" H 1060 3920 50  0000 L CNN
+F 1 "1uF" H 1060 3770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1050 3850 50  0001 C CNN
+F 3 "" H 1050 3850 50  0001 C CNN
+	1    1050 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR0127
+U 1 1 5C3FE416
+P 1150 3200
+F 0 "#PWR0127" H 1150 3050 50  0001 C CNN
+F 1 "+3.3V" H 1150 3340 50  0000 C CNN
+F 2 "" H 1150 3200 50  0001 C CNN
+F 3 "" H 1150 3200 50  0001 C CNN
+	1    1150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDD #PWR0128
+U 1 1 5C3FE41C
+P 1150 3400
+F 0 "#PWR0128" H 1150 3150 50  0001 C CNN
+F 1 "GNDD" H 1150 3275 50  0000 C CNN
+F 2 "" H 1150 3400 50  0001 C CNN
+F 3 "" H 1150 3400 50  0001 C CNN
+	1    1150 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C_Small C76
+U 1 1 5C3FE422
+P 1250 3300
+F 0 "C76" H 1260 3370 50  0000 L CNN
+F 1 "0.1uF" H 1260 3220 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1250 3300 50  0001 C CNN
+F 3 "" H 1250 3300 50  0001 C CNN
+	1    1250 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C74
+U 1 1 5C3FE428
+P 1050 3300
+F 0 "C74" H 1060 3370 50  0000 L CNN
+F 1 "1uF" H 1060 3220 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1050 3300 50  0001 C CNN
+F 3 "" H 1050 3300 50  0001 C CNN
+	1    1050 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR0129
+U 1 1 5C3FE658
+P 1800 4100
+F 0 "#PWR0129" H 1800 3950 50  0001 C CNN
+F 1 "+3.3V" H 1800 4240 50  0000 C CNN
+F 2 "" H 1800 4100 50  0001 C CNN
+F 3 "" H 1800 4100 50  0001 C CNN
+	1    1800 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDD #PWR0130
+U 1 1 5C3FE65E
+P 1800 3900
+F 0 "#PWR0130" H 1800 3650 50  0001 C CNN
+F 1 "GNDD" H 1800 3775 50  0000 C CNN
+F 2 "" H 1800 3900 50  0001 C CNN
+F 3 "" H 1800 3900 50  0001 C CNN
+	1    1800 3900
+	1    0    0    1   
+$EndComp
+$Comp
+L C_Small C79
+U 1 1 5C3FE664
+P 1700 4000
+F 0 "C79" H 1710 4070 50  0000 L CNN
+F 1 "0.1uF" H 1710 3920 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1700 4000 50  0001 C CNN
+F 3 "" H 1700 4000 50  0001 C CNN
+	1    1700 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C81
+U 1 1 5C3FE66A
+P 1900 4000
+F 0 "C81" H 1910 4070 50  0000 L CNN
+F 1 "1uF" H 1910 3920 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1900 4000 50  0001 C CNN
+F 3 "" H 1900 4000 50  0001 C CNN
+	1    1900 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x01 J4
+U 1 1 5C3FE394
+P 5350 1200
+F 0 "J4" H 5350 1300 50  0000 C CNN
+F 1 "Capsense_0" H 5350 1100 50  0000 C CNN
+F 2 "Cypress_capsense:Capsense_button" H 5350 1200 50  0001 C CNN
+F 3 "" H 5350 1200 50  0001 C CNN
+	1    5350 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J5
+U 1 1 5C3FE689
+P 5350 1300
+F 0 "J5" H 5350 1400 50  0000 C CNN
+F 1 "Capsense_1" H 5350 1200 50  0000 C CNN
+F 2 "Cypress_capsense:Capsense_button" H 5350 1300 50  0001 C CNN
+F 3 "" H 5350 1300 50  0001 C CNN
+	1    5350 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J6
+U 1 1 5C3FE726
+P 5350 1400
+F 0 "J6" H 5350 1500 50  0000 C CNN
+F 1 "Capsense_2" H 5350 1300 50  0000 C CNN
+F 2 "Cypress_capsense:Capsense_button" H 5350 1400 50  0001 C CNN
+F 3 "" H 5350 1400 50  0001 C CNN
+	1    5350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J7
+U 1 1 5C3FE7BA
+P 5350 1500
+F 0 "J7" H 5350 1600 50  0000 C CNN
+F 1 "Capsense_3" H 5350 1400 50  0000 C CNN
+F 2 "Cypress_capsense:Capsense_button" H 5350 1500 50  0001 C CNN
+F 3 "" H 5350 1500 50  0001 C CNN
+	1    5350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5C5216C3
+P 9650 5800
+F 0 "R?" V 9730 5800 50  0000 C CNN
+F 1 "1k" V 9650 5800 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 9580 5800 50  0001 C CNN
+F 3 "" H 9650 5800 50  0001 C CNN
+	1    9650 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C521B15
+P 9650 5900
+F 0 "R?" V 9730 5900 50  0000 C CNN
+F 1 "1k" V 9650 5900 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 9580 5900 50  0001 C CNN
+F 3 "" H 9650 5900 50  0001 C CNN
+	1    9650 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C521BB2
+P 9650 6000
+F 0 "R?" V 9730 6000 50  0000 C CNN
+F 1 "1k" V 9650 6000 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 9580 6000 50  0001 C CNN
+F 3 "" H 9650 6000 50  0001 C CNN
+	1    9650 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C521C52
+P 9650 6100
+F 0 "R?" V 9730 6100 50  0000 C CNN
+F 1 "1k" V 9650 6100 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 9580 6100 50  0001 C CNN
+F 3 "" H 9650 6100 50  0001 C CNN
+	1    9650 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L CP1_Small C?
+U 1 1 5C521F74
+P 10000 5800
+F 0 "C?" H 10010 5870 50  0000 L CNN
+F 1 "33uF" H 10010 5720 50  0000 L CNN
+F 2 "" H 10000 5800 50  0001 C CNN
+F 3 "" H 10000 5800 50  0001 C CNN
+	1    10000 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP1_Small C?
+U 1 1 5C522262
+P 10450 5900
+F 0 "C?" H 10460 5970 50  0000 L CNN
+F 1 "33uF" H 10460 5820 50  0000 L CNN
+F 2 "" H 10450 5900 50  0001 C CNN
+F 3 "" H 10450 5900 50  0001 C CNN
+	1    10450 5900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP1_Small C?
+U 1 1 5C522313
+P 10000 6000
+F 0 "C?" H 10010 6070 50  0000 L CNN
+F 1 "33uF" H 10010 5920 50  0000 L CNN
+F 2 "" H 10000 6000 50  0001 C CNN
+F 3 "" H 10000 6000 50  0001 C CNN
+	1    10000 6000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP1_Small C?
+U 1 1 5C5223C7
+P 10450 6100
+F 0 "C?" H 10460 6170 50  0000 L CNN
+F 1 "33uF" H 10460 6020 50  0000 L CNN
+F 2 "" H 10450 6100 50  0001 C CNN
+F 3 "" H 10450 6100 50  0001 C CNN
+	1    10450 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C522480
+P 10100 5800
+F 0 "#PWR?" H 10100 5550 50  0001 C CNN
+F 1 "GND" H 10100 5650 50  0000 C CNN
+F 2 "" H 10100 5800 50  0001 C CNN
+F 3 "" H 10100 5800 50  0001 C CNN
+	1    10100 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C52252A
+P 10550 5900
+F 0 "#PWR?" H 10550 5650 50  0001 C CNN
+F 1 "GND" H 10550 5750 50  0000 C CNN
+F 2 "" H 10550 5900 50  0001 C CNN
+F 3 "" H 10550 5900 50  0001 C CNN
+	1    10550 5900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C5225D4
+P 10100 6000
+F 0 "#PWR?" H 10100 5750 50  0001 C CNN
+F 1 "GND" H 10100 5850 50  0000 C CNN
+F 2 "" H 10100 6000 50  0001 C CNN
+F 3 "" H 10100 6000 50  0001 C CNN
+	1    10100 6000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C52267E
+P 10550 6100
+F 0 "#PWR?" H 10550 5850 50  0001 C CNN
+F 1 "GND" H 10550 5950 50  0000 C CNN
+F 2 "" H 10550 6100 50  0001 C CNN
+F 3 "" H 10550 6100 50  0001 C CNN
+	1    10550 6100
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
 	1050 7150 1350 7150
 Wire Wire Line
@@ -1147,13 +1455,13 @@ Wire Wire Line
 Wire Wire Line
 	4950 5200 5150 5200
 Wire Wire Line
-	9750 5800 10150 5800
+	9100 5800 9500 5800
 Wire Wire Line
-	9750 5900 10150 5900
+	9100 5900 9500 5900
 Wire Wire Line
-	9750 6000 10150 6000
+	9100 6000 9500 6000
 Wire Wire Line
-	9750 6100 10150 6100
+	9100 6100 9500 6100
 Wire Wire Line
 	2700 6700 2700 6850
 Wire Wire Line
@@ -1173,50 +1481,6 @@ Connection ~ 1800 3050
 Wire Wire Line
 	1700 3250 2150 3250
 Connection ~ 1800 3250
-$Comp
-L +3.3V #PWR0125
-U 1 1 5C3FE256
-P 1150 3750
-F 0 "#PWR0125" H 1150 3600 50  0001 C CNN
-F 1 "+3.3V" H 1150 3890 50  0000 C CNN
-F 2 "" H 1150 3750 50  0001 C CNN
-F 3 "" H 1150 3750 50  0001 C CNN
-	1    1150 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GNDD #PWR0126
-U 1 1 5C3FE25C
-P 1150 3950
-F 0 "#PWR0126" H 1150 3700 50  0001 C CNN
-F 1 "GNDD" H 1150 3825 50  0000 C CNN
-F 2 "" H 1150 3950 50  0001 C CNN
-F 3 "" H 1150 3950 50  0001 C CNN
-	1    1150 3950
-	-1   0    0    -1  
-$EndComp
-$Comp
-L C_Small C77
-U 1 1 5C3FE262
-P 1250 3850
-F 0 "C77" H 1260 3920 50  0000 L CNN
-F 1 "0.1uF" H 1260 3770 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1250 3850 50  0001 C CNN
-F 3 "" H 1250 3850 50  0001 C CNN
-	1    1250 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C75
-U 1 1 5C3FE268
-P 1050 3850
-F 0 "C75" H 1060 3920 50  0000 L CNN
-F 1 "1uF" H 1060 3770 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1050 3850 50  0001 C CNN
-F 3 "" H 1050 3850 50  0001 C CNN
-	1    1050 3850
-	1    0    0    -1  
-$EndComp
 Connection ~ 1150 3750
 Connection ~ 1150 3950
 Connection ~ 1900 3250
@@ -1225,98 +1489,10 @@ Wire Wire Line
 Wire Wire Line
 	2000 3150 2000 3050
 Connection ~ 1900 3050
-$Comp
-L +3.3V #PWR0127
-U 1 1 5C3FE416
-P 1150 3200
-F 0 "#PWR0127" H 1150 3050 50  0001 C CNN
-F 1 "+3.3V" H 1150 3340 50  0000 C CNN
-F 2 "" H 1150 3200 50  0001 C CNN
-F 3 "" H 1150 3200 50  0001 C CNN
-	1    1150 3200
-	1    0    0    -1  
-$EndComp
-$Comp
-L GNDD #PWR0128
-U 1 1 5C3FE41C
-P 1150 3400
-F 0 "#PWR0128" H 1150 3150 50  0001 C CNN
-F 1 "GNDD" H 1150 3275 50  0000 C CNN
-F 2 "" H 1150 3400 50  0001 C CNN
-F 3 "" H 1150 3400 50  0001 C CNN
-	1    1150 3400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L C_Small C76
-U 1 1 5C3FE422
-P 1250 3300
-F 0 "C76" H 1260 3370 50  0000 L CNN
-F 1 "0.1uF" H 1260 3220 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1250 3300 50  0001 C CNN
-F 3 "" H 1250 3300 50  0001 C CNN
-	1    1250 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C74
-U 1 1 5C3FE428
-P 1050 3300
-F 0 "C74" H 1060 3370 50  0000 L CNN
-F 1 "1uF" H 1060 3220 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1050 3300 50  0001 C CNN
-F 3 "" H 1050 3300 50  0001 C CNN
-	1    1050 3300
-	1    0    0    -1  
-$EndComp
 Connection ~ 1150 3200
 Connection ~ 1150 3400
 Connection ~ 1250 3200
 Connection ~ 1250 3400
-$Comp
-L +3.3V #PWR0129
-U 1 1 5C3FE658
-P 1800 4100
-F 0 "#PWR0129" H 1800 3950 50  0001 C CNN
-F 1 "+3.3V" H 1800 4240 50  0000 C CNN
-F 2 "" H 1800 4100 50  0001 C CNN
-F 3 "" H 1800 4100 50  0001 C CNN
-	1    1800 4100
-	-1   0    0    1   
-$EndComp
-$Comp
-L GNDD #PWR0130
-U 1 1 5C3FE65E
-P 1800 3900
-F 0 "#PWR0130" H 1800 3650 50  0001 C CNN
-F 1 "GNDD" H 1800 3775 50  0000 C CNN
-F 2 "" H 1800 3900 50  0001 C CNN
-F 3 "" H 1800 3900 50  0001 C CNN
-	1    1800 3900
-	1    0    0    1   
-$EndComp
-$Comp
-L C_Small C79
-U 1 1 5C3FE664
-P 1700 4000
-F 0 "C79" H 1710 4070 50  0000 L CNN
-F 1 "0.1uF" H 1710 3920 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1700 4000 50  0001 C CNN
-F 3 "" H 1700 4000 50  0001 C CNN
-	1    1700 4000
-	-1   0    0    1   
-$EndComp
-$Comp
-L C_Small C81
-U 1 1 5C3FE66A
-P 1900 4000
-F 0 "C81" H 1910 4070 50  0000 L CNN
-F 1 "1uF" H 1910 3920 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1900 4000 50  0001 C CNN
-F 3 "" H 1900 4000 50  0001 C CNN
-	1    1900 4000
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1700 4100 2000 4100
 Connection ~ 1800 4100
@@ -1346,9 +1522,9 @@ Wire Wire Line
 Wire Wire Line
 	2150 3450 1550 3450
 Wire Wire Line
-	1550 3450 1550 3750
+	1550 3750 1550 3450
 Wire Wire Line
-	1550 3750 1050 3750
+	1050 3750 1550 3750
 Wire Wire Line
 	1400 3400 1400 3550
 Wire Wire Line
@@ -1356,53 +1532,9 @@ Wire Wire Line
 Wire Wire Line
 	2150 3650 1600 3650
 Wire Wire Line
-	1600 3650 1600 3950
+	1600 3950 1600 3650
 Wire Wire Line
-	1600 3950 1050 3950
-$Comp
-L Conn_01x01 J4
-U 1 1 5C3FE394
-P 5350 1200
-F 0 "J4" H 5350 1300 50  0000 C CNN
-F 1 "Capsense_0" H 5350 1100 50  0000 C CNN
-F 2 "Cypress_capsense:Capsense_button" H 5350 1200 50  0001 C CNN
-F 3 "" H 5350 1200 50  0001 C CNN
-	1    5350 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x01 J5
-U 1 1 5C3FE689
-P 5350 1300
-F 0 "J5" H 5350 1400 50  0000 C CNN
-F 1 "Capsense_1" H 5350 1200 50  0000 C CNN
-F 2 "Cypress_capsense:Capsense_button" H 5350 1300 50  0001 C CNN
-F 3 "" H 5350 1300 50  0001 C CNN
-	1    5350 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x01 J6
-U 1 1 5C3FE726
-P 5350 1400
-F 0 "J6" H 5350 1500 50  0000 C CNN
-F 1 "Capsense_2" H 5350 1300 50  0000 C CNN
-F 2 "Cypress_capsense:Capsense_button" H 5350 1400 50  0001 C CNN
-F 3 "" H 5350 1400 50  0001 C CNN
-	1    5350 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Conn_01x01 J7
-U 1 1 5C3FE7BA
-P 5350 1500
-F 0 "J7" H 5350 1600 50  0000 C CNN
-F 1 "Capsense_3" H 5350 1400 50  0000 C CNN
-F 2 "Cypress_capsense:Capsense_button" H 5350 1500 50  0001 C CNN
-F 3 "" H 5350 1500 50  0001 C CNN
-	1    5350 1500
-	1    0    0    -1  
-$EndComp
+	1050 3950 1600 3950
 Wire Wire Line
 	5150 1500 4950 1500
 Wire Wire Line
@@ -1411,4 +1543,32 @@ Wire Wire Line
 	5150 1300 4950 1300
 Wire Wire Line
 	4950 1200 5150 1200
+Wire Wire Line
+	9800 5800 9900 5800
+Wire Wire Line
+	9800 5900 10350 5900
+Wire Wire Line
+	9800 6000 9900 6000
+Wire Wire Line
+	9800 6100 10350 6100
+Wire Wire Line
+	9850 5800 9850 5250
+Wire Wire Line
+	9850 5250 9900 5250
+Connection ~ 9850 5800
+Wire Wire Line
+	10250 5900 10250 5650
+Wire Wire Line
+	10250 5650 10300 5650
+Connection ~ 10250 5900
+Wire Wire Line
+	9850 6000 9850 6250
+Wire Wire Line
+	9850 6250 9900 6250
+Connection ~ 9850 6000
+Wire Wire Line
+	10250 6100 10250 6400
+Wire Wire Line
+	10250 6400 10350 6400
+Connection ~ 10250 6100
 $EndSCHEMATC

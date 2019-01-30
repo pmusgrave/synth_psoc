@@ -1,3 +1,5 @@
+#ifndef GLOBALS_H
+#define GLOBALS_H
 #include "project.h"
 
 extern volatile uint8_t current_mode;
@@ -12,5 +14,14 @@ extern volatile float pulse_width_2;
 extern volatile float freq_3;
 extern volatile float pulse_width_3;
 
+struct button {
+    uint8_t note_triggered;
+    uint8_t capsense_widget;
+    void (*osc_enable_function)(void);
+    void (*osc_disable_function)(void);
+};
+
 extern volatile double music_notes[];
+
+#endif
 /* [] END OF FILE */

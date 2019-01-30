@@ -46,7 +46,6 @@ int main(void)
     osc_3_ovf_StartEx(OSC_3_OVF_VECT);
     
     // Init envelope components and PWM interrupts
-    /*
     envelope_PWM_0_Start();
     envelope_PWM_1_Start();
     envelope_PWM_2_Start();
@@ -58,13 +57,17 @@ int main(void)
     envelope_3_ovf_StartEx(ENV_3_OVF_VECT);
     
     float system_tick = 0;
-    */
     
     // Init Capsense
     CapSense_Buttons_Start();	
 	CapSense_Buttons_InitializeAllBaselines();
     CapSense_Buttons_ScanEnabledWidgets();
-    
+        
+    struct button Osc_0_Button = {0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
+    struct button Osc_1_Button = {0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
+    struct button Osc_2_Button = {0, CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop};
+    struct button Osc_3_Button = {0, CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop};
+
     while(1){
         // update all ADC values when the end of conversion interrupt triggers
         if(adc_update_flag != 0){ 
@@ -85,13 +88,54 @@ int main(void)
         }
 
         
+        system_tick = system_tick + 0.1;
+        pwm_value = (uint16_t)system_tick;
         
-        // system_tick = system_tick + 0.1;
+        /*
+        if(Osc_0_Button.note_triggered){
+            
+        }
+        else{
+            if(pwm_value > 0){
+                pwm_value--;
+            }
+            envelope_PWM_0_WriteCompare(pwm_value);
+        }
         
-        // pwm_value = (uint16_t)system_tick;
-        // envelope_PWM_0_WriteCompare(pwm_value);
         
-
+        if(Osc_1_Button.note_triggered){
+            pwm_value = (uint16_t)system_tick;
+            envelope_PWM_1_WriteCompare(pwm_value);
+        }
+        else{
+            if(pwm_value > 0){
+                pwm_value--;
+            }
+            envelope_PWM_1_WriteCompare(pwm_value);
+        }
+        
+        if(Osc_2_Button.note_triggered){
+            pwm_value = (uint16_t)system_tick;
+            envelope_PWM_2_WriteCompare(pwm_value);
+        }
+        else{
+            if(pwm_value > 0){
+                pwm_value--;
+            }
+            envelope_PWM_2_WriteCompare(pwm_value);
+        }
+        
+        if(Osc_3_Button.note_triggered){
+            pwm_value = (uint16_t)system_tick;
+            envelope_PWM_3_WriteCompare(pwm_value);
+        }
+        else{
+            if(pwm_value > 0){
+                pwm_value--;
+            }
+            envelope_PWM_3_WriteCompare(pwm_value);
+        }
+        */
         
         
         // scan all CapSense buttons sequentially,
@@ -99,10 +143,10 @@ int main(void)
         if(!CapSense_Buttons_IsBusy()) {
             CapSense_Buttons_UpdateEnabledBaselines();
             
-            HandleButton(CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop);
-            HandleButton(CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop);
-            HandleButton(CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop);
-            HandleButton(CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop);
+            HandleButton(Osc_0_Button);
+            HandleButton(Osc_1_Button);
+            HandleButton(Osc_2_Button);
+            HandleButton(Osc_3_Button);
             
             CapSense_Buttons_ScanEnabledWidgets();
         }
