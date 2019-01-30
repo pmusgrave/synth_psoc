@@ -71,6 +71,7 @@ int main(void)
             adc_update_flag = 0;
                
             freq_0 = ADC_SAR_Seq_GetResult16(FREQ_0_ADC_CHAN);
+            freq_0 = Quantize(freq_0);
             pulse_width_0 = ADC_SAR_Seq_GetResult16(PW_0_ADC_CHAN);  
             
             freq_1 = ADC_SAR_Seq_GetResult16(FREQ_1_ADC_CHAN);

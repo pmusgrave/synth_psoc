@@ -36,4 +36,10 @@ void EnableSingleOscillator(void (*osc_enable_function)(void)){
 void DisableSingleOscillator(void (*osc_disable_function)(void)){
     (*osc_disable_function)();
 }
+
+double Quantize(float unquantized_freq){
+    unquantized_freq = unquantized_freq + 10;
+    double quantized_freq = 65535/(200000/440);
+    return (quantized_freq);
+}
 /* [] END OF FILE */

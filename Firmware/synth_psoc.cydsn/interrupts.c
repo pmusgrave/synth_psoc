@@ -17,7 +17,6 @@ CY_ISR_PROTO(OSC_0_OVF_VECT){
 CY_ISR_PROTO(OSC_1_OVF_VECT){
     main_osc_PWM_1_WritePeriod((uint16) 65535/freq_1);
     main_osc_PWM_1_WriteCompare((uint16) (65535/freq_1)/(2000/pulse_width_1));
-    
 }
 
 CY_ISR_PROTO(OSC_2_OVF_VECT){
