@@ -189,612 +189,14 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L 2N3904 Q6
-U 1 1 5C367DF2
-P 5300 2800
-F 0 "Q6" H 5500 2875 50  0000 L CNN
-F 1 "2N3904" H 5500 2800 50  0000 L CNN
-F 2 "digikey-footprints:SOT-23-3" H 5500 2725 50  0001 L CIN
-F 3 "" H 5300 2800 50  0001 L CNN
-	1    5300 2800
-	1    0    0    -1  
-$EndComp
-Text Label 4900 2350 0    60   ~ 0
-bias
-$Comp
-L R R85
-U 1 1 5C367F46
-P 5400 2300
-F 0 "R85" V 5480 2300 50  0000 C CNN
-F 1 "10k" V 5400 2300 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 5330 2300 50  0001 C CNN
-F 3 "" H 5400 2300 50  0001 C CNN
-	1    5400 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R86
-U 1 1 5C367FA3
-P 5400 3300
-F 0 "R86" V 5480 3300 50  0000 C CNN
-F 1 "10k" V 5400 3300 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 5330 3300 50  0001 C CNN
-F 3 "" H 5400 3300 50  0001 C CNN
-	1    5400 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR071
-U 1 1 5C367FDF
-P 5400 3500
-F 0 "#PWR071" H 5400 3250 50  0001 C CNN
-F 1 "GND" H 5400 3350 50  0000 C CNN
-F 2 "" H 5400 3500 50  0001 C CNN
-F 3 "" H 5400 3500 50  0001 C CNN
-	1    5400 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L +15V #PWR072
-U 1 1 5C368017
-P 5400 2100
-F 0 "#PWR072" H 5400 1950 50  0001 C CNN
-F 1 "+15V" H 5400 2240 50  0000 C CNN
-F 2 "" H 5400 2100 50  0001 C CNN
-F 3 "" H 5400 2100 50  0001 C CNN
-	1    5400 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C63
-U 1 1 5C368040
-P 5850 2650
-F 0 "C63" H 5860 2720 50  0000 L CNN
-F 1 "33nF" H 5860 2570 50  0000 L CNN
-F 2 "digikey-footprints:0805" H 5850 2650 50  0001 C CNN
-F 3 "" H 5850 2650 50  0001 C CNN
-	1    5850 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L POT RV11
-U 1 1 5C368098
-P 5850 2950
-F 0 "RV11" V 5675 2950 50  0000 C CNN
-F 1 "10kB" V 5750 2950 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 5850 2950 50  0001 C CNN
-F 3 "" H 5850 2950 50  0001 C CNN
-	1    5850 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP1_Small C61
-U 1 1 5C36835D
-P 4650 2800
-F 0 "C61" H 4660 2870 50  0000 L CNN
-F 1 "22uF" H 4660 2720 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 4650 2800 50  0001 C CNN
-F 3 "" H 4650 2800 50  0001 C CNN
-	1    4650 2800
-	0    1    1    0   
-$EndComp
-$Comp
-L CP1_Small C65
-U 1 1 5C368390
-P 6500 2750
-F 0 "C65" H 6510 2820 50  0000 L CNN
-F 1 "220uF" H 6510 2670 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_8x10" H 6500 2750 50  0001 C CNN
-F 3 "" H 6500 2750 50  0001 C CNN
-	1    6500 2750
-	0    -1   -1   0   
-$EndComp
 Text HLabel 7150 3050 2    60   Output ~ 0
 lfo1
-Text Notes 6450 3100 2    60   ~ 0
-lfo_1 phase
-$Comp
-L POT RV13
-U 1 1 5C36940A
-P 6850 3050
-F 0 "RV13" V 6675 3050 50  0000 C CNN
-F 1 "10kA" V 6750 3050 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6850 3050 50  0001 C CNN
-F 3 "" H 6850 3050 50  0001 C CNN
-	1    6850 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR073
-U 1 1 5C3694AC
-P 6850 3250
-F 0 "#PWR073" H 6850 3000 50  0001 C CNN
-F 1 "GND" H 6850 3100 50  0000 C CNN
-F 2 "" H 6850 3250 50  0001 C CNN
-F 3 "" H 6850 3250 50  0001 C CNN
-	1    6850 3250
-	1    0    0    -1  
-$EndComp
-Text Notes 7600 3200 2    60   ~ 0
-lfo1 mod level
-$Comp
-L 2N3904 Q7
-U 1 1 5C374CBC
-P 8750 2800
-F 0 "Q7" H 8950 2875 50  0000 L CNN
-F 1 "2N3904" H 8950 2800 50  0000 L CNN
-F 2 "digikey-footprints:SOT-23-3" H 8950 2725 50  0001 L CIN
-F 3 "" H 8750 2800 50  0001 L CNN
-	1    8750 2800
-	1    0    0    -1  
-$EndComp
-Text Label 8350 2250 0    60   ~ 0
-bias
-$Comp
-L R R89
-U 1 1 5C374CC3
-P 8850 2250
-F 0 "R89" V 8930 2250 50  0000 C CNN
-F 1 "10k" V 8850 2250 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 8780 2250 50  0001 C CNN
-F 3 "" H 8850 2250 50  0001 C CNN
-	1    8850 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R90
-U 1 1 5C374CC9
-P 8850 3300
-F 0 "R90" V 8930 3300 50  0000 C CNN
-F 1 "10k" V 8850 3300 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 8780 3300 50  0001 C CNN
-F 3 "" H 8850 3300 50  0001 C CNN
-	1    8850 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR074
-U 1 1 5C374CCF
-P 8850 3500
-F 0 "#PWR074" H 8850 3250 50  0001 C CNN
-F 1 "GND" H 8850 3350 50  0000 C CNN
-F 2 "" H 8850 3500 50  0001 C CNN
-F 3 "" H 8850 3500 50  0001 C CNN
-	1    8850 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L +15V #PWR075
-U 1 1 5C374CD5
-P 8850 2100
-F 0 "#PWR075" H 8850 1950 50  0001 C CNN
-F 1 "+15V" H 8850 2240 50  0000 C CNN
-F 2 "" H 8850 2100 50  0001 C CNN
-F 3 "" H 8850 2100 50  0001 C CNN
-	1    8850 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C68
-U 1 1 5C374CDB
-P 9300 2650
-F 0 "C68" H 9310 2720 50  0000 L CNN
-F 1 "33nF" H 9310 2570 50  0000 L CNN
-F 2 "digikey-footprints:0805" H 9300 2650 50  0001 C CNN
-F 3 "" H 9300 2650 50  0001 C CNN
-	1    9300 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L POT RV14
-U 1 1 5C374CE1
-P 9300 2950
-F 0 "RV14" V 9125 2950 50  0000 C CNN
-F 1 "10kB" V 9200 2950 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9300 2950 50  0001 C CNN
-F 3 "" H 9300 2950 50  0001 C CNN
-	1    9300 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP1_Small C66
-U 1 1 5C374CF7
-P 8100 2800
-F 0 "C66" H 8110 2870 50  0000 L CNN
-F 1 "22uF" H 8110 2720 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 8100 2800 50  0001 C CNN
-F 3 "" H 8100 2800 50  0001 C CNN
-	1    8100 2800
-	0    1    1    0   
-$EndComp
-$Comp
-L CP1_Small C70
-U 1 1 5C374CFD
-P 9950 2750
-F 0 "C70" H 9960 2820 50  0000 L CNN
-F 1 "22uF" H 9960 2670 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 9950 2750 50  0001 C CNN
-F 3 "" H 9950 2750 50  0001 C CNN
-	1    9950 2750
-	0    -1   -1   0   
-$EndComp
 Text HLabel 10600 3050 2    60   Output ~ 0
 lfo2
-Text Notes 9900 3100 2    60   ~ 0
-lfo_2 phase
-$Comp
-L POT RV16
-U 1 1 5C374D06
-P 10300 3050
-F 0 "RV16" V 10125 3050 50  0000 C CNN
-F 1 "10kA" V 10200 3050 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 10300 3050 50  0001 C CNN
-F 3 "" H 10300 3050 50  0001 C CNN
-	1    10300 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR076
-U 1 1 5C374D0F
-P 10300 3250
-F 0 "#PWR076" H 10300 3000 50  0001 C CNN
-F 1 "GND" H 10300 3100 50  0000 C CNN
-F 2 "" H 10300 3250 50  0001 C CNN
-F 3 "" H 10300 3250 50  0001 C CNN
-	1    10300 3250
-	1    0    0    -1  
-$EndComp
-Text Notes 11050 3200 2    60   ~ 0
-lfo2 mod level
-$Comp
-L 2N3904 Q5
-U 1 1 5C374DFF
-P 5250 5050
-F 0 "Q5" H 5450 5125 50  0000 L CNN
-F 1 "2N3904" H 5450 5050 50  0000 L CNN
-F 2 "digikey-footprints:SOT-23-3" H 5450 4975 50  0001 L CIN
-F 3 "" H 5250 5050 50  0001 L CNN
-	1    5250 5050
-	1    0    0    -1  
-$EndComp
-Text Label 4850 4500 0    60   ~ 0
-bias
-$Comp
-L R R83
-U 1 1 5C374E06
-P 5350 4550
-F 0 "R83" V 5430 4550 50  0000 C CNN
-F 1 "10k" V 5350 4550 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 5280 4550 50  0001 C CNN
-F 3 "" H 5350 4550 50  0001 C CNN
-	1    5350 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R84
-U 1 1 5C374E0C
-P 5350 5550
-F 0 "R84" V 5430 5550 50  0000 C CNN
-F 1 "10k" V 5350 5550 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 5280 5550 50  0001 C CNN
-F 3 "" H 5350 5550 50  0001 C CNN
-	1    5350 5550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR077
-U 1 1 5C374E12
-P 5350 5750
-F 0 "#PWR077" H 5350 5500 50  0001 C CNN
-F 1 "GND" H 5350 5600 50  0000 C CNN
-F 2 "" H 5350 5750 50  0001 C CNN
-F 3 "" H 5350 5750 50  0001 C CNN
-	1    5350 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L +15V #PWR078
-U 1 1 5C374E18
-P 5350 4350
-F 0 "#PWR078" H 5350 4200 50  0001 C CNN
-F 1 "+15V" H 5350 4490 50  0000 C CNN
-F 2 "" H 5350 4350 50  0001 C CNN
-F 3 "" H 5350 4350 50  0001 C CNN
-	1    5350 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C62
-U 1 1 5C374E1E
-P 5800 4900
-F 0 "C62" H 5810 4970 50  0000 L CNN
-F 1 "33nF" H 5810 4820 50  0000 L CNN
-F 2 "digikey-footprints:0805" H 5800 4900 50  0001 C CNN
-F 3 "" H 5800 4900 50  0001 C CNN
-	1    5800 4900
-	1    0    0    -1  
-$EndComp
-$Comp
-L POT RV10
-U 1 1 5C374E24
-P 5800 5200
-F 0 "RV10" V 5625 5200 50  0000 C CNN
-F 1 "10kB" V 5700 5200 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 5800 5200 50  0001 C CNN
-F 3 "" H 5800 5200 50  0001 C CNN
-	1    5800 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP1_Small C60
-U 1 1 5C374E3A
-P 4600 5050
-F 0 "C60" H 4610 5120 50  0000 L CNN
-F 1 "22uF" H 4610 4970 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 4600 5050 50  0001 C CNN
-F 3 "" H 4600 5050 50  0001 C CNN
-	1    4600 5050
-	0    1    1    0   
-$EndComp
-$Comp
-L CP1_Small C64
-U 1 1 5C374E40
-P 6450 5000
-F 0 "C64" H 6460 5070 50  0000 L CNN
-F 1 "22uF" H 6460 4920 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 6450 5000 50  0001 C CNN
-F 3 "" H 6450 5000 50  0001 C CNN
-	1    6450 5000
-	0    -1   -1   0   
-$EndComp
 Text HLabel 7100 5300 2    60   Output ~ 0
 lfo3
-Text Notes 6400 5350 2    60   ~ 0
-lfo_3 phase
-$Comp
-L POT RV12
-U 1 1 5C374E49
-P 6800 5300
-F 0 "RV12" V 6625 5300 50  0000 C CNN
-F 1 "10kA" V 6700 5300 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6800 5300 50  0001 C CNN
-F 3 "" H 6800 5300 50  0001 C CNN
-	1    6800 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR079
-U 1 1 5C374E52
-P 6800 5500
-F 0 "#PWR079" H 6800 5250 50  0001 C CNN
-F 1 "GND" H 6800 5350 50  0000 C CNN
-F 2 "" H 6800 5500 50  0001 C CNN
-F 3 "" H 6800 5500 50  0001 C CNN
-	1    6800 5500
-	1    0    0    -1  
-$EndComp
-Text Notes 7550 5450 2    60   ~ 0
-lfo3 mod level
-$Comp
-L 2N3904 Q8
-U 1 1 5C375022
-P 8750 5000
-F 0 "Q8" H 8950 5075 50  0000 L CNN
-F 1 "2N3904" H 8950 5000 50  0000 L CNN
-F 2 "digikey-footprints:SOT-23-3" H 8950 4925 50  0001 L CIN
-F 3 "" H 8750 5000 50  0001 L CNN
-	1    8750 5000
-	1    0    0    -1  
-$EndComp
-Text Label 8350 4400 0    60   ~ 0
-bias
-$Comp
-L R R91
-U 1 1 5C375029
-P 8850 4500
-F 0 "R91" V 8930 4500 50  0000 C CNN
-F 1 "10k" V 8850 4500 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 8780 4500 50  0001 C CNN
-F 3 "" H 8850 4500 50  0001 C CNN
-	1    8850 4500
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R92
-U 1 1 5C37502F
-P 8850 5500
-F 0 "R92" V 8930 5500 50  0000 C CNN
-F 1 "10k" V 8850 5500 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 8780 5500 50  0001 C CNN
-F 3 "" H 8850 5500 50  0001 C CNN
-	1    8850 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR080
-U 1 1 5C375035
-P 8850 5700
-F 0 "#PWR080" H 8850 5450 50  0001 C CNN
-F 1 "GND" H 8850 5550 50  0000 C CNN
-F 2 "" H 8850 5700 50  0001 C CNN
-F 3 "" H 8850 5700 50  0001 C CNN
-	1    8850 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L +15V #PWR081
-U 1 1 5C37503B
-P 8850 4300
-F 0 "#PWR081" H 8850 4150 50  0001 C CNN
-F 1 "+15V" H 8850 4440 50  0000 C CNN
-F 2 "" H 8850 4300 50  0001 C CNN
-F 3 "" H 8850 4300 50  0001 C CNN
-	1    8850 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L C_Small C69
-U 1 1 5C375041
-P 9300 4850
-F 0 "C69" H 9310 4920 50  0000 L CNN
-F 1 "33nF" H 9310 4770 50  0000 L CNN
-F 2 "digikey-footprints:0805" H 9300 4850 50  0001 C CNN
-F 3 "" H 9300 4850 50  0001 C CNN
-	1    9300 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L POT RV15
-U 1 1 5C375047
-P 9300 5150
-F 0 "RV15" V 9125 5150 50  0000 C CNN
-F 1 "10kB" V 9200 5150 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9300 5150 50  0001 C CNN
-F 3 "" H 9300 5150 50  0001 C CNN
-	1    9300 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP1_Small C67
-U 1 1 5C37505D
-P 8100 5000
-F 0 "C67" H 8110 5070 50  0000 L CNN
-F 1 "22uF" H 8110 4920 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 8100 5000 50  0001 C CNN
-F 3 "" H 8100 5000 50  0001 C CNN
-	1    8100 5000
-	0    1    1    0   
-$EndComp
-$Comp
-L CP1_Small C71
-U 1 1 5C375063
-P 9950 4950
-F 0 "C71" H 9960 5020 50  0000 L CNN
-F 1 "22uF" H 9960 4870 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 9950 4950 50  0001 C CNN
-F 3 "" H 9950 4950 50  0001 C CNN
-	1    9950 4950
-	0    -1   -1   0   
-$EndComp
 Text HLabel 10600 5250 2    60   Output ~ 0
 lfo4
-Text Notes 9900 5300 2    60   ~ 0
-lfo_4 phase
-$Comp
-L POT RV17
-U 1 1 5C37506C
-P 10300 5250
-F 0 "RV17" V 10125 5250 50  0000 C CNN
-F 1 "10kA" V 10200 5250 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 10300 5250 50  0001 C CNN
-F 3 "" H 10300 5250 50  0001 C CNN
-	1    10300 5250
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR082
-U 1 1 5C375075
-P 10300 5450
-F 0 "#PWR082" H 10300 5200 50  0001 C CNN
-F 1 "GND" H 10300 5300 50  0000 C CNN
-F 2 "" H 10300 5450 50  0001 C CNN
-F 3 "" H 10300 5450 50  0001 C CNN
-	1    10300 5450
-	1    0    0    -1  
-$EndComp
-Text Notes 11050 5400 2    60   ~ 0
-lfo4 mod level
-$Comp
-L +15V #PWR083
-U 1 1 5C37F050
-P 1050 1000
-F 0 "#PWR083" H 1050 850 50  0001 C CNN
-F 1 "+15V" H 1050 1140 50  0000 C CNN
-F 2 "" H 1050 1000 50  0001 C CNN
-F 3 "" H 1050 1000 50  0001 C CNN
-	1    1050 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R72
-U 1 1 5C37F0DB
-P 1050 1150
-F 0 "R72" V 1130 1150 50  0000 C CNN
-F 1 "10k" V 1050 1150 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 980 1150 50  0001 C CNN
-F 3 "" H 1050 1150 50  0001 C CNN
-	1    1050 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R73
-U 1 1 5C37F1BF
-P 1050 1550
-F 0 "R73" V 1130 1550 50  0000 C CNN
-F 1 "10k" V 1050 1550 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 980 1550 50  0001 C CNN
-F 3 "" H 1050 1550 50  0001 C CNN
-	1    1050 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR084
-U 1 1 5C37F24D
-P 1050 1750
-F 0 "#PWR084" H 1050 1500 50  0001 C CNN
-F 1 "GND" H 1050 1600 50  0000 C CNN
-F 2 "" H 1050 1750 50  0001 C CNN
-F 3 "" H 1050 1750 50  0001 C CNN
-	1    1050 1750
-	1    0    0    -1  
-$EndComp
-Text Label 1300 1350 0    60   ~ 0
-bias
-$Comp
-L R R82
-U 1 1 5C37F4DB
-P 4900 2550
-F 0 "R82" V 4980 2550 50  0000 C CNN
-F 1 "470k" V 4900 2550 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 4830 2550 50  0001 C CNN
-F 3 "" H 4900 2550 50  0001 C CNN
-	1    4900 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R81
-U 1 1 5C37F889
-P 4850 4750
-F 0 "R81" V 4930 4750 50  0000 C CNN
-F 1 "470k" V 4850 4750 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 4780 4750 50  0001 C CNN
-F 3 "" H 4850 4750 50  0001 C CNN
-	1    4850 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R87
-U 1 1 5C37F945
-P 8350 2500
-F 0 "R87" V 8430 2500 50  0000 C CNN
-F 1 "470k" V 8350 2500 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 8280 2500 50  0001 C CNN
-F 3 "" H 8350 2500 50  0001 C CNN
-	1    8350 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R88
-U 1 1 5C37FA46
-P 8350 4700
-F 0 "R88" V 8430 4700 50  0000 C CNN
-F 1 "470k" V 8350 4700 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 8280 4700 50  0001 C CNN
-F 3 "" H 8350 4700 50  0001 C CNN
-	1    8350 4700
-	1    0    0    -1  
-$EndComp
 $Comp
 L GND #PWR085
 U 1 1 5C37F537
@@ -949,14 +351,6 @@ F 3 "" H 4050 4050 50  0001 C CNN
 	1    4050 4050
 	1    0    0    -1  
 $EndComp
-Text Label 4050 2800 0    60   ~ 0
-main_lfo
-Text Label 4050 5050 0    60   ~ 0
-main_lfo
-Text Label 7550 2800 0    60   ~ 0
-main_lfo
-Text Label 7550 5000 0    60   ~ 0
-main_lfo
 Text GLabel 900  3500 0    60   Input ~ 0
 VREF
 Text GLabel 2650 4250 0    60   Input ~ 0
@@ -994,267 +388,29 @@ F 3 "" H 2300 2350 50  0001 C CNN
 	1    2300 2350
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4750 2800 5100 2800
-Wire Wire Line
-	5400 3500 5400 3450
-Wire Wire Line
-	5400 3000 5400 3150
-Wire Wire Line
-	5400 2450 5400 2600
-Wire Wire Line
-	5400 2100 5400 2150
-Wire Wire Line
-	5850 2550 5850 2500
-Wire Wire Line
-	5850 2500 5400 2500
-Connection ~ 5400 2500
-Wire Wire Line
-	5850 2800 5850 2750
-Wire Wire Line
-	6000 2950 6000 2750
-Wire Wire Line
-	5850 2750 6400 2750
-Wire Wire Line
-	5850 3100 5400 3100
-Connection ~ 5400 3100
-Connection ~ 6000 2750
-Connection ~ 4900 2800
-Wire Wire Line
-	7150 3050 7000 3050
-Wire Wire Line
-	6850 2900 6850 2750
-Wire Wire Line
-	6850 2750 6600 2750
-Wire Wire Line
-	6850 3250 6850 3200
-Wire Wire Line
-	8200 2800 8550 2800
-Wire Wire Line
-	8850 3500 8850 3450
-Wire Wire Line
-	8850 3000 8850 3150
-Wire Wire Line
-	8850 2400 8850 2600
-Wire Wire Line
-	8850 2100 8850 2100
-Wire Wire Line
-	9300 2550 9300 2500
-Wire Wire Line
-	9300 2500 8850 2500
-Connection ~ 8850 2500
-Wire Wire Line
-	9300 2800 9300 2750
-Wire Wire Line
-	9450 2950 9450 2750
-Wire Wire Line
-	9300 2750 9850 2750
-Wire Wire Line
-	9300 3100 8850 3100
-Connection ~ 8850 3100
-Connection ~ 9450 2750
-Wire Wire Line
-	8350 2650 8350 2800
-Connection ~ 8350 2800
-Wire Wire Line
-	10600 3050 10450 3050
-Wire Wire Line
-	10300 2900 10300 2750
-Wire Wire Line
-	10300 2750 10050 2750
-Wire Wire Line
-	10300 3250 10300 3200
-Wire Wire Line
-	4700 5050 5050 5050
-Wire Wire Line
-	5350 5750 5350 5700
-Wire Wire Line
-	5350 5250 5350 5400
-Wire Wire Line
-	5350 4700 5350 4850
-Wire Wire Line
-	5350 4350 5350 4400
-Wire Wire Line
-	5800 4800 5800 4750
-Wire Wire Line
-	5800 4750 5350 4750
-Connection ~ 5350 4750
-Wire Wire Line
-	5800 5050 5800 5000
-Wire Wire Line
-	5950 5200 5950 5000
-Wire Wire Line
-	5800 5000 6350 5000
-Wire Wire Line
-	5800 5350 5350 5350
-Connection ~ 5350 5350
-Connection ~ 5950 5000
-Wire Wire Line
-	4850 4900 4850 5050
-Connection ~ 4850 5050
-Wire Wire Line
-	7100 5300 6950 5300
-Wire Wire Line
-	6800 5150 6800 5000
-Wire Wire Line
-	6800 5000 6550 5000
-Wire Wire Line
-	6800 5500 6800 5450
-Wire Wire Line
-	8200 5000 8550 5000
-Wire Wire Line
-	8850 5700 8850 5650
-Wire Wire Line
-	8850 5200 8850 5350
-Wire Wire Line
-	8850 4650 8850 4800
-Wire Wire Line
-	8850 4300 8850 4350
-Wire Wire Line
-	9300 4750 9300 4700
-Wire Wire Line
-	9300 4700 8850 4700
-Connection ~ 8850 4700
-Wire Wire Line
-	9300 5000 9300 4950
-Wire Wire Line
-	9450 5150 9450 4950
-Wire Wire Line
-	9300 4950 9850 4950
-Wire Wire Line
-	9300 5300 8850 5300
-Connection ~ 8850 5300
-Connection ~ 9450 4950
-Wire Wire Line
-	8350 4850 8350 5000
-Connection ~ 8350 5000
-Wire Wire Line
-	10600 5250 10450 5250
-Wire Wire Line
-	10300 5100 10300 4950
-Wire Wire Line
-	10300 4950 10050 4950
-Wire Wire Line
-	10300 5450 10300 5400
-Wire Wire Line
-	1050 1750 1050 1700
-Wire Wire Line
-	1050 1300 1050 1400
-Wire Wire Line
-	1300 1350 1050 1350
-Connection ~ 1050 1350
-Wire Wire Line
-	4900 2350 4900 2400
-Wire Wire Line
-	4900 2700 4900 2800
-Wire Wire Line
-	4850 4500 4850 4600
-Wire Wire Line
-	8350 2250 8350 2350
-Wire Wire Line
-	8350 4550 8350 4400
-Wire Wire Line
-	2250 3600 2350 3600
-Wire Wire Line
-	1850 3600 1950 3600
-Wire Wire Line
-	3550 3100 3550 4550
-Wire Wire Line
-	3550 3100 3300 3100
-Wire Wire Line
-	3000 3100 2750 3100
-Wire Wire Line
-	2750 3100 2750 3600
-Connection ~ 2750 3600
-Wire Wire Line
-	2700 3850 2700 3800
-Wire Wire Line
-	1900 3050 1900 4250
-Wire Wire Line
-	1900 4250 1600 4250
-Connection ~ 1900 3600
-Wire Wire Line
-	1300 4250 1100 4250
-Wire Wire Line
-	1100 3700 1100 4550
-Wire Wire Line
-	3550 4550 2250 4550
-Connection ~ 3550 3700
-Wire Wire Line
-	1100 4550 1950 4550
-Connection ~ 1100 4250
-Wire Wire Line
-	4050 3750 4050 3700
-Wire Wire Line
-	3950 3700 4250 3700
-Wire Wire Line
-	2500 3750 2700 3750
-Wire Wire Line
-	2700 3750 2700 3600
-Connection ~ 2700 3600
-Connection ~ 4050 3700
-Wire Wire Line
-	4050 2800 4550 2800
-Wire Wire Line
-	4050 5050 4500 5050
-Wire Wire Line
-	7550 2800 8000 2800
-Wire Wire Line
-	7550 5000 8000 5000
-Wire Wire Line
-	2650 4250 2700 4250
-Wire Wire Line
-	2700 4250 2700 4150
-Wire Wire Line
-	1250 3500 1200 3500
-Wire Wire Line
-	1250 3700 1100 3700
-Wire Wire Line
-	3450 3700 3650 3700
-Wire Wire Line
-	2650 3600 2850 3600
-Wire Wire Line
-	2700 3800 2850 3800
-Wire Wire Line
-	2300 2500 2300 2700
-Wire Wire Line
-	1900 2100 2300 2100
-Wire Wire Line
-	2300 2100 2300 2200
-Text Label 2700 2600 0    60   ~ 0
+Text Label 3150 2600 0    60   ~ 0
 lfo_square
-Wire Wire Line
-	2300 2600 2700 2600
-Connection ~ 2300 2600
 Text Label 4250 3700 0    60   ~ 0
 lfo_tri
 $Comp
 L SW_DPDT_x2 SW1
 U 1 1 5C38FB5B
-P 3600 2150
-F 0 "SW1" H 3600 2320 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 3600 1950 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCHE-DPDT" H 3600 2150 50  0001 C CNN
-F 3 "" H 3600 2150 50  0001 C CNN
-	1    3600 2150
+P 3500 1500
+F 0 "SW1" H 3500 1670 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 3500 1300 50  0000 C CNN
+F 2 "SparkFun-Electromechanical:SWITCHE-DPDT" H 3500 1500 50  0001 C CNN
+F 3 "" H 3500 1500 50  0001 C CNN
+	1    3500 1500
 	-1   0    0    1   
 $EndComp
-Text Label 2800 2250 0    60   ~ 0
+Text Label 2700 1600 0    60   ~ 0
 lfo_tri
-Wire Wire Line
-	2800 2250 3400 2250
-Text Label 2800 2050 0    60   ~ 0
+Text Label 2700 1400 0    60   ~ 0
 lfo_square
-Wire Wire Line
-	2800 2050 3400 2050
-Text Label 4000 2150 0    60   ~ 0
+Text Label 3900 1500 0    60   ~ 0
 main_lfo
-Wire Wire Line
-	4000 2150 3800 2150
 Text Notes 1550 5050 0    60   ~ 0
 470R and 10k might \nnot be the right values.\nDetermine under test.
-Text Notes 6700 1700 0    60   ~ 0
-33nF and 10k might \nnot be the right values.\nDetermine under test.
 $Comp
 L TL074 U4
 U 1 1 5C3DFB3A
@@ -1288,11 +444,6 @@ F 3 "" H 2550 2850 50  0001 C CNN
 	1    2550 2850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2550 2700 2550 2700
-Wire Wire Line
-	2550 2700 2550 2600
-Connection ~ 2550 2600
 $Comp
 L GND #PWR?
 U 1 1 5C50BC49
@@ -1315,6 +466,518 @@ F 3 "" H 1900 2900 50  0001 C CNN
 	1    1900 2900
 	-1   0    0    1   
 $EndComp
+Text Notes 11050 5400 2    60   ~ 0
+lfo4 mod level
+$Comp
+L GND #PWR082
+U 1 1 5C375075
+P 10300 5450
+F 0 "#PWR082" H 10300 5200 50  0001 C CNN
+F 1 "GND" H 10300 5300 50  0000 C CNN
+F 2 "" H 10300 5450 50  0001 C CNN
+F 3 "" H 10300 5450 50  0001 C CNN
+	1    10300 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV17
+U 1 1 5C37506C
+P 10300 5250
+F 0 "RV17" V 10125 5250 50  0000 C CNN
+F 1 "10kA" V 10200 5250 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 10300 5250 50  0001 C CNN
+F 3 "" H 10300 5250 50  0001 C CNN
+	1    10300 5250
+	1    0    0    -1  
+$EndComp
+Text Notes 11050 3200 2    60   ~ 0
+lfo2 mod level
+$Comp
+L GND #PWR076
+U 1 1 5C374D0F
+P 10300 3250
+F 0 "#PWR076" H 10300 3000 50  0001 C CNN
+F 1 "GND" H 10300 3100 50  0000 C CNN
+F 2 "" H 10300 3250 50  0001 C CNN
+F 3 "" H 10300 3250 50  0001 C CNN
+	1    10300 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV16
+U 1 1 5C374D06
+P 10300 3050
+F 0 "RV16" V 10125 3050 50  0000 C CNN
+F 1 "10kA" V 10200 3050 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 10300 3050 50  0001 C CNN
+F 3 "" H 10300 3050 50  0001 C CNN
+	1    10300 3050
+	1    0    0    -1  
+$EndComp
+Text Notes 7550 5450 2    60   ~ 0
+lfo3 mod level
+$Comp
+L GND #PWR079
+U 1 1 5C374E52
+P 6800 5500
+F 0 "#PWR079" H 6800 5250 50  0001 C CNN
+F 1 "GND" H 6800 5350 50  0000 C CNN
+F 2 "" H 6800 5500 50  0001 C CNN
+F 3 "" H 6800 5500 50  0001 C CNN
+	1    6800 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV12
+U 1 1 5C374E49
+P 6800 5300
+F 0 "RV12" V 6625 5300 50  0000 C CNN
+F 1 "10kA" V 6700 5300 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6800 5300 50  0001 C CNN
+F 3 "" H 6800 5300 50  0001 C CNN
+	1    6800 5300
+	1    0    0    -1  
+$EndComp
+Text Notes 7600 3200 2    60   ~ 0
+lfo1 mod level
+$Comp
+L GND #PWR073
+U 1 1 5C3694AC
+P 6850 3250
+F 0 "#PWR073" H 6850 3000 50  0001 C CNN
+F 1 "GND" H 6850 3100 50  0000 C CNN
+F 2 "" H 6850 3250 50  0001 C CNN
+F 3 "" H 6850 3250 50  0001 C CNN
+	1    6850 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV13
+U 1 1 5C36940A
+P 6850 3050
+F 0 "RV13" V 6675 3050 50  0000 C CNN
+F 1 "10kA" V 6750 3050 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6850 3050 50  0001 C CNN
+F 3 "" H 6850 3050 50  0001 C CNN
+	1    6850 3050
+	1    0    0    -1  
+$EndComp
+Text Label 4600 2850 0    60   ~ 0
+main_lfo
+$Comp
+L GND #PWR?
+U 1 1 5C541D9A
+P 5750 2450
+F 0 "#PWR?" H 5750 2200 50  0001 C CNN
+F 1 "GND" H 5750 2300 50  0000 C CNN
+F 2 "" H 5750 2450 50  0001 C CNN
+F 3 "" H 5750 2450 50  0001 C CNN
+	1    5750 2450
+	1    0    0    1   
+$EndComp
+$Comp
+L +15V #PWR?
+U 1 1 5C541DA0
+P 5750 3050
+F 0 "#PWR?" H 5750 2900 50  0001 C CNN
+F 1 "+15V" H 5750 3190 50  0000 C CNN
+F 2 "" H 5750 3050 50  0001 C CNN
+F 3 "" H 5750 3050 50  0001 C CNN
+	1    5750 3050
+	1    0    0    1   
+$EndComp
+$Comp
+L TL074 U?
+U 1 1 5C541DA6
+P 5850 2750
+F 0 "U?" H 5850 2950 50  0000 L CNN
+F 1 "TL074" H 5850 2550 50  0000 L CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5800 2850 50  0001 C CNN
+F 3 "" H 5900 2950 50  0001 C CNN
+	1    5850 2750
+	1    0    0    1   
+$EndComp
+Text Label 8000 2850 0    60   ~ 0
+main_lfo
+$Comp
+L GND #PWR?
+U 1 1 5C542158
+P 9150 2450
+F 0 "#PWR?" H 9150 2200 50  0001 C CNN
+F 1 "GND" H 9150 2300 50  0000 C CNN
+F 2 "" H 9150 2450 50  0001 C CNN
+F 3 "" H 9150 2450 50  0001 C CNN
+	1    9150 2450
+	1    0    0    1   
+$EndComp
+$Comp
+L +15V #PWR?
+U 1 1 5C54215E
+P 9150 3050
+F 0 "#PWR?" H 9150 2900 50  0001 C CNN
+F 1 "+15V" H 9150 3190 50  0000 C CNN
+F 2 "" H 9150 3050 50  0001 C CNN
+F 3 "" H 9150 3050 50  0001 C CNN
+	1    9150 3050
+	1    0    0    1   
+$EndComp
+$Comp
+L TL074 U?
+U 1 1 5C542164
+P 9250 2750
+F 0 "U?" H 9250 2950 50  0000 L CNN
+F 1 "TL074" H 9250 2550 50  0000 L CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 9200 2850 50  0001 C CNN
+F 3 "" H 9300 2950 50  0001 C CNN
+	1    9250 2750
+	1    0    0    1   
+$EndComp
+Text Label 4550 5050 0    60   ~ 0
+main_lfo
+$Comp
+L GND #PWR?
+U 1 1 5C5423E6
+P 5700 4650
+F 0 "#PWR?" H 5700 4400 50  0001 C CNN
+F 1 "GND" H 5700 4500 50  0000 C CNN
+F 2 "" H 5700 4650 50  0001 C CNN
+F 3 "" H 5700 4650 50  0001 C CNN
+	1    5700 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L +15V #PWR?
+U 1 1 5C5423EC
+P 5700 5250
+F 0 "#PWR?" H 5700 5100 50  0001 C CNN
+F 1 "+15V" H 5700 5390 50  0000 C CNN
+F 2 "" H 5700 5250 50  0001 C CNN
+F 3 "" H 5700 5250 50  0001 C CNN
+	1    5700 5250
+	1    0    0    1   
+$EndComp
+$Comp
+L TL074 U?
+U 1 1 5C5423F2
+P 5800 4950
+F 0 "U?" H 5800 5150 50  0000 L CNN
+F 1 "TL074" H 5800 4750 50  0000 L CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5750 5050 50  0001 C CNN
+F 3 "" H 5850 5150 50  0001 C CNN
+	1    5800 4950
+	1    0    0    1   
+$EndComp
+Text Label 7950 5050 0    60   ~ 0
+main_lfo
+$Comp
+L GND #PWR?
+U 1 1 5C5426E0
+P 9200 4650
+F 0 "#PWR?" H 9200 4400 50  0001 C CNN
+F 1 "GND" H 9200 4500 50  0000 C CNN
+F 2 "" H 9200 4650 50  0001 C CNN
+F 3 "" H 9200 4650 50  0001 C CNN
+	1    9200 4650
+	1    0    0    1   
+$EndComp
+$Comp
+L +15V #PWR?
+U 1 1 5C5426E6
+P 9200 5250
+F 0 "#PWR?" H 9200 5100 50  0001 C CNN
+F 1 "+15V" H 9200 5390 50  0000 C CNN
+F 2 "" H 9200 5250 50  0001 C CNN
+F 3 "" H 9200 5250 50  0001 C CNN
+	1    9200 5250
+	1    0    0    1   
+$EndComp
+$Comp
+L TL074 U?
+U 1 1 5C5426EC
+P 9300 4950
+F 0 "U?" H 9300 5150 50  0000 L CNN
+F 1 "TL074" H 9300 4750 50  0000 L CNN
+F 2 "digikey-footprints:SOIC-14_W3.9mm" H 9250 5050 50  0001 C CNN
+F 3 "" H 9350 5150 50  0001 C CNN
+	1    9300 4950
+	1    0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C5450B4
+P 5250 2550
+F 0 "R?" V 5330 2550 50  0000 C CNN
+F 1 "470k" V 5250 2550 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 5180 2550 50  0001 C CNN
+F 3 "" H 5250 2550 50  0001 C CNN
+	1    5250 2550
+	-1   0    0    1   
+$EndComp
+Text GLabel 5250 2400 1    60   Input ~ 0
+VREF
+$Comp
+L CP1 C?
+U 1 1 5C545298
+P 2850 2600
+F 0 "C?" H 2875 2700 50  0000 L CNN
+F 1 "220uF" H 2875 2500 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10" H 2850 2600 50  0001 C CNN
+F 3 "" H 2850 2600 50  0001 C CNN
+	1    2850 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C54563D
+P 8650 2600
+F 0 "R?" V 8730 2600 50  0000 C CNN
+F 1 "470k" V 8650 2600 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 8580 2600 50  0001 C CNN
+F 3 "" H 8650 2600 50  0001 C CNN
+	1    8650 2600
+	-1   0    0    1   
+$EndComp
+Text GLabel 8650 2450 1    60   Input ~ 0
+VREF
+$Comp
+L R R?
+U 1 1 5C54594A
+P 8650 4800
+F 0 "R?" V 8730 4800 50  0000 C CNN
+F 1 "470k" V 8650 4800 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 8580 4800 50  0001 C CNN
+F 3 "" H 8650 4800 50  0001 C CNN
+	1    8650 4800
+	-1   0    0    1   
+$EndComp
+Text GLabel 8650 4650 1    60   Input ~ 0
+VREF
+$Comp
+L CP1 C?
+U 1 1 5C545CF6
+P 6600 2750
+F 0 "C?" H 6625 2850 50  0000 L CNN
+F 1 "220uF" H 6625 2650 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10" H 6600 2750 50  0001 C CNN
+F 3 "" H 6600 2750 50  0001 C CNN
+	1    6600 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5C545FC0
+P 6550 4950
+F 0 "C?" H 6575 5050 50  0000 L CNN
+F 1 "220uF" H 6575 4850 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10" H 6550 4950 50  0001 C CNN
+F 3 "" H 6550 4950 50  0001 C CNN
+	1    6550 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5C5463C1
+P 10050 2750
+F 0 "C?" H 10075 2850 50  0000 L CNN
+F 1 "220uF" H 10075 2650 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10" H 10050 2750 50  0001 C CNN
+F 3 "" H 10050 2750 50  0001 C CNN
+	1    10050 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP1 C?
+U 1 1 5C546825
+P 10050 4950
+F 0 "C?" H 10075 5050 50  0000 L CNN
+F 1 "220uF" H 10075 4850 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_8x10" H 10050 4950 50  0001 C CNN
+F 3 "" H 10050 4950 50  0001 C CNN
+	1    10050 4950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10200 4950 10300 4950
+Wire Wire Line
+	9600 4950 9900 4950
+Wire Wire Line
+	10200 2750 10300 2750
+Wire Wire Line
+	9550 2750 9900 2750
+Wire Wire Line
+	6700 4950 6800 4950
+Wire Wire Line
+	6100 4950 6400 4950
+Wire Wire Line
+	6750 2750 6850 2750
+Wire Wire Line
+	6150 2750 6450 2750
+Connection ~ 8650 5050
+Wire Wire Line
+	8650 4950 8650 5050
+Connection ~ 8650 2850
+Wire Wire Line
+	8650 2750 8650 2850
+Connection ~ 5250 5050
+Wire Wire Line
+	5250 4900 5250 5050
+Wire Wire Line
+	3000 2600 3150 2600
+Wire Wire Line
+	5250 2700 5250 2850
+Connection ~ 9800 4950
+Wire Wire Line
+	8900 4850 9000 4850
+Wire Wire Line
+	8900 4400 8900 4850
+Wire Wire Line
+	9800 4400 8900 4400
+Wire Wire Line
+	9800 4950 9800 4400
+Wire Wire Line
+	7950 5050 9000 5050
+Connection ~ 6300 4950
+Wire Wire Line
+	5400 4850 5500 4850
+Wire Wire Line
+	5400 4400 5400 4850
+Wire Wire Line
+	6300 4400 5400 4400
+Wire Wire Line
+	6300 4950 6300 4400
+Wire Wire Line
+	4550 5050 5500 5050
+Connection ~ 9750 2750
+Wire Wire Line
+	8850 2650 8950 2650
+Wire Wire Line
+	8850 2200 8850 2650
+Wire Wire Line
+	9750 2200 8850 2200
+Wire Wire Line
+	9750 2750 9750 2200
+Wire Wire Line
+	8000 2850 8950 2850
+Connection ~ 6350 2750
+Wire Wire Line
+	5450 2650 5550 2650
+Wire Wire Line
+	5450 2200 5450 2650
+Wire Wire Line
+	6350 2200 5450 2200
+Wire Wire Line
+	6350 2750 6350 2200
+Wire Wire Line
+	4600 2850 5550 2850
+Wire Wire Line
+	7150 3050 7000 3050
+Wire Wire Line
+	6850 2750 6850 2900
+Wire Wire Line
+	6850 3250 6850 3200
+Wire Wire Line
+	7100 5300 6950 5300
+Wire Wire Line
+	6800 4950 6800 5150
+Wire Wire Line
+	6800 5500 6800 5450
+Wire Wire Line
+	10600 3050 10450 3050
+Wire Wire Line
+	10300 2750 10300 2900
+Wire Wire Line
+	10300 3250 10300 3200
+Wire Wire Line
+	10600 5250 10450 5250
+Wire Wire Line
+	10300 4950 10300 5100
+Wire Wire Line
+	10300 5450 10300 5400
 Wire Wire Line
 	1900 2750 1900 2100
+Connection ~ 2550 2600
+Wire Wire Line
+	2550 2600 2550 2700
+Wire Wire Line
+	3900 1500 3700 1500
+Wire Wire Line
+	2700 1400 3300 1400
+Wire Wire Line
+	2700 1600 3300 1600
+Connection ~ 2300 2600
+Wire Wire Line
+	2300 2600 2700 2600
+Wire Wire Line
+	2300 2100 2300 2200
+Wire Wire Line
+	1900 2100 2300 2100
+Wire Wire Line
+	2300 2500 2300 2700
+Wire Wire Line
+	2700 3800 2850 3800
+Wire Wire Line
+	2650 3600 2850 3600
+Wire Wire Line
+	3450 3700 3650 3700
+Wire Wire Line
+	1250 3700 1100 3700
+Wire Wire Line
+	1250 3500 1200 3500
+Wire Wire Line
+	2700 4250 2700 4150
+Wire Wire Line
+	2650 4250 2700 4250
+Connection ~ 4050 3700
+Wire Wire Line
+	3950 3700 4250 3700
+Wire Wire Line
+	4050 3750 4050 3700
+Connection ~ 1100 4250
+Wire Wire Line
+	1100 4550 1950 4550
+Connection ~ 3550 3700
+Wire Wire Line
+	3550 4550 2250 4550
+Wire Wire Line
+	1100 3700 1100 4550
+Wire Wire Line
+	1300 4250 1100 4250
+Connection ~ 1900 3600
+Wire Wire Line
+	1900 4250 1600 4250
+Wire Wire Line
+	1900 3050 1900 4250
+Wire Wire Line
+	2700 3850 2700 3800
+Connection ~ 2750 3600
+Wire Wire Line
+	2750 3100 2750 3600
+Wire Wire Line
+	3000 3100 2750 3100
+Wire Wire Line
+	3550 3100 3300 3100
+Wire Wire Line
+	3550 3100 3550 4550
+Wire Wire Line
+	1850 3600 1950 3600
+Wire Wire Line
+	2250 3600 2350 3600
+$Comp
+L R R?
+U 1 1 5C547773
+P 5250 4750
+F 0 "R?" V 5330 4750 50  0000 C CNN
+F 1 "470k" V 5250 4750 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 5180 4750 50  0001 C CNN
+F 3 "" H 5250 4750 50  0001 C CNN
+	1    5250 4750
+	-1   0    0    1   
+$EndComp
+Text GLabel 5250 4600 1    60   Input ~ 0
+VREF
+Wire Wire Line
+	2500 3750 2300 3750
+Wire Wire Line
+	2300 3750 2300 3600
+Connection ~ 2300 3600
 $EndSCHEMATC

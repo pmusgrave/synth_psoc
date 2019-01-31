@@ -16,41 +16,18 @@ X +15V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# +3V3
+# +5V
 #
-DEF +3V3 #PWR 0 0 Y Y 1 F P
+DEF +5V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "+3V3" 0 140 50 H V C CNN
+F1 "+5V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
 DRAW
 P 2 0 1 0 -30 50 0 100 N
 P 2 0 1 0 0 0 0 100 N
 P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# 2N3904
-#
-DEF 2N3904 Q 0 0 Y N 1 F N
-F0 "Q" 200 75 50 H V L CNN
-F1 "2N3904" 200 0 50 H V L CNN
-F2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" 200 -75 50 H I L CIN
-F3 "" 0 0 50 H I L CNN
-$FPLIST
- TO?92*
-$ENDFPLIST
-DRAW
-C 50 0 111 0 1 10 N
-P 2 0 1 0 25 25 100 100 N
-P 3 0 1 0 25 -25 100 -100 100 -100 N
-P 3 0 1 20 25 75 25 -75 25 -75 N
-P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
-X E 1 100 -200 100 U 50 50 1 1 P
-X B 2 -200 0 225 R 50 50 1 1 P
-X C 3 100 200 100 D 50 50 1 1 P
+X +5V 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
@@ -376,31 +353,6 @@ X GNDD 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# LD1117S33CTR
-#
-DEF LD1117S33CTR U 0 20 Y Y 1 F N
-F0 "U" 50 150 60 H V C CNN
-F1 "LD1117S33CTR" 50 250 60 H V C CNN
-F2 "digikey-footprints:SOT-223" 200 200 60 H I L CNN
-F3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" 200 300 60 H I L CNN
-F4 "497-1241-1-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "LD1117S33CTR" 200 500 60 H I L CNN "MPN"
-F6 "Integrated Circuits (ICs)" 200 600 60 H I L CNN "Category"
-F7 "PMIC - Voltage Regulators - Linear" 200 700 60 H I L CNN "Family"
-F8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/stmicroelectronics/LD1117S33CTR/497-1241-1-ND/586241" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "IC REG LINEAR 3.3V 800MA SOT223" 200 1000 60 H I L CNN "Description"
-F11 "STMicroelectronics" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-S -200 100 300 -200 1 1 0 f
-X GND 1 0 -300 100 U 50 50 1 1 W
-X VOUT 2 400 0 100 L 50 50 1 1 w
-X VIN 3 -300 0 100 R 50 50 1 1 W
-X VOUT 4 400 -100 100 L 50 50 1 1 w
-ENDDRAW
-ENDDEF
-#
 # LM2902
 #
 DEF LM2902 U 0 20 Y Y 4 F N
@@ -499,6 +451,26 @@ X 6 6 400 -100 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# POT_TRIM
+#
+DEF POT_TRIM RV 0 40 N N 1 F N
+F0 "RV" -175 0 50 V V C CNN
+F1 "POT_TRIM" -100 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Potentiometer*
+$ENDFPLIST
+DRAW
+S 40 100 -40 -100 0 1 10 N
+P 2 0 1 0 60 30 60 -30 N
+P 2 0 1 0 100 0 60 0 N
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
+X 3 3 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Q_PJFET_DSG
 #
 DEF Q_PJFET_DSG Q 0 0 Y N 1 F N
@@ -557,6 +529,30 @@ X C 3 200 -100 100 L 50 50 1 1 P
 X A 4 200 100 100 L 50 50 2 1 P
 X B 5 -200 0 100 R 50 50 2 1 P
 X C 6 200 -100 100 L 50 50 2 1 P
+ENDDRAW
+ENDDEF
+#
+# V7805-1000
+#
+DEF V7805-1000 U 0 20 Y Y 1 F N
+F0 "U" -250 250 60 H V L CNN
+F1 "V7805-1000" 50 -200 60 H V L CNN
+F2 "digikey-footprints:3-SIP_Module_V7805-1000" 200 200 60 H I L CNN
+F3 "https://www.cui.com/product/resource/digikeypdf/v78xx-1000.pdf" 200 300 60 H I L CNN
+F4 "102-1715-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "V7805-1000" 200 500 60 H I L CNN "MPN"
+F6 "Power Supplies - Board Mount" 200 600 60 H I L CNN "Category"
+F7 "DC DC Converters" 200 700 60 H I L CNN "Family"
+F8 "https://www.cui.com/product/resource/digikeypdf/v78xx-1000.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/cui-inc/V7805-1000/102-1715-ND/1828608" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "DC DC CONVERTER 5V 5W" 200 1000 60 H I L CNN "Description"
+F11 "CUI Inc." 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+S -250 200 250 -150 0 1 0 f
+X Vin+ 1 -400 100 150 R 50 50 1 1 W
+X GND 2 0 -300 150 U 50 50 1 1 W
+X Vo+ 3 400 100 150 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
