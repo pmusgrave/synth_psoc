@@ -906,29 +906,19 @@ Wire Wire Line
 Wire Wire Line
 	1050 7350 1350 7350
 Wire Wire Line
-	1850 2150 2050 2150
-Wire Wire Line
-	2050 2150 2150 2150
+	1850 2150 2150 2150
 Wire Wire Line
 	1850 2250 2150 2250
 Wire Wire Line
 	2150 2350 1850 2350
 Wire Wire Line
-	1500 4400 1500 4500
-Wire Wire Line
-	1500 4500 1500 4800
-Wire Wire Line
-	1500 4800 1500 4850
+	1500 4400 1500 4850
 Wire Wire Line
 	1500 4400 2150 4400
 Wire Wire Line
-	2000 4500 2000 4800
+	2000 4500 2000 4850
 Wire Wire Line
-	2000 4800 2000 4850
-Wire Wire Line
-	1900 4500 2000 4500
-Wire Wire Line
-	2000 4500 2150 4500
+	1900 4500 2150 4500
 Connection ~ 2000 4500
 Wire Wire Line
 	1600 4500 1500 4500
@@ -1013,18 +1003,10 @@ Wire Wire Line
 Wire Wire Line
 	2100 3950 2150 3950
 Wire Wire Line
-	1700 3050 1800 3050
-Wire Wire Line
-	1800 3050 1900 3050
-Wire Wire Line
-	1900 3050 2000 3050
+	1700 3050 2000 3050
 Connection ~ 1800 3050
 Wire Wire Line
-	1700 3250 1800 3250
-Wire Wire Line
-	1800 3250 1900 3250
-Wire Wire Line
-	1900 3250 2150 3250
+	1700 3250 2150 3250
 Connection ~ 1800 3250
 $Comp
 L GNDD #PWR0126
@@ -1138,18 +1120,10 @@ F 3 "" H 1900 4000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1700 4100 1800 4100
-Wire Wire Line
-	1800 4100 1900 4100
-Wire Wire Line
-	1900 4100 2000 4100
+	1700 4100 2000 4100
 Connection ~ 1800 4100
 Wire Wire Line
-	1700 3900 1800 3900
-Wire Wire Line
-	1800 3900 1900 3900
-Wire Wire Line
-	1900 3900 1950 3900
+	1700 3900 1950 3900
 Connection ~ 1800 3900
 Wire Wire Line
 	2150 3750 1950 3750
@@ -1164,17 +1138,9 @@ Connection ~ 1900 4100
 Connection ~ 1250 3750
 Connection ~ 1250 3950
 Wire Wire Line
-	1050 3200 1150 3200
+	1050 3200 1550 3200
 Wire Wire Line
-	1150 3200 1250 3200
-Wire Wire Line
-	1250 3200 1550 3200
-Wire Wire Line
-	1050 3400 1150 3400
-Wire Wire Line
-	1150 3400 1250 3400
-Wire Wire Line
-	1250 3400 1400 3400
+	1050 3400 1400 3400
 Wire Wire Line
 	1550 3200 1550 3350
 Wire Wire Line
@@ -1182,13 +1148,9 @@ Wire Wire Line
 Wire Wire Line
 	2150 3450 1550 3450
 Wire Wire Line
-	1550 3750 1550 3450
+	1550 3450 1550 3750
 Wire Wire Line
-	1050 3750 1150 3750
-Wire Wire Line
-	1150 3750 1250 3750
-Wire Wire Line
-	1250 3750 1550 3750
+	1550 3750 1050 3750
 Wire Wire Line
 	1400 3400 1400 3550
 Wire Wire Line
@@ -1196,13 +1158,9 @@ Wire Wire Line
 Wire Wire Line
 	2150 3650 1600 3650
 Wire Wire Line
-	1600 3950 1600 3650
+	1600 3650 1600 3950
 Wire Wire Line
-	1050 3950 1150 3950
-Wire Wire Line
-	1150 3950 1250 3950
-Wire Wire Line
-	1250 3950 1600 3950
+	1600 3950 1050 3950
 $Comp
 L Conn_01x01 J4
 U 1 1 5C3FE394
@@ -1479,4 +1437,222 @@ F 3 "" H 6700 4550 50  0001 C CNN
 	1    6700 4550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4950 2000 5150 2000
+Wire Wire Line
+	4950 2300 5150 2300
+Text Label 5150 2000 0    60   ~ 0
+osc4_quant
+Text Label 5150 2100 0    60   ~ 0
+osc3_quant
+Text Label 5150 2200 0    60   ~ 0
+osc2_quant
+Text Label 5150 2300 0    60   ~ 0
+osc1_quant
+Text Label 5050 7000 0    60   ~ 0
+osc4_quant
+Text Label 5050 7100 0    60   ~ 0
+osc3_quant
+Text Label 5050 7200 0    60   ~ 0
+osc2_quant
+Text Label 5050 7300 0    60   ~ 0
+osc1_quant
+$Comp
+L SW_SPST SW?
+U 1 1 5C54DEFF
+P 4050 7000
+F 0 "SW?" H 4050 7125 50  0000 C CNN
+F 1 "SW_SPST" H 4050 6900 50  0000 C CNN
+F 2 "" H 4050 7000 50  0001 C CNN
+F 3 "" H 4050 7000 50  0001 C CNN
+	1    4050 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_SPST SW?
+U 1 1 5C54DFDF
+P 4050 7100
+F 0 "SW?" H 4050 7225 50  0000 C CNN
+F 1 "SW_SPST" H 4050 7000 50  0000 C CNN
+F 2 "" H 4050 7100 50  0001 C CNN
+F 3 "" H 4050 7100 50  0001 C CNN
+	1    4050 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_SPST SW?
+U 1 1 5C54E07F
+P 4050 7200
+F 0 "SW?" H 4050 7325 50  0000 C CNN
+F 1 "SW_SPST" H 4050 7100 50  0000 C CNN
+F 2 "" H 4050 7200 50  0001 C CNN
+F 3 "" H 4050 7200 50  0001 C CNN
+	1    4050 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_SPST SW?
+U 1 1 5C54E122
+P 4050 7300
+F 0 "SW?" H 4050 7425 50  0000 C CNN
+F 1 "SW_SPST" H 4050 7200 50  0000 C CNN
+F 2 "" H 4050 7300 50  0001 C CNN
+F 3 "" H 4050 7300 50  0001 C CNN
+	1    4050 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5C54E1C8
+P 4950 6800
+F 0 "R?" V 5030 6800 50  0000 C CNN
+F 1 "R" V 4950 6800 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 4880 6800 50  0001 C CNN
+F 3 "" H 4950 6800 50  0001 C CNN
+	1    4950 6800
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C54E344
+P 4750 6800
+F 0 "R?" V 4830 6800 50  0000 C CNN
+F 1 "R" V 4750 6800 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 4680 6800 50  0001 C CNN
+F 3 "" H 4750 6800 50  0001 C CNN
+	1    4750 6800
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C54E3F4
+P 4550 6800
+F 0 "R?" V 4630 6800 50  0000 C CNN
+F 1 "R" V 4550 6800 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 4480 6800 50  0001 C CNN
+F 3 "" H 4550 6800 50  0001 C CNN
+	1    4550 6800
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5C54E4A7
+P 4350 6800
+F 0 "R?" V 4430 6800 50  0000 C CNN
+F 1 "R" V 4350 6800 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 4280 6800 50  0001 C CNN
+F 3 "" H 4350 6800 50  0001 C CNN
+	1    4350 6800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 7000 5050 7000
+Wire Wire Line
+	5050 7100 4250 7100
+Wire Wire Line
+	4250 7200 5050 7200
+Wire Wire Line
+	5050 7300 4250 7300
+$Comp
+L GNDD #PWR?
+U 1 1 5C54E8D4
+P 3850 7000
+F 0 "#PWR?" H 3850 6750 50  0001 C CNN
+F 1 "GNDD" H 3850 6875 50  0000 C CNN
+F 2 "" H 3850 7000 50  0001 C CNN
+F 3 "" H 3850 7000 50  0001 C CNN
+	1    3850 7000
+	0    1    -1   0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5C54E981
+P 3850 7100
+F 0 "#PWR?" H 3850 6850 50  0001 C CNN
+F 1 "GNDD" H 3850 6975 50  0000 C CNN
+F 2 "" H 3850 7100 50  0001 C CNN
+F 3 "" H 3850 7100 50  0001 C CNN
+	1    3850 7100
+	0    1    -1   0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5C54EA2E
+P 3850 7200
+F 0 "#PWR?" H 3850 6950 50  0001 C CNN
+F 1 "GNDD" H 3850 7075 50  0000 C CNN
+F 2 "" H 3850 7200 50  0001 C CNN
+F 3 "" H 3850 7200 50  0001 C CNN
+	1    3850 7200
+	0    1    -1   0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5C54EADB
+P 3850 7300
+F 0 "#PWR?" H 3850 7050 50  0001 C CNN
+F 1 "GNDD" H 3850 7175 50  0000 C CNN
+F 2 "" H 3850 7300 50  0001 C CNN
+F 3 "" H 3850 7300 50  0001 C CNN
+	1    3850 7300
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4350 6950 4350 7000
+Connection ~ 4350 7000
+Wire Wire Line
+	4550 6950 4550 7100
+Connection ~ 4550 7100
+Wire Wire Line
+	4750 6950 4750 7200
+Connection ~ 4750 7200
+Wire Wire Line
+	4950 6950 4950 7300
+Connection ~ 4950 7300
+$Comp
+L +5V #PWR?
+U 1 1 5C54EE56
+P 4350 6650
+F 0 "#PWR?" H 4350 6500 50  0001 C CNN
+F 1 "+5V" H 4350 6790 50  0000 C CNN
+F 2 "" H 4350 6650 50  0001 C CNN
+F 3 "" H 4350 6650 50  0001 C CNN
+	1    4350 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5C54EFA5
+P 4550 6650
+F 0 "#PWR?" H 4550 6500 50  0001 C CNN
+F 1 "+5V" H 4550 6790 50  0000 C CNN
+F 2 "" H 4550 6650 50  0001 C CNN
+F 3 "" H 4550 6650 50  0001 C CNN
+	1    4550 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5C54F052
+P 4750 6650
+F 0 "#PWR?" H 4750 6500 50  0001 C CNN
+F 1 "+5V" H 4750 6790 50  0000 C CNN
+F 2 "" H 4750 6650 50  0001 C CNN
+F 3 "" H 4750 6650 50  0001 C CNN
+	1    4750 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5C54F0FF
+P 4950 6650
+F 0 "#PWR?" H 4950 6500 50  0001 C CNN
+F 1 "+5V" H 4950 6790 50  0000 C CNN
+F 2 "" H 4950 6650 50  0001 C CNN
+F 3 "" H 4950 6650 50  0001 C CNN
+	1    4950 6650
+	1    0    0    -1  
+$EndComp
+Text Notes 5150 6800 0    60   ~ 0
+MCU pins have resistive pull \nup as an option, so probably \nleave these resistors unloaded.
 $EndSCHEMATC
