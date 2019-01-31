@@ -1,4 +1,4 @@
---------------- Build Started: 01/30/2019 16:37:48 Project: synth_psoc, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 01/30/2019 20:54:47 Project: synth_psoc, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
 main.c: In function 'main':
@@ -13,6 +13,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\CortexM0\ARM_GCC_541\Debug\synth_psoc.elf
-Flash used: 23270 of 65536 bytes (35.5%).
+Flash used: 23310 of 65536 bytes (35.6%).
 SRAM used: 2920 of 8192 bytes (35.6%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 01/30/2019 16:37:48 ---------------
+--------------- Build Succeeded: 01/30/2019 20:54:48 ---------------
