@@ -627,14 +627,10 @@ Wire Wire Line
 Wire Wire Line
 	7050 1350 7050 1600
 Wire Wire Line
-	6650 1800 6700 1800
-Wire Wire Line
-	6700 1800 6750 1800
+	6650 1800 6750 1800
 Connection ~ 7050 1350
 Wire Wire Line
-	5700 1700 5850 1700
-Wire Wire Line
-	5850 1700 5950 1700
+	5700 1700 5950 1700
 Connection ~ 8800 1450
 Wire Wire Line
 	8800 2850 8800 3400
@@ -649,14 +645,10 @@ Wire Wire Line
 Wire Wire Line
 	7050 2750 7050 3000
 Wire Wire Line
-	6650 3200 6700 3200
-Wire Wire Line
-	6700 3200 6750 3200
+	6650 3200 6750 3200
 Connection ~ 7050 2750
 Wire Wire Line
-	5800 3100 5900 3100
-Wire Wire Line
-	5900 3100 5950 3100
+	5800 3100 5950 3100
 Connection ~ 8800 2850
 Wire Wire Line
 	8800 4100 8800 4650
@@ -671,14 +663,10 @@ Wire Wire Line
 Wire Wire Line
 	7050 4000 7050 4250
 Wire Wire Line
-	6650 4450 6700 4450
-Wire Wire Line
-	6700 4450 6750 4450
+	6650 4450 6750 4450
 Connection ~ 7050 4000
 Wire Wire Line
-	5700 4350 5850 4350
-Wire Wire Line
-	5850 4350 5950 4350
+	5700 4350 5950 4350
 Connection ~ 8800 4100
 Wire Wire Line
 	8800 5450 8800 6000
@@ -693,14 +681,10 @@ Wire Wire Line
 Wire Wire Line
 	7050 5350 7050 5600
 Wire Wire Line
-	6650 5800 6700 5800
-Wire Wire Line
-	6700 5800 6750 5800
+	6650 5800 6750 5800
 Connection ~ 7050 5350
 Wire Wire Line
-	5700 5700 5850 5700
-Wire Wire Line
-	5850 5700 5950 5700
+	5700 5700 5950 5700
 Connection ~ 8800 5450
 Wire Wire Line
 	7700 1300 7700 1350
@@ -731,67 +715,35 @@ Wire Wire Line
 	7650 2700 7650 2750
 Connection ~ 7650 2750
 Wire Wire Line
-	6300 1350 6350 1350
+	6300 1350 7300 1350
 Wire Wire Line
-	6350 1350 7050 1350
+	7500 1350 8050 1350
 Wire Wire Line
-	7050 1350 7300 1350
+	7500 2750 8050 2750
 Wire Wire Line
-	7500 1350 7700 1350
+	6300 2750 7300 2750
 Wire Wire Line
-	7700 1350 8050 1350
+	6300 4000 7300 4000
 Wire Wire Line
-	7500 2750 7650 2750
+	7500 4000 8050 4000
 Wire Wire Line
-	7650 2750 8050 2750
+	6300 5350 7300 5350
 Wire Wire Line
-	6300 2750 6350 2750
+	7500 5350 8050 5350
 Wire Wire Line
-	6350 2750 7050 2750
-Wire Wire Line
-	7050 2750 7300 2750
-Wire Wire Line
-	6300 4000 6400 4000
-Wire Wire Line
-	6400 4000 7050 4000
-Wire Wire Line
-	7050 4000 7300 4000
-Wire Wire Line
-	7500 4000 7650 4000
-Wire Wire Line
-	7650 4000 8050 4000
-Wire Wire Line
-	6300 5350 6400 5350
-Wire Wire Line
-	6400 5350 7050 5350
-Wire Wire Line
-	7050 5350 7300 5350
-Wire Wire Line
-	7500 5350 7650 5350
-Wire Wire Line
-	7650 5350 8050 5350
-Wire Wire Line
-	8650 1450 8800 1450
-Wire Wire Line
-	8800 1450 8950 1450
+	8650 1450 8950 1450
 Wire Wire Line
 	9200 1550 9200 1450
 Wire Wire Line
-	8650 2850 8800 2850
-Wire Wire Line
-	8800 2850 8950 2850
+	8650 2850 8950 2850
 Wire Wire Line
 	9200 2950 9200 2850
 Wire Wire Line
-	8650 4100 8800 4100
-Wire Wire Line
-	8800 4100 8950 4100
+	8650 4100 8950 4100
 Wire Wire Line
 	9200 4250 9200 4100
 Wire Wire Line
-	8650 5450 8800 5450
-Wire Wire Line
-	8800 5450 8950 5450
+	8650 5450 8950 5450
 Wire Wire Line
 	9200 5550 9200 5450
 $Comp
@@ -1256,9 +1208,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 1900 6250 1900
 Wire Wire Line
-	6300 1700 6300 1800
-Wire Wire Line
-	6300 1800 6300 1900
+	6300 1700 6300 1900
 Wire Wire Line
 	6300 1800 6350 1800
 Wire Wire Line
@@ -1304,9 +1254,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 3300 6250 3300
 Wire Wire Line
-	6300 3100 6300 3200
-Wire Wire Line
-	6300 3200 6300 3300
+	6300 3100 6300 3300
 Wire Wire Line
 	6300 3200 6350 3200
 Wire Wire Line
@@ -1352,9 +1300,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 4550 6250 4550
 Wire Wire Line
-	6300 4350 6300 4450
-Wire Wire Line
-	6300 4450 6300 4550
+	6300 4350 6300 4550
 Wire Wire Line
 	6300 4450 6350 4450
 Wire Wire Line
@@ -1387,9 +1333,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 5900 6250 5900
 Wire Wire Line
-	6300 5700 6300 5800
-Wire Wire Line
-	6300 5800 6300 5900
+	6300 5700 6300 5900
 Wire Wire Line
 	6300 5800 6350 5800
 Wire Wire Line
@@ -1402,7 +1346,7 @@ L CP1_Small C?
 U 1 1 5C540E88
 P 1500 1900
 F 0 "C?" H 1510 1970 50  0000 L CNN
-F 1 "220uF" H 1510 1820 50  0000 L CNN
+F 1 "1uF" H 1510 1820 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 1500 1900 50  0001 C CNN
 F 3 "" H 1500 1900 50  0001 C CNN
 	1    1500 1900
@@ -1442,59 +1386,22 @@ F 3 "" H 1150 1300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1500 1450 1500 1650
-Wire Wire Line
-	1500 1650 1500 1800
+	1500 1450 1500 1800
 Wire Wire Line
 	1600 1450 1500 1450
 Connection ~ 1500 1650
 $Comp
-L GND #PWR?
-U 1 1 5C540EA8
-P 1800 1050
-F 0 "#PWR?" H 1800 800 50  0001 C CNN
-F 1 "GND" H 1800 900 50  0000 C CNN
-F 2 "" H 1800 1050 50  0001 C CNN
-F 3 "" H 1800 1050 50  0001 C CNN
-	1    1800 1050
-	-1   0    0    1   
-$EndComp
-$Comp
 L +15V #PWR?
 U 1 1 5C540EAE
-P 1800 1650
-F 0 "#PWR?" H 1800 1500 50  0001 C CNN
-F 1 "+15V" H 1800 1790 50  0000 C CNN
-F 2 "" H 1800 1650 50  0001 C CNN
-F 3 "" H 1800 1650 50  0001 C CNN
-	1    1800 1650
-	-1   0    0    1   
+P 1900 1150
+F 0 "#PWR?" H 1900 1000 50  0001 C CNN
+F 1 "+15V" H 1900 1290 50  0000 C CNN
+F 2 "" H 1900 1150 50  0001 C CNN
+F 3 "" H 1900 1150 50  0001 C CNN
+	1    1900 1150
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2200 1350 2300 1350
-Wire Wire Line
-	2300 1350 2500 1350
-Wire Wire Line
-	2300 1350 2300 900 
-Wire Wire Line
-	2300 900  1500 900 
-Wire Wire Line
-	1500 900  1500 1250
-Wire Wire Line
-	1500 1250 1600 1250
-Connection ~ 2300 1350
-$Comp
-L TL074 U?
-U 1 1 5C540EBA
-P 1900 1350
-F 0 "U?" H 1900 1550 50  0000 L CNN
-F 1 "TL074" H 1900 1150 50  0000 L CNN
-F 2 "digikey-footprints:SOIC-14_W3.9mm" H 1850 1450 50  0001 C CNN
-F 3 "" H 1950 1550 50  0001 C CNN
-	1    1900 1350
-	1    0    0    1   
-$EndComp
-Text Label 2500 1350 0    60   ~ 0
+Text Label 2500 1700 0    60   ~ 0
 lfo_bias_1
 $Comp
 L POT_TRIM RV?
@@ -1518,7 +1425,7 @@ L CP1_Small C?
 U 1 1 5C543B76
 P 1500 3300
 F 0 "C?" H 1510 3370 50  0000 L CNN
-F 1 "220uF" H 1510 3220 50  0000 L CNN
+F 1 "1uF" H 1510 3220 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 1500 3300 50  0001 C CNN
 F 3 "" H 1500 3300 50  0001 C CNN
 	1    1500 3300
@@ -1558,59 +1465,11 @@ F 3 "" H 1150 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1500 2850 1500 3050
-Wire Wire Line
-	1500 3050 1500 3200
+	1500 2850 1500 3200
 Wire Wire Line
 	1600 2850 1500 2850
 Connection ~ 1500 3050
-$Comp
-L GND #PWR?
-U 1 1 5C543B91
-P 1800 2450
-F 0 "#PWR?" H 1800 2200 50  0001 C CNN
-F 1 "GND" H 1800 2300 50  0000 C CNN
-F 2 "" H 1800 2450 50  0001 C CNN
-F 3 "" H 1800 2450 50  0001 C CNN
-	1    1800 2450
-	-1   0    0    1   
-$EndComp
-$Comp
-L +15V #PWR?
-U 1 1 5C543B97
-P 1800 3050
-F 0 "#PWR?" H 1800 2900 50  0001 C CNN
-F 1 "+15V" H 1800 3190 50  0000 C CNN
-F 2 "" H 1800 3050 50  0001 C CNN
-F 3 "" H 1800 3050 50  0001 C CNN
-	1    1800 3050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2200 2750 2300 2750
-Wire Wire Line
-	2300 2750 2500 2750
-Wire Wire Line
-	2300 2750 2300 2300
-Wire Wire Line
-	2300 2300 1500 2300
-Wire Wire Line
-	1500 2300 1500 2650
-Wire Wire Line
-	1500 2650 1600 2650
-Connection ~ 2300 2750
-$Comp
-L TL074 U?
-U 1 1 5C543BA3
-P 1900 2750
-F 0 "U?" H 1900 2950 50  0000 L CNN
-F 1 "TL074" H 1900 2550 50  0000 L CNN
-F 2 "digikey-footprints:SOIC-14_W3.9mm" H 1850 2850 50  0001 C CNN
-F 3 "" H 1950 2950 50  0001 C CNN
-	1    1900 2750
-	1    0    0    1   
-$EndComp
-Text Label 2500 2750 0    60   ~ 0
+Text Label 2500 3100 0    60   ~ 0
 lfo_bias_2
 $Comp
 L POT_TRIM RV?
@@ -1634,7 +1493,7 @@ L CP1_Small C?
 U 1 1 5C543E11
 P 1550 4700
 F 0 "C?" H 1560 4770 50  0000 L CNN
-F 1 "220uF" H 1560 4620 50  0000 L CNN
+F 1 "1uF" H 1560 4620 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 1550 4700 50  0001 C CNN
 F 3 "" H 1550 4700 50  0001 C CNN
 	1    1550 4700
@@ -1674,59 +1533,9 @@ F 3 "" H 1200 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 4250 1550 4450
-Wire Wire Line
-	1550 4450 1550 4600
-Wire Wire Line
-	1650 4250 1550 4250
+	1550 4250 1550 4600
 Connection ~ 1550 4450
-$Comp
-L GND #PWR?
-U 1 1 5C543E2C
-P 1850 3850
-F 0 "#PWR?" H 1850 3600 50  0001 C CNN
-F 1 "GND" H 1850 3700 50  0000 C CNN
-F 2 "" H 1850 3850 50  0001 C CNN
-F 3 "" H 1850 3850 50  0001 C CNN
-	1    1850 3850
-	-1   0    0    1   
-$EndComp
-$Comp
-L +15V #PWR?
-U 1 1 5C543E32
-P 1850 4450
-F 0 "#PWR?" H 1850 4300 50  0001 C CNN
-F 1 "+15V" H 1850 4590 50  0000 C CNN
-F 2 "" H 1850 4450 50  0001 C CNN
-F 3 "" H 1850 4450 50  0001 C CNN
-	1    1850 4450
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2250 4150 2350 4150
-Wire Wire Line
-	2350 4150 2550 4150
-Wire Wire Line
-	2350 4150 2350 3700
-Wire Wire Line
-	2350 3700 1550 3700
-Wire Wire Line
-	1550 3700 1550 4050
-Wire Wire Line
-	1550 4050 1650 4050
-Connection ~ 2350 4150
-$Comp
-L TL074 U?
-U 1 1 5C543E3E
-P 1950 4150
-F 0 "U?" H 1950 4350 50  0000 L CNN
-F 1 "TL074" H 1950 3950 50  0000 L CNN
-F 2 "digikey-footprints:SOIC-14_W3.9mm" H 1900 4250 50  0001 C CNN
-F 3 "" H 2000 4350 50  0001 C CNN
-	1    1950 4150
-	1    0    0    1   
-$EndComp
-Text Label 2550 4150 0    60   ~ 0
+Text Label 2550 4500 0    60   ~ 0
 lfo_bias_3
 $Comp
 L POT_TRIM RV?
@@ -1750,7 +1559,7 @@ L CP1_Small C?
 U 1 1 5C543E4E
 P 1550 6100
 F 0 "C?" H 1560 6170 50  0000 L CNN
-F 1 "220uF" H 1560 6020 50  0000 L CNN
+F 1 "1uF" H 1560 6020 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 1550 6100 50  0001 C CNN
 F 3 "" H 1550 6100 50  0001 C CNN
 	1    1550 6100
@@ -1790,59 +1599,11 @@ F 3 "" H 1200 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 5650 1550 5850
-Wire Wire Line
-	1550 5850 1550 6000
+	1550 5650 1550 6000
 Wire Wire Line
 	1650 5650 1550 5650
 Connection ~ 1550 5850
-$Comp
-L GND #PWR?
-U 1 1 5C543E69
-P 1850 5250
-F 0 "#PWR?" H 1850 5000 50  0001 C CNN
-F 1 "GND" H 1850 5100 50  0000 C CNN
-F 2 "" H 1850 5250 50  0001 C CNN
-F 3 "" H 1850 5250 50  0001 C CNN
-	1    1850 5250
-	-1   0    0    1   
-$EndComp
-$Comp
-L +15V #PWR?
-U 1 1 5C543E6F
-P 1850 5850
-F 0 "#PWR?" H 1850 5700 50  0001 C CNN
-F 1 "+15V" H 1850 5990 50  0000 C CNN
-F 2 "" H 1850 5850 50  0001 C CNN
-F 3 "" H 1850 5850 50  0001 C CNN
-	1    1850 5850
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2250 5550 2350 5550
-Wire Wire Line
-	2350 5550 2550 5550
-Wire Wire Line
-	2350 5550 2350 5100
-Wire Wire Line
-	2350 5100 1550 5100
-Wire Wire Line
-	1550 5100 1550 5450
-Wire Wire Line
-	1550 5450 1650 5450
-Connection ~ 2350 5550
-$Comp
-L TL074 U?
-U 1 1 5C543E7B
-P 1950 5550
-F 0 "U?" H 1950 5750 50  0000 L CNN
-F 1 "TL074" H 1950 5350 50  0000 L CNN
-F 2 "digikey-footprints:SOIC-14_W3.9mm" H 1900 5650 50  0001 C CNN
-F 3 "" H 2000 5750 50  0001 C CNN
-	1    1950 5550
-	1    0    0    1   
-$EndComp
-Text Label 2550 5550 0    60   ~ 0
+Text Label 2550 5900 0    60   ~ 0
 lfo_bias_4
 $Comp
 L POT_TRIM RV?
@@ -1869,4 +1630,235 @@ Text Label 4700 4200 0    60   ~ 0
 lfo_bias_3
 Text Label 4700 5550 0    60   ~ 0
 lfo_bias_4
+$Comp
+L MMBT3904-TP Q?
+U 1 1 5C5495D5
+P 1800 1450
+F 0 "Q?" H 1674 1616 60  0000 L CNN
+F 1 "MMBT3904-TP" V 2006 1450 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 2000 1650 60  0001 L CNN
+F 3 "http://www.mccsemi.com/up_pdf/MMBT3904(SOT-23).pdf" H 2000 1750 60  0001 L CNN
+F 4 "MMBT3904TPMSCT-ND" H 2000 1850 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBT3904-TP" H 2000 1950 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 2000 2050 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 2000 2150 60  0001 L CNN "Family"
+F 8 "http://www.mccsemi.com/up_pdf/MMBT3904(SOT-23).pdf" H 2000 2250 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/micro-commercial-co/MMBT3904-TP/MMBT3904TPMSCT-ND/717395" H 2000 2350 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 40V 0.2A SOT23" H 2000 2450 60  0001 L CNN "Description"
+F 11 "Micro Commercial Co" H 2000 2550 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2000 2650 60  0001 L CNN "Status"
+	1    1800 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1150 1900 1250
+$Comp
+L R R?
+U 1 1 5C54989A
+P 1900 1900
+F 0 "R?" V 1980 1900 50  0000 C CNN
+F 1 "470k" V 1900 1900 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 1830 1900 50  0001 C CNN
+F 3 "" H 1900 1900 50  0001 C CNN
+	1    1900 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C5499D3
+P 1900 2050
+F 0 "#PWR?" H 1900 1800 50  0001 C CNN
+F 1 "GND" H 1900 1900 50  0000 C CNN
+F 2 "" H 1900 2050 50  0001 C CNN
+F 3 "" H 1900 2050 50  0001 C CNN
+	1    1900 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1650 1900 1750
+Wire Wire Line
+	1900 1700 2500 1700
+Connection ~ 1900 1700
+$Comp
+L +15V #PWR?
+U 1 1 5C54A056
+P 1900 2550
+F 0 "#PWR?" H 1900 2400 50  0001 C CNN
+F 1 "+15V" H 1900 2690 50  0000 C CNN
+F 2 "" H 1900 2550 50  0001 C CNN
+F 3 "" H 1900 2550 50  0001 C CNN
+	1    1900 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L MMBT3904-TP Q?
+U 1 1 5C54A065
+P 1800 2850
+F 0 "Q?" H 1674 3016 60  0000 L CNN
+F 1 "MMBT3904-TP" V 2006 2850 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 2000 3050 60  0001 L CNN
+F 3 "http://www.mccsemi.com/up_pdf/MMBT3904(SOT-23).pdf" H 2000 3150 60  0001 L CNN
+F 4 "MMBT3904TPMSCT-ND" H 2000 3250 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBT3904-TP" H 2000 3350 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 2000 3450 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 2000 3550 60  0001 L CNN "Family"
+F 8 "http://www.mccsemi.com/up_pdf/MMBT3904(SOT-23).pdf" H 2000 3650 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/micro-commercial-co/MMBT3904-TP/MMBT3904TPMSCT-ND/717395" H 2000 3750 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 40V 0.2A SOT23" H 2000 3850 60  0001 L CNN "Description"
+F 11 "Micro Commercial Co" H 2000 3950 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2000 4050 60  0001 L CNN "Status"
+	1    1800 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2550 1900 2650
+$Comp
+L R R?
+U 1 1 5C54A06C
+P 1900 3300
+F 0 "R?" V 1980 3300 50  0000 C CNN
+F 1 "470k" V 1900 3300 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 1830 3300 50  0001 C CNN
+F 3 "" H 1900 3300 50  0001 C CNN
+	1    1900 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C54A072
+P 1900 3450
+F 0 "#PWR?" H 1900 3200 50  0001 C CNN
+F 1 "GND" H 1900 3300 50  0000 C CNN
+F 2 "" H 1900 3450 50  0001 C CNN
+F 3 "" H 1900 3450 50  0001 C CNN
+	1    1900 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 3050 1900 3150
+Wire Wire Line
+	1900 3100 2500 3100
+Connection ~ 1900 3100
+$Comp
+L +15V #PWR?
+U 1 1 5C54A855
+P 1950 3950
+F 0 "#PWR?" H 1950 3800 50  0001 C CNN
+F 1 "+15V" H 1950 4090 50  0000 C CNN
+F 2 "" H 1950 3950 50  0001 C CNN
+F 3 "" H 1950 3950 50  0001 C CNN
+	1    1950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MMBT3904-TP Q?
+U 1 1 5C54A864
+P 1850 4250
+F 0 "Q?" H 1724 4416 60  0000 L CNN
+F 1 "MMBT3904-TP" V 2056 4250 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 2050 4450 60  0001 L CNN
+F 3 "http://www.mccsemi.com/up_pdf/MMBT3904(SOT-23).pdf" H 2050 4550 60  0001 L CNN
+F 4 "MMBT3904TPMSCT-ND" H 2050 4650 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBT3904-TP" H 2050 4750 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 2050 4850 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 2050 4950 60  0001 L CNN "Family"
+F 8 "http://www.mccsemi.com/up_pdf/MMBT3904(SOT-23).pdf" H 2050 5050 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/micro-commercial-co/MMBT3904-TP/MMBT3904TPMSCT-ND/717395" H 2050 5150 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 40V 0.2A SOT23" H 2050 5250 60  0001 L CNN "Description"
+F 11 "Micro Commercial Co" H 2050 5350 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2050 5450 60  0001 L CNN "Status"
+	1    1850 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3950 1950 4050
+$Comp
+L R R?
+U 1 1 5C54A86B
+P 1950 4700
+F 0 "R?" V 2030 4700 50  0000 C CNN
+F 1 "470k" V 1950 4700 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 1880 4700 50  0001 C CNN
+F 3 "" H 1950 4700 50  0001 C CNN
+	1    1950 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C54A871
+P 1950 4850
+F 0 "#PWR?" H 1950 4600 50  0001 C CNN
+F 1 "GND" H 1950 4700 50  0000 C CNN
+F 2 "" H 1950 4850 50  0001 C CNN
+F 3 "" H 1950 4850 50  0001 C CNN
+	1    1950 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4450 1950 4550
+Wire Wire Line
+	1950 4500 2550 4500
+Connection ~ 1950 4500
+$Comp
+L +15V #PWR?
+U 1 1 5C54A9CF
+P 1950 5350
+F 0 "#PWR?" H 1950 5200 50  0001 C CNN
+F 1 "+15V" H 1950 5490 50  0000 C CNN
+F 2 "" H 1950 5350 50  0001 C CNN
+F 3 "" H 1950 5350 50  0001 C CNN
+	1    1950 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L MMBT3904-TP Q?
+U 1 1 5C54A9DE
+P 1850 5650
+F 0 "Q?" H 1724 5816 60  0000 L CNN
+F 1 "MMBT3904-TP" V 2056 5650 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 2050 5850 60  0001 L CNN
+F 3 "http://www.mccsemi.com/up_pdf/MMBT3904(SOT-23).pdf" H 2050 5950 60  0001 L CNN
+F 4 "MMBT3904TPMSCT-ND" H 2050 6050 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBT3904-TP" H 2050 6150 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 2050 6250 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 2050 6350 60  0001 L CNN "Family"
+F 8 "http://www.mccsemi.com/up_pdf/MMBT3904(SOT-23).pdf" H 2050 6450 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/micro-commercial-co/MMBT3904-TP/MMBT3904TPMSCT-ND/717395" H 2050 6550 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 40V 0.2A SOT23" H 2050 6650 60  0001 L CNN "Description"
+F 11 "Micro Commercial Co" H 2050 6750 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 2050 6850 60  0001 L CNN "Status"
+	1    1850 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 5350 1950 5450
+$Comp
+L R R?
+U 1 1 5C54A9E5
+P 1950 6100
+F 0 "R?" V 2030 6100 50  0000 C CNN
+F 1 "470k" V 1950 6100 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 1880 6100 50  0001 C CNN
+F 3 "" H 1950 6100 50  0001 C CNN
+	1    1950 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5C54A9EB
+P 1950 6250
+F 0 "#PWR?" H 1950 6000 50  0001 C CNN
+F 1 "GND" H 1950 6100 50  0000 C CNN
+F 2 "" H 1950 6250 50  0001 C CNN
+F 3 "" H 1950 6250 50  0001 C CNN
+	1    1950 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 5850 1950 5950
+Wire Wire Line
+	1950 5900 2550 5900
+Connection ~ 1950 5900
+Wire Wire Line
+	1650 4250 1550 4250
 $EndSCHEMATC
