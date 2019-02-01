@@ -81,12 +81,15 @@ int main(void)
             pulse_width_0 = ADC_SAR_Seq_GetResult16(PW_0_ADC_CHAN);  
             
             freq_1 = ADC_SAR_Seq_GetResult16(FREQ_1_ADC_CHAN);
+            freq_1 = Quantize(freq_1);
             pulse_width_1 = ADC_SAR_Seq_GetResult16(PW_1_ADC_CHAN);
             
             freq_2 = ADC_SAR_Seq_GetResult16(FREQ_2_ADC_CHAN);
+            freq_2 = Quantize(freq_2);
             pulse_width_2 = ADC_SAR_Seq_GetResult16(PW_2_ADC_CHAN);  
             
             freq_3 = ADC_SAR_Seq_GetResult16(FREQ_3_ADC_CHAN);
+            freq_3 = Quantize(freq_3);
             pulse_width_3 = ADC_SAR_Seq_GetResult16(PW_3_ADC_CHAN);  
         }
 
