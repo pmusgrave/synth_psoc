@@ -99,11 +99,14 @@ int main(void)
         // temporarily using PWM ADC's for envelope time
         
         if(Osc_0_Button.note_triggered == 1){
-            env0_pwm = env0_pwm + (pulse_width_0 * 0.002);
+            env0_pwm = env0_pwm + (pulse_width_0 * 0.2);
+            if (env0_pwm > 65000) {
+                env0_pwm  = 65000;
+            }
         }
         else {
             if(env0_pwm > 0.1){
-                env0_pwm = env0_pwm - (pulse_width_0 * 0.002);
+                env0_pwm = env0_pwm - (pulse_width_0 * 0.2);
             }
             if (env0_pwm < 0.5){
                 main_osc_PWM_0_Stop();
@@ -112,6 +115,9 @@ int main(void)
         
         if(Osc_1_Button.note_triggered == 1){
             env1_pwm = env1_pwm + (pulse_width_1 * 0.002);
+            if (env1_pwm > 65000) {
+                env1_pwm  = 65000;
+            }
         }
         else{
             if(env1_pwm > 0.1){
@@ -124,6 +130,9 @@ int main(void)
         
         if(Osc_2_Button.note_triggered == 1){
             env2_pwm = env2_pwm + (pulse_width_2 * 0.002);
+            if (env2_pwm > 65000) {
+                env2_pwm  = 65000;
+            }
         }
         else{
             if(env2_pwm > 0){
@@ -136,6 +145,9 @@ int main(void)
         
         if(Osc_3_Button.note_triggered == 1){
             env3_pwm = env3_pwm + (pulse_width_3 * 0.002);
+            if (env3_pwm > 65000) {
+                env3_pwm  = 65000;
+            }
         }
         else{
             if(env3_pwm > 0){
