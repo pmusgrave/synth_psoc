@@ -234,7 +234,7 @@ $EndSheet
 $Sheet
 S 7500 3000 600  800 
 U 5C357081
-F0 "Mixer and output connectors" 60
+F0 "Mixer and Effects" 60
 F1 "mixer.sch" 60
 F2 "osc1" I L 7500 3050 60 
 F3 "osc2" I L 7500 3150 60 
