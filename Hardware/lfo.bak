@@ -206,7 +206,7 @@ F 1 "GND" H 1450 3150 50  0000 C CNN
 F 2 "" H 1450 3300 50  0001 C CNN
 F 3 "" H 1450 3300 50  0001 C CNN
 	1    1450 3300
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L GND #PWR086
@@ -217,7 +217,7 @@ F 1 "GND" H 3050 3250 50  0000 C CNN
 F 2 "" H 3050 3400 50  0001 C CNN
 F 3 "" H 3050 3400 50  0001 C CNN
 	1    3050 3400
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L +15V #PWR087
@@ -228,7 +228,7 @@ F 1 "+15V" H 1450 4040 50  0000 C CNN
 F 2 "" H 1450 3900 50  0001 C CNN
 F 3 "" H 1450 3900 50  0001 C CNN
 	1    1450 3900
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L +15V #PWR088
@@ -239,7 +239,7 @@ F 1 "+15V" H 3050 4140 50  0000 C CNN
 F 2 "" H 3050 4000 50  0001 C CNN
 F 3 "" H 3050 4000 50  0001 C CNN
 	1    3050 4000
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L R R75
@@ -250,7 +250,7 @@ F 1 "10k" V 1450 4250 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 1380 4250 50  0001 C CNN
 F 3 "" H 1450 4250 50  0001 C CNN
 	1    1450 4250
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 $Comp
 L R R76
@@ -261,7 +261,7 @@ F 1 "470" V 2100 3600 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 2030 3600 50  0001 C CNN
 F 3 "" H 2100 3600 50  0001 C CNN
 	1    2100 3600
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 $Comp
 L POT RV9
@@ -272,7 +272,7 @@ F 1 "10kA" V 2400 3600 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 2500 3600 50  0001 C CNN
 F 3 "" H 2500 3600 50  0001 C CNN
 	1    2500 3600
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 $Comp
 L R R77
@@ -283,7 +283,7 @@ F 1 "2.2k" V 2100 4550 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 2030 4550 50  0001 C CNN
 F 3 "" H 2100 4550 50  0001 C CNN
 	1    2100 4550
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 $Comp
 L CP1 C58
@@ -294,7 +294,7 @@ F 1 "22uF" H 3175 3000 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3150 3100 50  0001 C CNN
 F 3 "" H 3150 3100 50  0001 C CNN
 	1    3150 3100
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R79
@@ -305,7 +305,7 @@ F 1 "470k" V 2700 4000 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 2630 4000 50  0001 C CNN
 F 3 "" H 2700 4000 50  0001 C CNN
 	1    2700 4000
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L R R74
@@ -316,7 +316,7 @@ F 1 "470k" V 1050 3500 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 980 3500 50  0001 C CNN
 F 3 "" H 1050 3500 50  0001 C CNN
 	1    1050 3500
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 $Comp
 L CP1 C59
@@ -327,7 +327,7 @@ F 1 "220uF" H 3825 3600 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 3800 3700 50  0001 C CNN
 F 3 "" H 3800 3700 50  0001 C CNN
 	1    3800 3700
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R80
@@ -338,7 +338,7 @@ F 1 "100k" V 4050 3900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 3980 3900 50  0001 C CNN
 F 3 "" H 4050 3900 50  0001 C CNN
 	1    4050 3900
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 $Comp
 L GND #PWR089
@@ -349,7 +349,7 @@ F 1 "GND" H 4050 3900 50  0000 C CNN
 F 2 "" H 4050 4050 50  0001 C CNN
 F 3 "" H 4050 4050 50  0001 C CNN
 	1    4050 4050
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Text GLabel 900  3500 0    60   Input ~ 0
 VREF
@@ -364,7 +364,7 @@ F 1 "BZX84C3V3-T1" H 2300 2750 50  0000 C CNN
 F 2 "digikey-footprints:SOT-23-3" H 2300 2850 50  0001 C CNN
 F 3 "" H 2300 2850 50  0001 C CNN
 	1    2300 2850
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 $Comp
 L GND #PWR090
@@ -375,7 +375,7 @@ F 1 "GND" H 2300 2850 50  0000 C CNN
 F 2 "" H 2300 3000 50  0001 C CNN
 F 3 "" H 2300 3000 50  0001 C CNN
 	1    2300 3000
-	-1   0    0    -1
+	-1   0    0    -1  
 $EndComp
 $Comp
 L R R78
@@ -386,7 +386,7 @@ F 1 "860" V 2300 2350 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 2230 2350 50  0001 C CNN
 F 3 "" H 2300 2350 50  0001 C CNN
 	1    2300 2350
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 Text Label 3150 2600 0    60   ~ 0
 lfo_square
@@ -401,7 +401,7 @@ F 1 "SW_DPDT_x2" H 3500 1300 50  0000 C CNN
 F 2 "SparkFun-Electromechanical:SWITCHE-DPDT" H 3500 1500 50  0001 C CNN
 F 3 "" H 3500 1500 50  0001 C CNN
 	1    3500 1500
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 Text Label 2700 1600 0    60   ~ 0
 lfo_tri
@@ -420,7 +420,7 @@ F 1 "TL074" H 1550 3400 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 1500 3700 50  0001 C CNN
 F 3 "" H 1600 3800 50  0001 C CNN
 	1    1550 3600
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L TL074 U4
@@ -431,7 +431,7 @@ F 1 "TL074" H 3150 3500 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 3100 3800 50  0001 C CNN
 F 3 "" H 3200 3900 50  0001 C CNN
 	2    3150 3700
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L R R?
@@ -442,7 +442,7 @@ F 1 "100k" V 2550 2850 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 2480 2850 50  0001 C CNN
 F 3 "" H 2550 2850 50  0001 C CNN
 	1    2550 2850
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
@@ -453,7 +453,7 @@ F 1 "GND" H 2550 2850 50  0000 C CNN
 F 2 "" H 2550 3000 50  0001 C CNN
 F 3 "" H 2550 3000 50  0001 C CNN
 	1    2550 3000
-	-1   0    0    -1
+	-1   0    0    -1  
 $EndComp
 $Comp
 L CP1 C?
@@ -464,7 +464,7 @@ F 1 "220uF" H 1925 2800 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 1900 2900 50  0001 C CNN
 F 3 "" H 1900 2900 50  0001 C CNN
 	1    1900 2900
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 Text Notes 11050 5400 2    60   ~ 0
 lfo4 mod level
@@ -477,7 +477,7 @@ F 1 "GND" H 10300 5300 50  0000 C CNN
 F 2 "" H 10300 5450 50  0001 C CNN
 F 3 "" H 10300 5450 50  0001 C CNN
 	1    10300 5450
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L POT RV17
@@ -488,7 +488,7 @@ F 1 "10kA" V 10200 5250 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 10300 5250 50  0001 C CNN
 F 3 "" H 10300 5250 50  0001 C CNN
 	1    10300 5250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Text Notes 11050 3200 2    60   ~ 0
 lfo2 mod level
@@ -501,7 +501,7 @@ F 1 "GND" H 10300 3100 50  0000 C CNN
 F 2 "" H 10300 3250 50  0001 C CNN
 F 3 "" H 10300 3250 50  0001 C CNN
 	1    10300 3250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L POT RV16
@@ -512,7 +512,7 @@ F 1 "10kA" V 10200 3050 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 10300 3050 50  0001 C CNN
 F 3 "" H 10300 3050 50  0001 C CNN
 	1    10300 3050
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Text Notes 7550 5450 2    60   ~ 0
 lfo3 mod level
@@ -525,7 +525,7 @@ F 1 "GND" H 6800 5350 50  0000 C CNN
 F 2 "" H 6800 5500 50  0001 C CNN
 F 3 "" H 6800 5500 50  0001 C CNN
 	1    6800 5500
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L POT RV12
@@ -536,7 +536,7 @@ F 1 "10kA" V 6700 5300 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6800 5300 50  0001 C CNN
 F 3 "" H 6800 5300 50  0001 C CNN
 	1    6800 5300
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Text Notes 7600 3200 2    60   ~ 0
 lfo1 mod level
@@ -549,7 +549,7 @@ F 1 "GND" H 6850 3100 50  0000 C CNN
 F 2 "" H 6850 3250 50  0001 C CNN
 F 3 "" H 6850 3250 50  0001 C CNN
 	1    6850 3250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L POT RV13
@@ -560,7 +560,7 @@ F 1 "10kA" V 6750 3050 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6850 3050 50  0001 C CNN
 F 3 "" H 6850 3050 50  0001 C CNN
 	1    6850 3050
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Text Label 4600 2850 0    60   ~ 0
 main_lfo
@@ -573,7 +573,7 @@ F 1 "GND" H 5750 2300 50  0000 C CNN
 F 2 "" H 5750 2450 50  0001 C CNN
 F 3 "" H 5750 2450 50  0001 C CNN
 	1    5750 2450
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L +15V #PWR?
@@ -584,7 +584,7 @@ F 1 "+15V" H 5750 3190 50  0000 C CNN
 F 2 "" H 5750 3050 50  0001 C CNN
 F 3 "" H 5750 3050 50  0001 C CNN
 	1    5750 3050
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L TL074 U?
@@ -595,7 +595,7 @@ F 1 "TL074" H 5850 2550 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5800 2850 50  0001 C CNN
 F 3 "" H 5900 2950 50  0001 C CNN
 	1    5850 2750
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 Text Label 8000 2850 0    60   ~ 0
 main_lfo
@@ -608,7 +608,7 @@ F 1 "GND" H 9150 2300 50  0000 C CNN
 F 2 "" H 9150 2450 50  0001 C CNN
 F 3 "" H 9150 2450 50  0001 C CNN
 	1    9150 2450
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L +15V #PWR?
@@ -619,7 +619,7 @@ F 1 "+15V" H 9150 3190 50  0000 C CNN
 F 2 "" H 9150 3050 50  0001 C CNN
 F 3 "" H 9150 3050 50  0001 C CNN
 	1    9150 3050
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L TL074 U?
@@ -630,7 +630,7 @@ F 1 "TL074" H 9250 2550 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 9200 2850 50  0001 C CNN
 F 3 "" H 9300 2950 50  0001 C CNN
 	1    9250 2750
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 Text Label 4550 5050 0    60   ~ 0
 main_lfo
@@ -643,7 +643,7 @@ F 1 "GND" H 5700 4500 50  0000 C CNN
 F 2 "" H 5700 4650 50  0001 C CNN
 F 3 "" H 5700 4650 50  0001 C CNN
 	1    5700 4650
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L +15V #PWR?
@@ -654,7 +654,7 @@ F 1 "+15V" H 5700 5390 50  0000 C CNN
 F 2 "" H 5700 5250 50  0001 C CNN
 F 3 "" H 5700 5250 50  0001 C CNN
 	1    5700 5250
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L TL074 U?
@@ -665,7 +665,7 @@ F 1 "TL074" H 5800 4750 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5750 5050 50  0001 C CNN
 F 3 "" H 5850 5150 50  0001 C CNN
 	1    5800 4950
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 Text Label 7950 5050 0    60   ~ 0
 main_lfo
@@ -678,7 +678,7 @@ F 1 "GND" H 9200 4500 50  0000 C CNN
 F 2 "" H 9200 4650 50  0001 C CNN
 F 3 "" H 9200 4650 50  0001 C CNN
 	1    9200 4650
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L +15V #PWR?
@@ -689,7 +689,7 @@ F 1 "+15V" H 9200 5390 50  0000 C CNN
 F 2 "" H 9200 5250 50  0001 C CNN
 F 3 "" H 9200 5250 50  0001 C CNN
 	1    9200 5250
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L TL074 U?
@@ -700,7 +700,7 @@ F 1 "TL074" H 9300 4750 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 9250 5050 50  0001 C CNN
 F 3 "" H 9350 5150 50  0001 C CNN
 	1    9300 4950
-	1    0    0    1
+	1    0    0    1   
 $EndComp
 $Comp
 L R R?
@@ -711,7 +711,7 @@ F 1 "470k" V 5250 2550 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 5180 2550 50  0001 C CNN
 F 3 "" H 5250 2550 50  0001 C CNN
 	1    5250 2550
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 Text GLabel 5250 2400 1    60   Input ~ 0
 VREF
@@ -724,7 +724,7 @@ F 1 "220uF" H 2875 2500 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 2850 2600 50  0001 C CNN
 F 3 "" H 2850 2600 50  0001 C CNN
 	1    2850 2600
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L R R?
@@ -735,7 +735,7 @@ F 1 "470k" V 8650 2600 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 8580 2600 50  0001 C CNN
 F 3 "" H 8650 2600 50  0001 C CNN
 	1    8650 2600
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 Text GLabel 8650 2450 1    60   Input ~ 0
 VREF
@@ -748,7 +748,7 @@ F 1 "470k" V 8650 4800 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 8580 4800 50  0001 C CNN
 F 3 "" H 8650 4800 50  0001 C CNN
 	1    8650 4800
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 Text GLabel 8650 4650 1    60   Input ~ 0
 VREF
@@ -761,7 +761,7 @@ F 1 "220uF" H 6625 2650 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 6600 2750 50  0001 C CNN
 F 3 "" H 6600 2750 50  0001 C CNN
 	1    6600 2750
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L CP1 C?
@@ -772,7 +772,7 @@ F 1 "220uF" H 6575 4850 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 6550 4950 50  0001 C CNN
 F 3 "" H 6550 4950 50  0001 C CNN
 	1    6550 4950
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L CP1 C?
@@ -783,7 +783,7 @@ F 1 "220uF" H 10075 2650 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 10050 2750 50  0001 C CNN
 F 3 "" H 10050 2750 50  0001 C CNN
 	1    10050 2750
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L CP1 C?
@@ -794,7 +794,7 @@ F 1 "220uF" H 10075 4850 50  0000 L CNN
 F 2 "Capacitors_SMD:CP_Elec_8x10" H 10050 4950 50  0001 C CNN
 F 3 "" H 10050 4950 50  0001 C CNN
 	1    10050 4950
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	10200 4950 10300 4950
@@ -971,7 +971,7 @@ F 1 "470k" V 5250 4750 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 5180 4750 50  0001 C CNN
 F 3 "" H 5250 4750 50  0001 C CNN
 	1    5250 4750
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 Text GLabel 5250 4600 1    60   Input ~ 0
 VREF

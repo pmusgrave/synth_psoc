@@ -206,7 +206,7 @@ F 1 "20kA" V 6600 1950 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6700 1950 50  0001 C CNN
 F 3 "" H 6700 1950 50  0001 C CNN
 	1    6700 1950
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R94
@@ -217,7 +217,7 @@ F 1 "R" V 6700 1650 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 6630 1650 50  0001 C CNN
 F 3 "" H 6700 1650 50  0001 C CNN
 	1    6700 1650
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR091
@@ -228,7 +228,7 @@ F 1 "GND" H 6700 1950 50  0000 C CNN
 F 2 "" H 6700 2100 50  0001 C CNN
 F 3 "" H 6700 2100 50  0001 C CNN
 	1    6700 2100
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L POT RV22
@@ -239,7 +239,7 @@ F 1 "20kA" V 7750 1950 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 7850 1950 50  0001 C CNN
 F 3 "" H 7850 1950 50  0001 C CNN
 	1    7850 1950
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R98
@@ -250,7 +250,7 @@ F 1 "R" V 7850 1650 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 7780 1650 50  0001 C CNN
 F 3 "" H 7850 1650 50  0001 C CNN
 	1    7850 1650
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR092
@@ -261,7 +261,7 @@ F 1 "GND" H 7850 1950 50  0000 C CNN
 F 2 "" H 7850 2100 50  0001 C CNN
 F 3 "" H 7850 2100 50  0001 C CNN
 	1    7850 2100
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 6850 1950 0    60   ~ 0
 osc1_freq_wiper
@@ -274,7 +274,7 @@ F 1 "20kA" V 6600 3000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6700 3000 50  0001 C CNN
 F 3 "" H 6700 3000 50  0001 C CNN
 	1    6700 3000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R95
@@ -285,7 +285,7 @@ F 1 "R" V 6700 2700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 6630 2700 50  0001 C CNN
 F 3 "" H 6700 2700 50  0001 C CNN
 	1    6700 2700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR093
@@ -296,7 +296,7 @@ F 1 "GND" H 6700 3000 50  0000 C CNN
 F 2 "" H 6700 3150 50  0001 C CNN
 F 3 "" H 6700 3150 50  0001 C CNN
 	1    6700 3150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L POT RV23
@@ -307,7 +307,7 @@ F 1 "20kA" V 7750 3000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 7850 3000 50  0001 C CNN
 F 3 "" H 7850 3000 50  0001 C CNN
 	1    7850 3000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R99
@@ -318,7 +318,7 @@ F 1 "R" V 7850 2700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 7780 2700 50  0001 C CNN
 F 3 "" H 7850 2700 50  0001 C CNN
 	1    7850 2700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR094
@@ -329,7 +329,7 @@ F 1 "GND" H 7850 3000 50  0000 C CNN
 F 2 "" H 7850 3150 50  0001 C CNN
 F 3 "" H 7850 3150 50  0001 C CNN
 	1    7850 3150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 6850 3000 0    60   ~ 0
 osc2_freq_wiper
@@ -342,7 +342,7 @@ F 1 "20kA" V 6600 4000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6700 4000 50  0001 C CNN
 F 3 "" H 6700 4000 50  0001 C CNN
 	1    6700 4000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R96
@@ -353,7 +353,7 @@ F 1 "R" V 6700 3700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 6630 3700 50  0001 C CNN
 F 3 "" H 6700 3700 50  0001 C CNN
 	1    6700 3700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR095
@@ -364,7 +364,7 @@ F 1 "GND" H 6700 4000 50  0000 C CNN
 F 2 "" H 6700 4150 50  0001 C CNN
 F 3 "" H 6700 4150 50  0001 C CNN
 	1    6700 4150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L POT RV24
@@ -375,7 +375,7 @@ F 1 "20kA" V 7750 4000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 7850 4000 50  0001 C CNN
 F 3 "" H 7850 4000 50  0001 C CNN
 	1    7850 4000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R100
@@ -386,7 +386,7 @@ F 1 "R" V 7850 3700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 7780 3700 50  0001 C CNN
 F 3 "" H 7850 3700 50  0001 C CNN
 	1    7850 3700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR096
@@ -397,7 +397,7 @@ F 1 "GND" H 7850 4000 50  0000 C CNN
 F 2 "" H 7850 4150 50  0001 C CNN
 F 3 "" H 7850 4150 50  0001 C CNN
 	1    7850 4150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 6850 4000 0    60   ~ 0
 osc3_freq_wiper
@@ -410,7 +410,7 @@ F 1 "20kA" V 6600 5000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 6700 5000 50  0001 C CNN
 F 3 "" H 6700 5000 50  0001 C CNN
 	1    6700 5000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R97
@@ -421,7 +421,7 @@ F 1 "R" V 6700 4700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 6630 4700 50  0001 C CNN
 F 3 "" H 6700 4700 50  0001 C CNN
 	1    6700 4700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR097
@@ -432,7 +432,7 @@ F 1 "GND" H 6700 5000 50  0000 C CNN
 F 2 "" H 6700 5150 50  0001 C CNN
 F 3 "" H 6700 5150 50  0001 C CNN
 	1    6700 5150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L POT RV25
@@ -443,7 +443,7 @@ F 1 "20kA" V 7750 5000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 7850 5000 50  0001 C CNN
 F 3 "" H 7850 5000 50  0001 C CNN
 	1    7850 5000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R101
@@ -454,7 +454,7 @@ F 1 "R" V 7850 4700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 7780 4700 50  0001 C CNN
 F 3 "" H 7850 4700 50  0001 C CNN
 	1    7850 4700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR098
@@ -465,7 +465,7 @@ F 1 "GND" H 7850 5000 50  0000 C CNN
 F 2 "" H 7850 5150 50  0001 C CNN
 F 3 "" H 7850 5150 50  0001 C CNN
 	1    7850 5150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 6850 5000 0    60   ~ 0
 osc4_freq_wiper
@@ -486,7 +486,7 @@ F 1 "SWD_programming" H 850 6850 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 850 7150 50  0001 C CNN
 F 3 "" H 850 7150 50  0001 C CNN
 	1    850  7150
-	-1   0    0    -1  
+	-1   0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR0108
@@ -497,7 +497,7 @@ F 1 "GNDD" H 1400 6925 50  0000 C CNN
 F 2 "" H 1400 7050 50  0001 C CNN
 F 3 "" H 1400 7050 50  0001 C CNN
 	1    1400 7050
-	0    -1   1    0   
+	0    -1   1    0
 $EndComp
 Text Label 1350 7150 2    60   ~ 0
 XRES
@@ -520,7 +520,7 @@ F 1 "Crystal" H 1750 4650 50  0000 C CNN
 F 2 "Crystals:Crystal_SMD_HC49-SD_HandSoldering" H 1750 4800 50  0001 C CNN
 F 3 "" H 1750 4800 50  0001 C CNN
 	1    1750 4800
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R93
@@ -531,7 +531,7 @@ F 1 "1MEG" V 1750 4500 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 1680 4500 50  0001 C CNN
 F 3 "" H 1750 4500 50  0001 C CNN
 	1    1750 4500
-	0    1    1    0   
+	0    1    1    0
 $EndComp
 $Comp
 L C_Small C73
@@ -542,7 +542,7 @@ F 1 "22pF" H 2010 4870 50  0000 L CNN
 F 2 "digikey-footprints:0805" H 2000 4950 50  0001 C CNN
 F 3 "" H 2000 4950 50  0001 C CNN
 	1    2000 4950
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L C_Small C72
@@ -553,7 +553,7 @@ F 1 "22pF" H 1510 4870 50  0000 L CNN
 F 2 "digikey-footprints:0805" H 1500 4950 50  0001 C CNN
 F 3 "" H 1500 4950 50  0001 C CNN
 	1    1500 4950
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR0109
@@ -564,7 +564,7 @@ F 1 "GNDD" H 1500 4925 50  0000 C CNN
 F 2 "" H 1500 5050 50  0001 C CNN
 F 3 "" H 1500 5050 50  0001 C CNN
 	1    1500 5050
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR0110
@@ -575,7 +575,7 @@ F 1 "GNDD" H 2000 4925 50  0000 C CNN
 F 2 "" H 2000 5050 50  0001 C CNN
 F 3 "" H 2000 5050 50  0001 C CNN
 	1    2000 5050
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L CY8C4246AZI-L445 U7
@@ -586,7 +586,7 @@ F 1 "CY8C4246AZI-L445" H 3600 3400 60  0000 C CNN
 F 2 "digikey-footprints:LQFP-64_10x10mm" H 3650 3300 60  0001 C CNN
 F 3 "" H 3650 3300 60  0000 C CNN
 	1    3550 3350
-	-1   0    0    -1  
+	-1   0    0    -1
 $EndComp
 Text Label 5150 2800 0    60   ~ 0
 osc1_freq_wiper
@@ -637,7 +637,7 @@ F 1 "20kB" V 9000 1950 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9100 1950 50  0001 C CNN
 F 3 "" H 9100 1950 50  0001 C CNN
 	1    9100 1950
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R102
@@ -648,7 +648,7 @@ F 1 "R" V 9100 1650 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 9030 1650 50  0001 C CNN
 F 3 "" H 9100 1650 50  0001 C CNN
 	1    9100 1650
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR0111
@@ -659,7 +659,7 @@ F 1 "GND" H 9100 1950 50  0000 C CNN
 F 2 "" H 9100 2100 50  0001 C CNN
 F 3 "" H 9100 2100 50  0001 C CNN
 	1    9100 2100
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 9250 1950 0    60   ~ 0
 osc1_speed
@@ -672,7 +672,7 @@ F 1 "20kB" V 9000 3000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9100 3000 50  0001 C CNN
 F 3 "" H 9100 3000 50  0001 C CNN
 	1    9100 3000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R103
@@ -683,7 +683,7 @@ F 1 "R" V 9100 2700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 9030 2700 50  0001 C CNN
 F 3 "" H 9100 2700 50  0001 C CNN
 	1    9100 2700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR0112
@@ -694,7 +694,7 @@ F 1 "GND" H 9100 3000 50  0000 C CNN
 F 2 "" H 9100 3150 50  0001 C CNN
 F 3 "" H 9100 3150 50  0001 C CNN
 	1    9100 3150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 9250 3000 0    60   ~ 0
 osc2_speed
@@ -707,7 +707,7 @@ F 1 "20kB" V 9000 4000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9100 4000 50  0001 C CNN
 F 3 "" H 9100 4000 50  0001 C CNN
 	1    9100 4000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R104
@@ -718,7 +718,7 @@ F 1 "R" V 9100 3700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 9030 3700 50  0001 C CNN
 F 3 "" H 9100 3700 50  0001 C CNN
 	1    9100 3700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR0113
@@ -729,7 +729,7 @@ F 1 "GND" H 9100 4000 50  0000 C CNN
 F 2 "" H 9100 4150 50  0001 C CNN
 F 3 "" H 9100 4150 50  0001 C CNN
 	1    9100 4150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 9250 4000 0    60   ~ 0
 osc3_speed
@@ -742,7 +742,7 @@ F 1 "20kB" V 9000 5000 50  0000 C CNN
 F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9100 5000 50  0001 C CNN
 F 3 "" H 9100 5000 50  0001 C CNN
 	1    9100 5000
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R105
@@ -753,7 +753,7 @@ F 1 "R" V 9100 4700 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 9030 4700 50  0001 C CNN
 F 3 "" H 9100 4700 50  0001 C CNN
 	1    9100 4700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR0114
@@ -764,7 +764,7 @@ F 1 "GND" H 9100 5000 50  0000 C CNN
 F 2 "" H 9100 5150 50  0001 C CNN
 F 3 "" H 9100 5150 50  0001 C CNN
 	1    9100 5150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 9250 5000 0    60   ~ 0
 osc4_speed
@@ -803,7 +803,7 @@ F 1 "GNDD" H 1800 3125 50  0000 C CNN
 F 2 "" H 1800 3250 50  0001 C CNN
 F 3 "" H 1800 3250 50  0001 C CNN
 	1    1800 3250
-	-1   0    0    -1  
+	-1   0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR0121
@@ -814,7 +814,7 @@ F 1 "GNDD" H 850 6075 50  0000 C CNN
 F 2 "" H 850 6200 50  0001 C CNN
 F 3 "" H 850 6200 50  0001 C CNN
 	1    850  6200
-	-1   0    0    -1  
+	-1   0    0    -1
 $EndComp
 $Comp
 L GND #PWR0122
@@ -825,7 +825,7 @@ F 1 "GND" H 1150 6050 50  0000 C CNN
 F 2 "" H 1150 6200 50  0001 C CNN
 F 3 "" H 1150 6200 50  0001 C CNN
 	1    1150 6200
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R107
@@ -836,7 +836,7 @@ F 1 "R" V 1000 6050 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 930 6050 50  0001 C CNN
 F 3 "" H 1000 6050 50  0001 C CNN
 	1    1000 6050
-	0    1    1    0   
+	0    1    1    0
 $EndComp
 $Comp
 L R R106
@@ -847,7 +847,7 @@ F 1 "R" V 2050 1900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 1980 1900 50  0001 C CNN
 F 3 "" H 2050 1900 50  0001 C CNN
 	1    2050 1900
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L C_Small C80
@@ -858,7 +858,7 @@ F 1 "0.1uF" H 1910 3070 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1900 3150 50  0001 C CNN
 F 3 "" H 1900 3150 50  0001 C CNN
 	1    1900 3150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L C_Small C78
@@ -869,7 +869,7 @@ F 1 "1uF" H 1710 3070 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1700 3150 50  0001 C CNN
 F 3 "" H 1700 3150 50  0001 C CNN
 	1    1700 3150
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L C_Small C82
@@ -880,7 +880,7 @@ F 1 "1uF" H 2110 4020 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 2100 4100 50  0001 C CNN
 F 3 "" H 2100 4100 50  0001 C CNN
 	1    2100 4100
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR0124
@@ -891,7 +891,7 @@ F 1 "GNDD" H 2100 4075 50  0000 C CNN
 F 2 "" H 2100 4200 50  0001 C CNN
 F 3 "" H 2100 4200 50  0001 C CNN
 	1    2100 4200
-	-1   0    0    -1  
+	-1   0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR0126
@@ -902,7 +902,7 @@ F 1 "GNDD" H 1150 3825 50  0000 C CNN
 F 2 "" H 1150 3950 50  0001 C CNN
 F 3 "" H 1150 3950 50  0001 C CNN
 	1    1150 3950
-	-1   0    0    -1  
+	-1   0    0    -1
 $EndComp
 $Comp
 L C_Small C77
@@ -913,7 +913,7 @@ F 1 "0.1uF" H 1260 3770 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1250 3850 50  0001 C CNN
 F 3 "" H 1250 3850 50  0001 C CNN
 	1    1250 3850
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L C_Small C75
@@ -924,7 +924,7 @@ F 1 "1uF" H 1060 3770 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1050 3850 50  0001 C CNN
 F 3 "" H 1050 3850 50  0001 C CNN
 	1    1050 3850
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR0128
@@ -935,7 +935,7 @@ F 1 "GNDD" H 1150 3275 50  0000 C CNN
 F 2 "" H 1150 3400 50  0001 C CNN
 F 3 "" H 1150 3400 50  0001 C CNN
 	1    1150 3400
-	-1   0    0    -1  
+	-1   0    0    -1
 $EndComp
 $Comp
 L C_Small C76
@@ -946,7 +946,7 @@ F 1 "0.1uF" H 1260 3220 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1250 3300 50  0001 C CNN
 F 3 "" H 1250 3300 50  0001 C CNN
 	1    1250 3300
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L C_Small C74
@@ -957,7 +957,7 @@ F 1 "1uF" H 1060 3220 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1050 3300 50  0001 C CNN
 F 3 "" H 1050 3300 50  0001 C CNN
 	1    1050 3300
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR0130
@@ -968,7 +968,7 @@ F 1 "GNDD" H 1800 3775 50  0000 C CNN
 F 2 "" H 1800 3900 50  0001 C CNN
 F 3 "" H 1800 3900 50  0001 C CNN
 	1    1800 3900
-	1    0    0    1   
+	1    0    0    1
 $EndComp
 $Comp
 L C_Small C79
@@ -979,7 +979,7 @@ F 1 "0.1uF" H 1710 3920 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1700 4000 50  0001 C CNN
 F 3 "" H 1700 4000 50  0001 C CNN
 	1    1700 4000
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L C_Small C81
@@ -990,7 +990,7 @@ F 1 "1uF" H 1910 3920 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1900 4000 50  0001 C CNN
 F 3 "" H 1900 4000 50  0001 C CNN
 	1    1900 4000
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L Conn_01x01 J4
@@ -1001,7 +1001,7 @@ F 1 "Capsense_0" H 5650 1200 50  0000 C CNN
 F 2 "Cypress_capsense:Capsense_button" H 5350 1200 50  0001 C CNN
 F 3 "" H 5350 1200 50  0001 C CNN
 	1    5350 1200
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L Conn_01x01 J5
@@ -1012,7 +1012,7 @@ F 1 "Capsense_1" H 5650 1300 50  0000 C CNN
 F 2 "Cypress_capsense:Capsense_button" H 5350 1300 50  0001 C CNN
 F 3 "" H 5350 1300 50  0001 C CNN
 	1    5350 1300
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L Conn_01x01 J6
@@ -1023,7 +1023,7 @@ F 1 "Capsense_2" H 5650 1400 50  0000 C CNN
 F 2 "Cypress_capsense:Capsense_button" H 5350 1400 50  0001 C CNN
 F 3 "" H 5350 1400 50  0001 C CNN
 	1    5350 1400
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L Conn_01x01 J7
@@ -1034,7 +1034,7 @@ F 1 "Capsense_3" H 5650 1500 50  0000 C CNN
 F 2 "Cypress_capsense:Capsense_button" H 5350 1500 50  0001 C CNN
 F 3 "" H 5350 1500 50  0001 C CNN
 	1    5350 1500
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L C_Small C?
@@ -1045,7 +1045,7 @@ F 1 "2.2nF" H 5410 4470 50  0000 L CNN
 F 2 "" H 5400 4550 50  0001 C CNN
 F 3 "" H 5400 4550 50  0001 C CNN
 	1    5400 4550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1056,7 +1056,7 @@ F 1 "GNDD" H 5400 4525 50  0000 C CNN
 F 2 "" H 5400 4650 50  0001 C CNN
 F 3 "" H 5400 4650 50  0001 C CNN
 	1    5400 4650
-	-1   0    0    -1  
+	-1   0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1067,7 +1067,7 @@ F 1 "+5V" H 2050 1840 50  0000 C CNN
 F 2 "" H 2050 1700 50  0001 C CNN
 F 3 "" H 2050 1700 50  0001 C CNN
 	1    2050 1700
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1078,7 +1078,7 @@ F 1 "+5V" H 1150 3340 50  0000 C CNN
 F 2 "" H 1150 3200 50  0001 C CNN
 F 3 "" H 1150 3200 50  0001 C CNN
 	1    1150 3200
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1089,7 +1089,7 @@ F 1 "+5V" H 1800 3190 50  0000 C CNN
 F 2 "" H 1800 3050 50  0001 C CNN
 F 3 "" H 1800 3050 50  0001 C CNN
 	1    1800 3050
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1100,7 +1100,7 @@ F 1 "+5V" H 1150 3890 50  0000 C CNN
 F 2 "" H 1150 3750 50  0001 C CNN
 F 3 "" H 1150 3750 50  0001 C CNN
 	1    1150 3750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1111,7 +1111,7 @@ F 1 "+5V" H 1800 4240 50  0000 C CNN
 F 2 "" H 1800 4100 50  0001 C CNN
 F 3 "" H 1800 4100 50  0001 C CNN
 	1    1800 4100
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1122,7 +1122,7 @@ F 1 "+5V" H 1400 7090 50  0000 C CNN
 F 2 "" H 1400 6950 50  0001 C CNN
 F 3 "" H 1400 6950 50  0001 C CNN
 	1    1400 6950
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1133,7 +1133,7 @@ F 1 "+5V" H 6700 1640 50  0000 C CNN
 F 2 "" H 6700 1500 50  0001 C CNN
 F 3 "" H 6700 1500 50  0001 C CNN
 	1    6700 1500
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1144,7 +1144,7 @@ F 1 "+5V" H 7850 1640 50  0000 C CNN
 F 2 "" H 7850 1500 50  0001 C CNN
 F 3 "" H 7850 1500 50  0001 C CNN
 	1    7850 1500
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1155,7 +1155,7 @@ F 1 "+5V" H 9100 1640 50  0000 C CNN
 F 2 "" H 9100 1500 50  0001 C CNN
 F 3 "" H 9100 1500 50  0001 C CNN
 	1    9100 1500
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1166,7 +1166,7 @@ F 1 "+5V" H 9100 2690 50  0000 C CNN
 F 2 "" H 9100 2550 50  0001 C CNN
 F 3 "" H 9100 2550 50  0001 C CNN
 	1    9100 2550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1177,7 +1177,7 @@ F 1 "+5V" H 7850 2690 50  0000 C CNN
 F 2 "" H 7850 2550 50  0001 C CNN
 F 3 "" H 7850 2550 50  0001 C CNN
 	1    7850 2550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1188,7 +1188,7 @@ F 1 "+5V" H 6700 2690 50  0000 C CNN
 F 2 "" H 6700 2550 50  0001 C CNN
 F 3 "" H 6700 2550 50  0001 C CNN
 	1    6700 2550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1199,7 +1199,7 @@ F 1 "+5V" H 6700 3690 50  0000 C CNN
 F 2 "" H 6700 3550 50  0001 C CNN
 F 3 "" H 6700 3550 50  0001 C CNN
 	1    6700 3550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1210,7 +1210,7 @@ F 1 "+5V" H 7850 3690 50  0000 C CNN
 F 2 "" H 7850 3550 50  0001 C CNN
 F 3 "" H 7850 3550 50  0001 C CNN
 	1    7850 3550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1221,7 +1221,7 @@ F 1 "+5V" H 9100 3690 50  0000 C CNN
 F 2 "" H 9100 3550 50  0001 C CNN
 F 3 "" H 9100 3550 50  0001 C CNN
 	1    9100 3550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1232,7 +1232,7 @@ F 1 "+5V" H 9100 4690 50  0000 C CNN
 F 2 "" H 9100 4550 50  0001 C CNN
 F 3 "" H 9100 4550 50  0001 C CNN
 	1    9100 4550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1243,7 +1243,7 @@ F 1 "+5V" H 7850 4690 50  0000 C CNN
 F 2 "" H 7850 4550 50  0001 C CNN
 F 3 "" H 7850 4550 50  0001 C CNN
 	1    7850 4550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1254,7 +1254,7 @@ F 1 "+5V" H 6700 4690 50  0000 C CNN
 F 2 "" H 6700 4550 50  0001 C CNN
 F 3 "" H 6700 4550 50  0001 C CNN
 	1    6700 4550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 5150 2000 0    60   ~ 0
 osc4_quant
@@ -1281,7 +1281,7 @@ F 1 "SW_SPST" H 5350 7000 50  0000 C CNN
 F 2 "" H 5350 7100 50  0001 C CNN
 F 3 "" H 5350 7100 50  0001 C CNN
 	1    5350 7100
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1292,7 +1292,7 @@ F 1 "SW_SPST" H 5350 7100 50  0000 C CNN
 F 2 "" H 5350 7200 50  0001 C CNN
 F 3 "" H 5350 7200 50  0001 C CNN
 	1    5350 7200
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1303,7 +1303,7 @@ F 1 "SW_SPST" H 5350 7200 50  0000 C CNN
 F 2 "" H 5350 7300 50  0001 C CNN
 F 3 "" H 5350 7300 50  0001 C CNN
 	1    5350 7300
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1314,7 +1314,7 @@ F 1 "SW_SPST" H 5350 7300 50  0000 C CNN
 F 2 "" H 5350 7400 50  0001 C CNN
 F 3 "" H 5350 7400 50  0001 C CNN
 	1    5350 7400
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R?
@@ -1325,7 +1325,7 @@ F 1 "R" V 6250 6900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 6180 6900 50  0001 C CNN
 F 3 "" H 6250 6900 50  0001 C CNN
 	1    6250 6900
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L R R?
@@ -1336,7 +1336,7 @@ F 1 "R" V 6050 6900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 5980 6900 50  0001 C CNN
 F 3 "" H 6050 6900 50  0001 C CNN
 	1    6050 6900
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L R R?
@@ -1347,7 +1347,7 @@ F 1 "R" V 5850 6900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 5780 6900 50  0001 C CNN
 F 3 "" H 5850 6900 50  0001 C CNN
 	1    5850 6900
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L R R?
@@ -1358,7 +1358,7 @@ F 1 "R" V 5650 6900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 5580 6900 50  0001 C CNN
 F 3 "" H 5650 6900 50  0001 C CNN
 	1    5650 6900
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1369,7 +1369,7 @@ F 1 "GNDD" H 5150 6975 50  0000 C CNN
 F 2 "" H 5150 7100 50  0001 C CNN
 F 3 "" H 5150 7100 50  0001 C CNN
 	1    5150 7100
-	0    1    -1   0   
+	0    1    -1   0
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1380,7 +1380,7 @@ F 1 "GNDD" H 5150 7075 50  0000 C CNN
 F 2 "" H 5150 7200 50  0001 C CNN
 F 3 "" H 5150 7200 50  0001 C CNN
 	1    5150 7200
-	0    1    -1   0   
+	0    1    -1   0
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1391,7 +1391,7 @@ F 1 "GNDD" H 5150 7175 50  0000 C CNN
 F 2 "" H 5150 7300 50  0001 C CNN
 F 3 "" H 5150 7300 50  0001 C CNN
 	1    5150 7300
-	0    1    -1   0   
+	0    1    -1   0
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1402,7 +1402,7 @@ F 1 "GNDD" H 5150 7275 50  0000 C CNN
 F 2 "" H 5150 7400 50  0001 C CNN
 F 3 "" H 5150 7400 50  0001 C CNN
 	1    5150 7400
-	0    1    -1   0   
+	0    1    -1   0
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1413,7 +1413,7 @@ F 1 "+5V" H 5650 6890 50  0000 C CNN
 F 2 "" H 5650 6750 50  0001 C CNN
 F 3 "" H 5650 6750 50  0001 C CNN
 	1    5650 6750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1424,7 +1424,7 @@ F 1 "+5V" H 5850 6890 50  0000 C CNN
 F 2 "" H 5850 6750 50  0001 C CNN
 F 3 "" H 5850 6750 50  0001 C CNN
 	1    5850 6750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1435,7 +1435,7 @@ F 1 "+5V" H 6050 6890 50  0000 C CNN
 F 2 "" H 6050 6750 50  0001 C CNN
 F 3 "" H 6050 6750 50  0001 C CNN
 	1    6050 6750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1446,7 +1446,7 @@ F 1 "+5V" H 6250 6890 50  0000 C CNN
 F 2 "" H 6250 6750 50  0001 C CNN
 F 3 "" H 6250 6750 50  0001 C CNN
 	1    6250 6750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R?
@@ -1457,7 +1457,7 @@ F 1 "R" V 8850 6000 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 8780 6000 50  0001 C CNN
 F 3 "" H 8850 6000 50  0001 C CNN
 	1    8850 6000
-	0    1    1    0   
+	0    1    1    0
 $EndComp
 $Comp
 L R R?
@@ -1468,7 +1468,7 @@ F 1 "R" V 8850 6100 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 8780 6100 50  0001 C CNN
 F 3 "" H 8850 6100 50  0001 C CNN
 	1    8850 6100
-	0    1    1    0   
+	0    1    1    0
 $EndComp
 $Comp
 L R R?
@@ -1479,7 +1479,7 @@ F 1 "R" V 8850 6200 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 8780 6200 50  0001 C CNN
 F 3 "" H 8850 6200 50  0001 C CNN
 	1    8850 6200
-	0    1    1    0   
+	0    1    1    0
 $EndComp
 $Comp
 L R R?
@@ -1490,7 +1490,7 @@ F 1 "R" V 8850 6300 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 8780 6300 50  0001 C CNN
 F 3 "" H 8850 6300 50  0001 C CNN
 	1    8850 6300
-	0    1    1    0   
+	0    1    1    0
 $EndComp
 $Comp
 L CP1_Small C?
@@ -1501,7 +1501,7 @@ F 1 "CP1_Small" H 9060 6420 50  0000 L CNN
 F 2 "" H 9050 6500 50  0001 C CNN
 F 3 "" H 9050 6500 50  0001 C CNN
 	1    9050 6500
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L CP1_Small C?
@@ -1512,7 +1512,7 @@ F 1 "CP1_Small" H 9260 6420 50  0000 L CNN
 F 2 "" H 9250 6500 50  0001 C CNN
 F 3 "" H 9250 6500 50  0001 C CNN
 	1    9250 6500
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L CP1_Small C?
@@ -1523,7 +1523,7 @@ F 1 "CP1_Small" H 9460 6420 50  0000 L CNN
 F 2 "" H 9450 6500 50  0001 C CNN
 F 3 "" H 9450 6500 50  0001 C CNN
 	1    9450 6500
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L CP1_Small C?
@@ -1534,7 +1534,7 @@ F 1 "CP1_Small" H 9660 6420 50  0000 L CNN
 F 2 "" H 9650 6500 50  0001 C CNN
 F 3 "" H 9650 6500 50  0001 C CNN
 	1    9650 6500
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR?
@@ -1545,7 +1545,7 @@ F 1 "GND" H 9050 6450 50  0000 C CNN
 F 2 "" H 9050 6600 50  0001 C CNN
 F 3 "" H 9050 6600 50  0001 C CNN
 	1    9050 6600
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR?
@@ -1556,7 +1556,7 @@ F 1 "GND" H 9250 6450 50  0000 C CNN
 F 2 "" H 9250 6600 50  0001 C CNN
 F 3 "" H 9250 6600 50  0001 C CNN
 	1    9250 6600
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR?
@@ -1567,7 +1567,7 @@ F 1 "GND" H 9450 6450 50  0000 C CNN
 F 2 "" H 9450 6600 50  0001 C CNN
 F 3 "" H 9450 6600 50  0001 C CNN
 	1    9450 6600
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L GND #PWR?
@@ -1578,7 +1578,7 @@ F 1 "GND" H 9650 6450 50  0000 C CNN
 F 2 "" H 9650 6600 50  0001 C CNN
 F 3 "" H 9650 6600 50  0001 C CNN
 	1    9650 6600
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Label 4200 7100 0    60   ~ 0
 osc4_repeat
@@ -1597,7 +1597,7 @@ F 1 "SW_SPST" H 3200 7000 50  0000 C CNN
 F 2 "" H 3200 7100 50  0001 C CNN
 F 3 "" H 3200 7100 50  0001 C CNN
 	1    3200 7100
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1608,7 +1608,7 @@ F 1 "SW_SPST" H 3200 7100 50  0000 C CNN
 F 2 "" H 3200 7200 50  0001 C CNN
 F 3 "" H 3200 7200 50  0001 C CNN
 	1    3200 7200
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1619,7 +1619,7 @@ F 1 "SW_SPST" H 3200 7200 50  0000 C CNN
 F 2 "" H 3200 7300 50  0001 C CNN
 F 3 "" H 3200 7300 50  0001 C CNN
 	1    3200 7300
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1630,7 +1630,7 @@ F 1 "SW_SPST" H 3200 7300 50  0000 C CNN
 F 2 "" H 3200 7400 50  0001 C CNN
 F 3 "" H 3200 7400 50  0001 C CNN
 	1    3200 7400
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L R R?
@@ -1641,7 +1641,7 @@ F 1 "R" V 4100 6900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 4030 6900 50  0001 C CNN
 F 3 "" H 4100 6900 50  0001 C CNN
 	1    4100 6900
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L R R?
@@ -1652,7 +1652,7 @@ F 1 "R" V 3900 6900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 3830 6900 50  0001 C CNN
 F 3 "" H 3900 6900 50  0001 C CNN
 	1    3900 6900
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L R R?
@@ -1663,7 +1663,7 @@ F 1 "R" V 3700 6900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 3630 6900 50  0001 C CNN
 F 3 "" H 3700 6900 50  0001 C CNN
 	1    3700 6900
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L R R?
@@ -1674,7 +1674,7 @@ F 1 "R" V 3500 6900 50  0000 C CNN
 F 2 "digikey-footprints:0805" V 3430 6900 50  0001 C CNN
 F 3 "" H 3500 6900 50  0001 C CNN
 	1    3500 6900
-	-1   0    0    1   
+	-1   0    0    1
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1685,7 +1685,7 @@ F 1 "GNDD" H 3000 6975 50  0000 C CNN
 F 2 "" H 3000 7100 50  0001 C CNN
 F 3 "" H 3000 7100 50  0001 C CNN
 	1    3000 7100
-	0    1    -1   0   
+	0    1    -1   0
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1696,7 +1696,7 @@ F 1 "GNDD" H 3000 7075 50  0000 C CNN
 F 2 "" H 3000 7200 50  0001 C CNN
 F 3 "" H 3000 7200 50  0001 C CNN
 	1    3000 7200
-	0    1    -1   0   
+	0    1    -1   0
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1707,7 +1707,7 @@ F 1 "GNDD" H 3000 7175 50  0000 C CNN
 F 2 "" H 3000 7300 50  0001 C CNN
 F 3 "" H 3000 7300 50  0001 C CNN
 	1    3000 7300
-	0    1    -1   0   
+	0    1    -1   0
 $EndComp
 $Comp
 L GNDD #PWR?
@@ -1718,7 +1718,7 @@ F 1 "GNDD" H 3000 7275 50  0000 C CNN
 F 2 "" H 3000 7400 50  0001 C CNN
 F 3 "" H 3000 7400 50  0001 C CNN
 	1    3000 7400
-	0    1    -1   0   
+	0    1    -1   0
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1729,7 +1729,7 @@ F 1 "+5V" H 3500 6890 50  0000 C CNN
 F 2 "" H 3500 6750 50  0001 C CNN
 F 3 "" H 3500 6750 50  0001 C CNN
 	1    3500 6750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1740,7 +1740,7 @@ F 1 "+5V" H 3700 6890 50  0000 C CNN
 F 2 "" H 3700 6750 50  0001 C CNN
 F 3 "" H 3700 6750 50  0001 C CNN
 	1    3700 6750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1751,7 +1751,7 @@ F 1 "+5V" H 3900 6890 50  0000 C CNN
 F 2 "" H 3900 6750 50  0001 C CNN
 F 3 "" H 3900 6750 50  0001 C CNN
 	1    3900 6750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L +5V #PWR?
@@ -1762,7 +1762,7 @@ F 1 "+5V" H 4100 6890 50  0000 C CNN
 F 2 "" H 4100 6750 50  0001 C CNN
 F 3 "" H 4100 6750 50  0001 C CNN
 	1    4100 6750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Text Notes 4250 6500 0    60   ~ 0
 MCU pins have resistive pull \nup as an option, so probably \nleave these resistors unloaded.
@@ -1783,7 +1783,7 @@ F 1 "SW_SPST" H 9350 5750 50  0000 C CNN
 F 2 "" H 9350 5850 50  0001 C CNN
 F 3 "" H 9350 5850 50  0001 C CNN
 	1    9350 5850
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1794,7 +1794,7 @@ F 1 "SW_SPST" H 9350 5450 50  0000 C CNN
 F 2 "" H 9350 5550 50  0001 C CNN
 F 3 "" H 9350 5550 50  0001 C CNN
 	1    9350 5550
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1805,7 +1805,7 @@ F 1 "SW_SPST" H 9350 5650 50  0000 C CNN
 F 2 "" H 9350 5750 50  0001 C CNN
 F 3 "" H 9350 5750 50  0001 C CNN
 	1    9350 5750
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 $Comp
 L SW_SPST SW?
@@ -1816,7 +1816,7 @@ F 1 "SW_SPST" H 9350 5550 50  0000 C CNN
 F 2 "" H 9350 5650 50  0001 C CNN
 F 3 "" H 9350 5650 50  0001 C CNN
 	1    9350 5650
-	1    0    0    -1  
+	1    0    0    -1
 $EndComp
 Wire Wire Line
 	1050 7150 1350 7150
