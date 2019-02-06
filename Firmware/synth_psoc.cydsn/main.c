@@ -77,19 +77,19 @@ int main(void)
             adc_update_flag = 0;
                
             freq_0 = ADC_SAR_Seq_GetResult16(FREQ_0_ADC_CHAN);
-            freq_0 = Quantize(freq_0);
+            //freq_0 = Quantize(freq_0);
             pulse_width_0 = ADC_SAR_Seq_GetResult16(PW_0_ADC_CHAN);  
             
             freq_1 = ADC_SAR_Seq_GetResult16(FREQ_1_ADC_CHAN);
-            freq_1 = Quantize(freq_1);
+            //freq_1 = Quantize(freq_1);
             pulse_width_1 = ADC_SAR_Seq_GetResult16(PW_1_ADC_CHAN);
             
             freq_2 = ADC_SAR_Seq_GetResult16(FREQ_2_ADC_CHAN);
-            freq_2 = Quantize(freq_2);
+            //freq_2 = Quantize(freq_2);
             pulse_width_2 = ADC_SAR_Seq_GetResult16(PW_2_ADC_CHAN);  
             
             freq_3 = ADC_SAR_Seq_GetResult16(FREQ_3_ADC_CHAN);
-            freq_3 = Quantize(freq_3);
+            //freq_3 = Quantize(freq_3);
             pulse_width_3 = ADC_SAR_Seq_GetResult16(PW_3_ADC_CHAN);  
         }
 
@@ -103,9 +103,9 @@ int main(void)
         }
         if(Osc_0_Button.note_triggered == 1){
             env0_pwm = env0_pwm + (pulse_width_0 * 0.2);
-            //if (env0_pwm > 65000) {
-                //env0_pwm  = 65000;
-            //}
+            if (env0_pwm > 65000) {
+                env0_pwm  = 65000;
+            }
         }
         else {
             if(env0_pwm > 0.1){
@@ -121,9 +121,9 @@ int main(void)
         }
         if(Osc_1_Button.note_triggered == 1){
             env1_pwm = env1_pwm + (pulse_width_1 * 0.002);
-            //if (env1_pwm > 65000) {
-                //env1_pwm  = 65000;
-            //}
+            if (env1_pwm > 65000) {
+                env1_pwm  = 65000;
+            }
         }
         else{
             if(env1_pwm > 0.1){
@@ -139,9 +139,9 @@ int main(void)
         }
         if(Osc_2_Button.note_triggered == 1){
             env2_pwm = env2_pwm + (pulse_width_2 * 0.002);
-            //if (env2_pwm > 65000) {
-                //env2_pwm  = 65000;
-            //}
+            if (env2_pwm > 65000) {
+                env2_pwm  = 65000;
+            }
         }
         else{
             if(env2_pwm > 0){
@@ -157,9 +157,9 @@ int main(void)
         }
         if(Osc_3_Button.note_triggered == 1){
             env3_pwm = env3_pwm + (pulse_width_3 * 0.002);
-            //if (env3_pwm > 65000) {
-                //env3_pwm  = 65000;
-            //}
+            if (env3_pwm > 65000) {
+                env3_pwm  = 65000;
+            }
         }
         else{
             if(env3_pwm > 0){
