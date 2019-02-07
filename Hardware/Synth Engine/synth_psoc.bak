@@ -179,7 +179,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 7
+Sheet 1 8
 Title ""
 Date ""
 Rev ""
@@ -321,4 +321,10 @@ Wire Wire Line
 	3850 4100 6100 4100
 Wire Wire Line
 	6100 4350 3850 4350
+$Sheet
+S 4300 950  1900 800 
+U 5C5CADB1
+F0 "Connectors" 60
+F1 "connectors.sch" 60
+$EndSheet
 $EndSCHEMATC
