@@ -1039,7 +1039,9 @@ Wire Wire Line
 Wire Wire Line
 	3150 5400 3150 5650
 Wire Wire Line
-	3000 5650 3200 5650
+	3000 5650 3150 5650
+Wire Wire Line
+	3150 5650 3200 5650
 Connection ~ 3150 5650
 Wire Wire Line
 	3850 5450 3850 5400
@@ -1048,7 +1050,11 @@ Wire Wire Line
 Wire Wire Line
 	3650 5400 3650 5650
 Wire Wire Line
-	3500 5650 3700 5650
+	3500 5650 3550 5650
+Wire Wire Line
+	3550 5650 3650 5650
+Wire Wire Line
+	3650 5650 3700 5650
 Connection ~ 3650 5650
 Wire Wire Line
 	4000 5650 4250 5650
@@ -1059,10 +1065,16 @@ Wire Wire Line
 Wire Wire Line
 	3150 5950 3150 6200
 Wire Wire Line
-	3000 6200 3200 6200
+	3000 6200 3150 6200
+Wire Wire Line
+	3150 6200 3200 6200
 Connection ~ 3150 6200
 Wire Wire Line
-	3500 6200 3700 6200
+	3500 6200 3600 6200
+Wire Wire Line
+	3600 6200 3650 6200
+Wire Wire Line
+	3650 6200 3700 6200
 Wire Wire Line
 	3850 6000 3850 5950
 Wire Wire Line
@@ -1079,10 +1091,16 @@ Wire Wire Line
 Wire Wire Line
 	3150 6450 3150 6700
 Wire Wire Line
-	3000 6700 3200 6700
+	3000 6700 3150 6700
+Wire Wire Line
+	3150 6700 3200 6700
 Connection ~ 3150 6700
 Wire Wire Line
-	3500 6700 3700 6700
+	3500 6700 3550 6700
+Wire Wire Line
+	3550 6700 3650 6700
+Wire Wire Line
+	3650 6700 3700 6700
 Wire Wire Line
 	3850 6500 3850 6450
 Wire Wire Line
@@ -1093,9 +1111,15 @@ Connection ~ 3650 6700
 Wire Wire Line
 	4000 6700 4250 6700
 Wire Wire Line
-	3500 7150 3700 7150
+	3500 7150 3550 7150
 Wire Wire Line
-	3000 7150 3200 7150
+	3550 7150 3650 7150
+Wire Wire Line
+	3650 7150 3700 7150
+Wire Wire Line
+	3000 7150 3150 7150
+Wire Wire Line
+	3150 7150 3200 7150
 Wire Wire Line
 	4000 7150 4250 7150
 Wire Wire Line
@@ -1119,7 +1143,9 @@ Wire Wire Line
 Wire Wire Line
 	1300 6550 1300 6350
 Wire Wire Line
-	1150 6350 1350 6350
+	1150 6350 1300 6350
+Wire Wire Line
+	1300 6350 1350 6350
 Connection ~ 1300 6350
 Wire Wire Line
 	1750 6350 1650 6350
@@ -1337,4 +1363,54 @@ F 3 "" H 11100 2700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10900 2600 10700 2600
+$Comp
+L SW_DPDT_x2 SW?
+U 1 1 5C5E11B0
+P 6200 4600
+F 0 "SW?" H 6200 4770 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 6450 4600 50  0000 C CNN
+F 2 "" H 6200 4600 50  0001 C CNN
+F 3 "" H 6200 4600 50  0001 C CNN
+	1    6200 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x03 J?
+U 1 1 5C5E130C
+P 7050 4600
+F 0 "J?" H 7050 4800 50  0000 C CNN
+F 1 "Conn_01x03" H 7050 4400 50  0000 C CNN
+F 2 "" H 7050 4600 50  0001 C CNN
+F 3 "" H 7050 4600 50  0001 C CNN
+	1    7050 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4600 6400 4600
+Wire Wire Line
+	6850 4500 6550 4500
+Wire Wire Line
+	6550 4500 6550 4350
+Wire Wire Line
+	6550 4350 5900 4350
+Wire Wire Line
+	5900 4350 5900 4500
+Wire Wire Line
+	5900 4500 6000 4500
+Wire Wire Line
+	6000 4700 5900 4700
+Wire Wire Line
+	5900 4700 5900 4900
+Wire Wire Line
+	5900 4900 6550 4900
+Wire Wire Line
+	6550 4900 6550 4700
+Wire Wire Line
+	6550 4700 6850 4700
+Text Label 6000 4350 0    60   ~ 0
+LFO_square
+Text Label 6100 4900 0    60   ~ 0
+LFO_tri
+Text Label 6450 4600 0    60   ~ 0
+LFO_out
 $EndSCHEMATC

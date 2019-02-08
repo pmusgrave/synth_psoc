@@ -381,22 +381,11 @@ Text Label 3150 2600 0    60   ~ 0
 lfo_square
 Text Label 4250 3700 0    60   ~ 0
 lfo_tri
-$Comp
-L SW_DPDT_x2 SW1
-U 1 1 5C38FB5B
-P 3500 1500
-F 0 "SW1" H 3500 1670 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 3500 1300 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 3500 1500 50  0001 C CNN
-F 3 "" H 3500 1500 50  0001 C CNN
-	1    3500 1500
-	-1   0    0    1   
-$EndComp
 Text Label 2700 1600 0    60   ~ 0
 lfo_tri
 Text Label 2700 1400 0    60   ~ 0
 lfo_square
-Text Label 3900 1500 0    60   ~ 0
+Text Label 2700 1500 0    60   ~ 0
 main_lfo
 Text Notes 1550 5050 0    60   ~ 0
 470R and 10k might \nnot be the right values.\nDetermine under test.
@@ -788,19 +777,27 @@ $EndComp
 Wire Wire Line
 	10200 4950 10300 4950
 Wire Wire Line
-	9600 4950 9900 4950
+	9600 4950 9800 4950
+Wire Wire Line
+	9800 4950 9900 4950
 Wire Wire Line
 	10200 2750 10300 2750
 Wire Wire Line
-	9550 2750 9900 2750
+	9550 2750 9750 2750
+Wire Wire Line
+	9750 2750 9900 2750
 Wire Wire Line
 	6700 4950 6800 4950
 Wire Wire Line
-	6100 4950 6400 4950
+	6100 4950 6300 4950
+Wire Wire Line
+	6300 4950 6400 4950
 Wire Wire Line
 	6750 2750 6850 2750
 Wire Wire Line
-	6150 2750 6450 2750
+	6150 2750 6350 2750
+Wire Wire Line
+	6350 2750 6450 2750
 Connection ~ 8650 5050
 Wire Wire Line
 	8650 4950 8650 5050
@@ -824,7 +821,9 @@ Wire Wire Line
 Wire Wire Line
 	9800 4950 9800 4400
 Wire Wire Line
-	7950 5050 9000 5050
+	7950 5050 8650 5050
+Wire Wire Line
+	8650 5050 9000 5050
 Connection ~ 6300 4950
 Wire Wire Line
 	5400 4850 5500 4850
@@ -835,7 +834,9 @@ Wire Wire Line
 Wire Wire Line
 	6300 4950 6300 4400
 Wire Wire Line
-	4550 5050 5500 5050
+	4550 5050 5250 5050
+Wire Wire Line
+	5250 5050 5500 5050
 Connection ~ 9750 2750
 Wire Wire Line
 	8850 2650 8950 2650
@@ -846,7 +847,9 @@ Wire Wire Line
 Wire Wire Line
 	9750 2750 9750 2200
 Wire Wire Line
-	8000 2850 8950 2850
+	8000 2850 8650 2850
+Wire Wire Line
+	8650 2850 8950 2850
 Connection ~ 6350 2750
 Wire Wire Line
 	5450 2650 5550 2650
@@ -888,26 +891,32 @@ Connection ~ 2550 2600
 Wire Wire Line
 	2550 2600 2550 2700
 Wire Wire Line
-	3900 1500 3700 1500
-Wire Wire Line
 	2700 1400 3300 1400
 Wire Wire Line
 	2700 1600 3300 1600
 Connection ~ 2300 2600
 Wire Wire Line
-	2300 2600 2700 2600
+	2300 2600 2550 2600
+Wire Wire Line
+	2550 2600 2700 2600
 Wire Wire Line
 	2300 2100 2300 2200
 Wire Wire Line
 	1900 2100 2300 2100
 Wire Wire Line
-	2300 2500 2300 2700
+	2300 2500 2300 2600
+Wire Wire Line
+	2300 2600 2300 2700
 Wire Wire Line
 	2700 3800 2850 3800
 Wire Wire Line
-	2650 3600 2850 3600
+	2650 3600 2750 3600
 Wire Wire Line
-	3450 3700 3650 3700
+	2750 3600 2850 3600
+Wire Wire Line
+	3450 3700 3550 3700
+Wire Wire Line
+	3550 3700 3650 3700
 Wire Wire Line
 	1250 3700 1100 3700
 Wire Wire Line
@@ -918,7 +927,9 @@ Wire Wire Line
 	2650 4250 2700 4250
 Connection ~ 4050 3700
 Wire Wire Line
-	3950 3700 4250 3700
+	3950 3700 4050 3700
+Wire Wire Line
+	4050 3700 4250 3700
 Wire Wire Line
 	4050 3750 4050 3700
 Connection ~ 1100 4250
@@ -928,14 +939,18 @@ Connection ~ 3550 3700
 Wire Wire Line
 	3550 4550 2250 4550
 Wire Wire Line
-	1100 3700 1100 4550
+	1100 3700 1100 4250
+Wire Wire Line
+	1100 4250 1100 4550
 Wire Wire Line
 	1300 4250 1100 4250
 Connection ~ 1900 3600
 Wire Wire Line
 	1900 4250 1600 4250
 Wire Wire Line
-	1900 3050 1900 4250
+	1900 3050 1900 3600
+Wire Wire Line
+	1900 3600 1900 4250
 Wire Wire Line
 	2700 3850 2700 3800
 Connection ~ 2750 3600
@@ -946,9 +961,13 @@ Wire Wire Line
 Wire Wire Line
 	3550 3100 3300 3100
 Wire Wire Line
-	3550 3100 3550 4550
+	3550 3100 3550 3700
 Wire Wire Line
-	1850 3600 1950 3600
+	3550 3700 3550 4550
+Wire Wire Line
+	1850 3600 1900 3600
+Wire Wire Line
+	1900 3600 1950 3600
 Wire Wire Line
 	2250 3600 2300 3600
 $Comp
@@ -972,4 +991,17 @@ Wire Wire Line
 	2300 3600 2300 3400
 Wire Wire Line
 	2650 3500 2650 3600
+$Comp
+L Conn_01x03 J?
+U 1 1 5C5E25FE
+P 3500 1500
+F 0 "J?" H 3500 1700 50  0000 C CNN
+F 1 "Conn_01x03" H 3500 1300 50  0000 C CNN
+F 2 "" H 3500 1500 50  0001 C CNN
+F 3 "" H 3500 1500 50  0001 C CNN
+	1    3500 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1500 3300 1500
 $EndSCHEMATC
