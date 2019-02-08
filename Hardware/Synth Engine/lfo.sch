@@ -264,17 +264,6 @@ F 3 "" H 2100 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L POT RV17
-U 1 1 5C380212
-P 2500 3600
-F 0 "RV17" V 2325 3600 50  0000 C CNN
-F 1 "10kA" V 2400 3600 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 2500 3600 50  0001 C CNN
-F 3 "" H 2500 3600 50  0001 C CNN
-	1    2500 3600
-	0    1    1    0   
-$EndComp
-$Comp
 L R R83
 U 1 1 5C3808A8
 P 2100 4550
@@ -961,7 +950,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 3600 1950 3600
 Wire Wire Line
-	2250 3600 2350 3600
+	2250 3600 2300 3600
 $Comp
 L R R89
 U 1 1 5C547773
@@ -975,9 +964,12 @@ F 3 "" H 5250 4750 50  0001 C CNN
 $EndComp
 Text GLabel 5250 4600 1    60   Input ~ 0
 VREF
+Text HLabel 2300 3400 2    60   Output ~ 0
+LFO_in
+Text HLabel 2650 3500 0    60   Input ~ 0
+LFO_out
 Wire Wire Line
-	2500 3750 2300 3750
+	2300 3600 2300 3400
 Wire Wire Line
-	2300 3750 2300 3600
-Connection ~ 2300 3600
+	2650 3500 2650 3600
 $EndSCHEMATC

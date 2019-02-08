@@ -189,13 +189,13 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 3100 1650 0    60   Input ~ 0
+Text HLabel 2750 1650 0    60   Input ~ 0
 osc1
-Text HLabel 3100 3150 0    60   Input ~ 0
+Text HLabel 2750 3150 0    60   Input ~ 0
 osc2
-Text HLabel 3100 4600 0    60   Input ~ 0
+Text HLabel 2750 4600 0    60   Input ~ 0
 osc3
-Text HLabel 3100 6100 0    60   Input ~ 0
+Text HLabel 2750 6100 0    60   Input ~ 0
 osc4
 Text HLabel 6800 1750 2    60   Input ~ 0
 filter_out_1
@@ -252,12 +252,12 @@ $EndComp
 $Comp
 L CP1_Small C1
 U 1 1 5C37CAF6
-P 3350 1650
-F 0 "C1" H 3360 1720 50  0000 L CNN
-F 1 "22uF" H 3360 1570 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3350 1650 50  0001 C CNN
-F 3 "" H 3350 1650 50  0001 C CNN
-	1    3350 1650
+P 3000 1650
+F 0 "C1" H 3010 1720 50  0000 L CNN
+F 1 "22uF" H 3010 1570 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3000 1650 50  0001 C CNN
+F 3 "" H 3000 1650 50  0001 C CNN
+	1    3000 1650
 	0    1    1    0   
 $EndComp
 $Comp
@@ -287,12 +287,12 @@ VREF
 $Comp
 L R R1
 U 1 1 5C537DA0
-P 3700 1650
-F 0 "R1" V 3780 1650 50  0000 C CNN
-F 1 "1k" V 3700 1650 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 3630 1650 50  0001 C CNN
-F 3 "" H 3700 1650 50  0001 C CNN
-	1    3700 1650
+P 3350 1650
+F 0 "R1" V 3430 1650 50  0000 C CNN
+F 1 "1k" V 3350 1650 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 3280 1650 50  0001 C CNN
+F 3 "" H 3350 1650 50  0001 C CNN
+	1    3350 1650
 	0    1    1    0   
 $EndComp
 $Comp
@@ -317,36 +317,15 @@ F 3 "" H 5850 1000 50  0001 C CNN
 	1    5850 1000
 	0    1    1    0   
 $EndComp
-$Comp
-L POT_Dual RV1
-U 1 1 5C53920C
-P 4400 1550
-F 0 "RV1" H 4400 1700 50  0000 C CNN
-F 1 "POT_Dual" H 4400 1625 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-EVM3E" H 4650 1475 50  0001 C CNN
-F 3 "" H 4650 1475 50  0001 C CNN
-	1    4400 1550
-	1    0    0    -1  
-$EndComp
-Connection ~ 4450 1400
-Wire Wire Line
-	4650 1400 4450 1400
-Connection ~ 4450 1650
-Wire Wire Line
-	4450 1000 4450 1650
 Wire Wire Line
 	4800 1650 4950 1650
 Wire Wire Line
-	4650 1450 4650 1400
-Wire Wire Line
-	4300 1650 4500 1650
-Wire Wire Line
-	3250 1650 3100 1650
+	2900 1650 2750 1650
 Connection ~ 5300 1650
 Wire Wire Line
 	5300 1800 5300 1650
 Wire Wire Line
-	3550 1650 3450 1650
+	3200 1650 3100 1650
 Wire Wire Line
 	4450 1000 5750 1000
 Wire Wire Line
@@ -374,14 +353,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 1850 5600 1850
 Wire Wire Line
-	4150 1450 4150 1400
-Wire Wire Line
-	4150 1400 3900 1400
-Wire Wire Line
-	3900 1400 3900 1650
-Wire Wire Line
-	3850 1650 4000 1650
-Connection ~ 3900 1650
+	3500 1650 3650 1650
 $Comp
 L CP1_Small C13
 U 1 1 5C53B3FD
@@ -467,12 +439,12 @@ $EndComp
 $Comp
 L CP1_Small C2
 U 1 1 5C53C635
-P 3350 3150
-F 0 "C2" H 3360 3220 50  0000 L CNN
-F 1 "22uF" H 3360 3070 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3350 3150 50  0001 C CNN
-F 3 "" H 3350 3150 50  0001 C CNN
-	1    3350 3150
+P 3000 3150
+F 0 "C2" H 3010 3220 50  0000 L CNN
+F 1 "22uF" H 3010 3070 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3000 3150 50  0001 C CNN
+F 3 "" H 3000 3150 50  0001 C CNN
+	1    3000 3150
 	0    1    1    0   
 $EndComp
 $Comp
@@ -502,12 +474,12 @@ VREF
 $Comp
 L R R2
 U 1 1 5C53C648
-P 3700 3150
-F 0 "R2" V 3780 3150 50  0000 C CNN
-F 1 "1k" V 3700 3150 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 3630 3150 50  0001 C CNN
-F 3 "" H 3700 3150 50  0001 C CNN
-	1    3700 3150
+P 3350 3150
+F 0 "R2" V 3430 3150 50  0000 C CNN
+F 1 "1k" V 3350 3150 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 3280 3150 50  0001 C CNN
+F 3 "" H 3350 3150 50  0001 C CNN
+	1    3350 3150
 	0    1    1    0   
 $EndComp
 $Comp
@@ -532,36 +504,15 @@ F 3 "" H 5850 2500 50  0001 C CNN
 	1    5850 2500
 	0    1    1    0   
 $EndComp
-$Comp
-L POT_Dual RV2
-U 1 1 5C53C65A
-P 4400 3050
-F 0 "RV2" H 4400 3200 50  0000 C CNN
-F 1 "POT_Dual" H 4400 3125 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-EVM3E" H 4650 2975 50  0001 C CNN
-F 3 "" H 4650 2975 50  0001 C CNN
-	1    4400 3050
-	1    0    0    -1  
-$EndComp
-Connection ~ 4450 2900
-Wire Wire Line
-	4650 2900 4450 2900
-Connection ~ 4450 3150
-Wire Wire Line
-	4450 2500 4450 3150
 Wire Wire Line
 	4800 3150 4950 3150
 Wire Wire Line
-	4650 2950 4650 2900
-Wire Wire Line
-	4300 3150 4500 3150
-Wire Wire Line
-	3250 3150 3100 3150
+	2900 3150 2750 3150
 Connection ~ 5300 3150
 Wire Wire Line
 	5300 3300 5300 3150
 Wire Wire Line
-	3550 3150 3450 3150
+	3200 3150 3100 3150
 Wire Wire Line
 	4450 2500 5750 2500
 Wire Wire Line
@@ -589,14 +540,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 3350 5600 3350
 Wire Wire Line
-	4150 2950 4150 2900
-Wire Wire Line
-	4150 2900 3900 2900
-Wire Wire Line
-	3900 2900 3900 3150
-Wire Wire Line
-	3850 3150 4000 3150
-Connection ~ 3900 3150
+	3500 3150 3650 3150
 $Comp
 L CP1_Small C14
 U 1 1 5C53C685
@@ -682,12 +626,12 @@ $EndComp
 $Comp
 L CP1_Small C3
 U 1 1 5C53CB3B
-P 3350 4600
-F 0 "C3" H 3360 4670 50  0000 L CNN
-F 1 "22uF" H 3360 4520 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3350 4600 50  0001 C CNN
-F 3 "" H 3350 4600 50  0001 C CNN
-	1    3350 4600
+P 3000 4600
+F 0 "C3" H 3010 4670 50  0000 L CNN
+F 1 "22uF" H 3010 4520 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3000 4600 50  0001 C CNN
+F 3 "" H 3000 4600 50  0001 C CNN
+	1    3000 4600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -717,12 +661,12 @@ VREF
 $Comp
 L R R3
 U 1 1 5C53CB4E
-P 3700 4600
-F 0 "R3" V 3780 4600 50  0000 C CNN
-F 1 "1k" V 3700 4600 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 3630 4600 50  0001 C CNN
-F 3 "" H 3700 4600 50  0001 C CNN
-	1    3700 4600
+P 3350 4600
+F 0 "R3" V 3430 4600 50  0000 C CNN
+F 1 "1k" V 3350 4600 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 3280 4600 50  0001 C CNN
+F 3 "" H 3350 4600 50  0001 C CNN
+	1    3350 4600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -747,36 +691,15 @@ F 3 "" H 5850 3950 50  0001 C CNN
 	1    5850 3950
 	0    1    1    0   
 $EndComp
-$Comp
-L POT_Dual RV3
-U 1 1 5C53CB60
-P 4400 4500
-F 0 "RV3" H 4400 4650 50  0000 C CNN
-F 1 "POT_Dual" H 4400 4575 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-EVM3E" H 4650 4425 50  0001 C CNN
-F 3 "" H 4650 4425 50  0001 C CNN
-	1    4400 4500
-	1    0    0    -1  
-$EndComp
-Connection ~ 4450 4350
-Wire Wire Line
-	4650 4350 4450 4350
-Connection ~ 4450 4600
-Wire Wire Line
-	4450 3950 4450 4600
 Wire Wire Line
 	4800 4600 4950 4600
 Wire Wire Line
-	4650 4400 4650 4350
-Wire Wire Line
-	4300 4600 4500 4600
-Wire Wire Line
-	3250 4600 3100 4600
+	2900 4600 2750 4600
 Connection ~ 5300 4600
 Wire Wire Line
 	5300 4750 5300 4600
 Wire Wire Line
-	3550 4600 3450 4600
+	3200 4600 3100 4600
 Wire Wire Line
 	4450 3950 5750 3950
 Wire Wire Line
@@ -804,14 +727,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 4800 5600 4800
 Wire Wire Line
-	4150 4400 4150 4350
-Wire Wire Line
-	4150 4350 3900 4350
-Wire Wire Line
-	3900 4350 3900 4600
-Wire Wire Line
-	3850 4600 4000 4600
-Connection ~ 3900 4600
+	3500 4600 3650 4600
 $Comp
 L CP1_Small C15
 U 1 1 5C53CB8B
@@ -897,12 +813,12 @@ $EndComp
 $Comp
 L CP1_Small C4
 U 1 1 5C53CBB9
-P 3350 6100
-F 0 "C4" H 3360 6170 50  0000 L CNN
-F 1 "22uF" H 3360 6020 50  0000 L CNN
-F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3350 6100 50  0001 C CNN
-F 3 "" H 3350 6100 50  0001 C CNN
-	1    3350 6100
+P 3000 6100
+F 0 "C4" H 3010 6170 50  0000 L CNN
+F 1 "22uF" H 3010 6020 50  0000 L CNN
+F 2 "Capacitors_SMD:CP_Elec_5x5.7" H 3000 6100 50  0001 C CNN
+F 3 "" H 3000 6100 50  0001 C CNN
+	1    3000 6100
 	0    1    1    0   
 $EndComp
 $Comp
@@ -932,12 +848,12 @@ VREF
 $Comp
 L R R4
 U 1 1 5C53CBCC
-P 3700 6100
-F 0 "R4" V 3780 6100 50  0000 C CNN
-F 1 "1k" V 3700 6100 50  0000 C CNN
-F 2 "digikey-footprints:0805" V 3630 6100 50  0001 C CNN
-F 3 "" H 3700 6100 50  0001 C CNN
-	1    3700 6100
+P 3350 6100
+F 0 "R4" V 3430 6100 50  0000 C CNN
+F 1 "1k" V 3350 6100 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 3280 6100 50  0001 C CNN
+F 3 "" H 3350 6100 50  0001 C CNN
+	1    3350 6100
 	0    1    1    0   
 $EndComp
 $Comp
@@ -962,36 +878,15 @@ F 3 "" H 5850 5450 50  0001 C CNN
 	1    5850 5450
 	0    1    1    0   
 $EndComp
-$Comp
-L POT_Dual RV4
-U 1 1 5C53CBDE
-P 4400 6000
-F 0 "RV4" H 4400 6150 50  0000 C CNN
-F 1 "POT_Dual" H 4400 6075 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-EVM3E" H 4650 5925 50  0001 C CNN
-F 3 "" H 4650 5925 50  0001 C CNN
-	1    4400 6000
-	1    0    0    -1  
-$EndComp
-Connection ~ 4450 5850
-Wire Wire Line
-	4650 5850 4450 5850
-Connection ~ 4450 6100
-Wire Wire Line
-	4450 5450 4450 6100
 Wire Wire Line
 	4800 6100 4950 6100
 Wire Wire Line
-	4650 5900 4650 5850
-Wire Wire Line
-	4300 6100 4500 6100
-Wire Wire Line
-	3250 6100 3100 6100
+	2900 6100 2750 6100
 Connection ~ 5300 6100
 Wire Wire Line
 	5300 6250 5300 6100
 Wire Wire Line
-	3550 6100 3450 6100
+	3200 6100 3100 6100
 Wire Wire Line
 	4450 5450 5750 5450
 Wire Wire Line
@@ -1019,14 +914,7 @@ Wire Wire Line
 Wire Wire Line
 	5450 6300 5600 6300
 Wire Wire Line
-	4150 5900 4150 5850
-Wire Wire Line
-	4150 5850 3900 5850
-Wire Wire Line
-	3900 5850 3900 6100
-Wire Wire Line
-	3850 6100 4000 6100
-Connection ~ 3900 6100
+	3500 6100 3650 6100
 $Comp
 L CP1_Small C16
 U 1 1 5C53CC09
@@ -1065,4 +953,28 @@ Wire Wire Line
 Wire Wire Line
 	6700 6250 6700 6200
 Connection ~ 6700 6200
+Text HLabel 3650 1650 2    60   Output ~ 0
+freq_in_1
+Text HLabel 4450 1000 0    60   Output ~ 0
+freq_fb_1
+Text HLabel 4800 1650 0    60   Input ~ 0
+freq_out_1
+Text HLabel 3650 3150 2    60   Output ~ 0
+freq_in_2
+Text HLabel 4450 2500 0    60   Output ~ 0
+freq_fb_2
+Text HLabel 4800 3150 0    60   Input ~ 0
+freq_out_2
+Text HLabel 3650 4600 2    60   Output ~ 0
+freq_in_3
+Text HLabel 4450 3950 0    60   Output ~ 0
+freq_fb_3
+Text HLabel 4800 4600 0    60   Input ~ 0
+freq_out_3
+Text HLabel 3650 6100 2    60   Output ~ 0
+freq_in_4
+Text HLabel 4450 5450 0    60   Output ~ 0
+freq_fb_4
+Text HLabel 4800 6100 0    60   Input ~ 0
+freq_out_4
 $EndSCHEMATC
