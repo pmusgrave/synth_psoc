@@ -254,16 +254,14 @@ F4 "osc3" I L 8850 2700 60
 F5 "osc4" I L 8850 2800 60 
 $EndSheet
 $Sheet
-S 5600 3950 600  800 
+S 5300 4200 600  800 
 U 5C35738C
 F0 "LFO Modulation and Routing" 60
 F1 "lfo.sch" 60
-F2 "lfo1" O R 6200 4050 60 
-F3 "lfo2" O R 6200 4150 60 
-F4 "lfo3" O R 6200 4250 60 
-F5 "lfo4" O R 6200 4350 60 
-F6 "LFO_in" I L 5600 4500 60 
-F7 "LFO_out" I L 5600 4600 60 
+F2 "lfo1" O R 5900 4300 60 
+F3 "lfo2" O R 5900 4400 60 
+F4 "lfo3" O R 5900 4500 60 
+F5 "lfo4" O R 5900 4600 60 
 $EndSheet
 $Sheet
 S 3650 2450 1450 5050
@@ -348,12 +346,10 @@ F34 "envelope_pwm_bypass_in_4" I R 2650 7150 60
 F35 "envelope_pwm_bypass_out_4" O R 2650 7250 60 
 F36 "osc4_repeat" O R 2650 7350 60 
 F37 "osc4_quant" O R 2650 7450 60 
-F38 "LFO_freq_in" I R 2650 3850 60 
-F39 "LFO_freq_out" O R 2650 3950 60 
-F40 "freq_fb_1" I R 2650 2600 60 
-F41 "freq_fb_2" I R 2650 2900 60 
-F42 "freq_fb_3" I R 2650 3200 60 
-F43 "freq_fb_4" I R 2650 3500 60 
+F38 "freq_fb_1" I R 2650 2600 60 
+F39 "freq_fb_2" I R 2650 2900 60 
+F40 "freq_fb_3" I R 2650 3200 60 
+F41 "freq_fb_4" I R 2650 3500 60 
 $EndSheet
 Wire Wire Line
 	2650 3600 3400 3600
@@ -436,29 +432,29 @@ Wire Wire Line
 Wire Wire Line
 	5100 3050 7450 3050
 Wire Wire Line
-	7300 4350 6200 4350
+	7300 4600 5900 4600
 Wire Wire Line
-	7300 3700 7300 4350
+	7300 3700 7300 4600
 Wire Wire Line
 	7450 3700 7300 3700
 Wire Wire Line
-	7200 4250 6200 4250
+	7200 4500 5900 4500
 Wire Wire Line
-	7200 3450 7200 4250
+	7200 3450 7200 4500
 Wire Wire Line
 	7450 3450 7200 3450
 Wire Wire Line
-	7100 4150 6200 4150
+	7100 4400 5900 4400
 Wire Wire Line
-	7100 3200 7100 4150
+	7100 3200 7100 4400
 Wire Wire Line
 	7450 3200 7100 3200
 Wire Wire Line
 	7000 2950 7450 2950
 Wire Wire Line
-	7000 4050 7000 2950
+	7000 4300 7000 2950
 Wire Wire Line
-	6200 4050 7000 4050
+	5900 4300 7000 4300
 Wire Wire Line
 	8350 2800 8850 2800
 Wire Wire Line
@@ -539,20 +535,4 @@ Wire Wire Line
 	3650 7350 2650 7350
 Wire Wire Line
 	2650 7450 3650 7450
-Text Label 2950 3850 0    60   ~ 0
-LFO_in
-Text Label 2950 3950 0    60   ~ 0
-LFO_out
-Wire Wire Line
-	2950 3850 2650 3850
-Wire Wire Line
-	2650 3950 2950 3950
-Text Label 5550 4500 2    60   ~ 0
-LFO_in
-Text Label 5550 4600 2    60   ~ 0
-LFO_out
-Wire Wire Line
-	5550 4500 5600 4500
-Wire Wire Line
-	5550 4600 5600 4600
 $EndSCHEMATC

@@ -316,22 +316,6 @@ Text HLabel 9450 5100 2    60   Output ~ 0
 envelope_pwm_3
 Text HLabel 9450 5200 2    60   Output ~ 0
 envelope_pwm_4
-Text Label 5150 4900 0    60   ~ 0
-envelope_pwm_1
-Text Label 5150 5000 0    60   ~ 0
-envelope_pwm_2
-Text Label 5150 5100 0    60   ~ 0
-envelope_pwm_3
-Text Label 5150 5200 0    60   ~ 0
-envelope_pwm_4
-Text Label 7400 4900 2    60   ~ 0
-envelope_pwm_1
-Text Label 7400 5000 2    60   ~ 0
-envelope_pwm_2
-Text Label 7400 5100 2    60   ~ 0
-envelope_pwm_3
-Text Label 7400 5200 2    60   ~ 0
-envelope_pwm_4
 $Comp
 L GNDD #PWR0126
 U 1 1 5C3F1075
@@ -1055,13 +1039,13 @@ Wire Wire Line
 Wire Wire Line
 	4950 5700 5150 5700
 Wire Wire Line
-	5150 4900 4950 4900
+	4950 4900 8000 4900
 Wire Wire Line
-	5150 5000 4950 5000
+	4950 5000 8000 5000
 Wire Wire Line
-	4950 5100 5150 5100
+	4950 5100 8000 5100
 Wire Wire Line
-	4950 5200 5150 5200
+	4950 5200 8000 5200
 Wire Wire Line
 	750  6150 750  6300
 Wire Wire Line
@@ -1183,14 +1167,6 @@ Connection ~ 8750 5100
 Wire Wire Line
 	8950 5300 8950 5200
 Connection ~ 8950 5200
-Wire Wire Line
-	7400 4900 8000 4900
-Wire Wire Line
-	7400 5000 8000 5000
-Wire Wire Line
-	7400 5100 8000 5100
-Wire Wire Line
-	7400 5200 8000 5200
 Wire Wire Line
 	4950 1600 7950 1600
 Wire Wire Line

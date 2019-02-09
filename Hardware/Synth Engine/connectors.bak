@@ -261,10 +261,6 @@ Text Label 1600 4650 0    60   ~ 0
 freq_out_3
 Text Label 1600 6250 0    60   ~ 0
 freq_out_4
-Text Label 8000 5750 2    60   ~ 0
-LFO_freq_in
-Text Label 8000 5850 2    60   ~ 0
-LFO_freq_out
 $Comp
 L +5V #PWR?
 U 1 1 5C5CBE8C
@@ -427,21 +423,6 @@ Wire Wire Line
 	1550 2000 1550 2050
 Wire Wire Line
 	1550 2050 1600 2050
-$Comp
-L Conn_01x02 J?
-U 1 1 5C5CD696
-P 4250 5000
-F 0 "J?" H 4250 5100 50  0000 C CNN
-F 1 "Conn_01x02" H 4250 4800 50  0000 C CNN
-F 2 "" H 4250 5000 50  0001 C CNN
-F 3 "" H 4250 5000 50  0001 C CNN
-	1    4250 5000
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4450 5000 4600 5000
-Wire Wire Line
-	4600 5100 4450 5100
 Wire Wire Line
 	1400 2450 1600 2450
 Wire Wire Line
@@ -742,18 +723,6 @@ Wire Wire Line
 	8300 5250 8000 5250
 Wire Wire Line
 	8000 5350 8300 5350
-Text HLabel 8300 5750 2    60   Input ~ 0
-LFO_freq_in
-Text HLabel 8300 5850 2    60   Output ~ 0
-LFO_freq_out
-Wire Wire Line
-	8300 5750 8000 5750
-Wire Wire Line
-	8000 5850 8300 5850
-Text Label 4600 5000 0    60   ~ 0
-LFO_freq_in
-Text Label 4600 5100 0    60   ~ 0
-LFO_freq_out
 Text Label 1600 1300 0    60   ~ 0
 freq_fb_1
 Wire Wire Line

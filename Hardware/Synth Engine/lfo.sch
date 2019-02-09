@@ -983,10 +983,6 @@ F 3 "" H 5250 4750 50  0001 C CNN
 $EndComp
 Text GLabel 5250 4600 1    60   Input ~ 0
 VREF
-Text HLabel 2300 3400 2    60   Output ~ 0
-LFO_in
-Text HLabel 2650 3500 0    60   Input ~ 0
-LFO_out
 Wire Wire Line
 	2300 3600 2300 3400
 Wire Wire Line
@@ -1004,4 +1000,27 @@ F 3 "" H 3500 1500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2700 1500 3300 1500
+$Comp
+L Conn_01x02 J?
+U 1 1 5C5E39A1
+P 1000 950
+F 0 "J?" H 1000 1050 50  0000 C CNN
+F 1 "Conn_01x02" H 1000 750 50  0000 C CNN
+F 2 "" H 1000 950 50  0001 C CNN
+F 3 "" H 1000 950 50  0001 C CNN
+	1    1000 950 
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 950  1350 950 
+Wire Wire Line
+	1350 1050 1200 1050
+Text Label 1350 950  0    60   ~ 0
+LFO_freq_in
+Text Label 1350 1050 0    60   ~ 0
+LFO_freq_out
+Text Label 2300 3400 2    60   ~ 0
+LFO_freq_in
+Text Label 2650 3500 2    60   ~ 0
+LFO_freq_out
 $EndSCHEMATC
