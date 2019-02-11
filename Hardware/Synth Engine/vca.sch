@@ -239,7 +239,7 @@ Text HLabel 5350 1700 0    60   Input ~ 0
 lfo1
 Text HLabel 5400 1900 0    60   Input ~ 0
 level1
-Text HLabel 9450 1700 2    60   Output ~ 0
+Text HLabel 10650 3500 0    60   Output ~ 0
 env_out_1
 Text HLabel 5750 2750 0    60   Input ~ 0
 osc2
@@ -291,7 +291,7 @@ Text HLabel 5450 3100 0    60   Input ~ 0
 lfo2
 Text HLabel 5450 3300 0    60   Input ~ 0
 level2
-Text HLabel 9450 3100 2    60   Output ~ 0
+Text HLabel 10650 3700 0    60   Output ~ 0
 env_out_2
 Text HLabel 5750 4000 0    60   Input ~ 0
 osc3
@@ -343,7 +343,7 @@ Text HLabel 5350 4350 0    60   Input ~ 0
 lfo3
 Text HLabel 5350 4550 0    60   Input ~ 0
 level3
-Text HLabel 9450 4400 2    60   Output ~ 0
+Text HLabel 10650 3900 0    60   Output ~ 0
 env_out_3
 Text HLabel 5750 5350 0    60   Input ~ 0
 osc4
@@ -384,7 +384,7 @@ Text HLabel 5350 5700 0    60   Input ~ 0
 lfo4
 Text HLabel 5350 5900 0    60   Input ~ 0
 level4
-Text HLabel 9450 5700 2    60   Output ~ 0
+Text HLabel 10650 4100 0    60   Output ~ 0
 env_out_4
 $Comp
 L GND #PWR029
@@ -733,19 +733,11 @@ Wire Wire Line
 Wire Wire Line
 	8650 1450 8950 1450
 Wire Wire Line
-	9200 1550 9200 1450
-Wire Wire Line
 	8650 2850 8950 2850
-Wire Wire Line
-	9200 2950 9200 2850
 Wire Wire Line
 	8650 4100 8950 4100
 Wire Wire Line
-	9200 4250 9200 4100
-Wire Wire Line
 	8650 5450 8950 5450
-Wire Wire Line
-	9200 5550 9200 5450
 $Comp
 L R R25
 U 1 1 5C38938E
@@ -882,28 +874,6 @@ F 3 "" H 7050 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR038
-U 1 1 5C3BC62F
-P 9200 1850
-F 0 "#PWR038" H 9200 1600 50  0001 C CNN
-F 1 "GND" H 9200 1700 50  0000 C CNN
-F 2 "" H 9200 1850 50  0001 C CNN
-F 3 "" H 9200 1850 50  0001 C CNN
-	1    9200 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR039
-U 1 1 5C3BC6C4
-P 9200 3250
-F 0 "#PWR039" H 9200 3000 50  0001 C CNN
-F 1 "GND" H 9200 3100 50  0000 C CNN
-F 2 "" H 9200 3250 50  0001 C CNN
-F 3 "" H 9200 3250 50  0001 C CNN
-	1    9200 3250
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR040
 U 1 1 5C3BC759
 P 7050 3400
@@ -923,28 +893,6 @@ F 1 "GND" H 7050 4500 50  0000 C CNN
 F 2 "" H 7050 4650 50  0001 C CNN
 F 3 "" H 7050 4650 50  0001 C CNN
 	1    7050 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR042
-U 1 1 5C3BC883
-P 9200 4550
-F 0 "#PWR042" H 9200 4300 50  0001 C CNN
-F 1 "GND" H 9200 4400 50  0000 C CNN
-F 2 "" H 9200 4550 50  0001 C CNN
-F 3 "" H 9200 4550 50  0001 C CNN
-	1    9200 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR043
-U 1 1 5C3BC918
-P 9200 5850
-F 0 "#PWR043" H 9200 5600 50  0001 C CNN
-F 1 "GND" H 9200 5700 50  0000 C CNN
-F 2 "" H 9200 5850 50  0001 C CNN
-F 3 "" H 9200 5850 50  0001 C CNN
-	1    9200 5850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1100,74 +1048,14 @@ F 3 "" H 5600 5900 50  0001 C CNN
 	1    5600 5900
 	0    1    1    0   
 $EndComp
-$Comp
-L POT RV9
-U 1 1 5C3D05BD
-P 9200 1700
-F 0 "RV9" V 9025 1700 50  0000 C CNN
-F 1 "100kA" V 9100 1700 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9200 1700 50  0001 C CNN
-F 3 "" H 9200 1700 50  0001 C CNN
-	1    9200 1700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	9450 1700 9350 1700
+	9150 1450 10100 1450
 Wire Wire Line
-	9200 1450 9150 1450
-$Comp
-L POT RV10
-U 1 1 5C3D0AB4
-P 9200 3100
-F 0 "RV10" V 9025 3100 50  0000 C CNN
-F 1 "100kA" V 9100 3100 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9200 3100 50  0001 C CNN
-F 3 "" H 9200 3100 50  0001 C CNN
-	1    9200 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L POT RV11
-U 1 1 5C3D0C1E
-P 9200 4400
-F 0 "RV11" V 9025 4400 50  0000 C CNN
-F 1 "100kA" V 9100 4400 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9200 4400 50  0001 C CNN
-F 3 "" H 9200 4400 50  0001 C CNN
-	1    9200 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L POT RV12
-U 1 1 5C3D0DC0
-P 9200 5700
-F 0 "RV12" V 9025 5700 50  0000 C CNN
-F 1 "100kA" V 9100 5700 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 9200 5700 50  0001 C CNN
-F 3 "" H 9200 5700 50  0001 C CNN
-	1    9200 5700
-	1    0    0    -1  
-$EndComp
+	9150 2850 9800 2850
 Wire Wire Line
-	9450 3100 9350 3100
+	9150 4100 9800 4100
 Wire Wire Line
-	9200 2850 9150 2850
-Wire Wire Line
-	9450 4400 9350 4400
-Wire Wire Line
-	9200 4100 9150 4100
-Wire Wire Line
-	9450 5700 9350 5700
-Wire Wire Line
-	9200 5450 9150 5450
-Text Notes 9350 1850 0    60   ~ 0
-Volume
-Text Notes 9350 3250 0    60   ~ 0
-Volume
-Text Notes 9350 4550 0    60   ~ 0
-Volume
-Text Notes 9350 5850 0    60   ~ 0
-Volume
+	9150 5450 10100 5450
 $Comp
 L CP1_Small C25
 U 1 1 5C3D314F
@@ -1861,4 +1749,31 @@ Wire Wire Line
 Connection ~ 1950 5900
 Wire Wire Line
 	1650 4250 1550 4250
+$Comp
+L Conn_01x08 J?
+U 1 1 5C61FEFD
+P 10850 3700
+F 0 "J?" H 10850 4100 50  0000 C CNN
+F 1 "Conn_01x08" H 10850 3200 50  0000 C CNN
+F 2 "" H 10850 3700 50  0001 C CNN
+F 3 "" H 10850 3700 50  0001 C CNN
+	1    10850 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1450 10100 3400
+Wire Wire Line
+	10100 3400 10650 3400
+Wire Wire Line
+	10650 3600 9800 3600
+Wire Wire Line
+	9800 3600 9800 2850
+Wire Wire Line
+	9800 3800 10650 3800
+Wire Wire Line
+	9800 3800 9800 4100
+Wire Wire Line
+	10650 4000 10100 4000
+Wire Wire Line
+	10100 4000 10100 5450
 $EndSCHEMATC
