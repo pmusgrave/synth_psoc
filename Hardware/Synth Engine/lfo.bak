@@ -801,8 +801,6 @@ Wire Wire Line
 	5250 4900 5250 5050
 Wire Wire Line
 	3000 2600 3150 2600
-Wire Wire Line
-	5250 2700 5250 2850
 Connection ~ 9800 4950
 Wire Wire Line
 	8900 4850 9000 4850
@@ -991,4 +989,7 @@ Text Label 2300 3400 2    60   ~ 0
 LFO_freq_in
 Text Label 2650 3500 2    60   ~ 0
 LFO_freq_out
+Wire Wire Line
+	5250 2700 5250 2850
+Connection ~ 5250 2850
 $EndSCHEMATC
