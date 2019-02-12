@@ -3,7 +3,7 @@
   (general
     (links 467)
     (no_connects 467)
-    (area 0 0 0 0)
+    (area -6.481 -48.514 449.009001 195.103571)
     (thickness 1.6)
     (drawings 0)
     (tracks 0)
@@ -1224,7 +1224,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x4.5 (layer F.Cu) (tedit 58AA85E3) (tstamp 5C620519)
-    (at 330.2 171.704 90)
+    (at 355.092 171.704 90)
     (descr "SMT capacitor, aluminium electrolytic, 4x4.5")
     (path /5C356D9E/5C540E88)
     (attr smd)
@@ -1274,7 +1274,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x4.5 (layer F.Cu) (tedit 58AA85E3) (tstamp 5C620535)
-    (at 410.972 182.604 90)
+    (at 409.448 183.62 90)
     (descr "SMT capacitor, aluminium electrolytic, 4x4.5")
     (path /5C356D9E/5C543B76)
     (attr smd)
@@ -1324,7 +1324,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x4.5 (layer F.Cu) (tedit 58AA85E3) (tstamp 5C620551)
-    (at 403.86 129.54 270)
+    (at 407.924 144.78 270)
     (descr "SMT capacitor, aluminium electrolytic, 4x4.5")
     (path /5C356D9E/5C543E11)
     (attr smd)
@@ -1374,7 +1374,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_4x4.5 (layer F.Cu) (tedit 58AA85E3) (tstamp 5C62056D)
-    (at 321.564 124.736 270)
+    (at 334.772 149.12 270)
     (descr "SMT capacitor, aluminium electrolytic, 4x4.5")
     (path /5C356D9E/5C543E4E)
     (attr smd)
@@ -1424,7 +1424,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_8x10 (layer F.Cu) (tedit 58AA9153) (tstamp 5C620589)
-    (at 313.154506 173.514632 180)
+    (at 338.046506 173.514632 180)
     (descr "SMT capacitor, aluminium electrolytic, 8x10")
     (path /5C356D9E/5C38A85F)
     (attr smd)
@@ -1474,7 +1474,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_8x10 (layer F.Cu) (tedit 58AA9153) (tstamp 5C6205A5)
-    (at 313.154506 182.150632 180)
+    (at 338.046506 182.150632 180)
     (descr "SMT capacitor, aluminium electrolytic, 8x10")
     (path /5C356D9E/5C3D314F)
     (attr smd)
@@ -1524,7 +1524,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_8x10 (layer F.Cu) (tedit 58AA9153) (tstamp 5C6205C1)
-    (at 420.624 125.984)
+    (at 424.688 141.224)
     (descr "SMT capacitor, aluminium electrolytic, 8x10")
     (path /5C356D9E/5C38AFFF)
     (attr smd)
@@ -1574,7 +1574,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_8x10 (layer F.Cu) (tedit 58AA9153) (tstamp 5C6205DD)
-    (at 420.624 134.62)
+    (at 424.688 149.86)
     (descr "SMT capacitor, aluminium electrolytic, 8x10")
     (path /5C356D9E/5C3D457C)
     (attr smd)
@@ -1624,7 +1624,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_8x10 (layer F.Cu) (tedit 58AA9153) (tstamp 5C6205F9)
-    (at 338.328 124.46)
+    (at 351.536 148.844)
     (descr "SMT capacitor, aluminium electrolytic, 8x10")
     (path /5C356D9E/5C38B4C2)
     (attr smd)
@@ -1674,7 +1674,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_8x10 (layer F.Cu) (tedit 58AA9153) (tstamp 5C620615)
-    (at 338.328 115.824)
+    (at 351.536 140.208)
     (descr "SMT capacitor, aluminium electrolytic, 8x10")
     (path /5C356D9E/5C3CFE7B)
     (attr smd)
@@ -1724,7 +1724,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_8x10 (layer F.Cu) (tedit 58AA9153) (tstamp 5C620631)
-    (at 428.752 186.944)
+    (at 427.228 187.96)
     (descr "SMT capacitor, aluminium electrolytic, 8x10")
     (path /5C356D9E/5C38AB8D)
     (attr smd)
@@ -1774,7 +1774,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_8x10 (layer F.Cu) (tedit 58AA9153) (tstamp 5C62064D)
-    (at 428.75 178.308)
+    (at 427.226 179.324)
     (descr "SMT capacitor, aluminium electrolytic, 8x10")
     (path /5C356D9E/5C3D3DDC)
     (attr smd)
@@ -1824,7 +1824,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C62065D)
-    (at 349.47 173.228)
+    (at 369.79 184.912)
     (path /5C356D9E/5C3BEFB4)
     (fp_text reference C32 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1849,7 +1849,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C62066D)
-    (at 373.346 173.228)
+    (at 393.666 184.912)
     (path /5C356D9E/5C3BE72D)
     (fp_text reference C33 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1874,7 +1874,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C62067D)
-    (at 375.378 138.176)
+    (at 395.698 149.86)
     (path /5C356D9E/5C3BE0EB)
     (fp_text reference C34 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1899,7 +1899,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C62068D)
-    (at 353.06 137.16)
+    (at 373.38 148.844)
     (path /5C356D9E/5C3BD2FC)
     (fp_text reference C35 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1924,7 +1924,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_5x5.7 (layer F.Cu) (tedit 58AA8AEF) (tstamp 5C6206A9)
-    (at 357.124 165.608 180)
+    (at 377.444 177.292 180)
     (descr "SMT capacitor, aluminium electrolytic, 5x5.7")
     (path /5C356D9E/5C37B22A)
     (attr smd)
@@ -1974,7 +1974,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_5x5.7 (layer F.Cu) (tedit 58AA8AEF) (tstamp 5C6206C5)
-    (at 370.332 165.608)
+    (at 390.652 177.292)
     (descr "SMT capacitor, aluminium electrolytic, 5x5.7")
     (path /5C356D9E/5C37B322)
     (attr smd)
@@ -2024,7 +2024,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_5x5.7 (layer F.Cu) (tedit 58AA8AEF) (tstamp 5C6206E1)
-    (at 370.332 147.828)
+    (at 390.652 159.512)
     (descr "SMT capacitor, aluminium electrolytic, 5x5.7")
     (path /5C356D9E/5C37B4FA)
     (attr smd)
@@ -2074,7 +2074,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_5x5.7 (layer F.Cu) (tedit 58AA8AEF) (tstamp 5C6206FD)
-    (at 356.616 147.828 180)
+    (at 376.936 159.512 180)
     (descr "SMT capacitor, aluminium electrolytic, 5x5.7")
     (path /5C356D9E/5C37B589)
     (attr smd)
@@ -2124,7 +2124,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_5x5.7 (layer F.Cu) (tedit 58AA8AEF) (tstamp 5C620719)
-    (at 355.092 159.512 180)
+    (at 375.412 171.196 180)
     (descr "SMT capacitor, aluminium electrolytic, 5x5.7")
     (path /5C356D9E/5C37B623)
     (attr smd)
@@ -2174,7 +2174,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_5x5.7 (layer F.Cu) (tedit 58AA8AEF) (tstamp 5C620735)
-    (at 372.872 159.512)
+    (at 393.192 171.196)
     (descr "SMT capacitor, aluminium electrolytic, 5x5.7")
     (path /5C356D9E/5C37B6D4)
     (attr smd)
@@ -2224,7 +2224,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_5x5.7 (layer F.Cu) (tedit 58AA8AEF) (tstamp 5C620751)
-    (at 372.872 153.924)
+    (at 393.192 165.608)
     (descr "SMT capacitor, aluminium electrolytic, 5x5.7")
     (path /5C356D9E/5C37B778)
     (attr smd)
@@ -2274,7 +2274,7 @@
   )
 
   (module Capacitors_SMD:CP_Elec_5x5.7 (layer F.Cu) (tedit 58AA8AEF) (tstamp 5C62076D)
-    (at 355.092 153.924 180)
+    (at 375.412 165.608 180)
     (descr "SMT capacitor, aluminium electrolytic, 5x5.7")
     (path /5C356D9E/5C37B81B)
     (attr smd)
@@ -4247,7 +4247,7 @@
   )
 
   (module digikey-footprints:SOT-23-3 (layer F.Cu) (tedit 59D275F3) (tstamp 5C620C81)
-    (at 325.628 177.258 270)
+    (at 350.52 177.258 270)
     (path /5C356D9E/5C5495D5)
     (fp_text reference Q1 (at 0.025 -3.375 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -4287,7 +4287,7 @@
   )
 
   (module digikey-footprints:SOT-23-3 (layer F.Cu) (tedit 59D275F3) (tstamp 5C620C9D)
-    (at 415.544 188.434 270)
+    (at 414.02 189.45 270)
     (path /5C356D9E/5C54A065)
     (fp_text reference Q2 (at 0.025 -3.375 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -4327,7 +4327,7 @@
   )
 
   (module digikey-footprints:SOT-23-3 (layer F.Cu) (tedit 59D275F3) (tstamp 5C620CB9)
-    (at 408.94 124.46 90)
+    (at 413.004 139.7 90)
     (path /5C356D9E/5C54A864)
     (fp_text reference Q3 (at 0.025 -3.375 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -4367,7 +4367,7 @@
   )
 
   (module digikey-footprints:SOT-23-3 (layer F.Cu) (tedit 59D275F3) (tstamp 5C620CD5)
-    (at 326.136 122.936 90)
+    (at 339.344 147.32 90)
     (path /5C356D9E/5C54A9DE)
     (fp_text reference Q4 (at 0.025 -3.375 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -4407,7 +4407,7 @@
   )
 
   (module digikey-footprints:SOT-23-3 (layer F.Cu) (tedit 59D275F3) (tstamp 5C620CF1)
-    (at 351.028 166.59 270)
+    (at 371.348 178.274 270)
     (path /5C356D9E/5C359797)
     (fp_text reference Q5 (at 0.025 -3.375 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -4447,7 +4447,7 @@
   )
 
   (module digikey-footprints:SOT-23-3 (layer F.Cu) (tedit 59D275F3) (tstamp 5C620D0D)
-    (at 376.902 166.624)
+    (at 397.222 178.308)
     (path /5C356D9E/5C36E8D9)
     (fp_text reference Q6 (at 0.025 -3.375) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -4487,7 +4487,7 @@
   )
 
   (module digikey-footprints:SOT-23-3 (layer F.Cu) (tedit 59D275F3) (tstamp 5C620D29)
-    (at 376.936 146.846 90)
+    (at 397.256 158.53 90)
     (path /5C356D9E/5C36E9D1)
     (fp_text reference Q7 (at 0.025 -3.375 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -4527,7 +4527,7 @@
   )
 
   (module digikey-footprints:SOT-23-3 (layer F.Cu) (tedit 59D275F3) (tstamp 5C620D45)
-    (at 350.046 146.812 180)
+    (at 370.366 158.496 180)
     (path /5C356D9E/5C36EAC9)
     (fp_text reference Q8 (at 0.025 -3.375 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5017,7 +5017,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620E75)
-    (at 325.628 174.244)
+    (at 350.52 174.244)
     (path /5C356D9E/5C54989A)
     (fp_text reference R19 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5042,7 +5042,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620E85)
-    (at 415.544 184.912)
+    (at 414.02 185.928)
     (path /5C356D9E/5C54A06C)
     (fp_text reference R20 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5067,7 +5067,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620E95)
-    (at 408.94 127.508 180)
+    (at 413.004 142.748 180)
     (path /5C356D9E/5C54A86B)
     (fp_text reference R21 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5092,7 +5092,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620EA5)
-    (at 326.136 125.984 180)
+    (at 339.344 150.368 180)
     (path /5C356D9E/5C54A9E5)
     (fp_text reference R22 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5117,7 +5117,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620EB5)
-    (at 412.97 125.476)
+    (at 417.034 140.716)
     (path /5C356D9E/5C38982C)
     (fp_text reference R23 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5142,7 +5142,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620EC5)
-    (at 330.674 124.46)
+    (at 343.882 148.844)
     (path /5C356D9E/5C389A1C)
     (fp_text reference R24 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5167,7 +5167,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620ED5)
-    (at 320.808506 174.530632 180)
+    (at 345.700506 174.530632 180)
     (path /5C356D9E/5C38938E)
     (fp_text reference R25 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5192,7 +5192,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620EE5)
-    (at 420.116 187.452)
+    (at 418.592 188.468)
     (path /5C356D9E/5C3896A6)
     (fp_text reference R26 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5217,7 +5217,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620EF5)
-    (at 320.808506 178.594632 180)
+    (at 345.700506 178.594632 180)
     (path /5C356D9E/5C3D32E8)
     (fp_text reference R27 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5242,7 +5242,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F05)
-    (at 320.808506 180.626632 180)
+    (at 345.700506 180.626632 180)
     (path /5C356D9E/5C3D33A7)
     (fp_text reference R28 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5267,7 +5267,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F15)
-    (at 420.116 185.42)
+    (at 418.592 186.436)
     (path /5C356D9E/5C3D3BA9)
     (fp_text reference R29 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5292,7 +5292,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F25)
-    (at 420.082 183.388)
+    (at 418.558 184.404)
     (path /5C356D9E/5C3D3CFC)
     (fp_text reference R30 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5317,7 +5317,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F35)
-    (at 413.004 127.508)
+    (at 417.068 142.748)
     (path /5C356D9E/5C3D435E)
     (fp_text reference R31 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5342,7 +5342,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F45)
-    (at 412.97 129.54)
+    (at 417.034 144.78)
     (path /5C356D9E/5C3D444A)
     (fp_text reference R32 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5367,7 +5367,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F55)
-    (at 330.708 122.428)
+    (at 343.916 146.812)
     (path /5C356D9E/5C3D4B54)
     (fp_text reference R33 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5392,7 +5392,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F65)
-    (at 330.674 120.396)
+    (at 343.882 144.78)
     (path /5C356D9E/5C3D4C49)
     (fp_text reference R34 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5417,7 +5417,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F75)
-    (at 351.028 163.576 180)
+    (at 371.348 175.26 180)
     (path /5C356D9E/5C359814)
     (fp_text reference R35 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5442,7 +5442,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F85)
-    (at 376.936 163.576)
+    (at 397.256 175.26)
     (path /5C356D9E/5C36E8DF)
     (fp_text reference R36 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5467,7 +5467,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620F95)
-    (at 376.936 149.86)
+    (at 397.256 161.544)
     (path /5C356D9E/5C36E9D7)
     (fp_text reference R37 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5492,7 +5492,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620FA5)
-    (at 350.046 149.86 180)
+    (at 370.366 161.544 180)
     (path /5C356D9E/5C36EACF)
     (fp_text reference R38 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5517,7 +5517,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620FB5)
-    (at 320.740506 176.562632)
+    (at 345.632506 176.562632)
     (path /5C356D9E/5C359EAD)
     (fp_text reference R39 (at 0 -1.84) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5542,7 +5542,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620FC5)
-    (at 420.116 181.356 180)
+    (at 418.592 182.372 180)
     (path /5C356D9E/5C36E8F9)
     (fp_text reference R40 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5567,7 +5567,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620FD5)
-    (at 413.004 131.572 180)
+    (at 417.068 146.812 180)
     (path /5C356D9E/5C36E9F1)
     (fp_text reference R41 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5592,7 +5592,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620FE5)
-    (at 330.742 118.364 180)
+    (at 343.95 142.748 180)
     (path /5C356D9E/5C36EAE9)
     (fp_text reference R42 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5617,7 +5617,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C620FF5)
-    (at 349.47 175.26 180)
+    (at 369.79 186.944 180)
     (path /5C356D9E/5C3BF0CA)
     (fp_text reference R43 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5642,7 +5642,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C621005)
-    (at 373.414 175.26 180)
+    (at 393.734 186.944 180)
     (path /5C356D9E/5C3BE80A)
     (fp_text reference R44 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5667,7 +5667,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C621015)
-    (at 375.378 140.208 180)
+    (at 395.698 151.892 180)
     (path /5C356D9E/5C3BE1C2)
     (fp_text reference R45 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5692,7 +5692,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C621025)
-    (at 353.094 139.192 180)
+    (at 373.414 150.876 180)
     (path /5C356D9E/5C3BCF74)
     (fp_text reference R46 (at 0 -1.84 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5717,7 +5717,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C621035)
-    (at 365.252 163.102 270)
+    (at 385.572 174.786 270)
     (path /5C356D9E/5C3959EE)
     (fp_text reference R47 (at 0 -1.84 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5742,7 +5742,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C621045)
-    (at 365.252 150.334 90)
+    (at 385.572 162.018 90)
     (path /5C356D9E/5C395A9C)
     (fp_text reference R48 (at 0 -1.84 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5767,7 +5767,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C621055)
-    (at 362.204 150.402 90)
+    (at 382.524 162.086 90)
     (path /5C356D9E/5C395B2D)
     (fp_text reference R49 (at 0 -1.84 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -5792,7 +5792,7 @@
   )
 
   (module digikey-footprints:0805 (layer F.Cu) (tedit 5995D0E3) (tstamp 5C621065)
-    (at 362.204 163.034 270)
+    (at 382.524 174.718 270)
     (path /5C356D9E/5C395657)
     (fp_text reference R50 (at 0 -1.84 270) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -7017,7 +7017,7 @@
   )
 
   (module Potentiometers:Potentiometer_Trimmer-EVM3E (layer F.Cu) (tedit 580B90AB) (tstamp 5C62140B)
-    (at 330.2 177.8)
+    (at 355.092 177.8)
     (descr http://www.comkey.in/sites/default/files/attachments/EVM3ESX50B15.pdf)
     (tags "trimmer smd")
     (path /5C356D9E/5C5431FE)
@@ -7068,7 +7068,7 @@
   )
 
   (module Potentiometers:Potentiometer_Trimmer-EVM3E (layer F.Cu) (tedit 580B90AB) (tstamp 5C621431)
-    (at 410.972 188.976)
+    (at 409.448 189.992)
     (descr http://www.comkey.in/sites/default/files/attachments/EVM3ESX50B15.pdf)
     (tags "trimmer smd")
     (path /5C356D9E/5C543BAA)
@@ -7119,7 +7119,7 @@
   )
 
   (module Potentiometers:Potentiometer_Trimmer-EVM3E (layer F.Cu) (tedit 580B90AB) (tstamp 5C621457)
-    (at 404.368 122.936 180)
+    (at 408.432 138.176 180)
     (descr http://www.comkey.in/sites/default/files/attachments/EVM3ESX50B15.pdf)
     (tags "trimmer smd")
     (path /5C356D9E/5C543E45)
@@ -7170,7 +7170,7 @@
   )
 
   (module Potentiometers:Potentiometer_Trimmer-EVM3E (layer F.Cu) (tedit 580B90AB) (tstamp 5C62147D)
-    (at 326.136 118.364 90)
+    (at 339.344 142.748 90)
     (descr http://www.comkey.in/sites/default/files/attachments/EVM3ESX50B15.pdf)
     (tags "trimmer smd")
     (path /5C356D9E/5C543E82)
@@ -7656,7 +7656,7 @@
   )
 
   (module digikey-footprints:SOIC-14_W3.9mm (layer F.Cu) (tedit 5995D3F3) (tstamp 5C6215B5)
-    (at 363.728 156.812)
+    (at 384.048 168.496)
     (path /5C356D9E/5C359D57)
     (fp_text reference U2 (at 0 -4.79) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -8500,7 +8500,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 5C62E37A)
-    (at 101.6 160.528)
+    (at 102.108 159.004)
     (descr "Through hole straight pin header, 1x13, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x13 2.54mm single row")
     (path /5C5CADB1/5C5E7989)
@@ -8562,7 +8562,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 5C62E39B)
-    (at 106.68 160.528)
+    (at 109.22 161.036)
     (descr "Through hole straight pin header, 1x13, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x13 2.54mm single row")
     (path /5C5CADB1/5C5E7A2D)
@@ -8624,7 +8624,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 5C62E3BC)
-    (at 111.76 160.528)
+    (at 114.3 161.036)
     (descr "Through hole straight pin header, 1x13, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x13 2.54mm single row")
     (path /5C5CADB1/5C5E7A85)
@@ -8686,7 +8686,7 @@
   )
 
   (module Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm (layer F.Cu) (tedit 59650532) (tstamp 5C62E3DD)
-    (at 116.84 160.528)
+    (at 119.38 161.036)
     (descr "Through hole straight pin header, 1x13, 2.54mm pitch, single row")
     (tags "Through hole pin header THT 1x13 2.54mm single row")
     (path /5C5CADB1/5C5E7AE0)
