@@ -191,75 +191,75 @@ Comment4 ""
 $EndDescr
 Text Label 1600 900  0    60   ~ 0
 osc1_freq_wiper
-Text Label 1600 1000 0    60   ~ 0
-osc1_pwm_wiper
 Text Label 1600 1100 0    60   ~ 0
+osc1_pwm_wiper
+Text Label 1600 1300 0    60   ~ 0
 osc1_speed
 Text Label 1600 2550 0    60   ~ 0
 osc2_freq_wiper
-Text Label 1600 2650 0    60   ~ 0
-osc2_pwm_wiper
 Text Label 1600 2750 0    60   ~ 0
+osc2_pwm_wiper
+Text Label 1600 2950 0    60   ~ 0
 osc2_speed
 Text Label 1600 4150 0    60   ~ 0
 osc3_freq_wiper
-Text Label 1600 4250 0    60   ~ 0
-osc3_pwm_wiper
 Text Label 1600 4350 0    60   ~ 0
+osc3_pwm_wiper
+Text Label 1600 4550 0    60   ~ 0
 osc3_speed
 Text Label 1600 5750 0    60   ~ 0
 osc4_freq_wiper
-Text Label 1600 5850 0    60   ~ 0
-osc4_pwm_wiper
 Text Label 1600 5950 0    60   ~ 0
+osc4_pwm_wiper
+Text Label 1600 6150 0    60   ~ 0
 osc4_speed
-Text Label 1600 6350 0    60   ~ 0
-envelope_pwm_bypass_in_4
-Text Label 1600 4750 0    60   ~ 0
-envelope_pwm_bypass_in_3
-Text Label 1600 3150 0    60   ~ 0
-envelope_pwm_bypass_in_2
-Text Label 1600 1500 0    60   ~ 0
-envelope_pwm_bypass_in_1
-Text Label 1600 6450 0    60   ~ 0
-envelope_pwm_bypass_out_4
-Text Label 1600 4850 0    60   ~ 0
-envelope_pwm_bypass_out_3
-Text Label 1600 3250 0    60   ~ 0
-envelope_pwm_bypass_out_2
-Text Label 1600 1600 0    60   ~ 0
-envelope_pwm_bypass_out_1
-Text Label 1600 1700 0    60   ~ 0
-osc1_repeat
-Text Label 1600 3350 0    60   ~ 0
-osc2_repeat
-Text Label 1600 4950 0    60   ~ 0
-osc3_repeat
 Text Label 1600 6550 0    60   ~ 0
-osc4_repeat
-Text Label 1600 1800 0    60   ~ 0
-osc1_quant
-Text Label 1600 3450 0    60   ~ 0
-osc2_quant
-Text Label 1600 5050 0    60   ~ 0
-osc3_quant
+envelope_pwm_bypass_in_4
+Text Label 1600 4950 0    60   ~ 0
+envelope_pwm_bypass_in_3
+Text Label 1600 3350 0    60   ~ 0
+envelope_pwm_bypass_in_2
+Text Label 1600 1700 0    60   ~ 0
+envelope_pwm_bypass_in_1
 Text Label 1600 6650 0    60   ~ 0
+envelope_pwm_bypass_out_4
+Text Label 1600 5050 0    60   ~ 0
+envelope_pwm_bypass_out_3
+Text Label 1600 3450 0    60   ~ 0
+envelope_pwm_bypass_out_2
+Text Label 1600 1800 0    60   ~ 0
+envelope_pwm_bypass_out_1
+Text Label 1600 1500 0    60   ~ 0
+osc1_repeat
+Text Label 1600 3150 0    60   ~ 0
+osc2_repeat
+Text Label 1600 4750 0    60   ~ 0
+osc3_repeat
+Text Label 1600 6350 0    60   ~ 0
+osc4_repeat
+Text Label 1600 1600 0    60   ~ 0
+osc1_quant
+Text Label 1600 3250 0    60   ~ 0
+osc2_quant
+Text Label 1600 4850 0    60   ~ 0
+osc3_quant
+Text Label 1600 6450 0    60   ~ 0
 osc4_quant
-Text Label 1600 1200 0    60   ~ 0
+Text Label 3800 1150 0    60   ~ 0
 freq_in_1
-Text Label 1600 2850 0    60   ~ 0
+Text Label 3800 1850 0    60   ~ 0
 freq_in_2
-Text Label 1600 4450 0    60   ~ 0
+Text Label 3800 2500 0    60   ~ 0
 freq_in_3
-Text Label 1600 6050 0    60   ~ 0
+Text Label 3800 3150 0    60   ~ 0
 freq_in_4
-Text Label 1600 1400 0    60   ~ 0
+Text Label 3800 1350 0    60   ~ 0
 freq_out_1
-Text Label 1600 3050 0    60   ~ 0
+Text Label 3800 2050 0    60   ~ 0
 freq_out_2
-Text Label 1600 4650 0    60   ~ 0
+Text Label 3800 2700 0    60   ~ 0
 freq_out_3
-Text Label 1600 6250 0    60   ~ 0
+Text Label 3800 3350 0    60   ~ 0
 freq_out_4
 $Comp
 L +5V #PWR0124
@@ -317,21 +317,10 @@ F 3 "" H 1600 1900 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L GNDD #PWR0129
-U 1 1 5C5CC457
-P 1600 2050
-F 0 "#PWR0129" H 1600 1800 50  0001 C CNN
-F 1 "GNDD" H 1600 1925 50  0000 C CNN
-F 2 "" H 1600 2050 50  0001 C CNN
-F 3 "" H 1600 2050 50  0001 C CNN
-	1    1600 2050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR0130
+L GND #PWR0129
 U 1 1 5C5CC7AC
 P 1600 3550
-F 0 "#PWR0130" H 1600 3300 50  0001 C CNN
+F 0 "#PWR0129" H 1600 3300 50  0001 C CNN
 F 1 "GND" H 1600 3400 50  0000 C CNN
 F 2 "" H 1600 3550 50  0001 C CNN
 F 3 "" H 1600 3550 50  0001 C CNN
@@ -339,21 +328,10 @@ F 3 "" H 1600 3550 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L GNDD #PWR0131
-U 1 1 5C5CC80E
-P 1600 3700
-F 0 "#PWR0131" H 1600 3450 50  0001 C CNN
-F 1 "GNDD" H 1600 3575 50  0000 C CNN
-F 2 "" H 1600 3700 50  0001 C CNN
-F 3 "" H 1600 3700 50  0001 C CNN
-	1    1600 3700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR0132
+L GND #PWR0130
 U 1 1 5C5CC9CC
 P 1600 5150
-F 0 "#PWR0132" H 1600 4900 50  0001 C CNN
+F 0 "#PWR0130" H 1600 4900 50  0001 C CNN
 F 1 "GND" H 1600 5000 50  0000 C CNN
 F 2 "" H 1600 5150 50  0001 C CNN
 F 3 "" H 1600 5150 50  0001 C CNN
@@ -361,37 +339,15 @@ F 3 "" H 1600 5150 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L GNDD #PWR0133
-U 1 1 5C5CC9D2
-P 1600 5300
-F 0 "#PWR0133" H 1600 5050 50  0001 C CNN
-F 1 "GNDD" H 1600 5175 50  0000 C CNN
-F 2 "" H 1600 5300 50  0001 C CNN
-F 3 "" H 1600 5300 50  0001 C CNN
-	1    1600 5300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L GND #PWR0134
+L GND #PWR0131
 U 1 1 5C5CCA12
 P 1600 6750
-F 0 "#PWR0134" H 1600 6500 50  0001 C CNN
+F 0 "#PWR0131" H 1600 6500 50  0001 C CNN
 F 1 "GND" H 1600 6600 50  0000 C CNN
 F 2 "" H 1600 6750 50  0001 C CNN
 F 3 "" H 1600 6750 50  0001 C CNN
 	1    1600 6750
 	0    -1   1    0   
-$EndComp
-$Comp
-L GNDD #PWR0135
-U 1 1 5C5CCA18
-P 1600 6900
-F 0 "#PWR0135" H 1600 6650 50  0001 C CNN
-F 1 "GNDD" H 1600 6775 50  0000 C CNN
-F 2 "" H 1600 6900 50  0001 C CNN
-F 3 "" H 1600 6900 50  0001 C CNN
-	1    1600 6900
-	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	1600 750  1600 800 
@@ -418,11 +374,7 @@ Wire Wire Line
 Wire Wire Line
 	1600 1900 1350 1900
 Wire Wire Line
-	1350 2000 1550 2000
-Wire Wire Line
-	1550 2000 1550 2050
-Wire Wire Line
-	1550 2050 1600 2050
+	1350 2000 1600 2000
 Wire Wire Line
 	1400 2450 1600 2450
 Wire Wire Line
@@ -448,9 +400,7 @@ Wire Wire Line
 Wire Wire Line
 	1400 3550 1600 3550
 Wire Wire Line
-	1600 3700 1600 3650
-Wire Wire Line
-	1600 3650 1400 3650
+	1400 3650 1600 3650
 Wire Wire Line
 	1400 4050 1600 4050
 Wire Wire Line
@@ -478,8 +428,6 @@ Wire Wire Line
 Wire Wire Line
 	1400 5250 1600 5250
 Wire Wire Line
-	1600 5250 1600 5300
-Wire Wire Line
 	1400 5650 1600 5650
 Wire Wire Line
 	1600 5650 1600 5600
@@ -504,9 +452,7 @@ Wire Wire Line
 Wire Wire Line
 	1400 6750 1600 6750
 Wire Wire Line
-	1600 6900 1600 6850
-Wire Wire Line
-	1600 6850 1400 6850
+	1400 6850 1600 6850
 Text Label 8000 1200 2    60   ~ 0
 osc1_freq_wiper
 Text Label 8000 1300 2    60   ~ 0
@@ -723,19 +669,19 @@ Wire Wire Line
 	8300 5250 8000 5250
 Wire Wire Line
 	8000 5350 8300 5350
-Text Label 1600 1300 0    60   ~ 0
+Text Label 3800 1250 0    60   ~ 0
 freq_fb_1
 Wire Wire Line
 	1600 1300 1350 1300
-Text Label 1600 2950 0    60   ~ 0
+Text Label 3800 1950 0    60   ~ 0
 freq_fb_2
 Wire Wire Line
 	1600 2950 1400 2950
-Text Label 1600 4550 0    60   ~ 0
+Text Label 3800 2600 0    60   ~ 0
 freq_fb_3
 Wire Wire Line
 	1600 4550 1400 4550
-Text Label 1600 6150 0    60   ~ 0
+Text Label 3800 3250 0    60   ~ 0
 freq_fb_4
 Wire Wire Line
 	1600 6150 1400 6150
@@ -805,6 +751,190 @@ F 1 "Conn_01x13" H 1200 5550 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm" H 1200 6250 50  0001 C CNN
 F 3 "" H 1200 6250 50  0001 C CNN
 	1    1200 6250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR0132
+U 1 1 5C63883F
+P 1600 1000
+F 0 "#PWR0132" H 1600 850 50  0001 C CNN
+F 1 "+5V" H 1600 1140 50  0000 C CNN
+F 2 "" H 1600 1000 50  0001 C CNN
+F 3 "" H 1600 1000 50  0001 C CNN
+	1    1600 1000
+	0    1    -1   0   
+$EndComp
+$Comp
+L +5V #PWR0133
+U 1 1 5C63885A
+P 1600 1200
+F 0 "#PWR0133" H 1600 1050 50  0001 C CNN
+F 1 "+5V" H 1600 1340 50  0000 C CNN
+F 2 "" H 1600 1200 50  0001 C CNN
+F 3 "" H 1600 1200 50  0001 C CNN
+	1    1600 1200
+	0    1    -1   0   
+$EndComp
+Text Label 1600 1400 0    60   ~ 0
+osc1_hold
+$Comp
+L GND #PWR0134
+U 1 1 5C6388C2
+P 1600 2000
+F 0 "#PWR0134" H 1600 1750 50  0001 C CNN
+F 1 "GND" H 1600 1850 50  0000 C CNN
+F 2 "" H 1600 2000 50  0001 C CNN
+F 3 "" H 1600 2000 50  0001 C CNN
+	1    1600 2000
+	0    -1   1    0   
+$EndComp
+$Comp
+L +5V #PWR0135
+U 1 1 5C638972
+P 1600 2650
+F 0 "#PWR0135" H 1600 2500 50  0001 C CNN
+F 1 "+5V" H 1600 2790 50  0000 C CNN
+F 2 "" H 1600 2650 50  0001 C CNN
+F 3 "" H 1600 2650 50  0001 C CNN
+	1    1600 2650
+	0    1    -1   0   
+$EndComp
+$Comp
+L +5V #PWR0136
+U 1 1 5C63898D
+P 1600 2850
+F 0 "#PWR0136" H 1600 2700 50  0001 C CNN
+F 1 "+5V" H 1600 2990 50  0000 C CNN
+F 2 "" H 1600 2850 50  0001 C CNN
+F 3 "" H 1600 2850 50  0001 C CNN
+	1    1600 2850
+	0    1    -1   0   
+$EndComp
+Text Label 1600 3050 0    60   ~ 0
+osc2_hold
+$Comp
+L GND #PWR0137
+U 1 1 5C6389D7
+P 1600 3650
+F 0 "#PWR0137" H 1600 3400 50  0001 C CNN
+F 1 "GND" H 1600 3500 50  0000 C CNN
+F 2 "" H 1600 3650 50  0001 C CNN
+F 3 "" H 1600 3650 50  0001 C CNN
+	1    1600 3650
+	0    -1   1    0   
+$EndComp
+$Comp
+L +5V #PWR0138
+U 1 1 5C638A27
+P 1600 4250
+F 0 "#PWR0138" H 1600 4100 50  0001 C CNN
+F 1 "+5V" H 1600 4390 50  0000 C CNN
+F 2 "" H 1600 4250 50  0001 C CNN
+F 3 "" H 1600 4250 50  0001 C CNN
+	1    1600 4250
+	0    1    -1   0   
+$EndComp
+$Comp
+L +5V #PWR0139
+U 1 1 5C638A9A
+P 1600 4450
+F 0 "#PWR0139" H 1600 4300 50  0001 C CNN
+F 1 "+5V" H 1600 4590 50  0000 C CNN
+F 2 "" H 1600 4450 50  0001 C CNN
+F 3 "" H 1600 4450 50  0001 C CNN
+	1    1600 4450
+	0    1    -1   0   
+$EndComp
+Text Label 1600 4650 0    60   ~ 0
+osc3_hold
+$Comp
+L GND #PWR0140
+U 1 1 5C638ADC
+P 1600 5250
+F 0 "#PWR0140" H 1600 5000 50  0001 C CNN
+F 1 "GND" H 1600 5100 50  0000 C CNN
+F 2 "" H 1600 5250 50  0001 C CNN
+F 3 "" H 1600 5250 50  0001 C CNN
+	1    1600 5250
+	0    -1   1    0   
+$EndComp
+$Comp
+L +5V #PWR0141
+U 1 1 5C638BD0
+P 1600 5850
+F 0 "#PWR0141" H 1600 5700 50  0001 C CNN
+F 1 "+5V" H 1600 5990 50  0000 C CNN
+F 2 "" H 1600 5850 50  0001 C CNN
+F 3 "" H 1600 5850 50  0001 C CNN
+	1    1600 5850
+	0    1    -1   0   
+$EndComp
+$Comp
+L +5V #PWR0142
+U 1 1 5C638BE7
+P 1600 6050
+F 0 "#PWR0142" H 1600 5900 50  0001 C CNN
+F 1 "+5V" H 1600 6190 50  0000 C CNN
+F 2 "" H 1600 6050 50  0001 C CNN
+F 3 "" H 1600 6050 50  0001 C CNN
+	1    1600 6050
+	0    1    -1   0   
+$EndComp
+Text Label 1600 6250 0    60   ~ 0
+osc4_hold
+$Comp
+L GND #PWR0143
+U 1 1 5C638C2E
+P 1600 6850
+F 0 "#PWR0143" H 1600 6600 50  0001 C CNN
+F 1 "GND" H 1600 6700 50  0000 C CNN
+F 2 "" H 1600 6850 50  0001 C CNN
+F 3 "" H 1600 6850 50  0001 C CNN
+	1    1600 6850
+	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_01x05 J?
+U 1 1 5C639754
+P 3600 1350
+F 0 "J?" H 3600 1650 50  0000 C CNN
+F 1 "Conn_01x05" H 3600 1050 50  0000 C CNN
+F 2 "" H 3600 1350 50  0001 C CNN
+F 3 "" H 3600 1350 50  0001 C CNN
+	1    3600 1350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J?
+U 1 1 5C6397E0
+P 3600 2050
+F 0 "J?" H 3600 2350 50  0000 C CNN
+F 1 "Conn_01x05" H 3600 1750 50  0000 C CNN
+F 2 "" H 3600 2050 50  0001 C CNN
+F 3 "" H 3600 2050 50  0001 C CNN
+	1    3600 2050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J?
+U 1 1 5C63986E
+P 3600 2700
+F 0 "J?" H 3600 3000 50  0000 C CNN
+F 1 "Conn_01x05" H 3600 2400 50  0000 C CNN
+F 2 "" H 3600 2700 50  0001 C CNN
+F 3 "" H 3600 2700 50  0001 C CNN
+	1    3600 2700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J?
+U 1 1 5C6398B4
+P 3600 3350
+F 0 "J?" H 3600 3650 50  0000 C CNN
+F 1 "Conn_01x05" H 3600 3050 50  0000 C CNN
+F 2 "" H 3600 3350 50  0001 C CNN
+F 3 "" H 3600 3350 50  0001 C CNN
+	1    3600 3350
 	-1   0    0    -1  
 $EndComp
 $EndSCHEMATC
