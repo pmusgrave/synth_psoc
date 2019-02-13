@@ -245,21 +245,21 @@ Text Label 1600 4850 0    60   ~ 0
 osc3_quant
 Text Label 1600 6450 0    60   ~ 0
 osc4_quant
-Text Label 4050 1150 0    60   ~ 0
+Text Label 3800 1150 0    60   ~ 0
 freq_in_1
-Text Label 4050 1650 0    60   ~ 0
+Text Label 3800 1850 0    60   ~ 0
 freq_in_2
-Text Label 4050 2300 0    60   ~ 0
+Text Label 3800 2500 0    60   ~ 0
 freq_in_3
-Text Label 4100 2800 0    60   ~ 0
+Text Label 3800 3150 0    60   ~ 0
 freq_in_4
-Text Label 4050 1350 0    60   ~ 0
+Text Label 3800 1350 0    60   ~ 0
 freq_out_1
-Text Label 4050 1850 0    60   ~ 0
+Text Label 3800 2050 0    60   ~ 0
 freq_out_2
-Text Label 4050 2500 0    60   ~ 0
+Text Label 3800 2700 0    60   ~ 0
 freq_out_3
-Text Label 4100 3000 0    60   ~ 0
+Text Label 3800 3350 0    60   ~ 0
 freq_out_4
 $Comp
 L +5V #PWR0124
@@ -669,19 +669,19 @@ Wire Wire Line
 	8300 5250 8000 5250
 Wire Wire Line
 	8000 5350 8300 5350
-Text Label 4050 1250 0    60   ~ 0
+Text Label 3800 1250 0    60   ~ 0
 freq_fb_1
 Wire Wire Line
 	1600 1300 1350 1300
-Text Label 4050 1750 0    60   ~ 0
+Text Label 3800 1950 0    60   ~ 0
 freq_fb_2
 Wire Wire Line
 	1600 2950 1400 2950
-Text Label 4050 2400 0    60   ~ 0
+Text Label 3800 2600 0    60   ~ 0
 freq_fb_3
 Wire Wire Line
 	1600 4550 1400 4550
-Text Label 4100 2900 0    60   ~ 0
+Text Label 3800 3250 0    60   ~ 0
 freq_fb_4
 Wire Wire Line
 	1600 6150 1400 6150
@@ -892,5 +892,49 @@ F 2 "" H 1600 6850 50  0001 C CNN
 F 3 "" H 1600 6850 50  0001 C CNN
 	1    1600 6850
 	0    -1   1    0   
+$EndComp
+$Comp
+L Conn_01x05 J13
+U 1 1 5C639754
+P 3600 1350
+F 0 "J13" H 3600 1650 50  0000 C CNN
+F 1 "Conn_01x05" H 3600 1050 50  0000 C CNN
+F 2 "" H 3600 1350 50  0001 C CNN
+F 3 "" H 3600 1350 50  0001 C CNN
+	1    3600 1350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J14
+U 1 1 5C6397E0
+P 3600 2050
+F 0 "J14" H 3600 2350 50  0000 C CNN
+F 1 "Conn_01x05" H 3600 1750 50  0000 C CNN
+F 2 "" H 3600 2050 50  0001 C CNN
+F 3 "" H 3600 2050 50  0001 C CNN
+	1    3600 2050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J15
+U 1 1 5C63986E
+P 3600 2700
+F 0 "J15" H 3600 3000 50  0000 C CNN
+F 1 "Conn_01x05" H 3600 2400 50  0000 C CNN
+F 2 "" H 3600 2700 50  0001 C CNN
+F 3 "" H 3600 2700 50  0001 C CNN
+	1    3600 2700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J16
+U 1 1 5C6398B4
+P 3600 3350
+F 0 "J16" H 3600 3650 50  0000 C CNN
+F 1 "Conn_01x05" H 3600 3050 50  0000 C CNN
+F 2 "" H 3600 3350 50  0001 C CNN
+F 3 "" H 3600 3350 50  0001 C CNN
+	1    3600 3350
+	-1   0    0    -1  
 $EndComp
 $EndSCHEMATC

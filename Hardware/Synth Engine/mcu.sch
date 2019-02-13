@@ -734,37 +734,37 @@ F 3 "" H 8950 5500 50  0001 C CNN
 	1    8950 5500
 	1    0    0    -1  
 $EndComp
-Text HLabel 5150 2800 2    60   Input ~ 0
-osc1_freq_wiper
 Text HLabel 5150 2900 2    60   Input ~ 0
+osc1_freq_wiper
+Text HLabel 5150 2800 2    60   Input ~ 0
 osc1_pwm_wiper
-Text HLabel 5150 3000 2    60   Input ~ 0
-osc2_freq_wiper
 Text HLabel 5150 3100 2    60   Input ~ 0
+osc2_freq_wiper
+Text HLabel 5150 3000 2    60   Input ~ 0
 osc2_pwm_wiper
-Text HLabel 5150 3200 2    60   Input ~ 0
-osc3_freq_wiper
 Text HLabel 5150 3300 2    60   Input ~ 0
+osc3_freq_wiper
+Text HLabel 5150 3200 2    60   Input ~ 0
 osc3_pwm_wiper
-Text HLabel 5150 3400 2    60   Input ~ 0
-osc4_freq_wiper
 Text HLabel 5150 3500 2    60   Input ~ 0
+osc4_freq_wiper
+Text HLabel 5150 3400 2    60   Input ~ 0
 osc4_pwm_wiper
-Text HLabel 5150 2700 2    60   Input ~ 0
-osc1_speed
-Text HLabel 5150 2600 2    60   Input ~ 0
-osc2_speed
-Text HLabel 5150 2500 2    60   Input ~ 0
-osc3_speed
 Text HLabel 5150 2400 2    60   Input ~ 0
+osc1_speed
+Text HLabel 5150 2500 2    60   Input ~ 0
+osc2_speed
+Text HLabel 5150 2600 2    60   Input ~ 0
+osc3_speed
+Text HLabel 5150 2700 2    60   Input ~ 0
 osc4_speed
-Text HLabel 5150 2300 2    60   Input ~ 0
-osc1_quant
-Text HLabel 5150 2200 2    60   Input ~ 0
-osc2_quant
-Text HLabel 5150 2100 2    60   Input ~ 0
-osc3_quant
 Text HLabel 5150 2000 2    60   Input ~ 0
+osc1_quant
+Text HLabel 5150 2100 2    60   Input ~ 0
+osc2_quant
+Text HLabel 5150 2200 2    60   Input ~ 0
+osc3_quant
+Text HLabel 5150 2300 2    60   Input ~ 0
 osc4_quant
 Text HLabel 5150 1900 2    60   Input ~ 0
 osc1_repeat
