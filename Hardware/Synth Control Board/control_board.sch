@@ -619,9 +619,9 @@ Text Label 5700 2050 2    60   ~ 0
 osc1_freq_wiper
 Text Label 5700 2250 2    60   ~ 0
 osc1_pwm_wiper
-Text Label 5700 2950 2    60   ~ 0
+Text Label 5700 2450 2    60   ~ 0
 osc1_speed
-Text Label 5700 3450 2    60   ~ 0
+Text Label 5700 2950 2    60   ~ 0
 envelope_pwm_bypass_in_1
 Text Label 6850 1300 0    60   ~ 0
 envelope_pwm_bypass_out_4
@@ -631,11 +631,11 @@ Text Label 6850 1100 0    60   ~ 0
 envelope_pwm_bypass_out_2
 Text Label 6850 1000 0    60   ~ 0
 envelope_pwm_bypass_out_1
-Text Label 5700 3350 2    60   ~ 0
+Text Label 5700 2850 2    60   ~ 0
 envelope_pwm_bypass_out_1
-Text Label 5700 3150 2    60   ~ 0
+Text Label 5700 2650 2    60   ~ 0
 osc1_repeat
-Text Label 5700 3250 2    60   ~ 0
+Text Label 5700 2750 2    60   ~ 0
 osc1_quant
 Wire Wire Line
 	10600 1300 10450 1300
@@ -653,7 +653,7 @@ Text Label 3000 6700 2    60   ~ 0
 freq_in_3
 Text Label 3000 7150 2    60   ~ 0
 freq_in_4
-Text Label 5700 2350 2    60   ~ 0
+Text Label 13000 2600 2    60   ~ 0
 freq_in_1
 Text Label 4250 5650 0    60   ~ 0
 freq_out_1
@@ -663,7 +663,7 @@ Text Label 4250 6700 0    60   ~ 0
 freq_out_3
 Text Label 4250 7150 0    60   ~ 0
 freq_out_4
-Text Label 5700 2550 2    60   ~ 0
+Text Label 13000 2800 2    60   ~ 0
 freq_out_1
 Text Label 1150 6350 2    60   ~ 0
 LFO_freq_in
@@ -687,23 +687,23 @@ $EndComp
 $Comp
 L GND #PWR022
 U 1 1 5C5CC347
-P 5700 3550
-F 0 "#PWR022" H 5700 3300 50  0001 C CNN
-F 1 "GND" H 5700 3400 50  0000 C CNN
-F 2 "" H 5700 3550 50  0001 C CNN
-F 3 "" H 5700 3550 50  0001 C CNN
-	1    5700 3550
+P 5700 3050
+F 0 "#PWR022" H 5700 2800 50  0001 C CNN
+F 1 "GND" H 5700 2900 50  0000 C CNN
+F 2 "" H 5700 3050 50  0001 C CNN
+F 3 "" H 5700 3050 50  0001 C CNN
+	1    5700 3050
 	0    1    1    0   
 $EndComp
 $Comp
 L GNDD #PWR023
 U 1 1 5C5CC457
-P 5700 3700
-F 0 "#PWR023" H 5700 3450 50  0001 C CNN
-F 1 "GNDD" H 5700 3575 50  0000 C CNN
-F 2 "" H 5700 3700 50  0001 C CNN
-F 3 "" H 5700 3700 50  0001 C CNN
-	1    5700 3700
+P 5700 3200
+F 0 "#PWR023" H 5700 2950 50  0001 C CNN
+F 1 "GNDD" H 5700 3075 50  0000 C CNN
+F 2 "" H 5700 3200 50  0001 C CNN
+F 3 "" H 5700 3200 50  0001 C CNN
+	1    5700 3200
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -966,7 +966,7 @@ freq_fb_4
 Wire Wire Line
 	3550 6850 3550 7150
 Connection ~ 3550 7150
-Text Label 5700 2450 2    60   ~ 0
+Text Label 13000 2700 2    60   ~ 0
 freq_fb_1
 $Comp
 L SW_DPDT_x2 SW1
@@ -1158,9 +1158,9 @@ Wire Wire Line
 	6700 6350 6700 5750
 Wire Wire Line
 	6700 5750 6950 5750
-Text Label 5700 2650 2    60   ~ 0
+Text Label 13000 2900 2    60   ~ 0
 lfo_in_1
-Text Label 5700 2750 2    60   ~ 0
+Text Label 13000 3000 2    60   ~ 0
 lfo_out_1
 $Comp
 L +5V #PWR040
@@ -1176,267 +1176,265 @@ $EndComp
 $Comp
 L +5V #PWR041
 U 1 1 5C6249EF
-P 5700 2850
-F 0 "#PWR041" H 5700 2700 50  0001 C CNN
-F 1 "+5V" H 5700 2990 50  0000 C CNN
-F 2 "" H 5700 2850 50  0001 C CNN
-F 3 "" H 5700 2850 50  0001 C CNN
-	1    5700 2850
+P 5700 2350
+F 0 "#PWR041" H 5700 2200 50  0001 C CNN
+F 1 "+5V" H 5700 2490 50  0000 C CNN
+F 2 "" H 5700 2350 50  0001 C CNN
+F 3 "" H 5700 2350 50  0001 C CNN
+	1    5700 2350
 	0    -1   -1   0   
 $EndComp
-Text Label 5700 3050 2    60   ~ 0
+Text Label 5700 2550 2    60   ~ 0
 osc1_hold
 Wire Wire Line
-	5700 3650 5700 3700
-Text Label 6500 2050 0    60   ~ 0
+	5700 3150 5700 3200
+Text Label 7250 2050 2    60   ~ 0
 osc2_freq_wiper
-Text Label 6500 2150 0    60   ~ 0
+Text Label 7250 2250 2    60   ~ 0
 osc2_pwm_wiper
-Text Label 6500 2850 0    60   ~ 0
+Text Label 7250 2450 2    60   ~ 0
 osc2_speed
-Text Label 6500 3050 0    60   ~ 0
+Text Label 7250 2950 2    60   ~ 0
 envelope_pwm_bypass_in_2
-Text Label 6500 3150 0    60   ~ 0
+Text Label 7250 2850 2    60   ~ 0
 envelope_pwm_bypass_out_2
-Text Label 6500 3450 0    60   ~ 0
+Text Label 7250 2650 2    60   ~ 0
 osc2_repeat
-Text Label 6500 3250 0    60   ~ 0
+Text Label 7250 2750 2    60   ~ 0
 osc2_quant
-Text Label 6500 2550 0    60   ~ 0
+Text Label 12600 3600 0    60   ~ 0
 freq_in_2
-Text Label 6500 2350 0    60   ~ 0
+Text Label 12600 3400 0    60   ~ 0
 freq_out_2
 $Comp
 L +5V #PWR042
 U 1 1 5C62522F
-P 6500 1950
-F 0 "#PWR042" H 6500 1800 50  0001 C CNN
-F 1 "+5V" H 6500 2090 50  0000 C CNN
-F 2 "" H 6500 1950 50  0001 C CNN
-F 3 "" H 6500 1950 50  0001 C CNN
-	1    6500 1950
-	0    1    -1   0   
+P 7250 1950
+F 0 "#PWR042" H 7250 1800 50  0001 C CNN
+F 1 "+5V" H 7250 2090 50  0000 C CNN
+F 2 "" H 7250 1950 50  0001 C CNN
+F 3 "" H 7250 1950 50  0001 C CNN
+	1    7250 1950
+	0    -1   -1   0   
 $EndComp
 $Comp
 L GND #PWR043
 U 1 1 5C625235
-P 6500 3550
-F 0 "#PWR043" H 6500 3300 50  0001 C CNN
-F 1 "GND" H 6500 3400 50  0000 C CNN
-F 2 "" H 6500 3550 50  0001 C CNN
-F 3 "" H 6500 3550 50  0001 C CNN
-	1    6500 3550
-	0    -1   1    0   
+P 7250 3050
+F 0 "#PWR043" H 7250 2800 50  0001 C CNN
+F 1 "GND" H 7250 2900 50  0000 C CNN
+F 2 "" H 7250 3050 50  0001 C CNN
+F 3 "" H 7250 3050 50  0001 C CNN
+	1    7250 3050
+	0    1    1    0   
 $EndComp
 $Comp
 L GNDD #PWR044
 U 1 1 5C62523B
-P 6500 3700
-F 0 "#PWR044" H 6500 3450 50  0001 C CNN
-F 1 "GNDD" H 6500 3575 50  0000 C CNN
-F 2 "" H 6500 3700 50  0001 C CNN
-F 3 "" H 6500 3700 50  0001 C CNN
-	1    6500 3700
-	0    -1   -1   0   
+P 7250 3200
+F 0 "#PWR044" H 7250 2950 50  0001 C CNN
+F 1 "GNDD" H 7250 3075 50  0000 C CNN
+F 2 "" H 7250 3200 50  0001 C CNN
+F 3 "" H 7250 3200 50  0001 C CNN
+	1    7250 3200
+	0    1    -1   0   
 $EndComp
-Text Label 6500 2450 0    60   ~ 0
+Text Label 12600 3500 0    60   ~ 0
 freq_fb_2
-Text Label 6500 2650 0    60   ~ 0
+Text Label 12600 3700 0    60   ~ 0
 lfo_in_2
-Text Label 6500 2750 0    60   ~ 0
+Text Label 12600 3800 0    60   ~ 0
 lfo_out_2
 $Comp
 L +5V #PWR045
 U 1 1 5C625244
-P 6500 2250
-F 0 "#PWR045" H 6500 2100 50  0001 C CNN
-F 1 "+5V" H 6500 2390 50  0000 C CNN
-F 2 "" H 6500 2250 50  0001 C CNN
-F 3 "" H 6500 2250 50  0001 C CNN
-	1    6500 2250
-	0    1    -1   0   
+P 7250 2150
+F 0 "#PWR045" H 7250 2000 50  0001 C CNN
+F 1 "+5V" H 7250 2290 50  0000 C CNN
+F 2 "" H 7250 2150 50  0001 C CNN
+F 3 "" H 7250 2150 50  0001 C CNN
+	1    7250 2150
+	0    -1   -1   0   
 $EndComp
 $Comp
 L +5V #PWR046
 U 1 1 5C62524A
-P 6500 2950
-F 0 "#PWR046" H 6500 2800 50  0001 C CNN
-F 1 "+5V" H 6500 3090 50  0000 C CNN
-F 2 "" H 6500 2950 50  0001 C CNN
-F 3 "" H 6500 2950 50  0001 C CNN
-	1    6500 2950
-	0    1    -1   0   
+P 7250 2350
+F 0 "#PWR046" H 7250 2200 50  0001 C CNN
+F 1 "+5V" H 7250 2490 50  0000 C CNN
+F 2 "" H 7250 2350 50  0001 C CNN
+F 3 "" H 7250 2350 50  0001 C CNN
+	1    7250 2350
+	0    -1   -1   0   
 $EndComp
-Text Label 6500 3350 0    60   ~ 0
+Text Label 7250 2550 2    60   ~ 0
 osc2_hold
 Wire Wire Line
-	6500 3650 6500 3700
-Text Label 8850 2100 2    60   ~ 0
+	7250 3150 7250 3200
+Text Label 8800 3200 2    60   ~ 0
 osc3_freq_wiper
-Text Label 8850 2200 2    60   ~ 0
+Text Label 8800 3000 2    60   ~ 0
 osc3_pwm_wiper
-Text Label 8850 2900 2    60   ~ 0
+Text Label 8800 2800 2    60   ~ 0
 osc3_speed
-Text Label 8850 3100 2    60   ~ 0
+Text Label 8800 2600 2    60   ~ 0
 envelope_pwm_bypass_in_3
-Text Label 8850 3200 2    60   ~ 0
+Text Label 8800 2500 2    60   ~ 0
 envelope_pwm_bypass_out_3
-Text Label 8850 3500 2    60   ~ 0
+Text Label 8800 2300 2    60   ~ 0
 osc3_repeat
-Text Label 8850 3300 2    60   ~ 0
+Text Label 8800 2400 2    60   ~ 0
 osc3_quant
-Text Label 8850 2600 2    60   ~ 0
+Text Label 14100 3150 2    60   ~ 0
 freq_in_3
-Text Label 8850 2400 2    60   ~ 0
+Text Label 14100 2950 2    60   ~ 0
 freq_out_3
 $Comp
 L +5V #PWR047
 U 1 1 5C6257DA
-P 8850 2000
-F 0 "#PWR047" H 8850 1850 50  0001 C CNN
-F 1 "+5V" H 8850 2140 50  0000 C CNN
-F 2 "" H 8850 2000 50  0001 C CNN
-F 3 "" H 8850 2000 50  0001 C CNN
-	1    8850 2000
+P 8800 3100
+F 0 "#PWR047" H 8800 2950 50  0001 C CNN
+F 1 "+5V" H 8800 3240 50  0000 C CNN
+F 2 "" H 8800 3100 50  0001 C CNN
+F 3 "" H 8800 3100 50  0001 C CNN
+	1    8800 3100
 	0    -1   -1   0   
 $EndComp
 $Comp
 L GND #PWR048
 U 1 1 5C6257E0
-P 8850 3600
-F 0 "#PWR048" H 8850 3350 50  0001 C CNN
-F 1 "GND" H 8850 3450 50  0000 C CNN
-F 2 "" H 8850 3600 50  0001 C CNN
-F 3 "" H 8850 3600 50  0001 C CNN
-	1    8850 3600
+P 8800 2000
+F 0 "#PWR048" H 8800 1750 50  0001 C CNN
+F 1 "GND" H 8800 1850 50  0000 C CNN
+F 2 "" H 8800 2000 50  0001 C CNN
+F 3 "" H 8800 2000 50  0001 C CNN
+	1    8800 2000
 	0    1    1    0   
 $EndComp
 $Comp
 L GNDD #PWR049
 U 1 1 5C6257E6
-P 8850 3750
-F 0 "#PWR049" H 8850 3500 50  0001 C CNN
-F 1 "GNDD" H 8850 3625 50  0000 C CNN
-F 2 "" H 8850 3750 50  0001 C CNN
-F 3 "" H 8850 3750 50  0001 C CNN
-	1    8850 3750
+P 8800 2150
+F 0 "#PWR049" H 8800 1900 50  0001 C CNN
+F 1 "GNDD" H 8800 2025 50  0000 C CNN
+F 2 "" H 8800 2150 50  0001 C CNN
+F 3 "" H 8800 2150 50  0001 C CNN
+	1    8800 2150
 	0    1    -1   0   
 $EndComp
-Text Label 8850 2500 2    60   ~ 0
+Text Label 14100 3050 2    60   ~ 0
 freq_fb_3
-Text Label 8850 2800 2    60   ~ 0
+Text Label 14100 3350 2    60   ~ 0
 lfo_in_3
-Text Label 8850 2700 2    60   ~ 0
+Text Label 14100 3250 2    60   ~ 0
 lfo_out_3
 $Comp
 L +5V #PWR050
 U 1 1 5C6257EF
-P 8850 2300
-F 0 "#PWR050" H 8850 2150 50  0001 C CNN
-F 1 "+5V" H 8850 2440 50  0000 C CNN
-F 2 "" H 8850 2300 50  0001 C CNN
-F 3 "" H 8850 2300 50  0001 C CNN
-	1    8850 2300
+P 8800 2900
+F 0 "#PWR050" H 8800 2750 50  0001 C CNN
+F 1 "+5V" H 8800 3040 50  0000 C CNN
+F 2 "" H 8800 2900 50  0001 C CNN
+F 3 "" H 8800 2900 50  0001 C CNN
+	1    8800 2900
 	0    -1   -1   0   
 $EndComp
 $Comp
 L +5V #PWR051
 U 1 1 5C6257F5
-P 8850 3000
-F 0 "#PWR051" H 8850 2850 50  0001 C CNN
-F 1 "+5V" H 8850 3140 50  0000 C CNN
-F 2 "" H 8850 3000 50  0001 C CNN
-F 3 "" H 8850 3000 50  0001 C CNN
-	1    8850 3000
+P 8800 2700
+F 0 "#PWR051" H 8800 2550 50  0001 C CNN
+F 1 "+5V" H 8800 2840 50  0000 C CNN
+F 2 "" H 8800 2700 50  0001 C CNN
+F 3 "" H 8800 2700 50  0001 C CNN
+	1    8800 2700
 	0    -1   -1   0   
 $EndComp
-Text Label 8850 3400 2    60   ~ 0
+Text Label 8800 2200 2    60   ~ 0
 osc3_hold
 Wire Wire Line
-	8850 3700 8850 3750
-Text Label 9350 2100 0    60   ~ 0
+	8800 2100 8800 2150
+Text Label 10400 3200 2    60   ~ 0
 osc4_freq_wiper
-Text Label 9350 2200 0    60   ~ 0
+Text Label 10400 3000 2    60   ~ 0
 osc4_pwm_wiper
-Text Label 9350 2900 0    60   ~ 0
+Text Label 10400 2800 2    60   ~ 0
 osc4_speed
-Text Label 9350 3100 0    60   ~ 0
+Text Label 10400 2600 2    60   ~ 0
 envelope_pwm_bypass_in_4
-Text Label 9350 3200 0    60   ~ 0
+Text Label 10400 2500 2    60   ~ 0
 envelope_pwm_bypass_out_4
-Text Label 9350 3500 0    60   ~ 0
+Text Label 10400 2300 2    60   ~ 0
 osc4_repeat
-Text Label 9350 3300 0    60   ~ 0
+Text Label 10400 2400 2    60   ~ 0
 osc4_quant
-Text Label 9350 2600 0    60   ~ 0
+Text Label 14600 3150 0    60   ~ 0
 freq_in_4
-Text Label 9350 2400 0    60   ~ 0
+Text Label 14600 2950 0    60   ~ 0
 freq_out_4
 $Comp
 L +5V #PWR052
 U 1 1 5C62580C
-P 9350 2000
-F 0 "#PWR052" H 9350 1850 50  0001 C CNN
-F 1 "+5V" H 9350 2140 50  0000 C CNN
-F 2 "" H 9350 2000 50  0001 C CNN
-F 3 "" H 9350 2000 50  0001 C CNN
-	1    9350 2000
-	0    1    -1   0   
+P 10400 3100
+F 0 "#PWR052" H 10400 2950 50  0001 C CNN
+F 1 "+5V" H 10400 3240 50  0000 C CNN
+F 2 "" H 10400 3100 50  0001 C CNN
+F 3 "" H 10400 3100 50  0001 C CNN
+	1    10400 3100
+	0    -1   -1   0   
 $EndComp
 $Comp
 L GND #PWR053
 U 1 1 5C625812
-P 9350 3600
-F 0 "#PWR053" H 9350 3350 50  0001 C CNN
-F 1 "GND" H 9350 3450 50  0000 C CNN
-F 2 "" H 9350 3600 50  0001 C CNN
-F 3 "" H 9350 3600 50  0001 C CNN
-	1    9350 3600
-	0    -1   1    0   
+P 10400 1950
+F 0 "#PWR053" H 10400 1700 50  0001 C CNN
+F 1 "GND" H 10400 1800 50  0000 C CNN
+F 2 "" H 10400 1950 50  0001 C CNN
+F 3 "" H 10400 1950 50  0001 C CNN
+	1    10400 1950
+	0    1    1    0   
 $EndComp
 $Comp
 L GNDD #PWR054
 U 1 1 5C625818
-P 9350 3750
-F 0 "#PWR054" H 9350 3500 50  0001 C CNN
-F 1 "GNDD" H 9350 3625 50  0000 C CNN
-F 2 "" H 9350 3750 50  0001 C CNN
-F 3 "" H 9350 3750 50  0001 C CNN
-	1    9350 3750
-	0    -1   -1   0   
+P 10400 2100
+F 0 "#PWR054" H 10400 1850 50  0001 C CNN
+F 1 "GNDD" H 10400 1975 50  0000 C CNN
+F 2 "" H 10400 2100 50  0001 C CNN
+F 3 "" H 10400 2100 50  0001 C CNN
+	1    10400 2100
+	0    1    -1   0   
 $EndComp
-Text Label 9350 2500 0    60   ~ 0
+Text Label 14600 3050 0    60   ~ 0
 freq_fb_4
-Text Label 9350 2700 0    60   ~ 0
+Text Label 14600 3250 0    60   ~ 0
 lfo_in_4
-Text Label 9350 2800 0    60   ~ 0
+Text Label 14600 3350 0    60   ~ 0
 lfo_out_4
 $Comp
 L +5V #PWR055
 U 1 1 5C625821
-P 9350 2300
-F 0 "#PWR055" H 9350 2150 50  0001 C CNN
-F 1 "+5V" H 9350 2440 50  0000 C CNN
-F 2 "" H 9350 2300 50  0001 C CNN
-F 3 "" H 9350 2300 50  0001 C CNN
-	1    9350 2300
-	0    1    -1   0   
+P 10400 2900
+F 0 "#PWR055" H 10400 2750 50  0001 C CNN
+F 1 "+5V" H 10400 3040 50  0000 C CNN
+F 2 "" H 10400 2900 50  0001 C CNN
+F 3 "" H 10400 2900 50  0001 C CNN
+	1    10400 2900
+	0    -1   -1   0   
 $EndComp
 $Comp
 L +5V #PWR056
 U 1 1 5C625827
-P 9350 3000
-F 0 "#PWR056" H 9350 2850 50  0001 C CNN
-F 1 "+5V" H 9350 3140 50  0000 C CNN
-F 2 "" H 9350 3000 50  0001 C CNN
-F 3 "" H 9350 3000 50  0001 C CNN
-	1    9350 3000
-	0    1    -1   0   
+P 10400 2700
+F 0 "#PWR056" H 10400 2550 50  0001 C CNN
+F 1 "+5V" H 10400 2840 50  0000 C CNN
+F 2 "" H 10400 2700 50  0001 C CNN
+F 3 "" H 10400 2700 50  0001 C CNN
+	1    10400 2700
+	0    -1   -1   0   
 $EndComp
-Text Label 9350 3400 0    60   ~ 0
+Text Label 10400 2200 2    60   ~ 0
 osc4_hold
-Wire Wire Line
-	9350 3700 9350 3750
 $Comp
 L POT RV22
 U 1 1 5C627148
@@ -1613,17 +1611,6 @@ Text Label 8850 5500 0    60   ~ 0
 lfo_in_4
 Text Label 8850 5600 0    60   ~ 0
 lfo_out_4
-$Comp
-L Conn_02x18_Odd_Even J3
-U 1 1 5C6322C5
-P 9050 2800
-F 0 "J3" H 9100 3700 50  0000 C CNN
-F 1 "Conn_02x18_Odd_Even" H 9100 1800 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x18_Pitch2.54mm" H 9050 2800 50  0001 C CNN
-F 3 "" H 9050 2800 50  0001 C CNN
-	1    9050 2800
-	1    0    0    -1  
-$EndComp
 Text Label 9150 500  0    60   ~ 0
 osc1_hold
 Wire Wire Line
@@ -1641,14 +1628,49 @@ osc4_hold
 Wire Wire Line
 	9150 1500 8900 1500
 $Comp
-L Conn_01x18 J1
-U 1 1 5C632DD6
-P 5900 2750
-F 0 "J1" H 5900 3650 50  0000 C CNN
-F 1 "Conn_01x18" H 5900 1750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x18_Pitch2.54mm" H 5900 2750 50  0001 C CNN
-F 3 "" H 5900 2750 50  0001 C CNN
-	1    5900 2750
+L Conn_01x13 J1
+U 1 1 5C63692A
+P 5900 2550
+F 0 "J1" H 5900 3250 50  0000 C CNN
+F 1 "Conn_01x13" H 5900 1850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm" H 5900 2550 50  0001 C CNN
+F 3 "" H 5900 2550 50  0001 C CNN
+	1    5900 2550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Conn_01x13 J4
+U 1 1 5C636D97
+P 7450 2550
+F 0 "J4" H 7450 3250 50  0000 C CNN
+F 1 "Conn_01x13" H 7450 1850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm" H 7450 2550 50  0001 C CNN
+F 3 "" H 7450 2550 50  0001 C CNN
+	1    7450 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x13 J3
+U 1 1 5C6387A9
+P 9000 2600
+F 0 "J3" H 9000 3300 50  0000 C CNN
+F 1 "Conn_01x13" H 9000 1900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm" H 9000 2600 50  0001 C CNN
+F 3 "" H 9000 2600 50  0001 C CNN
+	1    9000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x13 J6
+U 1 1 5C6388F2
+P 10600 2600
+F 0 "J6" H 10600 3300 50  0000 C CNN
+F 1 "Conn_01x13" H 10600 1900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x13_Pitch2.54mm" H 10600 2600 50  0001 C CNN
+F 3 "" H 10600 2600 50  0001 C CNN
+	1    10600 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10400 2000 10400 1950
 $EndSCHEMATC

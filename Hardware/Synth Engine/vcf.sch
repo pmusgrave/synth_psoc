@@ -207,13 +207,13 @@ Text HLabel 6800 6200 2    60   Input ~ 0
 filter_out_4
 $Comp
 L TL074 U1
-U 1 1 5C37B428
+U 2 1 5C37B428
 P 5900 1750
 F 0 "U1" H 5900 1950 50  0000 L CNN
 F 1 "TL074" H 5900 1550 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5850 1850 50  0001 C CNN
 F 3 "" H 5950 1950 50  0001 C CNN
-	1    5900 1750
+	2    5900 1750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -394,13 +394,13 @@ Wire Wire Line
 Connection ~ 6700 1750
 $Comp
 L TL074 U1
-U 2 1 5C53C61D
+U 1 1 5C53C61D
 P 5900 3250
 F 0 "U1" H 5900 3450 50  0000 L CNN
 F 1 "TL074" H 5900 3050 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5850 3350 50  0001 C CNN
 F 3 "" H 5950 3450 50  0001 C CNN
-	2    5900 3250
+	1    5900 3250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -581,13 +581,13 @@ Wire Wire Line
 Connection ~ 6700 3250
 $Comp
 L TL074 U1
-U 3 1 5C53CB23
+U 4 1 5C53CB23
 P 5900 4700
 F 0 "U1" H 5900 4900 50  0000 L CNN
 F 1 "TL074" H 5900 4500 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5850 4800 50  0001 C CNN
 F 3 "" H 5950 4900 50  0001 C CNN
-	3    5900 4700
+	4    5900 4700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -768,13 +768,13 @@ Wire Wire Line
 Connection ~ 6700 4700
 $Comp
 L TL074 U1
-U 4 1 5C53CBA1
+U 3 1 5C53CBA1
 P 5900 6200
 F 0 "U1" H 5900 6400 50  0000 L CNN
 F 1 "TL074" H 5900 6000 50  0000 L CNN
 F 2 "digikey-footprints:SOIC-14_W3.9mm" H 5850 6300 50  0001 C CNN
 F 3 "" H 5950 6400 50  0001 C CNN
-	4    5900 6200
+	3    5900 6200
 	1    0    0    -1  
 $EndComp
 $Comp
