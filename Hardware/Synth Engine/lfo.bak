@@ -920,31 +920,52 @@ Wire Wire Line
 	10300 5100 10450 5100
 Text Label 10000 5250 0    60   ~ 0
 lfo_out_4
-Text Label 6350 800  0    60   ~ 0
+Text Label 5600 750  2    60   ~ 0
 lfo_in_1
-Text Label 6350 900  0    60   ~ 0
+Text Label 5600 850  2    60   ~ 0
 lfo_out_1
-Text Label 6350 1000 0    60   ~ 0
+Text Label 5600 950  2    60   ~ 0
 lfo_in_2
-Text Label 6350 1100 0    60   ~ 0
+Text Label 5600 1050 2    60   ~ 0
 lfo_out_2
-Text Label 6350 1200 0    60   ~ 0
+Text Label 5600 1150 2    60   ~ 0
 lfo_in_3
-Text Label 6350 1300 0    60   ~ 0
+Text Label 5600 1250 2    60   ~ 0
 lfo_out_3
-Text Label 6350 1400 0    60   ~ 0
+Text Label 5600 1350 2    60   ~ 0
 lfo_in_4
-Text Label 6350 1500 0    60   ~ 0
+Text Label 5600 1450 2    60   ~ 0
 lfo_out_4
-$Comp
-L Conn_01x08 J12
-U 1 1 5C638F36
-P 6150 1100
-F 0 "J12" H 6150 1500 50  0000 C CNN
-F 1 "Conn_01x08" H 6150 600 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 6150 1100 50  0001 C CNN
-F 3 "" H 6150 1100 50  0001 C CNN
-	1    6150 1100
-	-1   0    0    -1  
-$EndComp
+Text HLabel 5800 750  2    60   Output ~ 0
+lfo_in_1
+Text HLabel 5800 850  2    60   Input ~ 0
+lfo_out_1
+Text HLabel 5800 950  2    60   Output ~ 0
+lfo_in_2
+Text HLabel 5800 1050 2    60   Input ~ 0
+lfo_out_2
+Text HLabel 5800 1150 2    60   Output ~ 0
+lfo_in_3
+Text HLabel 5800 1250 2    60   Input ~ 0
+lfo_out_3
+Text HLabel 5800 1350 2    60   Output ~ 0
+lfo_in_4
+Text HLabel 5800 1450 2    60   Input ~ 0
+lfo_out_4
+Wire Wire Line
+	5600 750  5800 750 
+Wire Wire Line
+	5600 850  5800 850 
+Wire Wire Line
+	5800 950  5600 950 
+Wire Wire Line
+	5600 1050 5800 1050
+Wire Wire Line
+	5800 1150 5600 1150
+Wire Wire Line
+	5600 1250 5800 1250
+Wire Wire Line
+	5800 1350 5600 1350
+Wire Wire Line
+	5600 1450 5800 1450
 $EndSCHEMATC

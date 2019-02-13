@@ -924,9 +924,9 @@ Wire Wire Line
 Wire Wire Line
 	2150 3450 1550 3450
 Wire Wire Line
-	1550 3750 1550 3450
+	1550 3450 1550 3750
 Wire Wire Line
-	1050 3750 1550 3750
+	1550 3750 1050 3750
 Wire Wire Line
 	1400 3400 1400 3550
 Wire Wire Line
@@ -934,9 +934,9 @@ Wire Wire Line
 Wire Wire Line
 	2150 3650 1600 3650
 Wire Wire Line
-	1600 3950 1600 3650
+	1600 3650 1600 3950
 Wire Wire Line
-	1050 3950 1600 3950
+	1600 3950 1050 3950
 Wire Wire Line
 	5150 1500 4950 1500
 Wire Wire Line

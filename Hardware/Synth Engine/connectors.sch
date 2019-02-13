@@ -937,4 +937,68 @@ F 3 "" H 3600 3350 50  0001 C CNN
 	1    3600 3350
 	-1   0    0    -1  
 $EndComp
+Text Label 3800 1450 0    60   ~ 0
+lfo_in_1
+Text Label 3800 1550 0    60   ~ 0
+lfo_out_1
+Text Label 3800 2150 0    60   ~ 0
+lfo_in_2
+Text Label 3800 2250 0    60   ~ 0
+lfo_out_2
+Text Label 3800 2800 0    60   ~ 0
+lfo_in_3
+Text Label 3800 2900 0    60   ~ 0
+lfo_out_3
+Text Label 3800 3450 0    60   ~ 0
+lfo_in_4
+Text Label 3800 3550 0    60   ~ 0
+lfo_out_4
+Text Label 8050 5650 2    60   ~ 0
+lfo_in_1
+Text Label 8050 5750 2    60   ~ 0
+lfo_out_1
+Text Label 8050 5850 2    60   ~ 0
+lfo_in_2
+Text Label 8050 5950 2    60   ~ 0
+lfo_out_2
+Text Label 8050 6050 2    60   ~ 0
+lfo_in_3
+Text Label 8050 6150 2    60   ~ 0
+lfo_out_3
+Text Label 8050 6250 2    60   ~ 0
+lfo_in_4
+Text Label 8050 6350 2    60   ~ 0
+lfo_out_4
+Text HLabel 8250 5650 2    60   Output ~ 0
+lfo_in_1
+Text HLabel 8250 5750 2    60   Input ~ 0
+lfo_out_1
+Text HLabel 8250 5850 2    60   Output ~ 0
+lfo_in_2
+Text HLabel 8250 5950 2    60   Input ~ 0
+lfo_out_2
+Text HLabel 8250 6050 2    60   Output ~ 0
+lfo_in_3
+Text HLabel 8250 6150 2    60   Input ~ 0
+lfo_out_3
+Text HLabel 8250 6250 2    60   Output ~ 0
+lfo_in_4
+Text HLabel 8250 6350 2    60   Input ~ 0
+lfo_out_4
+Wire Wire Line
+	8050 5650 8250 5650
+Wire Wire Line
+	8050 5750 8250 5750
+Wire Wire Line
+	8250 5850 8050 5850
+Wire Wire Line
+	8050 5950 8250 5950
+Wire Wire Line
+	8250 6050 8050 6050
+Wire Wire Line
+	8050 6150 8250 6150
+Wire Wire Line
+	8250 6250 8050 6250
+Wire Wire Line
+	8050 6350 8250 6350
 $EndSCHEMATC
