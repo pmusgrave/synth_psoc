@@ -563,12 +563,12 @@ Check tapers of speed control.\nI believe these should be linear.
 $Comp
 L POT RV5
 U 1 1 5C5C948E
-P 1500 6350
-F 0 "RV5" V 1325 6350 50  0000 C CNN
-F 1 "10kA" V 1400 6350 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 1500 6350 50  0001 C CNN
-F 3 "" H 1500 6350 50  0001 C CNN
-	1    1500 6350
+P 1500 5800
+F 0 "RV5" V 1325 5800 50  0000 C CNN
+F 1 "10kA" V 1400 5800 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Bourns_PTV09A-1_Horizontal" H 1500 5800 50  0001 C CNN
+F 3 "" H 1500 5800 50  0001 C CNN
+	1    1500 5800
 	0    1    1    0   
 $EndComp
 $Comp
@@ -653,7 +653,7 @@ Text Label 3000 6700 2    60   ~ 0
 freq_in_3
 Text Label 3000 7150 2    60   ~ 0
 freq_in_4
-Text Label 13000 2600 2    60   ~ 0
+Text Label 10400 3850 2    60   ~ 0
 freq_in_1
 Text Label 4250 5650 0    60   ~ 0
 freq_out_1
@@ -663,15 +663,15 @@ Text Label 4250 6700 0    60   ~ 0
 freq_out_3
 Text Label 4250 7150 0    60   ~ 0
 freq_out_4
-Text Label 13000 2800 2    60   ~ 0
+Text Label 10400 4050 2    60   ~ 0
 freq_out_1
-Text Label 1150 6350 2    60   ~ 0
+Text Label 1150 5800 2    60   ~ 0
 LFO_freq_in
-Text Label 1750 6350 0    60   ~ 0
+Text Label 1750 5800 0    60   ~ 0
 LFO_freq_out
-Text Label 10450 5200 2    60   ~ 0
+Text Label 1550 6400 2    60   ~ 0
 LFO_freq_in
-Text Label 10450 5300 2    60   ~ 0
+Text Label 1550 6500 2    60   ~ 0
 LFO_freq_out
 $Comp
 L +5V #PWR021
@@ -709,18 +709,18 @@ $EndComp
 $Comp
 L Conn_01x02 J5
 U 1 1 5C5CD696
-P 10800 5200
-F 0 "J5" H 10800 5300 50  0000 C CNN
-F 1 "Conn_01x02" H 10800 5000 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 10800 5200 50  0001 C CNN
-F 3 "" H 10800 5200 50  0001 C CNN
-	1    10800 5200
+P 1900 6400
+F 0 "J5" H 1900 6500 50  0000 C CNN
+F 1 "Conn_01x02" H 1900 6200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1900 6400 50  0001 C CNN
+F 3 "" H 1900 6400 50  0001 C CNN
+	1    1900 6400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10600 5200 10450 5200
+	1700 6400 1550 6400
 Wire Wire Line
-	10450 5300 10600 5300
+	1550 6500 1700 6500
 Wire Wire Line
 	3350 5450 3350 5400
 Wire Wire Line
@@ -802,16 +802,16 @@ Wire Wire Line
 	3650 6900 3650 7150
 Connection ~ 3650 7150
 Wire Wire Line
-	1500 6500 1500 6550
+	1500 5950 1500 6000
 Wire Wire Line
-	1500 6550 1300 6550
+	1500 6000 1300 6000
 Wire Wire Line
-	1300 6550 1300 6350
+	1300 6000 1300 5800
 Wire Wire Line
-	1150 6350 1350 6350
-Connection ~ 1300 6350
+	1150 5800 1350 5800
+Connection ~ 1300 5800
 Wire Wire Line
-	1750 6350 1650 6350
+	1750 5800 1650 5800
 $Comp
 L +5V #PWR024
 U 1 1 5C5DF7D9
@@ -966,57 +966,57 @@ freq_fb_4
 Wire Wire Line
 	3550 6850 3550 7150
 Connection ~ 3550 7150
-Text Label 13000 2700 2    60   ~ 0
+Text Label 10400 3950 2    60   ~ 0
 freq_fb_1
 $Comp
 L SW_DPDT_x2 SW1
 U 1 1 5C5E11B0
-P 10050 5950
-F 0 "SW1" H 10050 6120 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 10300 5950 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 10050 5950 50  0001 C CNN
-F 3 "" H 10050 5950 50  0001 C CNN
-	1    10050 5950
+P 1150 7150
+F 0 "SW1" H 1150 7320 50  0000 C CNN
+F 1 "SW_DPDT_x2" H 1400 7150 50  0000 C CNN
+F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 1150 7150 50  0001 C CNN
+F 3 "" H 1150 7150 50  0001 C CNN
+	1    1150 7150
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Conn_01x03 J2
 U 1 1 5C5E130C
-P 10900 5950
-F 0 "J2" H 10900 6150 50  0000 C CNN
-F 1 "Conn_01x03" H 10900 5750 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 10900 5950 50  0001 C CNN
-F 3 "" H 10900 5950 50  0001 C CNN
-	1    10900 5950
+P 2000 7150
+F 0 "J2" H 2000 7350 50  0000 C CNN
+F 1 "Conn_01x03" H 2000 6950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 2000 7150 50  0001 C CNN
+F 3 "" H 2000 7150 50  0001 C CNN
+	1    2000 7150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10700 5950 10250 5950
+	1800 7150 1350 7150
 Wire Wire Line
-	10700 5850 10400 5850
+	1800 7050 1500 7050
 Wire Wire Line
-	10400 5850 10400 5700
+	1500 7050 1500 6900
 Wire Wire Line
-	10400 5700 9750 5700
+	1500 6900 850  6900
 Wire Wire Line
-	9750 5700 9750 5850
+	850  6900 850  7050
 Wire Wire Line
-	9750 5850 9850 5850
+	850  7050 950  7050
 Wire Wire Line
-	9850 6050 9750 6050
+	950  7250 850  7250
 Wire Wire Line
-	9750 6050 9750 6250
+	850  7250 850  7450
 Wire Wire Line
-	9750 6250 10400 6250
+	850  7450 1500 7450
 Wire Wire Line
-	10400 6250 10400 6050
+	1500 7450 1500 7250
 Wire Wire Line
-	10400 6050 10700 6050
-Text Label 9850 5700 0    60   ~ 0
+	1500 7250 1800 7250
+Text Label 950  6900 0    60   ~ 0
 LFO_square
-Text Label 9950 6250 0    60   ~ 0
+Text Label 1050 7450 0    60   ~ 0
 LFO_tri
-Text Label 10300 5950 0    60   ~ 0
+Text Label 1400 7150 0    60   ~ 0
 LFO_out
 $Comp
 L POT RV18
@@ -1158,9 +1158,9 @@ Wire Wire Line
 	6700 6350 6700 5750
 Wire Wire Line
 	6700 5750 6950 5750
-Text Label 13000 2900 2    60   ~ 0
+Text Label 10400 4150 2    60   ~ 0
 lfo_in_1
-Text Label 13000 3000 2    60   ~ 0
+Text Label 10400 4250 2    60   ~ 0
 lfo_out_1
 $Comp
 L +5V #PWR040
@@ -1202,9 +1202,9 @@ Text Label 7250 2650 2    60   ~ 0
 osc2_repeat
 Text Label 7250 2750 2    60   ~ 0
 osc2_quant
-Text Label 12600 3600 0    60   ~ 0
+Text Label 10400 4500 2    60   ~ 0
 freq_in_2
-Text Label 12600 3400 0    60   ~ 0
+Text Label 10400 4700 2    60   ~ 0
 freq_out_2
 $Comp
 L +5V #PWR042
@@ -1239,11 +1239,11 @@ F 3 "" H 7250 3200 50  0001 C CNN
 	1    7250 3200
 	0    1    -1   0   
 $EndComp
-Text Label 12600 3500 0    60   ~ 0
+Text Label 10400 4600 2    60   ~ 0
 freq_fb_2
-Text Label 12600 3700 0    60   ~ 0
+Text Label 10400 4800 2    60   ~ 0
 lfo_in_2
-Text Label 12600 3800 0    60   ~ 0
+Text Label 10400 4900 2    60   ~ 0
 lfo_out_2
 $Comp
 L +5V #PWR045
@@ -1285,9 +1285,9 @@ Text Label 8800 2200 2    60   ~ 0
 osc3_repeat
 Text Label 8800 2400 2    60   ~ 0
 osc3_quant
-Text Label 14100 3150 2    60   ~ 0
+Text Label 10400 5200 2    60   ~ 0
 freq_in_3
-Text Label 14100 2950 2    60   ~ 0
+Text Label 10400 5400 2    60   ~ 0
 freq_out_3
 $Comp
 L +5V #PWR047
@@ -1322,11 +1322,11 @@ F 3 "" H 8800 2100 50  0001 C CNN
 	1    8800 2100
 	0    1    -1   0   
 $EndComp
-Text Label 14100 3050 2    60   ~ 0
+Text Label 10400 5300 2    60   ~ 0
 freq_fb_3
-Text Label 14100 3350 2    60   ~ 0
+Text Label 10400 5500 2    60   ~ 0
 lfo_in_3
-Text Label 14100 3250 2    60   ~ 0
+Text Label 10400 5600 2    60   ~ 0
 lfo_out_3
 $Comp
 L +5V #PWR050
@@ -1366,9 +1366,9 @@ Text Label 10400 2200 2    60   ~ 0
 osc4_repeat
 Text Label 10400 2400 2    60   ~ 0
 osc4_quant
-Text Label 14600 3150 0    60   ~ 0
+Text Label 10400 5900 2    60   ~ 0
 freq_in_4
-Text Label 14600 2950 0    60   ~ 0
+Text Label 10400 6100 2    60   ~ 0
 freq_out_4
 $Comp
 L +5V #PWR052
@@ -1403,11 +1403,11 @@ F 3 "" H 10400 2100 50  0001 C CNN
 	1    10400 2100
 	0    1    -1   0   
 $EndComp
-Text Label 14600 3050 0    60   ~ 0
+Text Label 10400 6000 2    60   ~ 0
 freq_fb_4
-Text Label 14600 3250 0    60   ~ 0
+Text Label 10400 6200 2    60   ~ 0
 lfo_in_4
-Text Label 14600 3350 0    60   ~ 0
+Text Label 10400 6300 2    60   ~ 0
 lfo_out_4
 $Comp
 L +5V #PWR055
@@ -1713,6 +1713,50 @@ F 1 "SW_SPDT" H 8700 1400 50  0000 C CNN
 F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 1600 50  0001 C CNN
 F 3 "" H 8700 1600 50  0001 C CNN
 	1    8700 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J7
+U 1 1 5C63B7E7
+P 10600 4050
+F 0 "J7" H 10600 4350 50  0000 C CNN
+F 1 "Conn_01x05" H 10600 3750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 10600 4050 50  0001 C CNN
+F 3 "" H 10600 4050 50  0001 C CNN
+	1    10600 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J8
+U 1 1 5C63B889
+P 10600 4700
+F 0 "J8" H 10600 5000 50  0000 C CNN
+F 1 "Conn_01x05" H 10600 4400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 10600 4700 50  0001 C CNN
+F 3 "" H 10600 4700 50  0001 C CNN
+	1    10600 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J9
+U 1 1 5C63BBB5
+P 10600 5400
+F 0 "J9" H 10600 5700 50  0000 C CNN
+F 1 "Conn_01x05" H 10600 5100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 10600 5400 50  0001 C CNN
+F 3 "" H 10600 5400 50  0001 C CNN
+	1    10600 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x05 J10
+U 1 1 5C63BC62
+P 10600 6100
+F 0 "J10" H 10600 6400 50  0000 C CNN
+F 1 "Conn_01x05" H 10600 5800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 10600 6100 50  0001 C CNN
+F 3 "" H 10600 6100 50  0001 C CNN
+	1    10600 6100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
