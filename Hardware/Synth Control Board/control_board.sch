@@ -1281,7 +1281,7 @@ Text Label 8800 2600 2    60   ~ 0
 envelope_pwm_bypass_in_3
 Text Label 8800 2500 2    60   ~ 0
 envelope_pwm_bypass_out_3
-Text Label 8800 2300 2    60   ~ 0
+Text Label 8800 2200 2    60   ~ 0
 osc3_repeat
 Text Label 8800 2400 2    60   ~ 0
 osc3_quant
@@ -1314,12 +1314,12 @@ $EndComp
 $Comp
 L GNDD #PWR049
 U 1 1 5C6257E6
-P 8800 2150
-F 0 "#PWR049" H 8800 1900 50  0001 C CNN
-F 1 "GNDD" H 8800 2025 50  0000 C CNN
-F 2 "" H 8800 2150 50  0001 C CNN
-F 3 "" H 8800 2150 50  0001 C CNN
-	1    8800 2150
+P 8800 2100
+F 0 "#PWR049" H 8800 1850 50  0001 C CNN
+F 1 "GNDD" H 8800 1975 50  0000 C CNN
+F 2 "" H 8800 2100 50  0001 C CNN
+F 3 "" H 8800 2100 50  0001 C CNN
+	1    8800 2100
 	0    1    -1   0   
 $EndComp
 Text Label 14100 3050 2    60   ~ 0
@@ -1350,10 +1350,8 @@ F 3 "" H 8800 2700 50  0001 C CNN
 	1    8800 2700
 	0    -1   -1   0   
 $EndComp
-Text Label 8800 2200 2    60   ~ 0
+Text Label 8800 2300 2    60   ~ 0
 osc3_hold
-Wire Wire Line
-	8800 2100 8800 2150
 Text Label 10400 3200 2    60   ~ 0
 osc4_freq_wiper
 Text Label 10400 3000 2    60   ~ 0
@@ -1364,7 +1362,7 @@ Text Label 10400 2600 2    60   ~ 0
 envelope_pwm_bypass_in_4
 Text Label 10400 2500 2    60   ~ 0
 envelope_pwm_bypass_out_4
-Text Label 10400 2300 2    60   ~ 0
+Text Label 10400 2200 2    60   ~ 0
 osc4_repeat
 Text Label 10400 2400 2    60   ~ 0
 osc4_quant
@@ -1433,7 +1431,7 @@ F 3 "" H 10400 2700 50  0001 C CNN
 	1    10400 2700
 	0    -1   -1   0   
 $EndComp
-Text Label 10400 2200 2    60   ~ 0
+Text Label 10400 2300 2    60   ~ 0
 osc4_hold
 $Comp
 L POT RV22
@@ -1673,4 +1671,48 @@ F 3 "" H 10600 2600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10400 2000 10400 1950
+$Comp
+L SW_SPDT SW9
+U 1 1 5C6395CA
+P 8700 600
+F 0 "SW9" H 8700 770 50  0000 C CNN
+F 1 "SW_SPDT" H 8700 400 50  0000 C CNN
+F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 600 50  0001 C CNN
+F 3 "" H 8700 600 50  0001 C CNN
+	1    8700 600 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_SPDT SW8
+U 1 1 5C63968E
+P 8700 1000
+F 0 "SW8" H 8700 1170 50  0000 C CNN
+F 1 "SW_SPDT" H 8700 800 50  0000 C CNN
+F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 1000 50  0001 C CNN
+F 3 "" H 8700 1000 50  0001 C CNN
+	1    8700 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_SPDT SW7
+U 1 1 5C639730
+P 8700 1300
+F 0 "SW7" H 8700 1470 50  0000 C CNN
+F 1 "SW_SPDT" H 8700 1100 50  0000 C CNN
+F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 1300 50  0001 C CNN
+F 3 "" H 8700 1300 50  0001 C CNN
+	1    8700 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_SPDT SW6
+U 1 1 5C6397C9
+P 8700 1600
+F 0 "SW6" H 8700 1770 50  0000 C CNN
+F 1 "SW_SPDT" H 8700 1400 50  0000 C CNN
+F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 1600 50  0001 C CNN
+F 3 "" H 8700 1600 50  0001 C CNN
+	1    8700 1600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
