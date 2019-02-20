@@ -20,6 +20,9 @@ volatile float pulse_width_3 = 0;
 
 volatile uint8_t NOTE_ENABLE = 0; 
 
+volatile uint8_t ring_buffer[3000];
+volatile uint8_t update_delay_buffer_flag = 0;
+
 int main(void)
 {
     CyGlobalIntEnable;
@@ -45,7 +48,13 @@ int main(void)
 	CapSense_Buttons_InitializeAllBaselines();
     CapSense_Buttons_ScanEnabledWidgets();
     
+    system_tick_timer_Start();
+    sys_tick_ovf_StartEx(SYS_TICK_OVF_VECT);
+    
     current_mode = NOT_TRIGGERED;
+    
+    volatile uint16_t i,j = 0;
+    
     
     while(1){
         if(pwm_update_flag != 0){ 
@@ -67,11 +76,14 @@ int main(void)
             freq_2 = ADC_SAR_Seq_GetResult16(4);
             pulse_width_2 = ADC_SAR_Seq_GetResult16(5);  
             
-            freq_3 = ADC_SAR_Seq_GetResult16(6);
-            pulse_width_3 = ADC_SAR_Seq_GetResult16(7);  
+            //freq_3 = ADC_SAR_Seq_GetResult16(6);
+            //pulse_width_3 = ADC_SAR_Seq_GetResult16(7);  
+            
+            // many thanks to http://blog.vinu.co.in/2012/05/generating-audio-echo-using-atmega32.html
+            // add sampled feedback to ring buffer
             
             
-            
+                        
       
             //LFO_PWM_WritePeriod((uint16) 65535/freq);
             //LFO_PWM_WriteCompare((uint16) (65535/freq)/(2000/pulse_width));
@@ -148,6 +160,23 @@ int main(void)
             RAMP_TIMER_WritePeriod(freq);
             RAMP_TIMER_WriteCompare(freq);
             */
+        }
+        
+        if(update_delay_buffer_flag){
+            update_delay_buffer_flag = 0;
+            
+            ring_buffer[i] = (delay_buf_reg_Read());
+            i++;
+            if (i >= 2899){
+                i = 0;
+            }
+            if (i > 100){
+                j = i-100;
+            }
+            else {
+                j = 0;
+            }
+            delay_out_Write(ring_buffer[i]);
         }
         
         if(!CapSense_Buttons_IsBusy()) {

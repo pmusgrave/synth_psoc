@@ -30,5 +30,8 @@ CY_ISR_PROTO(OSC_3_OVF_VECT){
     main_osc_PWM_3_WriteCompare((uint16) (65535/freq_3)/(2000/pulse_width_3));
 }
 
+CY_ISR_PROTO(SYS_TICK_OVF_VECT){
+    update_delay_buffer_flag = 1;
+}
 
 /* [] END OF FILE */

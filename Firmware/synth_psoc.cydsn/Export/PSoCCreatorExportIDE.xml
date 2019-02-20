@@ -61,6 +61,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cydisabledsheets.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_high.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_high.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_high_aliases.h</File>
@@ -140,14 +142,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_wiper_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_wiper_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_wiper_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_3_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_wiper_3.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_wiper_3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_wiper_3_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\freq_pot_wiper_3_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_2.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\pulse_width_pot_wiper_2_aliases.h</File>
@@ -218,6 +212,34 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CapSense_Buttons_Sns_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CapSense_Buttons_SenseClk.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\CapSense_Buttons_SenseClk.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_in.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_in.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_in_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_in_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\IDAC.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\IDAC.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\IDAC_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_out.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_out.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_out_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_out_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ff_fb_out.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ff_fb_out.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ff_fb_out_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ff_fb_out_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_buf_reg.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_buf_reg.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\PWM_2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\system_tick_timer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\system_tick_timer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\system_tick_timer_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\sys_tick_ovf.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\sys_tick_ovf.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60">
