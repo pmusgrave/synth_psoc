@@ -20,7 +20,8 @@ volatile float pulse_width_3 = 0;
 
 volatile uint8_t NOTE_ENABLE = 0; 
 
-volatile uint8_t ring_buffer[3000];
+#define DELAY_BUFFER_SIZE 6000
+volatile uint8_t ring_buffer[DELAY_BUFFER_SIZE];
 volatile uint8_t update_delay_buffer_flag = 0;
 
 int main(void)
@@ -174,18 +175,18 @@ int main(void)
             if (bit_counter == 7){
                 bit_counter = 0;
                 
-                ring_buffer[i] = (sample_buffer)+ (0.8*ring_buffer[j]);
+                ring_buffer[i] = (sample_buffer)+ (0.95*ring_buffer[j]);
                 
                 i++;
-                if (i >= 2999){
+                if (i >= DELAY_BUFFER_SIZE){
                     i = 0;
                 }
-                if (i > 300){
-                    j = i-300;
+                
+                j = (i+5500)%(DELAY_BUFFER_SIZE-1);
+                if (j > DELAY_BUFFER_SIZE){
+                    j=0;
                 }
-                else {
-                    j = 0;
-                }
+                
                 IDAC_SetValue(ring_buffer[i]);
                 sample_buffer = 0;
             }
