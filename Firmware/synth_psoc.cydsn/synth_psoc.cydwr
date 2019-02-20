@@ -63,7 +63,7 @@
       <Data key="1881354c-def2-4d86-bdde-d62f11e29d7c" value="Pin_1" />
       <Data key="26585482-08b0-44e8-83f2-b5f9340f2ba6" value="pulse_width_pot_wiper" />
       <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="freq_pot_wiper" />
-      <Data key="aa4e370c-a810-4469-8e28-c6c0ae9f8917" value="fb_out" />
+      <Data key="aa4e370c-a810-4469-8e28-c6c0ae9f8917" value="dac_out" />
       <Data key="ac0f011c-9906-450c-8f43-4f8ef4e508ce" value="decay_debug_led" />
       <Data key="ae2a3e3c-c2d8-4086-a80c-3e27bce724fd" value="freq_pot_wiper_3" />
       <Data key="aecd5528-a069-4ee4-933f-83bd73ccbe18" value="freq_pot_low" />
@@ -3999,7 +3999,7 @@
     </Group>
     <Group key="aa4e370c-a810-4469-8e28-c6c0ae9f8917">
       <Group key="0">
-        <Data key="Port Format" value="2,7" />
+        <Data key="Port Format" value="9,2" />
       </Group>
     </Group>
     <Group key="ae2a3e3c-c2d8-4086-a80c-3e27bce724fd">

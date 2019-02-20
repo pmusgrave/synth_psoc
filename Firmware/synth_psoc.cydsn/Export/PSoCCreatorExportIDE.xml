@@ -219,10 +219,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\IDAC.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\IDAC.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\IDAC_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_out.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_out.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_out_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_out_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ff_fb_out.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ff_fb_out.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\ff_fb_out_aliases.h</File>
@@ -240,6 +236,10 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\system_tick_timer_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\sys_tick_ovf.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\sys_tick_ovf.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\dac_out.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\dac_out.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\dac_out_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\dac_out_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60">

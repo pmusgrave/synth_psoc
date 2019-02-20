@@ -48,13 +48,15 @@ int main(void)
 	CapSense_Buttons_InitializeAllBaselines();
     CapSense_Buttons_ScanEnabledWidgets();
     
+    IDAC_Start();
     system_tick_timer_Start();
     sys_tick_ovf_StartEx(SYS_TICK_OVF_VECT);
     
     current_mode = NOT_TRIGGERED;
     
     volatile uint16_t i,j = 0;
-    
+    uint8_t bit_counter = 0;
+    uint8_t sample_buffer = 0;
     
     while(1){
         if(pwm_update_flag != 0){ 
@@ -165,18 +167,28 @@ int main(void)
         if(update_delay_buffer_flag){
             update_delay_buffer_flag = 0;
             
-            ring_buffer[i] = (delay_buf_reg_Read());
-            i++;
-            if (i >= 2899){
-                i = 0;
+            delay_out_Write(delay_buf_reg_Read());
+            sample_buffer = (sample_buffer<<1) + delay_buf_reg_Read();
+            bit_counter++;
+            
+            if (bit_counter == 7){
+                bit_counter = 0;
+                
+                ring_buffer[i] = (sample_buffer)+ (0.8*ring_buffer[j]);
+                
+                i++;
+                if (i >= 2999){
+                    i = 0;
+                }
+                if (i > 300){
+                    j = i-300;
+                }
+                else {
+                    j = 0;
+                }
+                IDAC_SetValue(ring_buffer[i]);
+                sample_buffer = 0;
             }
-            if (i > 100){
-                j = i-100;
-            }
-            else {
-                j = 0;
-            }
-            delay_out_Write(ring_buffer[i]);
         }
         
         if(!CapSense_Buttons_IsBusy()) {
