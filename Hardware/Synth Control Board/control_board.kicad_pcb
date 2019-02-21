@@ -5,7 +5,7 @@
     (no_connects 60)
     (area -0.375448 -0.375448 167.139817 167.139817)
     (thickness 1.6)
-    (drawings 0)
+    (drawings 6)
     (tracks 5)
     (zones 0)
     (modules 56)
@@ -4936,6 +4936,13 @@
       (xy -5.977723 -31.423147) (xy -4.825364 -32.899048) (xy -3.295864 -34.082617) (xy -1.605397 -34.789426)
       (xy 0.164846 -35.019475) (xy 1.93367 -34.772762)) (layer F.SilkS) (width 0.01))
   )
+
+  (gr_line (start 7.62 5.08) (end 7.62 7.62) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 157.48 5.08) (end 7.62 5.08) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 157.48 152.4) (end 157.48 5.08) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 7.62 152.4) (end 157.48 152.4) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 7.62 144.78) (end 7.62 152.4) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 7.62 7.62) (end 7.62 144.78) (layer Edge.Cuts) (width 0.15))
 
   (segment (start 37.298 46.7595) (end 37.465 46.9265) (width 0.762) (layer F.Cu) (net 6))
   (segment (start 61.174 46.5055) (end 61.595 46.9265) (width 0.762) (layer F.Cu) (net 20))
