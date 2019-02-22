@@ -244,32 +244,16 @@ F16 "level4" I L 7450 3800 60
 F17 "env_out_4" O R 8350 2800 60 
 $EndSheet
 $Sheet
-S 8850 2450 600  800 
+S 9150 2450 600  800 
 U 5C357081
 F0 "Mixer and Effects" 60
 F1 "mixer.sch" 60
-F2 "osc1" I L 8850 2500 60 
-F3 "osc2" I L 8850 2600 60 
-F4 "osc3" I L 8850 2700 60 
-F5 "osc4" I L 8850 2800 60 
-$EndSheet
-$Sheet
-S 5300 4200 600  1500
-U 5C35738C
-F0 "LFO Modulation and Routing" 60
-F1 "lfo.sch" 60
-F2 "lfo1" O R 5900 4300 60 
-F3 "lfo2" O R 5900 4400 60 
-F4 "lfo3" O R 5900 4500 60 
-F5 "lfo4" O R 5900 4600 60 
-F6 "lfo_in_1" O R 5900 4800 60 
-F7 "lfo_out_1" I R 5900 4900 60 
-F8 "lfo_in_2" O R 5900 5000 60 
-F9 "lfo_out_2" I R 5900 5100 60 
-F10 "lfo_in_3" O R 5900 5200 60 
-F11 "lfo_out_3" I R 5900 5300 60 
-F12 "lfo_in_4" O R 5900 5400 60 
-F13 "lfo_out_4" I R 5900 5500 60 
+F2 "osc1" I L 9150 2500 60 
+F3 "osc2" I L 9150 2600 60 
+F4 "osc3" I L 9150 2700 60 
+F5 "osc4" I L 9150 2800 60 
+F6 "lfo_freq_in" O L 9150 3050 60 
+F7 "lfo_freq_out" I L 9150 3150 60 
 $EndSheet
 $Sheet
 S 3650 2450 1450 5050
@@ -472,13 +456,13 @@ Wire Wire Line
 Wire Wire Line
 	5900 4300 7000 4300
 Wire Wire Line
-	8350 2800 8850 2800
+	8350 2800 9150 2800
 Wire Wire Line
-	8350 2700 8850 2700
+	8350 2700 9150 2700
 Wire Wire Line
-	8350 2600 8850 2600
+	8350 2600 9150 2600
 Wire Wire Line
-	8350 2500 8850 2500
+	8350 2500 9150 2500
 Wire Wire Line
 	6800 2800 7450 2800
 Wire Wire Line
@@ -615,4 +599,40 @@ Wire Wire Line
 	900  3150 950  3150
 Wire Wire Line
 	900  3250 950  3250
+$Sheet
+S 5250 4200 650  1600
+U 5C35738C
+F0 "LFO Modulation and Routing" 60
+F1 "lfo.sch" 60
+F2 "lfo1" O R 5900 4300 60 
+F3 "lfo2" O R 5900 4400 60 
+F4 "lfo3" O R 5900 4500 60 
+F5 "lfo4" O R 5900 4600 60 
+F6 "lfo_in_1" O R 5900 4800 60 
+F7 "lfo_out_1" I R 5900 4900 60 
+F8 "lfo_in_2" O R 5900 5000 60 
+F9 "lfo_out_2" I R 5900 5100 60 
+F10 "lfo_in_3" O R 5900 5200 60 
+F11 "lfo_out_3" I R 5900 5300 60 
+F12 "lfo_in_4" O R 5900 5400 60 
+F13 "lfo_out_4" I R 5900 5500 60 
+F14 "lfo_freq_in" O R 5900 5600 60 
+F15 "lfo_freq_out" I R 5900 5700 60 
+$EndSheet
+Text Label 6150 5700 0    60   ~ 0
+lfo_freq_out
+Text Label 6150 5600 0    60   ~ 0
+lfo_freq_in
+Wire Wire Line
+	6150 5700 5900 5700
+Wire Wire Line
+	5900 5600 6150 5600
+Text Label 9050 3050 2    60   ~ 0
+lfo_freq_in
+Text Label 9050 3150 2    60   ~ 0
+lfo_freq_out
+Wire Wire Line
+	9050 3050 9150 3050
+Wire Wire Line
+	9050 3150 9150 3150
 $EndSCHEMATC

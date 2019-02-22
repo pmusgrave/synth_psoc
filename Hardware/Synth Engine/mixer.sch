@@ -1445,17 +1445,6 @@ Wire Wire Line
 	7350 3850 7350 4600
 Wire Wire Line
 	7350 5400 7350 4750
-$Comp
-L Conn_01x06 J12
-U 1 1 5C651FB4
-P 9550 2900
-F 0 "J12" H 9550 3200 50  0000 C CNN
-F 1 "Conn_01x06" H 9550 2500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 9550 2900 50  0001 C CNN
-F 3 "" H 9550 2900 50  0001 C CNN
-	1    9550 2900
-	1    0    0    -1  
-$EndComp
 Text Label 7400 2250 0    60   ~ 0
 delay_fb_ctrl_in
 Text Label 7550 2450 2    60   ~ 0
@@ -1485,6 +1474,25 @@ F 1 "GND" H 3850 2800 50  0000 C CNN
 F 2 "" H 3850 2950 50  0001 C CNN
 F 3 "" H 3850 2950 50  0001 C CNN
 	1    3850 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 3300 9350 3300
+Wire Wire Line
+	9000 3400 9350 3400
+Text HLabel 9000 3300 0    60   Output ~ 0
+lfo_freq_in
+Text HLabel 9000 3400 0    60   Input ~ 0
+lfo_freq_out
+$Comp
+L Conn_01x08 J5
+U 1 1 5C702327
+P 9550 3000
+F 0 "J5" H 9550 3400 50  0000 C CNN
+F 1 "Conn_01x08" H 9550 2500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 9550 3000 50  0001 C CNN
+F 3 "" H 9550 3000 50  0001 C CNN
+	1    9550 3000
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

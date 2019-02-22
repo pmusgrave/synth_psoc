@@ -843,7 +843,6 @@ Wire Wire Line
 	4200 2800 4350 2800
 Wire Wire Line
 	3650 2950 3850 2950
-Connection ~ 3850 2800
 Wire Wire Line
 	4250 3200 4250 3100
 Wire Wire Line
@@ -1446,17 +1445,6 @@ Wire Wire Line
 	7350 3850 7350 4600
 Wire Wire Line
 	7350 5400 7350 4750
-$Comp
-L Conn_01x06 J12
-U 1 1 5C651FB4
-P 9550 2900
-F 0 "J12" H 9550 3200 50  0000 C CNN
-F 1 "Conn_01x06" H 9550 2500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 9550 2900 50  0001 C CNN
-F 3 "" H 9550 2900 50  0001 C CNN
-	1    9550 2900
-	1    0    0    -1  
-$EndComp
 Text Label 7400 2250 0    60   ~ 0
 delay_fb_ctrl_in
 Text Label 7550 2450 2    60   ~ 0
@@ -1478,14 +1466,37 @@ delay_in
 Text Label 9350 3200 2    60   ~ 0
 delay_out
 $Comp
-L GND #PWR?
+L GND #PWR084
 U 1 1 5C652A53
 P 3850 2950
-F 0 "#PWR?" H 3850 2700 50  0001 C CNN
+F 0 "#PWR084" H 3850 2700 50  0001 C CNN
 F 1 "GND" H 3850 2800 50  0000 C CNN
 F 2 "" H 3850 2950 50  0001 C CNN
 F 3 "" H 3850 2950 50  0001 C CNN
 	1    3850 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 3300 9350 3300
+Wire Wire Line
+	9350 3400 9200 3400
+Text HLabel 9000 3300 0    60   Output ~ 0
+lfo_freq_in
+Text HLabel 9000 3400 0    60   Input ~ 0
+lfo_freq_out
+Wire Wire Line
+	9200 3300 9000 3300
+Wire Wire Line
+	9200 3400 9000 3400
+$Comp
+L Conn_01x08 J?
+U 1 1 5C702327
+P 9550 3000
+F 0 "J?" H 9550 3400 50  0000 C CNN
+F 1 "Conn_01x08" H 9550 2500 50  0000 C CNN
+F 2 "" H 9550 3000 50  0001 C CNN
+F 3 "" H 9550 3000 50  0001 C CNN
+	1    9550 3000
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
