@@ -59,7 +59,7 @@ int main(void)
     envelope_2_ovf_StartEx(ENV_2_OVF_VECT);
     envelope_3_ovf_StartEx(ENV_3_OVF_VECT);
     
-    float system_tick = 0;
+    //float system_tick = 0;
     
     // Init Capsense
     CapSense_Buttons_Start();	

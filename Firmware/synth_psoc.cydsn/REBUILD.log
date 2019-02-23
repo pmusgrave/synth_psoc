@@ -1,4 +1,4 @@
---------------- Rebuild Started: 01/30/2019 14:41:03 Project: synth_psoc, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Rebuild Started: 02/22/2019 17:02:10 Project: synth_psoc, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\main.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\envelope_generator.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\interrupts.o"
@@ -99,8 +99,6 @@ Deleting file ".\CortexM0\ARM_GCC_541\Debug\envelope_3_ovf.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\synth_psoc.hex"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\synth_psoc.elf"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\synth_psoc.map"
-Deleting file ".\synth_psoc.cycdx"
-Deleting file ".\synth_psoc.svd"
 Deleting file ".\synth_psoc.rpt"
 Deleting file ".\synth_psoc_timing.html"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
@@ -111,30 +109,10 @@ HDL Generation...
 Synthesis...
 Tech Mapping...
 Analog Placement...
-Info: plm.M0038: The pin named envelope_out_0(0) at location [IOP=(5)][IoId=(0)] prevents usage of special purposes: F(CSD,1). (App=cydsfit)
+Info: plm.M0038: The pin named square_wave_output_0(0) at location [IOP=(5)][IoId=(0)] prevents usage of special purposes: F(CSD,1). (App=cydsfit)
 Analog Routing...
-Analog Code Generation...
-Digital Placement...
-Digital Routing...
-Bitstream Generation...
-Bitstream Verification...
-Static timing analysis...
-API Generation...
+Error: apr.M0003: Unable to find a solution for the analog routing. (App=cydsfit)
 Dependency Generation...
 Cleanup...
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
-In file included from buttons.h:4:0,
-                 from main.c:5:
-globals.h:15:8: error: redefinition of 'struct button'
- struct button {
-        ^
-In file included from main.c:3:0:
-globals.h:15:8: note: originally defined here
- struct button {
-        ^
-main.c: In function 'main':
-main.c:59:11: warning: unused variable 'system_tick' [-Wunused-variable]
-     float system_tick = 0;
-           ^
-The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
---------------- Rebuild Failed: 01/30/2019 14:41:13 ---------------
+Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
+--------------- Rebuild Failed: 02/22/2019 17:02:19 ---------------

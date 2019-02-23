@@ -149,6 +149,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\AMux.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\AMux.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM_0.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM_0.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\main_osc_PWM_0_PM.c</File>
@@ -249,6 +251,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\envelope_2_ovf.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\envelope_3_ovf.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\envelope_3_ovf.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Opamp.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Opamp.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Opamp_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60">
