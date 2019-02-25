@@ -300,6 +300,10 @@ F36 "envelope_pwm_bypass_out_3" I L 3650 6450 60
 F37 "envelope_pwm_bypass_out_4" I L 3650 7250 60 
 F38 "mcu_delay_in" O L 3650 3900 60 
 F39 "mcu_delay_out" I L 3650 4000 60 
+F40 "osc1_hold" I L 3650 4350 60 
+F41 "osc2_hold" I L 3650 5150 60 
+F42 "osc3_hold" I L 3650 5950 60 
+F43 "osc4_hold" I L 3650 6750 60 
 $EndSheet
 $Sheet
 S 950  2400 1850 5100

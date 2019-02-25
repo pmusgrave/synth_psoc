@@ -958,25 +958,49 @@ osc3_quant
 Text Label 2800 3500 0    60   ~ 0
 osc4_quant
 $Comp
-L Conn_02x13_Odd_Even J?
+L Conn_02x13_Odd_Even J9
 U 1 1 5C747DA8
 P 2350 1400
-F 0 "J?" H 2400 2100 50  0000 C CNN
+F 0 "J9" H 2400 2100 50  0000 C CNN
 F 1 "Conn_02x13_Odd_Even" H 2400 700 50  0000 C CNN
-F 2 "" H 2350 1400 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x13_Pitch2.54mm" H 2350 1400 50  0001 C CNN
 F 3 "" H 2350 1400 50  0001 C CNN
 	1    2350 1400
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_02x13_Odd_Even J?
+L Conn_02x13_Odd_Even J8
 U 1 1 5C747E14
 P 2300 3500
-F 0 "J?" H 2350 4200 50  0000 C CNN
+F 0 "J8" H 2350 4200 50  0000 C CNN
 F 1 "Conn_02x13_Odd_Even" H 2350 2800 50  0000 C CNN
-F 2 "" H 2300 3500 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x13_Pitch2.54mm" H 2300 3500 50  0001 C CNN
 F 3 "" H 2300 3500 50  0001 C CNN
 	1    2300 3500
 	1    0    0    -1  
 $EndComp
+Text HLabel 8300 750  2    60   Output ~ 0
+osc1_hold
+Text HLabel 8300 850  2    60   Output ~ 0
+osc2_hold
+Text HLabel 8300 950  2    60   Output ~ 0
+osc3_hold
+Text HLabel 8300 1050 2    60   Output ~ 0
+osc4_hold
+Text Label 8000 750  2    60   ~ 0
+osc1_hold
+Wire Wire Line
+	8300 750  8000 750 
+Text Label 8000 850  2    60   ~ 0
+osc2_hold
+Text Label 8000 950  2    60   ~ 0
+osc3_hold
+Text Label 8000 1050 2    60   ~ 0
+osc4_hold
+Wire Wire Line
+	8000 850  8300 850 
+Wire Wire Line
+	8300 950  8000 950 
+Wire Wire Line
+	8000 1050 8300 1050
 $EndSCHEMATC

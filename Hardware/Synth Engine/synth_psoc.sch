@@ -300,6 +300,10 @@ F36 "envelope_pwm_bypass_out_3" I L 3650 6450 60
 F37 "envelope_pwm_bypass_out_4" I L 3650 7250 60 
 F38 "mcu_delay_in" O L 3650 3900 60 
 F39 "mcu_delay_out" I L 3650 4000 60 
+F40 "osc1_hold" I L 3650 4350 60 
+F41 "osc2_hold" I L 3650 5150 60 
+F42 "osc3_hold" I L 3650 5950 60 
+F43 "osc4_hold" I L 3650 6750 60 
 $EndSheet
 $Sheet
 S 950  2400 1850 5100
@@ -354,6 +358,10 @@ F46 "lfo_in_3" O L 950 2950 60
 F47 "lfo_out_3" I L 950 3050 60 
 F48 "lfo_in_4" O L 950 3150 60 
 F49 "lfo_out_4" I L 950 3250 60 
+F50 "osc1_hold" O R 2800 4350 60 
+F51 "osc2_hold" O R 2800 5150 60 
+F52 "osc3_hold" O R 2800 5950 60 
+F53 "osc4_hold" O R 2800 6750 60 
 $EndSheet
 Wire Wire Line
 	2800 3600 3400 3600
@@ -655,4 +663,12 @@ Wire Wire Line
 	3500 3900 3650 3900
 Wire Wire Line
 	3500 4000 3650 4000
+Wire Wire Line
+	2800 4350 3650 4350
+Wire Wire Line
+	2800 5150 3650 5150
+Wire Wire Line
+	2800 5950 3650 5950
+Wire Wire Line
+	2800 6750 3650 6750
 $EndSCHEMATC
