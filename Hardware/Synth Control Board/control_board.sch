@@ -493,9 +493,9 @@ Text Label 6850 1000 0    60   ~ 0
 envelope_pwm_bypass_out_1
 Text Label 5700 2850 2    60   ~ 0
 envelope_pwm_bypass_out_1
-Text Label 5700 2650 2    60   ~ 0
-osc1_repeat
 Text Label 5700 2750 2    60   ~ 0
+osc1_repeat
+Text Label 5700 2550 2    60   ~ 0
 osc1_quant
 Text Label 2650 5550 2    60   ~ 0
 freq_in_1
@@ -1010,7 +1010,7 @@ F 3 "" H 5700 2350 50  0001 C CNN
 	1    5700 2350
 	0    -1   -1   0   
 $EndComp
-Text Label 5700 2550 2    60   ~ 0
+Text Label 5700 2650 2    60   ~ 0
 osc1_hold
 Wire Wire Line
 	5700 3150 5700 3150
@@ -1024,9 +1024,9 @@ Text Label 6200 2950 0    60   ~ 0
 envelope_pwm_bypass_in_2
 Text Label 6200 2850 0    60   ~ 0
 envelope_pwm_bypass_out_2
-Text Label 6200 2650 0    60   ~ 0
-osc2_repeat
 Text Label 6200 2750 0    60   ~ 0
+osc2_repeat
+Text Label 6200 2550 0    60   ~ 0
 osc2_quant
 Text Label 10400 4500 2    60   ~ 0
 freq_in_2
@@ -1082,7 +1082,7 @@ F 3 "" H 6200 2350 50  0001 C CNN
 	1    6200 2350
 	0    1    -1   0   
 $EndComp
-Text Label 6200 2550 0    60   ~ 0
+Text Label 6200 2650 0    60   ~ 0
 osc2_hold
 Wire Wire Line
 	6200 3150 6200 3150
