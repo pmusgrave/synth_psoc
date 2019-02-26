@@ -358,6 +358,10 @@ F46 "lfo_in_3" O L 950 2950 60
 F47 "lfo_out_3" I L 950 3050 60 
 F48 "lfo_in_4" O L 950 3150 60 
 F49 "lfo_out_4" I L 950 3250 60 
+F50 "osc1_hold" O R 2800 4350 60 
+F51 "osc2_hold" O R 2800 5150 60 
+F52 "osc3_hold" O R 2800 5950 60 
+F53 "osc4_hold" O R 2800 6750 60 
 $EndSheet
 Wire Wire Line
 	2800 3600 3400 3600
@@ -659,4 +663,12 @@ Wire Wire Line
 	3500 3900 3650 3900
 Wire Wire Line
 	3500 4000 3650 4000
+Wire Wire Line
+	2800 4350 3650 4350
+Wire Wire Line
+	2800 5150 3650 5150
+Wire Wire Line
+	2800 5950 3650 5950
+Wire Wire Line
+	2800 6750 3650 6750
 $EndSCHEMATC

@@ -788,7 +788,7 @@ U 1 1 5C5E2C0E
 P 6150 4350
 F 0 "J7" H 6150 4550 50  0000 C CNN
 F 1 "Capsense_buttons" H 6550 4300 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 6150 4350 50  0001 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 6150 4350 50  0001 C CNN
 F 3 "" H 6150 4350 50  0001 C CNN
 	1    6150 4350
 	1    0    0    -1  
@@ -1151,4 +1151,41 @@ Text HLabel 4950 1500 2    60   Input ~ 0
 osc3_hold
 Text HLabel 4950 1400 2    60   Input ~ 0
 osc4_hold
+$Comp
+L Conn_01x04 J10
+U 1 1 5C75AB8E
+P 8850 2450
+F 0 "J10" H 8850 2650 50  0000 C CNN
+F 1 "USB" H 9000 2400 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 8850 2450 50  0001 C CNN
+F 3 "" H 8850 2450 50  0001 C CNN
+	1    8850 2450
+	1    0    0    -1  
+$EndComp
+Text Label 8650 2550 2    60   ~ 0
+USB_D_p
+Text Label 8650 2450 2    60   ~ 0
+USB_D_n
+$Comp
+L GNDD #PWR0109
+U 1 1 5C75B32A
+P 8650 2650
+F 0 "#PWR0109" H 8650 2400 50  0001 C CNN
+F 1 "GNDD" H 8650 2525 50  0000 C CNN
+F 2 "" H 8650 2650 50  0001 C CNN
+F 3 "" H 8650 2650 50  0001 C CNN
+	1    8650 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR0110
+U 1 1 5C75B515
+P 8650 2350
+F 0 "#PWR0110" H 8650 2200 50  0001 C CNN
+F 1 "+5V" H 8650 2490 50  0000 C CNN
+F 2 "" H 8650 2350 50  0001 C CNN
+F 3 "" H 8650 2350 50  0001 C CNN
+	1    8650 2350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

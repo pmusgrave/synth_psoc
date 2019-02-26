@@ -190,17 +190,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Barrel_Jack J1
-U 1 1 5C392266
-P 1800 1700
-F 0 "J1" H 1800 1910 50  0000 C CNN
-F 1 "Barrel_Jack" H 1800 1525 50  0000 C CNN
-F 2 "Connectors:BARREL_JACK" H 1850 1660 50  0001 C CNN
-F 3 "" H 1850 1660 50  0001 C CNN
-	1    1800 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L +15V #PWR017
 U 1 1 5C3922F5
 P 2700 1500
@@ -216,18 +205,18 @@ Check wall wart \npolarity vs DC barrel \njack pinout
 $Comp
 L GND #PWR018
 U 1 1 5C39231B
-P 2150 1850
-F 0 "#PWR018" H 2150 1600 50  0001 C CNN
-F 1 "GND" H 2150 1700 50  0000 C CNN
-F 2 "" H 2150 1850 50  0001 C CNN
-F 3 "" H 2150 1850 50  0001 C CNN
-	1    2150 1850
+P 2150 1750
+F 0 "#PWR018" H 2150 1500 50  0001 C CNN
+F 1 "GND" H 2150 1600 50  0000 C CNN
+F 2 "" H 2150 1750 50  0001 C CNN
+F 3 "" H 2150 1750 50  0001 C CNN
+	1    2150 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 1850 2150 1800
+	2150 1750 2150 1700
 Wire Wire Line
-	2150 1800 2100 1800
+	2150 1700 2100 1700
 Wire Wire Line
 	2700 1500 2700 1600
 Wire Wire Line
@@ -474,4 +463,15 @@ F 3 "" H 5950 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5950 2750
+$Comp
+L Conn_01x02 J1
+U 1 1 5C75C161
+P 1900 1600
+F 0 "J1" H 1900 1700 50  0000 C CNN
+F 1 "Conn_01x02" H 1900 1400 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 1900 1600 50  0001 C CNN
+F 3 "" H 1900 1600 50  0001 C CNN
+	1    1900 1600
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
