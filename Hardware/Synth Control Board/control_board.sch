@@ -1114,7 +1114,7 @@ U 1 1 5C6395CA
 P 8700 600
 F 0 "SW9" H 8700 770 50  0000 C CNN
 F 1 "SW_SPDT" H 8700 400 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 600 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 8700 600 50  0001 C CNN
 F 3 "" H 8700 600 50  0001 C CNN
 	1    8700 600 
 	1    0    0    -1  
@@ -1125,7 +1125,7 @@ U 1 1 5C63968E
 P 8700 1000
 F 0 "SW8" H 8700 1170 50  0000 C CNN
 F 1 "SW_SPDT" H 8700 800 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 1000 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 8700 1000 50  0001 C CNN
 F 3 "" H 8700 1000 50  0001 C CNN
 	1    8700 1000
 	1    0    0    -1  
@@ -1136,7 +1136,7 @@ U 1 1 5C639730
 P 8700 1300
 F 0 "SW7" H 8700 1470 50  0000 C CNN
 F 1 "SW_SPDT" H 8700 1100 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 1300 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 8700 1300 50  0001 C CNN
 F 3 "" H 8700 1300 50  0001 C CNN
 	1    8700 1300
 	1    0    0    -1  
@@ -1147,7 +1147,7 @@ U 1 1 5C6397C9
 P 8700 1600
 F 0 "SW6" H 8700 1770 50  0000 C CNN
 F 1 "SW_SPDT" H 8700 1400 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 8700 1600 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 8700 1600 50  0001 C CNN
 F 3 "" H 8700 1600 50  0001 C CNN
 	1    8700 1600
 	1    0    0    -1  
@@ -1783,9 +1783,7 @@ Wire Wire Line
 	4700 5950 4600 5950
 Connection ~ 4250 5950
 Wire Wire Line
-	4100 5950 4250 5950
-Wire Wire Line
-	4250 5950 4300 5950
+	4100 5950 4300 5950
 Wire Wire Line
 	4250 6150 4250 5950
 Wire Wire Line
@@ -1797,18 +1795,12 @@ Wire Wire Line
 Wire Wire Line
 	2600 6300 2700 6300
 Wire Wire Line
-	1800 6300 1800 6300
-Wire Wire Line
-	1800 6300 1950 6300
-Wire Wire Line
-	1950 6300 2000 6300
+	1800 6300 2000 6300
 Wire Wire Line
 	1950 6050 2300 6050
 Connection ~ 1150 6300
 Wire Wire Line
-	1000 6300 1150 6300
-Wire Wire Line
-	1150 6300 1200 6300
+	1000 6300 1200 6300
 Wire Wire Line
 	1150 6050 1150 6300
 Wire Wire Line
@@ -1850,15 +1842,9 @@ Wire Wire Line
 Wire Wire Line
 	2300 6050 2300 6100
 Wire Wire Line
-	950  6850 1050 6850
+	950  6850 1100 6850
 Wire Wire Line
-	1050 6850 1100 6850
-Wire Wire Line
-	1700 6850 1800 6850
-Wire Wire Line
-	1800 6850 1900 6850
-Wire Wire Line
-	1900 6850 1950 6850
+	1700 6850 1950 6850
 Wire Wire Line
 	1400 6650 1400 6600
 Wire Wire Line
@@ -1877,9 +1863,7 @@ Wire Wire Line
 	1900 6600 1900 6850
 Connection ~ 1900 6850
 Wire Wire Line
-	950  7350 1050 7350
-Wire Wire Line
-	1050 7350 1100 7350
+	950  7350 1100 7350
 Wire Wire Line
 	1400 7150 1400 7100
 Wire Wire Line
@@ -1888,11 +1872,7 @@ Wire Wire Line
 	1050 7100 1050 7350
 Connection ~ 1050 7350
 Wire Wire Line
-	1700 7350 1800 7350
-Wire Wire Line
-	1800 7350 1900 7350
-Wire Wire Line
-	1900 7350 1950 7350
+	1700 7350 1950 7350
 Wire Wire Line
 	1800 7050 1800 7350
 Connection ~ 1800 7350
@@ -1906,9 +1886,7 @@ Connection ~ 1900 7350
 Wire Wire Line
 	2550 7350 2750 7350
 Wire Wire Line
-	950  7800 1050 7800
-Wire Wire Line
-	1050 7800 1100 7800
+	950  7800 1100 7800
 Wire Wire Line
 	1400 7600 1400 7550
 Wire Wire Line
@@ -1917,11 +1895,7 @@ Wire Wire Line
 	1050 7550 1050 7800
 Connection ~ 1050 7800
 Wire Wire Line
-	1700 7800 1800 7800
-Wire Wire Line
-	1800 7800 1900 7800
-Wire Wire Line
-	1900 7800 1950 7800
+	1700 7800 1950 7800
 Wire Wire Line
 	1800 7500 1800 7800
 Connection ~ 1800 7800
