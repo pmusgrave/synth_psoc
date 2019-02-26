@@ -1086,19 +1086,19 @@ Text Label 6200 2650 0    60   ~ 0
 osc2_hold
 Wire Wire Line
 	6200 3150 6200 3150
-Text Label 8800 3200 2    60   ~ 0
+Text Label 8800 2100 2    60   ~ 0
 osc3_freq_wiper
-Text Label 8800 3000 2    60   ~ 0
+Text Label 8800 2300 2    60   ~ 0
 osc3_pwm_wiper
-Text Label 8800 2800 2    60   ~ 0
-osc3_speed
-Text Label 8800 2600 2    60   ~ 0
-envelope_pwm_bypass_in_3
 Text Label 8800 2500 2    60   ~ 0
+osc3_speed
+Text Label 8800 2900 2    60   ~ 0
+envelope_pwm_bypass_in_3
+Text Label 8800 3000 2    60   ~ 0
 envelope_pwm_bypass_out_3
-Text Label 8800 2200 2    60   ~ 0
+Text Label 8800 2800 2    60   ~ 0
 osc3_repeat
-Text Label 8800 2400 2    60   ~ 0
+Text Label 8800 2600 2    60   ~ 0
 osc3_quant
 Text Label 10400 5200 2    60   ~ 0
 freq_in_3
@@ -1107,24 +1107,24 @@ freq_out_3
 $Comp
 L +5V #PWR037
 U 1 1 5C6257DA
-P 8800 3100
-F 0 "#PWR037" H 8800 2950 50  0001 C CNN
-F 1 "+5V" H 8800 3240 50  0000 C CNN
-F 2 "" H 8800 3100 50  0001 C CNN
-F 3 "" H 8800 3100 50  0001 C CNN
-	1    8800 3100
-	0    -1   -1   0   
+P 8800 2000
+F 0 "#PWR037" H 8800 1850 50  0001 C CNN
+F 1 "+5V" H 8800 2140 50  0000 C CNN
+F 2 "" H 8800 2000 50  0001 C CNN
+F 3 "" H 8800 2000 50  0001 C CNN
+	1    8800 2000
+	0    -1   1    0   
 $EndComp
 $Comp
 L GND #PWR038
 U 1 1 5C6257E0
-P 8800 2000
-F 0 "#PWR038" H 8800 1750 50  0001 C CNN
-F 1 "GND" H 8800 1850 50  0000 C CNN
-F 2 "" H 8800 2000 50  0001 C CNN
-F 3 "" H 8800 2000 50  0001 C CNN
-	1    8800 2000
-	0    1    1    0   
+P 8800 3200
+F 0 "#PWR038" H 8800 2950 50  0001 C CNN
+F 1 "GND" H 8800 3050 50  0000 C CNN
+F 2 "" H 8800 3200 50  0001 C CNN
+F 3 "" H 8800 3200 50  0001 C CNN
+	1    8800 3200
+	0    1    -1   0   
 $EndComp
 Text Label 10400 5300 2    60   ~ 0
 freq_fb_3
@@ -1135,40 +1135,40 @@ lfo_out_3
 $Comp
 L +5V #PWR039
 U 1 1 5C6257EF
-P 8800 2900
-F 0 "#PWR039" H 8800 2750 50  0001 C CNN
-F 1 "+5V" H 8800 3040 50  0000 C CNN
-F 2 "" H 8800 2900 50  0001 C CNN
-F 3 "" H 8800 2900 50  0001 C CNN
-	1    8800 2900
-	0    -1   -1   0   
+P 8800 2200
+F 0 "#PWR039" H 8800 2050 50  0001 C CNN
+F 1 "+5V" H 8800 2340 50  0000 C CNN
+F 2 "" H 8800 2200 50  0001 C CNN
+F 3 "" H 8800 2200 50  0001 C CNN
+	1    8800 2200
+	0    -1   1    0   
 $EndComp
 $Comp
 L +5V #PWR040
 U 1 1 5C6257F5
-P 8800 2700
-F 0 "#PWR040" H 8800 2550 50  0001 C CNN
-F 1 "+5V" H 8800 2840 50  0000 C CNN
-F 2 "" H 8800 2700 50  0001 C CNN
-F 3 "" H 8800 2700 50  0001 C CNN
-	1    8800 2700
-	0    -1   -1   0   
+P 8800 2400
+F 0 "#PWR040" H 8800 2250 50  0001 C CNN
+F 1 "+5V" H 8800 2540 50  0000 C CNN
+F 2 "" H 8800 2400 50  0001 C CNN
+F 3 "" H 8800 2400 50  0001 C CNN
+	1    8800 2400
+	0    -1   1    0   
 $EndComp
-Text Label 8800 2300 2    60   ~ 0
+Text Label 8800 2700 2    60   ~ 0
 osc3_hold
-Text Label 9300 3200 0    60   ~ 0
+Text Label 9300 2100 0    60   ~ 0
 osc4_freq_wiper
-Text Label 9300 3000 0    60   ~ 0
+Text Label 9300 2300 0    60   ~ 0
 osc4_pwm_wiper
-Text Label 9300 2800 0    60   ~ 0
-osc4_speed
-Text Label 9300 2600 0    60   ~ 0
-envelope_pwm_bypass_in_4
 Text Label 9300 2500 0    60   ~ 0
+osc4_speed
+Text Label 9300 2900 0    60   ~ 0
+envelope_pwm_bypass_in_4
+Text Label 9300 3000 0    60   ~ 0
 envelope_pwm_bypass_out_4
-Text Label 9300 2200 0    60   ~ 0
+Text Label 9300 2800 0    60   ~ 0
 osc4_repeat
-Text Label 9300 2400 0    60   ~ 0
+Text Label 9300 2600 0    60   ~ 0
 osc4_quant
 Text Label 10400 5900 2    60   ~ 0
 freq_in_4
@@ -1177,24 +1177,24 @@ freq_out_4
 $Comp
 L +5V #PWR041
 U 1 1 5C62580C
-P 9300 3100
-F 0 "#PWR041" H 9300 2950 50  0001 C CNN
-F 1 "+5V" H 9300 3240 50  0000 C CNN
-F 2 "" H 9300 3100 50  0001 C CNN
-F 3 "" H 9300 3100 50  0001 C CNN
-	1    9300 3100
-	0    1    -1   0   
+P 9300 2000
+F 0 "#PWR041" H 9300 1850 50  0001 C CNN
+F 1 "+5V" H 9300 2140 50  0000 C CNN
+F 2 "" H 9300 2000 50  0001 C CNN
+F 3 "" H 9300 2000 50  0001 C CNN
+	1    9300 2000
+	0    1    1    0   
 $EndComp
 $Comp
 L GND #PWR042
 U 1 1 5C625812
-P 9300 2000
-F 0 "#PWR042" H 9300 1750 50  0001 C CNN
-F 1 "GND" H 9300 1850 50  0000 C CNN
-F 2 "" H 9300 2000 50  0001 C CNN
-F 3 "" H 9300 2000 50  0001 C CNN
-	1    9300 2000
-	0    -1   1    0   
+P 9300 3200
+F 0 "#PWR042" H 9300 2950 50  0001 C CNN
+F 1 "GND" H 9300 3050 50  0000 C CNN
+F 2 "" H 9300 3200 50  0001 C CNN
+F 3 "" H 9300 3200 50  0001 C CNN
+	1    9300 3200
+	0    -1   -1   0   
 $EndComp
 Text Label 10400 6000 2    60   ~ 0
 freq_fb_4
@@ -1205,26 +1205,26 @@ lfo_out_4
 $Comp
 L +5V #PWR043
 U 1 1 5C625821
-P 9300 2900
-F 0 "#PWR043" H 9300 2750 50  0001 C CNN
-F 1 "+5V" H 9300 3040 50  0000 C CNN
-F 2 "" H 9300 2900 50  0001 C CNN
-F 3 "" H 9300 2900 50  0001 C CNN
-	1    9300 2900
-	0    1    -1   0   
+P 9300 2200
+F 0 "#PWR043" H 9300 2050 50  0001 C CNN
+F 1 "+5V" H 9300 2340 50  0000 C CNN
+F 2 "" H 9300 2200 50  0001 C CNN
+F 3 "" H 9300 2200 50  0001 C CNN
+	1    9300 2200
+	0    1    1    0   
 $EndComp
 $Comp
 L +5V #PWR044
 U 1 1 5C625827
-P 9300 2700
-F 0 "#PWR044" H 9300 2550 50  0001 C CNN
-F 1 "+5V" H 9300 2840 50  0000 C CNN
-F 2 "" H 9300 2700 50  0001 C CNN
-F 3 "" H 9300 2700 50  0001 C CNN
-	1    9300 2700
-	0    1    -1   0   
+P 9300 2400
+F 0 "#PWR044" H 9300 2250 50  0001 C CNN
+F 1 "+5V" H 9300 2540 50  0000 C CNN
+F 2 "" H 9300 2400 50  0001 C CNN
+F 3 "" H 9300 2400 50  0001 C CNN
+	1    9300 2400
+	0    1    1    0   
 $EndComp
-Text Label 9300 2300 0    60   ~ 0
+Text Label 9300 2700 0    60   ~ 0
 osc4_hold
 $Comp
 L POT RV22
@@ -1419,7 +1419,7 @@ osc4_hold
 Wire Wire Line
 	9150 1500 8900 1500
 Wire Wire Line
-	9300 2000 9300 2000
+	9300 3200 9300 3200
 $Comp
 L SW_SPDT SW9
 U 1 1 5C6395CA
@@ -1511,24 +1511,24 @@ $EndComp
 $Comp
 L GND #PWR049
 U 1 1 5C63783E
-P 8800 2100
-F 0 "#PWR049" H 8800 1850 50  0001 C CNN
-F 1 "GND" H 8800 1950 50  0000 C CNN
-F 2 "" H 8800 2100 50  0001 C CNN
-F 3 "" H 8800 2100 50  0001 C CNN
-	1    8800 2100
-	0    1    1    0   
+P 8800 3100
+F 0 "#PWR049" H 8800 2850 50  0001 C CNN
+F 1 "GND" H 8800 2950 50  0000 C CNN
+F 2 "" H 8800 3100 50  0001 C CNN
+F 3 "" H 8800 3100 50  0001 C CNN
+	1    8800 3100
+	0    1    -1   0   
 $EndComp
 $Comp
 L GND #PWR050
 U 1 1 5C6379D8
-P 9300 2100
-F 0 "#PWR050" H 9300 1850 50  0001 C CNN
-F 1 "GND" H 9300 1950 50  0000 C CNN
-F 2 "" H 9300 2100 50  0001 C CNN
-F 3 "" H 9300 2100 50  0001 C CNN
-	1    9300 2100
-	0    -1   1    0   
+P 9300 3100
+F 0 "#PWR050" H 9300 2850 50  0001 C CNN
+F 1 "GND" H 9300 2950 50  0000 C CNN
+F 2 "" H 9300 3100 50  0001 C CNN
+F 3 "" H 9300 3100 50  0001 C CNN
+	1    9300 3100
+	0    -1   -1   0   
 $EndComp
 $Comp
 L GND #PWR051
