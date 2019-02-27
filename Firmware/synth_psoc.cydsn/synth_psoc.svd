@@ -24927,7 +24927,7 @@
         <register>
           <name>RX_MIDI1_UART_RX_ADDRESS1</name>
           <description>RX Address1 Register</description>
-          <addressOffset>0x400F0021</addressOffset>
+          <addressOffset>0x400F0020</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -24936,7 +24936,7 @@
         <register>
           <name>RX_MIDI1_UART_RX_ADDRESS2</name>
           <description>RX Address2 Register</description>
-          <addressOffset>0x400F0031</addressOffset>
+          <addressOffset>0x400F0030</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -24945,7 +24945,7 @@
         <register>
           <name>RX_MIDI1_UART_RX_DATA</name>
           <description>RX Data Register</description>
-          <addressOffset>0x400F0041</addressOffset>
+          <addressOffset>0x400F0040</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

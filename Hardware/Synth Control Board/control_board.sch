@@ -341,7 +341,7 @@ U 1 1 5C556BD2
 P 6400 1100
 F 0 "SW3" H 6400 1225 50  0000 C CNN
 F 1 "SW_SPST" H 6400 1000 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 6400 1100 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 6400 1100 50  0001 C CNN
 F 3 "" H 6400 1100 50  0001 C CNN
 	1    6400 1100
 	1    0    0    -1  
@@ -352,7 +352,7 @@ U 1 1 5C556AE3
 P 6400 1200
 F 0 "SW4" H 6400 1325 50  0000 C CNN
 F 1 "SW_SPST" H 6400 1100 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 6400 1200 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 6400 1200 50  0001 C CNN
 F 3 "" H 6400 1200 50  0001 C CNN
 	1    6400 1200
 	1    0    0    -1  
@@ -363,7 +363,7 @@ U 1 1 5C5569F3
 P 6400 1000
 F 0 "SW2" H 6400 1125 50  0000 C CNN
 F 1 "SW_SPST" H 6400 900 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 6400 1000 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 6400 1000 50  0001 C CNN
 F 3 "" H 6400 1000 50  0001 C CNN
 	1    6400 1000
 	1    0    0    -1  
@@ -374,7 +374,7 @@ U 1 1 5C5562AE
 P 6400 1300
 F 0 "SW5" H 6400 1425 50  0000 C CNN
 F 1 "SW_SPST" H 6400 1200 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 6400 1300 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 6400 1300 50  0001 C CNN
 F 3 "" H 6400 1300 50  0001 C CNN
 	1    6400 1300
 	1    0    0    -1  
@@ -628,7 +628,7 @@ U 1 1 5C5E11B0
 P 3750 6650
 F 0 "SW1" H 3750 6820 50  0000 C CNN
 F 1 "SW_DPDT_x2" H 4000 6650 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 3750 6650 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 3750 6650 50  0001 C CNN
 F 3 "" H 3750 6650 50  0001 C CNN
 	1    3750 6650
 	-1   0    0    -1  
@@ -1431,7 +1431,7 @@ U 1 1 5C7470DD
 P 10550 1050
 F 0 "SW11" H 10550 1175 50  0000 C CNN
 F 1 "SW_SPST" H 10550 950 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 10550 1050 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 10550 1050 50  0001 C CNN
 F 3 "" H 10550 1050 50  0001 C CNN
 	1    10550 1050
 	1    0    0    -1  
@@ -1442,7 +1442,7 @@ U 1 1 5C7470E3
 P 10550 1150
 F 0 "SW12" H 10550 1275 50  0000 C CNN
 F 1 "SW_SPST" H 10550 1050 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 10550 1150 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 10550 1150 50  0001 C CNN
 F 3 "" H 10550 1150 50  0001 C CNN
 	1    10550 1150
 	1    0    0    -1  
@@ -1453,7 +1453,7 @@ U 1 1 5C7470E9
 P 10550 950
 F 0 "SW10" H 10550 1075 50  0000 C CNN
 F 1 "SW_SPST" H 10550 850 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 10550 950 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 10550 950 50  0001 C CNN
 F 3 "" H 10550 950 50  0001 C CNN
 	1    10550 950 
 	1    0    0    -1  
@@ -1464,7 +1464,7 @@ U 1 1 5C7470EF
 P 10550 1250
 F 0 "SW13" H 10550 1375 50  0000 C CNN
 F 1 "SW_SPST" H 10550 1150 50  0000 C CNN
-F 2 "SparkFun-Electromechanical:SWITCH-SPDT" H 10550 1250 50  0001 C CNN
+F 2 "switches:switch_toggle_4.7mm_pitch" H 10550 1250 50  0001 C CNN
 F 3 "" H 10550 1250 50  0001 C CNN
 	1    10550 1250
 	1    0    0    -1  
