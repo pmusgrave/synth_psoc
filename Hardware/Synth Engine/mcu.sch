@@ -788,7 +788,7 @@ U 1 1 5C5E2C0E
 P 6150 4350
 F 0 "J7" H 6150 4550 50  0000 C CNN
 F 1 "Capsense_buttons" H 6550 4300 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 6150 4350 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.00mm" H 6150 4350 50  0001 C CNN
 F 3 "" H 6150 4350 50  0001 C CNN
 	1    6150 4350
 	1    0    0    -1  
@@ -1157,7 +1157,7 @@ U 1 1 5C75AB8E
 P 8850 2450
 F 0 "J10" H 8850 2650 50  0000 C CNN
 F 1 "USB" H 9000 2400 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-04_04x2.54mm_Straight" H 8850 2450 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.00mm" H 8850 2450 50  0001 C CNN
 F 3 "" H 8850 2450 50  0001 C CNN
 	1    8850 2450
 	1    0    0    -1  
@@ -1194,7 +1194,7 @@ U 1 1 5C76FED3
 P 2350 6950
 F 0 "J11" H 2350 7050 50  0000 C CNN
 F 1 "MIDI IN" H 2350 6750 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 2350 6950 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.00mm" H 2350 6950 50  0001 C CNN
 F 3 "" H 2350 6950 50  0001 C CNN
 	1    2350 6950
 	-1   0    0    -1  
@@ -1308,7 +1308,7 @@ U 1 1 5C773A8A
 P 6700 6900
 F 0 "J12" H 6700 7000 50  0000 C CNN
 F 1 "MIDI OUT" H 6700 6700 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 6700 6900 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.00mm" H 6700 6900 50  0001 C CNN
 F 3 "" H 6700 6900 50  0001 C CNN
 	1    6700 6900
 	1    0    0    -1  

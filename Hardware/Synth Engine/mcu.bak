@@ -1283,10 +1283,8 @@ Text Label 4350 7050 0    60   ~ 0
 MIDI_IN
 Wire Wire Line
 	4000 7050 4350 7050
-Text Label 5150 1200 0    60   ~ 0
+Text Label 5100 4800 0    60   ~ 0
 MIDI_OUT
-Wire Wire Line
-	5150 1200 4950 1200
 $Comp
 L R R99
 U 1 1 5C773277
@@ -1394,4 +1392,6 @@ Wire Wire Line
 Wire Wire Line
 	2550 6950 3400 6950
 Connection ~ 3050 6950
+Wire Wire Line
+	5100 4800 4950 4800
 $EndSCHEMATC

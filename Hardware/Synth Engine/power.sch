@@ -469,7 +469,7 @@ U 1 1 5C75C161
 P 1900 1600
 F 0 "J1" H 1900 1700 50  0000 C CNN
 F 1 "Conn_01x02" H 1900 1400 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-02_02x2.54mm_Straight" H 1900 1600 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.00mm" H 1900 1600 50  0001 C CNN
 F 3 "" H 1900 1600 50  0001 C CNN
 	1    1900 1600
 	-1   0    0    -1  
