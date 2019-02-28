@@ -805,8 +805,6 @@ Text HLabel 4950 3900 2    60   Input ~ 0
 osc3_quant
 Text HLabel 4950 3800 2    60   Input ~ 0
 osc4_quant
-Text Notes 6350 3550 0    60   ~ 0
-Delay pins are TEMPORARY
 Text Label 2150 2850 2    60   ~ 0
 USB_D_p
 Text Label 2150 2750 2    60   ~ 0
@@ -1100,10 +1098,6 @@ Wire Wire Line
 Wire Wire Line
 	5600 2300 4950 2300
 Wire Wire Line
-	6500 3600 4950 3600
-Wire Wire Line
-	5700 5300 4950 5300
-Wire Wire Line
 	5950 4250 5950 4200
 Wire Wire Line
 	5950 4200 4950 4200
@@ -1394,4 +1388,51 @@ Wire Wire Line
 Connection ~ 3050 6950
 Wire Wire Line
 	5100 4800 4950 4800
+$Comp
+L R R?
+U 1 1 5C77CA4F
+P 5100 4700
+F 0 "R?" V 5180 4700 50  0000 C CNN
+F 1 "10k" V 5100 4700 50  0000 C CNN
+F 2 "digikey-footprints:0805" V 5030 4700 50  0001 C CNN
+F 3 "" H 5100 4700 50  0001 C CNN
+	1    5100 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 3600 6500 3600
+$Comp
+L C_Small C?
+U 1 1 5C77D660
+P 5950 3750
+F 0 "C?" H 5960 3820 50  0000 L CNN
+F 1 "0.1uF" H 5960 3670 50  0000 L CNN
+F 2 "digikey-footprints:0805" H 5950 3750 50  0001 C CNN
+F 3 "" H 5950 3750 50  0001 C CNN
+	1    5950 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3650 5950 3600
+Connection ~ 5950 3600
+$Comp
+L GND #PWR?
+U 1 1 5C77D97F
+P 5950 3850
+F 0 "#PWR?" H 5950 3600 50  0001 C CNN
+F 1 "GND" H 5950 3700 50  0000 C CNN
+F 2 "" H 5950 3850 50  0001 C CNN
+F 3 "" H 5950 3850 50  0001 C CNN
+	1    5950 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 5300 5700 5300
+Text Label 6050 3550 0    60   ~ 0
+delay_fb_in
+Text Label 5250 4700 0    60   ~ 0
+delay_fb_in
+Wire Wire Line
+	6050 3550 6050 3600
+Connection ~ 6050 3600
 $EndSCHEMATC

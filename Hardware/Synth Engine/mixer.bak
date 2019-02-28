@@ -258,7 +258,7 @@ U 1 1 5C394BFE
 P 10600 4600
 F 0 "J2" H 10550 4775 50  0000 C CNN
 F 1 "Audio-Jack-2_Switch" H 10825 4525 50  0000 C CNN
-F 2 "Connectors_Molex:Molex_KK-6410-03_03x2.54mm_Straight" H 10850 4700 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.00mm" H 10850 4700 50  0001 C CNN
 F 3 "" H 10850 4700 50  0001 C CNN
 	1    10600 4600
 	-1   0    0    -1  
