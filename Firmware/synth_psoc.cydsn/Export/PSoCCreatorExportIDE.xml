@@ -358,6 +358,16 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_3_hold.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_3_hold_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_3_hold_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\audio_1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\audio_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_dig.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_dig.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_dig_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_dig_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60">
