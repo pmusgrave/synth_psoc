@@ -16,7 +16,7 @@
    id="svg8"
    sodipodi:docname="Top_panel_larger_enclosure.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   inkscape:export-filename="E:\Dropbox\PSYNTH\Hardware\Panel Artwork\Top_panel_2019-02-25.png"
+   inkscape:export-filename="E:\Dropbox\PSYNTH\Hardware\Panel Artwork\Top_panel.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.8101934"
-     inkscape:cx="425.63308"
-     inkscape:cy="185.84589"
+     inkscape:zoom="1.28"
+     inkscape:cx="297.74461"
+     inkscape:cy="298.39858"
      inkscape:document-units="in"
      inkscape:current-layer="layer2"
      showgrid="true"
@@ -60,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
