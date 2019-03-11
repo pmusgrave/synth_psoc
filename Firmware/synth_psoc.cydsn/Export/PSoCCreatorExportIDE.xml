@@ -305,43 +305,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_in.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_in_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\fb_in_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI1_UART.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI1_UART.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI1_UART_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI1_UART_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI1_UART_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_audio.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_audio.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_boot.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_cdc.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_cdc.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_cls.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_descr.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_drv.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_episr.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_hid.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_hid.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_pm.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_std.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_vnd.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_midi.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_midi.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_pvt.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_cydmac.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_msc.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_msc.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI1_UART_IntClock.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI1_UART_IntClock.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_Dp.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_Dp.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_Dp_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_Dp_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_Dm.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_Dm.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_Dm_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_1_Dm_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_0_hold.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_0_hold.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\osc_0_hold_aliases.h</File>
@@ -368,6 +331,43 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_dig.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_dig_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\delay_out_dig_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI_UART.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI_UART_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI_UART_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI_UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_audio.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_audio.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_boot.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_cdc.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_cdc.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_cls.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_descr.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_drv.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_episr.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_hid.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_hid.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_pm.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_std.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_vnd.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_midi.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_midi.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_pvt.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_cydmac.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_msc.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_msc.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI_UART_IntClock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\MIDI_UART_IntClock.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_Dp.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_Dp.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_Dp_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_Dp_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_Dm.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_Dm.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_Dm_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\USBMIDI_Dm_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\Export\ARM_GCC_Generic\CapSense_CSD_P4_v2_60">

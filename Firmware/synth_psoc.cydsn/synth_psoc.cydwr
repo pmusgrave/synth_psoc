@@ -31,8 +31,8 @@
     <Group key="Pin">
       <Data key="0c673af0-1c1f-4e93-95d8-f8c4140ef11e" value="osc_2_repeat" />
       <Data key="0ca51a06-405f-4abb-a557-2e4f77482a9f" value="release_pot_high" />
-      <Data key="0d776c25-0fda-4bff-af2b-9962432af301/8b77a6c4-10a0-4390-971c-672353e2a49c" value="USBMIDI_1_Dm" />
-      <Data key="0d776c25-0fda-4bff-af2b-9962432af301/618a72fc-5ddd-4df5-958f-a3d55102db42" value="USBMIDI_1_Dp" />
+      <Data key="0d776c25-0fda-4bff-af2b-9962432af301/8b77a6c4-10a0-4390-971c-672353e2a49c" value="USBMIDI_Dm" />
+      <Data key="0d776c25-0fda-4bff-af2b-9962432af301/618a72fc-5ddd-4df5-958f-a3d55102db42" value="USBMIDI_Dp" />
       <Data key="1c51b798-1861-4668-a377-49308f74bd40" value="osc_speed_in" />
       <Data key="2a5692d8-8b18-4a64-8ce7-287ab1c75daa" value="delay_out" />
       <Data key="2ac66863-7eaa-47a7-ad25-829c99996f36" value="osc_1_speed" />
@@ -3989,22 +3989,22 @@
     </Group>
     <Group key="3c61664b-2ce5-4a2c-89b5-3f48d38d5bf2">
       <Group key="0">
-        <Data key="Port Format" value="2,4" />
+        <Data key="Port Format" value="2,0" />
       </Group>
     </Group>
     <Group key="3fcc6371-f613-4467-856e-25f93a6af2c0">
       <Group key="0">
-        <Data key="Port Format" value="2,6" />
+        <Data key="Port Format" value="2,2" />
       </Group>
     </Group>
     <Group key="4c0b4fc7-d7f2-40be-99d7-e14340068c72">
       <Group key="0">
-        <Data key="Port Format" value="2,3" />
+        <Data key="Port Format" value="2,7" />
       </Group>
     </Group>
     <Group key="6bbe7db7-c9cf-40c1-a3d4-aa092cb9716a">
       <Group key="0">
-        <Data key="Port Format" value="3,5" />
+        <Data key="Port Format" value="3,7" />
       </Group>
     </Group>
     <Group key="6c0339b7-81db-42bc-81e3-fe058a5ba135">
@@ -4063,7 +4063,7 @@
     </Group>
     <Group key="52da76ba-c05b-495d-a5c6-b5894dcf304a">
       <Group key="0">
-        <Data key="Port Format" value="2,5" />
+        <Data key="Port Format" value="2,1" />
       </Group>
     </Group>
     <Group key="53ced7fb-4c32-47bb-8f41-0c707ed1dd34">
@@ -4093,7 +4093,7 @@
     </Group>
     <Group key="923ea714-98d5-4579-8008-4ba04847fc6f">
       <Group key="0">
-        <Data key="Port Format" value="3,6" />
+        <Data key="Port Format" value="3,4" />
       </Group>
     </Group>
     <Group key="975dc2b8-a339-4430-8a04-fb8720654cab">
@@ -4128,7 +4128,7 @@
     </Group>
     <Group key="312576c8-ef3e-4d46-96ac-fd4995c25d73">
       <Group key="0">
-        <Data key="Port Format" value="3,7" />
+        <Data key="Port Format" value="3,5" />
       </Group>
     </Group>
     <Group key="621792b2-51a4-4f20-9c81-0e007f069172">
@@ -4148,12 +4148,12 @@
     </Group>
     <Group key="26585482-08b0-44e8-83f2-b5f9340f2ba6">
       <Group key="0">
-        <Data key="Port Format" value="2,0" />
+        <Data key="Port Format" value="2,4" />
       </Group>
     </Group>
     <Group key="77715107-f8d5-47e5-a629-0fb83101ac6b">
       <Group key="0">
-        <Data key="Port Format" value="2,1" />
+        <Data key="Port Format" value="2,5" />
       </Group>
     </Group>
     <Group key="a76a22cf-aa88-4c5e-b54e-074678c67eba">
@@ -4168,7 +4168,7 @@
     </Group>
     <Group key="ae2a3e3c-c2d8-4086-a80c-3e27bce724fd">
       <Group key="0">
-        <Data key="Port Format" value="2,7" />
+        <Data key="Port Format" value="2,3" />
       </Group>
     </Group>
     <Group key="b98a4f1f-f295-4b61-a6c0-6bc99085e332">
@@ -4188,7 +4188,7 @@
     </Group>
     <Group key="c6bd3d13-0dd0-4c0e-baf9-6deb7e464849">
       <Group key="0">
-        <Data key="Port Format" value="2,2" />
+        <Data key="Port Format" value="2,6" />
       </Group>
     </Group>
     <Group key="c87b78da-fbd1-47b8-9e95-1dc1d11ab06f">
@@ -4248,7 +4248,7 @@
     </Group>
     <Group key="eb48c269-f47d-4a0b-975a-2652f30c2943">
       <Group key="0">
-        <Data key="Port Format" value="3,4" />
+        <Data key="Port Format" value="3,6" />
       </Group>
     </Group>
     <Group key="ed092b9b-d398-4703-be89-cebf998501f6">
