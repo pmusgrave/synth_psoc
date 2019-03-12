@@ -41,12 +41,14 @@
           <File BuildType="BUILD" Toolchain="">interrupts.c</File>
           <File BuildType="BUILD" Toolchain="">oscillator.c</File>
           <File BuildType="BUILD" Toolchain="">buttons.c</File>
+          <File BuildType="BUILD" Toolchain="">usb_midi.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">interrupts.h</File>
           <File BuildType="BUILD" Toolchain="">envelope_generator.h</File>
           <File BuildType="BUILD" Toolchain="">globals.h</File>
           <File BuildType="BUILD" Toolchain="">oscillator.h</File>
           <File BuildType="BUILD" Toolchain="">buttons.h</File>
+          <File BuildType="BUILD" Toolchain="">usb_midi.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\Generated_Source\PSoC4">

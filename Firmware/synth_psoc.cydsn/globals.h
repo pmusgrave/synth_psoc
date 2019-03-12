@@ -17,6 +17,11 @@ extern volatile float pulse_width_2;
 extern volatile float freq_3;
 extern volatile float pulse_width_3;
 
+/* Need for Identity Reply message */
+extern volatile uint8 USB_MIDI1_InqFlags;
+extern volatile uint8 USB_MIDI2_InqFlags;
+extern uint8 inqFlagsOld;
+    
 struct button {
     uint8_t note_triggered;
     uint8_t capsense_widget;
