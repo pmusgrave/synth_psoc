@@ -59,6 +59,8 @@ int main(void)
     envelope_2_ovf_StartEx(ENV_2_OVF_VECT);
     envelope_3_ovf_StartEx(ENV_3_OVF_VECT);
     
+    AMux_Start();
+    
     // Init Capsense
     CapSense_Buttons_Start();	
 	CapSense_Buttons_InitializeAllBaselines();
@@ -69,107 +71,123 @@ int main(void)
     struct button Osc_2_Button = {0, CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop};
     struct button Osc_3_Button = {0, CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop};
 
+    float env0_speed = 0;
+    float env1_speed = 0;
+    float env2_speed = 0;
+    float env3_speed = 0;
+    
     while(1){
         // update all ADC values when the end of conversion interrupt triggers
-        if(adc_update_flag != 0){ 
+        if(adc_update_flag != 0) { 
             adc_update_flag = 0;
                
             freq_0 = ADC_SAR_Seq_GetResult16(FREQ_0_ADC_CHAN);
             if(osc_0_quant_Read() == 1){
                 freq_0 = Quantize(freq_0);
             }
-            pulse_width_0 = ADC_SAR_Seq_GetResult16(PW_0_ADC_CHAN);  
+            pulse_width_0 = ADC_SAR_Seq_GetResult16(PW_0_ADC_CHAN); 
+            // envelope
+            AMux_Select(0);
+            CyDelayUs(100);
+            env0_speed = ADC_SAR_Seq_GetResult16(8);
             
             freq_1 = ADC_SAR_Seq_GetResult16(FREQ_1_ADC_CHAN);
             if(osc_1_quant_Read()){
                 freq_1 = Quantize(freq_1);
             }
             pulse_width_1 = ADC_SAR_Seq_GetResult16(PW_1_ADC_CHAN);
+            // envelope
+            AMux_Select(1);
+            CyDelayUs(100);
+            env1_speed = ADC_SAR_Seq_GetResult16(8);
             
             freq_2 = ADC_SAR_Seq_GetResult16(FREQ_2_ADC_CHAN);
             if(osc_2_quant_Read()){
                 freq_2 = Quantize(freq_2);
             }
             pulse_width_2 = ADC_SAR_Seq_GetResult16(PW_2_ADC_CHAN);  
+            // envelope
+            AMux_Select(2);
+            CyDelayUs(100);
+            env2_speed = ADC_SAR_Seq_GetResult16(8);
             
             freq_3 = ADC_SAR_Seq_GetResult16(FREQ_3_ADC_CHAN);
             if(osc_3_quant_Read()){
                 freq_3 = Quantize(freq_3);
             }
-            pulse_width_3 = ADC_SAR_Seq_GetResult16(PW_3_ADC_CHAN);  
+            pulse_width_3 = ADC_SAR_Seq_GetResult16(PW_3_ADC_CHAN); 
+            // envelope
+            AMux_Select(3);
+            CyDelayUs(100);
+            env3_speed = ADC_SAR_Seq_GetResult16(8);
         }
 
-        
-        // system_tick = system_tick + 0.1;
-
-        // temporarily using PWM ADC's for envelope time
-        
-        if(pulse_width_0 < 50){
+        if(env0_speed < 50){
             Osc_0_Button.note_triggered = 1;
         }
         if(Osc_0_Button.note_triggered == 1){
-            env0_pwm = env0_pwm + (pulse_width_0 * 0.2);
+            env0_pwm = env0_pwm + (env0_speed * 0.2);
             if (env0_pwm > 65000) {
                 env0_pwm  = 65000;
             }
         }
         else {
             if(env0_pwm > 0.1){
-                env0_pwm = env0_pwm - (pulse_width_0 * 0.2);
+                env0_pwm = env0_pwm - (env0_speed * 0.2);
             }
             if (env0_pwm < 0.5){
                 main_osc_PWM_0_Stop();
             }
         }
         
-        if(pulse_width_1 < 50){
+        if(env1_speed < 50){
             Osc_1_Button.note_triggered = 1;
         }
         if(Osc_1_Button.note_triggered == 1){
-            env1_pwm = env1_pwm + (pulse_width_1 * 0.002);
+            env1_pwm = env1_pwm + (env1_speed * 0.002);
             if (env1_pwm > 65000) {
                 env1_pwm  = 65000;
             }
         }
         else{
             if(env1_pwm > 0.1){
-                env1_pwm = env1_pwm - (pulse_width_1 * 0.002);
+                env1_pwm = env1_pwm - (env1_speed * 0.002);
             }
             if (env1_pwm < 0.5){
                 main_osc_PWM_1_Stop();
             }
         }
         
-        if(pulse_width_2 < 50){
+        if(env2_speed < 50){
             Osc_2_Button.note_triggered = 1;
         }
         if(Osc_2_Button.note_triggered == 1){
-            env2_pwm = env2_pwm + (pulse_width_2 * 0.002);
+            env2_pwm = env2_pwm + (env2_speed * 0.002);
             if (env2_pwm > 65000) {
                 env2_pwm  = 65000;
             }
         }
         else{
             if(env2_pwm > 0){
-                env2_pwm = env2_pwm - (pulse_width_2 * 0.002);
+                env2_pwm = env2_pwm - (env2_speed * 0.002);
             }
             if (env2_pwm < 0.5){
                 main_osc_PWM_2_Stop();
             }
         }
         
-        if(pulse_width_3 < 50){
+        if(env3_speed < 50){
             Osc_3_Button.note_triggered = 1;
         }
         if(Osc_3_Button.note_triggered == 1){
-            env3_pwm = env3_pwm + (pulse_width_3 * 0.002);
+            env3_pwm = env3_pwm + (env3_speed * 0.002);
             if (env3_pwm > 65000) {
                 env3_pwm  = 65000;
             }
         }
         else{
             if(env3_pwm > 0){
-                env3_pwm = env3_pwm - (pulse_width_3 * 0.002);
+                env3_pwm = env3_pwm - (env3_speed * 0.002);
             }
             if (env3_pwm < 0.5){
                 main_osc_PWM_3_Stop();
@@ -180,16 +198,16 @@ int main(void)
         
         // scan all CapSense buttons sequentially,
         // and start oscillator if button is pressed
-        //if(!CapSense_Buttons_IsBusy()) {
-            //CapSense_Buttons_UpdateEnabledBaselines();
+        if(!CapSense_Buttons_IsBusy()) {
+            CapSense_Buttons_UpdateEnabledBaselines();
             
             HandleButton(&Osc_0_Button);
             HandleButton(&Osc_1_Button);
             HandleButton(&Osc_2_Button);
             HandleButton(&Osc_3_Button);
             
-            //CapSense_Buttons_ScanEnabledWidgets();
-        //}
+            CapSense_Buttons_ScanEnabledWidgets();
+        }
     }
 }
 /* [] END OF FILE */
