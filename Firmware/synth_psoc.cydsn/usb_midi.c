@@ -1,6 +1,71 @@
 // references Cypress USB MIDI code example
 #include "usb_midi.h"
 
+/* Identity Reply message */
+const uint8 CYCODE MIDI_IDENTITY_REPLY[] = {
+    0xF0u,      /* SysEx */
+    0x7Eu,      /* Non-real time */
+    0x7Fu,      /* ID of target device (7F - "All Call") */
+    0x06u,      /* Sub-ID#1 - General Information */
+    0x02u,      /* Sub-ID#2 - Identity Reply */
+    0x7Du,      /* Manufacturer's ID: 7D - Educational Use */
+    0xB4u, 0x04u,               /* Family code */
+    0x32u, 0xD2u,               /* Model number */
+    0x01u, 0x00u, 0x00u, 0x00u, /* Version number */
+    /*0xF7         End of SysEx automatically appended */
+};
+    
+void ServiceUSB(){
+    // Handle USB enumeration
+
+    /* Host can send double SET_INTERFACE request */
+    if(0u != USBMIDI_IsConfigurationChanged())
+    {
+        /* Initialize IN endpoints when device configured */
+        if(0u != USBMIDI_GetConfiguration())   
+        {
+        	/* Enable output endpoint */
+            USBMIDI_MIDI_Init();
+        }
+        else
+        {
+            // SleepTimer_Stop();
+        }    
+    }        
+    
+    /* Service USB MIDI when device is configured */
+    if(0u != USBMIDI_GetConfiguration())    
+    {
+        /* Call this API from UART RX ISR for Auto DMA mode */
+        #if(!USB_EP_MANAGEMENT_DMA_AUTO) 
+            USBMIDI_MIDI_IN_Service();
+        #endif
+        /* In Manual EP Memory Management mode OUT_EP_Service() 
+        *  may have to be called from main foreground or from OUT EP ISR
+        */
+        #if(!USB_EP_MANAGEMENT_DMA_AUTO) 
+            USBMIDI_MIDI_OUT_Service();
+        #endif
+
+        /* Sending Identity Reply Universal System Exclusive message 
+         * back to computer */
+        if(0u != (USB_MIDI1_InqFlags & USBMIDI_INQ_IDENTITY_REQ_FLAG))
+        {
+            USBMIDI_PutUsbMidiIn(sizeof(MIDI_IDENTITY_REPLY), \
+                        (uint8 *)MIDI_IDENTITY_REPLY, USBMIDI_MIDI_CABLE_00);
+            USB_MIDI1_InqFlags &= ~USBMIDI_INQ_IDENTITY_REQ_FLAG;
+        }
+        #if (USB_MIDI_EXT_MODE >= USB_TWO_EXT_INTRF)
+            if(0u != (USB_MIDI2_InqFlags & USBMIDI_INQ_IDENTITY_REQ_FLAG))
+            {
+                USBMIDI_PutUsbMidiIn(sizeof(MIDI_IDENTITY_REPLY), \
+                        (uint8 *)MIDI_IDENTITY_REPLY, USBMIDI_MIDI_CABLE_01);
+                USB_MIDI2_InqFlags &= ~USBMIDI_INQ_IDENTITY_REQ_FLAG;
+            }
+        #endif /* End USB_MIDI_EXT_MODE >= USB_TWO_EXT_INTRF */
+    }
+}
+
 /*******************************************************************************
 * Function Name: USB_callbackLocalMidiEvent
 ********************************************************************************

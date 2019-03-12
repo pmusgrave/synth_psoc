@@ -7,5 +7,6 @@ extern volatile uint8 USB_MIDI2_InqFlags;
 extern uint8 inqFlagsOld;
 
 void USBMIDI_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT;
+void ServiceUSB(void);
 
 /* [] END OF FILE */

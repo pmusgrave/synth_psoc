@@ -1,4 +1,4 @@
---------------- Rebuild Started: 03/12/2019 15:42:45 Project: synth_psoc, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Rebuild Started: 03/12/2019 15:49:58 Project: synth_psoc, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\main.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\envelope_generator.o"
 Deleting file ".\CortexM0\ARM_GCC_541\Debug\interrupts.o"
@@ -364,4 +364,4 @@ Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S E:\Dropbox\PSYNTH\Firmware\synth_psoc.cydsn\CortexM0\ARM_GCC_541\Debug\synth_psoc.elf
 Flash used: 30002 of 65536 bytes (45.8%).
 SRAM used: 3328 of 8192 bytes (40.6%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Rebuild Succeeded: 03/12/2019 15:43:19 ---------------
+--------------- Rebuild Succeeded: 03/12/2019 15:50:30 ---------------
