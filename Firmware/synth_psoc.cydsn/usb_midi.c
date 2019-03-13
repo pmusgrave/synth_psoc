@@ -63,6 +63,8 @@ void ServiceUSB(){
                 USB_MIDI2_InqFlags &= ~USBMIDI_INQ_IDENTITY_REQ_FLAG;
             }
         #endif /* End USB_MIDI_EXT_MODE >= USB_TWO_EXT_INTRF */
+        
+        // I think this is where you handle outgoing MIDI messages?
     }
 }
 

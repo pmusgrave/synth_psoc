@@ -72,10 +72,10 @@ int main(void)
 	CapSense_Buttons_InitializeAllBaselines();
     CapSense_Buttons_ScanEnabledWidgets();
         
-    struct button Osc_0_Button = {0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
-    struct button Osc_1_Button = {0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
-    struct button Osc_2_Button = {0, CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop};
-    struct button Osc_3_Button = {0, CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop};
+    struct button Osc_0_Button = {&osc_0_hold_Read, 0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
+    struct button Osc_1_Button = {&osc_1_hold_Read, 0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
+    struct button Osc_2_Button = {&osc_2_hold_Read, 0, CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop};
+    struct button Osc_3_Button = {&osc_3_hold_Read, 0, CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop};
 
     float env0_speed = 0;
     float env1_speed = 0;
@@ -138,14 +138,16 @@ int main(void)
             Osc_0_Button.note_triggered = 1;
         }
         if(Osc_0_Button.note_triggered == 1){
-            env0_pwm = env0_pwm + (env0_speed * 0.02);
-            if (env0_pwm > 65000) {
-                env0_pwm  = 65000;
+            env0_pwm = env0_pwm + (env0_speed * 0.002);
+            if(!osc_0_repeat_Read() || osc_0_hold_Read()){
+                if (env0_pwm > 65000) {
+                    env0_pwm  = 65000;
+                }
             }
         }
         else {
             if(env0_pwm > 0.1){
-                env0_pwm = env0_pwm - (env0_speed * 0.02);
+                env0_pwm = env0_pwm - (env0_speed * 0.002);
             }
             if (env0_pwm < 0.5){
                 main_osc_PWM_0_Stop();
@@ -156,14 +158,14 @@ int main(void)
             Osc_1_Button.note_triggered = 1;
         }
         if(Osc_1_Button.note_triggered == 1){
-            env1_pwm = env1_pwm + (env1_speed * 0.02);
+            env1_pwm = env1_pwm + (env1_speed * 0.002);
             if (env1_pwm > 65000) {
                 env1_pwm  = 65000;
             }
         }
         else{
             if(env1_pwm > 0.1){
-                env1_pwm = env1_pwm - (env1_speed * 0.02);
+                env1_pwm = env1_pwm - (env1_speed * 0.002);
             }
             if (env1_pwm < 0.5){
                 main_osc_PWM_1_Stop();
@@ -210,16 +212,16 @@ int main(void)
         
         // scan all CapSense buttons sequentially,
         // and start oscillator if button is pressed
-        //if(!CapSense_Buttons_IsBusy()) {
-            //CapSense_Buttons_UpdateEnabledBaselines();
+        if(!CapSense_Buttons_IsBusy()) {
+            CapSense_Buttons_UpdateEnabledBaselines();
             
             HandleButton(&Osc_0_Button);
             HandleButton(&Osc_1_Button);
             HandleButton(&Osc_2_Button);
             HandleButton(&Osc_3_Button);
             
-            //CapSense_Buttons_ScanEnabledWidgets();
-        //}
+            CapSense_Buttons_ScanEnabledWidgets();
+        }
             
             
             

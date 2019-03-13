@@ -23,6 +23,7 @@ extern volatile uint8 USB_MIDI2_InqFlags;
 extern uint8 inqFlagsOld;
     
 struct button {
+    uint8_t  (*hold_check_function)(void);
     uint8_t note_triggered;
     uint8_t capsense_widget;
     void (*osc_enable_function)(void);
