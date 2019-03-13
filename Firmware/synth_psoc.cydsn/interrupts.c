@@ -35,18 +35,22 @@ CY_ISR_PROTO(OSC_3_OVF_VECT){
 
 CY_ISR_PROTO(ENV_0_OVF_VECT){
     envelope_PWM_0_WriteCompare((uint16_t) env0_pwm);
+    //envelope_PWM_0_WriteCompare((uint16_t) pwm);
 }
 
 CY_ISR_PROTO(ENV_1_OVF_VECT){
     envelope_PWM_1_WriteCompare((uint16_t) env1_pwm);
+    //envelope_PWM_1_WriteCompare((uint16_t) pwm);
 }
 
 CY_ISR_PROTO(ENV_2_OVF_VECT){
     envelope_PWM_2_WriteCompare((uint16_t) env2_pwm);
+    //envelope_PWM_2_WriteCompare((uint16_t) pwm);
 }
 
 CY_ISR_PROTO(ENV_3_OVF_VECT){
     envelope_PWM_3_WriteCompare((uint16_t) env3_pwm);
+    //envelope_PWM_3_WriteCompare((uint16_t) pwm);
 }
 
 /* [] END OF FILE */

@@ -17,10 +17,10 @@
 #define PW_3_ADC_CHAN 7
 
 volatile uint8_t adc_update_flag = 0;
-volatile float env0_pwm = 0;
-volatile float env1_pwm = 0;
-volatile float env2_pwm = 0;
-volatile float env3_pwm = 0;
+float env0_pwm = 0;
+float env1_pwm = 0;
+float env2_pwm = 0;
+float env3_pwm = 0;
 volatile float freq_0 = 0;
 volatile float pulse_width_0 = 0;
 volatile float freq_1 = 0;
@@ -42,6 +42,8 @@ uint8 inqFlagsOld = 0u;
 
 void UpdateADCValues(void);
 void UpdateEnvelope(struct envelope *envelope, struct button *button);
+
+volatile float pwm = 0;
 
 int main(void)
 {
@@ -80,10 +82,10 @@ int main(void)
 	CapSense_Buttons_InitializeAllBaselines();
     CapSense_Buttons_ScanEnabledWidgets();
     
-    struct envelope Osc_0_Envelope = {env0_speed, env0_pwm};
-    struct envelope Osc_1_Envelope = {env1_speed, env1_pwm};
-    struct envelope Osc_2_Envelope = {env2_speed, env2_pwm};
-    struct envelope Osc_3_Envelope = {env3_speed, env3_pwm};
+    struct envelope Osc_0_Envelope = {&env0_speed, &env0_pwm};
+    struct envelope Osc_1_Envelope = {&env1_speed, &env1_pwm};
+    struct envelope Osc_2_Envelope = {&env2_speed, &env2_pwm};
+    struct envelope Osc_3_Envelope = {&env3_speed, &env3_pwm};
     
     struct button Osc_0_Button = {&osc_0_hold_Read, &osc_0_repeat_Read, 0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
     struct button Osc_1_Button = {&osc_1_hold_Read, &osc_1_repeat_Read, 0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
@@ -105,6 +107,8 @@ int main(void)
         UpdateEnvelope(&Osc_1_Envelope, &Osc_1_Button);
         UpdateEnvelope(&Osc_2_Envelope, &Osc_2_Button);
         UpdateEnvelope(&Osc_3_Envelope, &Osc_3_Button);
+        pwm = pwm + 0.1;
+        //envelope_PWM_0_WriteCompare((uint16_t) pwm);
        
         // scan all CapSense buttons sequentially,
         // and start oscillator if button is pressed
@@ -167,22 +171,22 @@ void UpdateADCValues(){
 }
 
 void UpdateEnvelope(struct envelope *envelope, struct button *button){
-    //if((*envelope).env_speed < 50){
-        //(*button).note_triggered = 1;
-    //}
+    if(*(*envelope).env_speed < 50){
+        (*button).note_triggered = 1;
+    }
     if((*button).note_triggered == 1){
-        (*envelope).env_pwm = (*envelope).env_pwm + ((*envelope).env_speed * 0.002);
+        *(*envelope).env_pwm = *(*envelope).env_pwm + (*(*envelope).env_speed * 0.002);
         if(!(*button).repeat_check_function() || (*button).hold_check_function()){
-            if ((*envelope).env_pwm > 65000) {
-                (*envelope).env_pwm  = 65000;
+            if (*(*envelope).env_pwm > 65000) {
+                *(*envelope).env_pwm  = 65000;
             }
         }
     }
-    else {
-        if((*envelope).env_pwm > 0.1){
-            (*envelope).env_pwm = (*envelope).env_pwm - ((*envelope).env_speed * 0.002);
+   else {
+        if(*(*envelope).env_pwm > 0.5){
+            *(*envelope).env_pwm = *(*envelope).env_pwm - (*(*envelope).env_speed * 0.002);
         }
-        if ((*envelope).env_pwm < 0.5){
+        if (*(*envelope).env_pwm < 0.5){
             (*button).osc_disable_function();
         }
     }
