@@ -4088,7 +4088,7 @@
     </Group>
     <Group key="78f94347-ac1a-480f-b466-fc6a33cc180a">
       <Group key="0">
-        <Data key="Port Format" value="0,2" />
+        <Data key="Port Format" value="0,6" />
       </Group>
     </Group>
     <Group key="923ea714-98d5-4579-8008-4ba04847fc6f">
@@ -4263,7 +4263,7 @@
     </Group>
     <Group key="fa62242f-eeee-4397-99d4-5204dcf70bc2">
       <Group key="0">
-        <Data key="Port Format" value="0,6" />
+        <Data key="Port Format" value="0,2" />
       </Group>
     </Group>
     <Group key="UnAssigned Pins">
