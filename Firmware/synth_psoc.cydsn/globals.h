@@ -4,6 +4,7 @@
 
 extern volatile uint8_t current_mode;
 extern volatile uint8_t adc_update_flag;
+extern volatile uint8_t MIDI_RX_flag;
 extern float env0_pwm;
 extern float env1_pwm;
 extern float env2_pwm;

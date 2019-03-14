@@ -53,4 +53,8 @@ CY_ISR_PROTO(ENV_3_OVF_VECT){
     //envelope_PWM_3_WriteCompare((uint16_t) pwm);
 }
 
+CY_ISR_PROTO(MIDI_RX_VECT){
+    MIDI_RX_flag = 1;
+}
+
 /* [] END OF FILE */

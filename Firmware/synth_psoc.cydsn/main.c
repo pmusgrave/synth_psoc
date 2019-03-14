@@ -17,6 +17,8 @@
 #define PW_3_ADC_CHAN 7
 
 volatile uint8_t adc_update_flag = 0;
+volatile uint8_t MIDI_RX_flag = 0;
+uint8_t MIDI_in_buf = 0;
 float env0_pwm = 0;
 float env1_pwm = 0;
 float env2_pwm = 0;
@@ -96,6 +98,7 @@ int main(void)
     // references Cypress USB MIDI code example
     USBMIDI_Start(0u, USBMIDI_5V_OPERATION);
     MIDI_UART_Start();
+    MIDI_RX_StartEx(MIDI_RX_VECT);
     
     while(1){
         if(adc_update_flag != 0) { 
@@ -107,7 +110,7 @@ int main(void)
         UpdateEnvelope(&Osc_1_Envelope, &Osc_1_Button);
         UpdateEnvelope(&Osc_2_Envelope, &Osc_2_Button);
         UpdateEnvelope(&Osc_3_Envelope, &Osc_3_Button);
-        pwm = pwm + 0.1;
+        //pwm = pwm + 0.1;
         //envelope_PWM_0_WriteCompare((uint16_t) pwm);
        
         // scan all CapSense buttons sequentially,
@@ -122,8 +125,21 @@ int main(void)
             
             CapSense_Buttons_ScanEnabledWidgets();
         }
+        
+        /*
+        if(MIDI_RX_flag) {
+            MIDI_RX_flag = 0;
+            MIDI_in_buf = MIDI_UART_ReadRxData();
+            if(MIDI_in_buf == 0x90){
+                Osc_0_Button.note_triggered = 1;
+            }
+            if(MIDI_in_buf == 0x80){
+                Osc_0_Button.note_triggered = 0;
+            }
+        }
+        */
 
-        // Handle USB enumeration and scan for MIDI messages
+        // Handle USB enumeration
         ServiceUSB();
     }
 }
@@ -136,7 +152,7 @@ void UpdateADCValues(){
     pulse_width_0 = ADC_SAR_Seq_GetResult16(PW_0_ADC_CHAN); 
     // envelope
     AMux_Select(0);
-    CyDelayUs(100);
+    CyDelayUs(10);
     env0_speed = ADC_SAR_Seq_GetResult16(8);
     
     freq_1 = ADC_SAR_Seq_GetResult16(FREQ_1_ADC_CHAN);
@@ -146,7 +162,7 @@ void UpdateADCValues(){
     pulse_width_1 = ADC_SAR_Seq_GetResult16(PW_1_ADC_CHAN);
     // envelope
     AMux_Select(1);
-    CyDelayUs(100);
+    CyDelayUs(10);
     env1_speed = ADC_SAR_Seq_GetResult16(8);
     
     freq_2 = ADC_SAR_Seq_GetResult16(FREQ_2_ADC_CHAN);
@@ -156,7 +172,7 @@ void UpdateADCValues(){
     pulse_width_2 = ADC_SAR_Seq_GetResult16(PW_2_ADC_CHAN);  
     // envelope
     AMux_Select(2);
-    CyDelayUs(100);
+    CyDelayUs(10);
     env2_speed = ADC_SAR_Seq_GetResult16(8);
     
     freq_3 = ADC_SAR_Seq_GetResult16(FREQ_3_ADC_CHAN);
@@ -166,7 +182,7 @@ void UpdateADCValues(){
     pulse_width_3 = ADC_SAR_Seq_GetResult16(PW_3_ADC_CHAN); 
     // envelope
     AMux_Select(3);
-    CyDelayUs(100);
+    CyDelayUs(10);
     env3_speed = ADC_SAR_Seq_GetResult16(8);
 }
 
