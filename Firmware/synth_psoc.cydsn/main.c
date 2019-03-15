@@ -5,8 +5,6 @@
 #include "buttons.h"
 #include "usb_midi.h"
 
-#define ENVELOPE_MAX_PERIOD 2048
-
 #define FREQ_0_ADC_CHAN 0
 #define PW_0_ADC_CHAN 1
 #define FREQ_1_ADC_CHAN 2
@@ -15,6 +13,9 @@
 #define PW_2_ADC_CHAN 5
 #define FREQ_3_ADC_CHAN 6
 #define PW_3_ADC_CHAN 7
+#define ENV_MUX_ADC_CHAN 8
+
+#define ENVELOPE_MAX_PERIOD 2048
 
 volatile uint8_t adc_update_flag = 0;
 volatile uint8_t MIDI_RX_flag = 0;
@@ -42,7 +43,7 @@ volatile uint8 USB_MIDI1_InqFlags;
 volatile uint8 USB_MIDI2_InqFlags;
 uint8 inqFlagsOld = 0u;
 
-void UpdateADCValues(void);
+void UpdateADCValues(uint8_t *AMux_ADC);
 void UpdateEnvelope(struct envelope *envelope, struct button *button);
 
 volatile float pwm = 0;
@@ -78,6 +79,9 @@ int main(void)
     envelope_3_ovf_StartEx(ENV_3_OVF_VECT);
     
     AMux_Start();
+    AMux_Init();
+    Opamp_Start();
+    uint8_t AMux_ADC_counter = 0;
     
     // Init Capsense
     CapSense_Buttons_Start();	
@@ -103,7 +107,7 @@ int main(void)
     while(1){
         if(adc_update_flag != 0) { 
             adc_update_flag = 0;
-            UpdateADCValues();
+            UpdateADCValues(&AMux_ADC_counter);
         }
 
         UpdateEnvelope(&Osc_0_Envelope, &Osc_0_Button);
@@ -140,58 +144,63 @@ int main(void)
         */
 
         // Handle USB enumeration
-        ServiceUSB();
+        //ServiceUSB();
     }
 }
 
-void UpdateADCValues(){
+void UpdateADCValues(uint8_t *AMux_ADC){
     freq_0 = ADC_SAR_Seq_GetResult16(FREQ_0_ADC_CHAN);
     if(osc_0_quant_Read() == 1){
         freq_0 = Quantize(freq_0);
     }
     pulse_width_0 = ADC_SAR_Seq_GetResult16(PW_0_ADC_CHAN); 
-    // envelope
-    AMux_Select(0);
-    CyDelayUs(10);
-    env0_speed = ADC_SAR_Seq_GetResult16(8);
     
     freq_1 = ADC_SAR_Seq_GetResult16(FREQ_1_ADC_CHAN);
     if(osc_1_quant_Read()){
         freq_1 = Quantize(freq_1);
     }
     pulse_width_1 = ADC_SAR_Seq_GetResult16(PW_1_ADC_CHAN);
-    // envelope
-    AMux_Select(1);
-    CyDelayUs(10);
-    env1_speed = ADC_SAR_Seq_GetResult16(8);
     
     freq_2 = ADC_SAR_Seq_GetResult16(FREQ_2_ADC_CHAN);
     if(osc_2_quant_Read()){
         freq_2 = Quantize(freq_2);
     }
     pulse_width_2 = ADC_SAR_Seq_GetResult16(PW_2_ADC_CHAN);  
-    // envelope
-    AMux_Select(2);
-    CyDelayUs(10);
-    env2_speed = ADC_SAR_Seq_GetResult16(8);
     
     freq_3 = ADC_SAR_Seq_GetResult16(FREQ_3_ADC_CHAN);
     if(osc_3_quant_Read()){
         freq_3 = Quantize(freq_3);
     }
     pulse_width_3 = ADC_SAR_Seq_GetResult16(PW_3_ADC_CHAN); 
+
+    
     // envelope
-    AMux_Select(3);
-    CyDelayUs(10);
-    env3_speed = ADC_SAR_Seq_GetResult16(8);
+    AMux_Select(*AMux_ADC);
+    CyDelayUs(1000);
+    switch(*AMux_ADC){
+    case 0:
+        env0_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
+    case 1:
+        env1_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
+    case 2:
+        env2_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
+    case 3:
+        env3_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
+    }
+    (*AMux_ADC) += 1;
+    if (*AMux_ADC == 4){
+        *AMux_ADC = 0;
+    }
+    CyDelayUs(1000);
 }
 
 void UpdateEnvelope(struct envelope *envelope, struct button *button){
     if(*(*envelope).env_speed < 50){
-        (*button).note_triggered = 1;
+        //(*button).note_triggered = 1;
+        *(*envelope).env_speed = 50;
     }
     if((*button).note_triggered == 1){
-        *(*envelope).env_pwm = *(*envelope).env_pwm + (*(*envelope).env_speed * 0.002);
+        *(*envelope).env_pwm = *(*envelope).env_pwm + *(*envelope).env_speed * 0.002;
         if(!(*button).repeat_check_function() || (*button).hold_check_function()){
             if (*(*envelope).env_pwm > 65000) {
                 *(*envelope).env_pwm  = 65000;
@@ -200,7 +209,7 @@ void UpdateEnvelope(struct envelope *envelope, struct button *button){
     }
    else {
         if(*(*envelope).env_pwm > 0.5){
-            *(*envelope).env_pwm = *(*envelope).env_pwm - (*(*envelope).env_speed * 0.002);
+            *(*envelope).env_pwm = *(*envelope).env_pwm - *(*envelope).env_speed * 0.002;
         }
         if (*(*envelope).env_pwm < 0.5){
             (*button).osc_disable_function();
