@@ -24,14 +24,6 @@ float env0_pwm = 0;
 float env1_pwm = 0;
 float env2_pwm = 0;
 float env3_pwm = 0;
-volatile float freq_0 = 0;
-volatile float pulse_width_0 = 0;
-volatile float freq_1 = 0;
-volatile float pulse_width_1 = 0;
-volatile float freq_2 = 0;
-volatile float pulse_width_2 = 0;
-volatile float freq_3 = 0;
-volatile float pulse_width_3 = 0;
 
 float env0_speed = 0;
 float env1_speed = 0;
@@ -410,8 +402,6 @@ void MIDI1_UART_RXISR_ExitCallback(void)
     #endif /* (USB_EP_MANAGEMENT_DMA_AUTO) */
     
     //LED_InA_Write(0);
-    main_osc_PWM_0_WritePeriod((uint16_t) 65535/10000);
-    main_osc_PWM_0_WriteCompare((uint16_t) (65535/10000)/(2000/pulse_width_0));
 }
 
 /* [] END OF FILE */
