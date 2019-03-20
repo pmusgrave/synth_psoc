@@ -16,6 +16,9 @@
 
 #define ENVELOPE_MAX_PERIOD 2048
 
+/*******************************************************************************
+* Global Variables
+*******************************************************************************/
 volatile uint8_t adc_update_flag = 0;
 float env0_pwm = 0;
 float env1_pwm = 0;
@@ -211,21 +214,6 @@ int main(void)
                 USB_MIDI1_InqFlags &= ~USB_INQ_IDENTITY_REQ_FLAG;
             }
         }
-
-        /******************************************************************************/
-        
-        /*
-        if(MIDI_RX_flag) {
-            MIDI_RX_flag = 0;
-            midiMsg[0] = MIDI1_UART_ReadRxData();
-            if(midiMsg[0] == 0x90){
-                Osc_0_Button.note_triggered = 1;
-            }
-            if(midiMsg[0] == 0x80){
-                Osc_0_Button.note_triggered = 0;
-            }
-        }
-        */
     }
 }
 
