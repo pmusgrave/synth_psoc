@@ -38,7 +38,16 @@ float env1_speed = 0;
 float env2_speed = 0;
 float env3_speed = 0;
 
-volatile float pwm = 0;
+volatile struct oscillator Osc_0 = {0, 0, &osc_0_quant_Read};
+volatile struct oscillator Osc_1 = {0, 0, &osc_1_quant_Read};
+volatile struct oscillator Osc_2 = {0, 0, &osc_2_quant_Read};
+volatile struct oscillator Osc_3 = {0, 0, &osc_3_quant_Read};
+
+struct envelope Osc_0_Envelope = {&env0_speed, &env0_pwm};
+struct envelope Osc_1_Envelope = {&env1_speed, &env1_pwm};
+struct envelope Osc_2_Envelope = {&env2_speed, &env2_pwm};
+struct envelope Osc_3_Envelope = {&env3_speed, &env3_pwm};
+
 
 struct button Osc_0_Button = {&osc_0_hold_Read, &osc_0_repeat_Read, 0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
 struct button Osc_1_Button = {&osc_1_hold_Read, &osc_1_repeat_Read, 0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
@@ -99,6 +108,8 @@ volatile uint8_t MIDI_RX_flag = 0;
 *******************************************************************************/
 
 void UpdateADCValues(uint8_t *AMux_ADC);
+void UpdateOscFreq(struct oscillator *oscillator, uint8_t ADC_chan);
+void UpdateOscPulseWidth(struct oscillator *oscillator, uint8_t ADC_chan);
 void UpdateEnvelope(struct envelope *envelope, struct button *button);
 
 /******************************************************************************/
@@ -143,11 +154,6 @@ int main(void)
 	CapSense_Buttons_InitializeAllBaselines();
     CapSense_Buttons_ScanEnabledWidgets();
     
-    struct envelope Osc_0_Envelope = {&env0_speed, &env0_pwm};
-    struct envelope Osc_1_Envelope = {&env1_speed, &env1_pwm};
-    struct envelope Osc_2_Envelope = {&env2_speed, &env2_pwm};
-    struct envelope Osc_3_Envelope = {&env3_speed, &env3_pwm};
-    
     // Init USB and MIDI
     // references Cypress USB MIDI code example
     /* Start USBFS device 0 with VDDD operation */
@@ -165,8 +171,6 @@ int main(void)
         UpdateEnvelope(&Osc_1_Envelope, &Osc_1_Button);
         UpdateEnvelope(&Osc_2_Envelope, &Osc_2_Button);
         UpdateEnvelope(&Osc_3_Envelope, &Osc_3_Button);
-        //pwm = pwm + 0.1;
-        //envelope_PWM_0_WriteCompare((uint16_t) pwm);
        
         // scan all CapSense buttons sequentially,
         // and start oscillator if button is pressed
@@ -218,29 +222,17 @@ int main(void)
 }
 
 void UpdateADCValues(uint8_t *AMux_ADC){
-    freq_0 = ADC_SAR_Seq_GetResult16(FREQ_0_ADC_CHAN);
-    if(osc_0_quant_Read() == 1){
-        freq_0 = Quantize(freq_0);
-    }
-    pulse_width_0 = ADC_SAR_Seq_GetResult16(PW_0_ADC_CHAN); 
+    UpdateOscFreq(&Osc_0, FREQ_0_ADC_CHAN);
+    UpdateOscPulseWidth(&Osc_0, PW_0_ADC_CHAN);
+  
+    UpdateOscFreq(&Osc_1, FREQ_1_ADC_CHAN);
+    UpdateOscPulseWidth(&Osc_1, PW_1_ADC_CHAN);
     
-    freq_1 = ADC_SAR_Seq_GetResult16(FREQ_1_ADC_CHAN);
-    if(osc_1_quant_Read()){
-        freq_1 = Quantize(freq_1);
-    }
-    pulse_width_1 = ADC_SAR_Seq_GetResult16(PW_1_ADC_CHAN);
+    UpdateOscFreq(&Osc_2, FREQ_2_ADC_CHAN);
+    UpdateOscPulseWidth(&Osc_2, PW_2_ADC_CHAN);
     
-    freq_2 = ADC_SAR_Seq_GetResult16(FREQ_2_ADC_CHAN);
-    if(osc_2_quant_Read()){
-        freq_2 = Quantize(freq_2);
-    }
-    pulse_width_2 = ADC_SAR_Seq_GetResult16(PW_2_ADC_CHAN);  
-    
-    freq_3 = ADC_SAR_Seq_GetResult16(FREQ_3_ADC_CHAN);
-    if(osc_3_quant_Read()){
-        freq_3 = Quantize(freq_3);
-    }
-    pulse_width_3 = ADC_SAR_Seq_GetResult16(PW_3_ADC_CHAN); 
+    UpdateOscFreq(&Osc_3, FREQ_3_ADC_CHAN);
+    UpdateOscPulseWidth(&Osc_3, PW_3_ADC_CHAN);
 
     
     // envelope
@@ -261,6 +253,17 @@ void UpdateADCValues(uint8_t *AMux_ADC){
         *AMux_ADC = 0;
     }
     CyDelayUs(10);
+}
+
+void UpdateOscFreq(struct oscillator *oscillator, uint8_t ADC_chan){
+    (*oscillator).freq = ADC_SAR_Seq_GetResult16(ADC_chan);
+    if((*oscillator).quant_check_function() == 1){
+        (*oscillator).freq = Quantize((*oscillator).freq);
+    }
+}
+
+void UpdateOscPulseWidth(struct oscillator *oscillator, uint8_t ADC_chan){
+    (*oscillator).pulse_width = ADC_SAR_Seq_GetResult16(ADC_chan); 
 }
 
 void UpdateEnvelope(struct envelope *envelope, struct button *button){
@@ -328,10 +331,10 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
         //notes[index].env_acc = 0;   // reset envelope acc
         //notecount++; if (notecount>0) isrDrq_Enable();
         
-        Osc_0_Button.note_triggered = 1;
-        Osc_1_Button.note_triggered = 1;
-        Osc_2_Button.note_triggered = 1;
-        Osc_3_Button.note_triggered = 1;
+        //Osc_0_Button.note_triggered = 1;
+        //Osc_1_Button.note_triggered = 1;
+        //Osc_2_Button.note_triggered = 1;
+        //Osc_3_Button.note_triggered = 1;
     }
     else if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_OFF)
     {
@@ -344,10 +347,10 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
         //sprintf(buff, "\r\n%lu ", StopWatch_Cycles);
         MIDI1_UART_PutString(buff);
         
-        Osc_0_Button.note_triggered = 0;
-        Osc_1_Button.note_triggered = 0;
-        Osc_2_Button.note_triggered = 0;
-        Osc_3_Button.note_triggered = 0;
+        //Osc_0_Button.note_triggered = 0;
+        //Osc_1_Button.note_triggered = 0;
+        //Osc_2_Button.note_triggered = 0;
+        //Osc_3_Button.note_triggered = 0;
     }
 }    
 
