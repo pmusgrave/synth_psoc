@@ -20,11 +20,6 @@ extern volatile float pulse_width_3;
     
 extern volatile float pwm;
 
-/* Need for Identity Reply message */
-extern volatile uint8 USB_MIDI1_InqFlags;
-extern volatile uint8 USB_MIDI2_InqFlags;
-extern uint8 inqFlagsOld;
-    
 struct envelope {
     float *env_speed;
     float *env_pwm;

@@ -54,7 +54,7 @@ CY_ISR_PROTO(ENV_3_OVF_VECT){
 }
 
 CY_ISR_PROTO(MIDI_RX_VECT){
-    MIDI_RX_flag = 1;
+    //MIDI_RX_flag = 1;
 }
 
 /* [] END OF FILE */

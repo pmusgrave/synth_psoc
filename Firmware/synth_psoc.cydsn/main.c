@@ -3,7 +3,6 @@
 #include "globals.h"
 #include "oscillator.h"
 #include "buttons.h"
-#include "usb_midi.h"
 
 #define FREQ_0_ADC_CHAN 0
 #define PW_0_ADC_CHAN 1
@@ -18,8 +17,6 @@
 #define ENVELOPE_MAX_PERIOD 2048
 
 volatile uint8_t adc_update_flag = 0;
-volatile uint8_t MIDI_RX_flag = 0;
-uint8_t MIDI_in_buf = 0;
 float env0_pwm = 0;
 float env1_pwm = 0;
 float env2_pwm = 0;
@@ -38,15 +35,70 @@ float env1_speed = 0;
 float env2_speed = 0;
 float env3_speed = 0;
 
+volatile float pwm = 0;
+
+struct button Osc_0_Button = {&osc_0_hold_Read, &osc_0_repeat_Read, 0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
+struct button Osc_1_Button = {&osc_1_hold_Read, &osc_1_repeat_Read, 0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
+struct button Osc_2_Button = {&osc_2_hold_Read, &osc_2_repeat_Read, 0, CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop};
+struct button Osc_3_Button = {&osc_3_hold_Read, &osc_3_repeat_Read, 0, CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop};
+
+    
+/*******************************************************************************
+* USB and MIDI stuff
+*******************************************************************************/
+#define DEVICE                  (0u)
+#define MIDI_MSG_SIZE           (4u)
+
+/*MIDI Message Fields */
+#define MIDI_MSG_TYPE           (0u)
+#define MIDI_NOTE_NUMBER        (1u)
+#define MIDI_NOTE_VELOCITY      (2u)
+
+/* MIDI Notes*/
+#define NOTE_72                 (72u)
+#define NOTE_76                 (76u)
+
+/* MIDI Notes Velocity*/
+#define VOLUME_OFF              (0u)
+#define VOLUME_ON               (100u)
+
+#define USB_SUSPEND_TIMEOUT     (2u)
+
+/* Identity Reply message */
+const uint8 CYCODE MIDI_IDENTITY_REPLY[] = {
+    0xF0u,      /* SysEx */
+    0x7Eu,      /* Non-real time */
+    0x7Fu,      /* ID of target device (7F - "All Call") */
+    0x06u,      /* Sub-ID#1 - General Information */
+    0x02u,      /* Sub-ID#2 - Identity Reply */
+    0x7Du,      /* Manufacturer's ID: 7D - Educational Use */
+    0xB4u, 0x04u,               /* Family code */
+    0x32u, 0xD2u,               /* Model number */
+    0x01u, 0x00u, 0x00u, 0x00u, /* Version number */
+    /*0xF7         End of SysEx automatically appended */
+};
+
 /* Need for Identity Reply message */
 volatile uint8 USB_MIDI1_InqFlags;
-volatile uint8 USB_MIDI2_InqFlags;
+
+volatile uint8 usbActivityCounter = 0u;
+
 uint8 inqFlagsOld = 0u;
+
+uint8 midiMsg[MIDI_MSG_SIZE];   
+char buff[32];//output UART buffer
+
+volatile uint8_t MIDI_RX_flag = 0;
+
+
+/*******************************************************************************
+* Function Prototypes
+*******************************************************************************/
 
 void UpdateADCValues(uint8_t *AMux_ADC);
 void UpdateEnvelope(struct envelope *envelope, struct button *button);
 
-volatile float pwm = 0;
+/******************************************************************************/
 
 int main(void)
 {
@@ -93,16 +145,12 @@ int main(void)
     struct envelope Osc_2_Envelope = {&env2_speed, &env2_pwm};
     struct envelope Osc_3_Envelope = {&env3_speed, &env3_pwm};
     
-    struct button Osc_0_Button = {&osc_0_hold_Read, &osc_0_repeat_Read, 0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
-    struct button Osc_1_Button = {&osc_1_hold_Read, &osc_1_repeat_Read, 0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
-    struct button Osc_2_Button = {&osc_2_hold_Read, &osc_2_repeat_Read, 0, CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop};
-    struct button Osc_3_Button = {&osc_3_hold_Read, &osc_3_repeat_Read, 0, CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop};
-
     // Init USB and MIDI
     // references Cypress USB MIDI code example
-    USBMIDI_Start(0u, USBMIDI_5V_OPERATION);
-    MIDI_UART_Start();
-    MIDI_RX_StartEx(MIDI_RX_VECT);
+    /* Start USBFS device 0 with VDDD operation */
+    USB_Start(DEVICE, USB_DWR_VDDD_OPERATION); 
+    //MIDI1_UART_Start();
+    //MIDI_RX_StartEx(MIDI_RX_VECT);
     
     while(1){
         if(adc_update_flag != 0) { 
@@ -130,21 +178,54 @@ int main(void)
             CapSense_Buttons_ScanEnabledWidgets();
         }
         
+        /*******************************************************************************
+        * USB AND MIDI STUFF
+        * references Cypress USB MIDI code examples
+        *******************************************************************************/
+        if(0u != USB_IsConfigurationChanged()){
+            if(0u != USB_GetConfiguration())   // Initialize IN endpoints when device configured
+            {
+                USB_MIDI_Init(); // Enable output endpoint
+            }
+        }            
+        
+        /* Service USB MIDI when device is configured */
+        if(0u != USB_GetConfiguration())    
+        {
+            /* Call this API from UART RX ISR for Auto DMA mode */
+            #if(!USB_EP_MANAGEMENT_DMA_AUTO) 
+                USB_MIDI_IN_Service();
+            #endif
+            /* In Manual EP Memory Management mode OUT_EP_Service() 
+            *  may have to be called from main foreground or from OUT EP ISR
+            */
+            #if(!USB_EP_MANAGEMENT_DMA_AUTO) 
+                USB_MIDI_OUT_Service();
+            #endif
+
+            /* Sending Identity Reply Universal System Exclusive message 
+             * back to computer */
+            if(0u != (USB_MIDI1_InqFlags & USB_INQ_IDENTITY_REQ_FLAG))
+            {
+                USB_PutUsbMidiIn(sizeof(MIDI_IDENTITY_REPLY), (uint8 *)MIDI_IDENTITY_REPLY, USB_MIDI_CABLE_00);
+                USB_MIDI1_InqFlags &= ~USB_INQ_IDENTITY_REQ_FLAG;
+            }
+        }
+
+        /******************************************************************************/
+        
         /*
         if(MIDI_RX_flag) {
             MIDI_RX_flag = 0;
-            MIDI_in_buf = MIDI_UART_ReadRxData();
-            if(MIDI_in_buf == 0x90){
+            midiMsg[0] = MIDI1_UART_ReadRxData();
+            if(midiMsg[0] == 0x90){
                 Osc_0_Button.note_triggered = 1;
             }
-            if(MIDI_in_buf == 0x80){
+            if(midiMsg[0] == 0x80){
                 Osc_0_Button.note_triggered = 0;
             }
         }
         */
-
-        // Handle USB enumeration
-        //ServiceUSB();
     }
 }
 
@@ -176,7 +257,7 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     
     // envelope
     AMux_Select(*AMux_ADC);
-    CyDelayUs(1000);
+    CyDelayUs(10);
     switch(*AMux_ADC){
     case 0:
         env0_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
@@ -191,7 +272,7 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     if (*AMux_ADC == 4){
         *AMux_ADC = 0;
     }
-    CyDelayUs(1000);
+    CyDelayUs(10);
 }
 
 void UpdateEnvelope(struct envelope *envelope, struct button *button){
@@ -216,4 +297,130 @@ void UpdateEnvelope(struct envelope *envelope, struct button *button){
         }
     }
 }
+
+
+
+/*******************************************************************************
+* Function Name: USB_callbackLocalMidiEvent
+********************************************************************************
+* Summary: Local processing of the USB MIDI out-events.
+* References: Cypress code examples, 
+* and https://community.cypress.com/message/144752#144752
+*******************************************************************************/
+void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
+{
+    uint8_t note;
+    
+    /* Support General System On/Off Message. */
+    if((0u == (USB_MIDI1_InqFlags & USB_INQ_SYSEX_FLAG)) \
+            && (0u != (inqFlagsOld & USB_INQ_SYSEX_FLAG)))
+    {
+        if(midiMsg[USB_EVENT_BYTE0] == USB_MIDI_SYSEX_GEN_MESSAGE)
+        {
+            if(midiMsg[USB_EVENT_BYTE1] == USB_MIDI_SYSEX_SYSTEM_ON)
+            {
+                //MIDI_PWR_Write(0u); /* Power ON */
+            }
+            else if(midiMsg[USB_EVENT_BYTE1] == USB_MIDI_SYSEX_SYSTEM_OFF)
+            {
+                //MIDI_PWR_Write(1u); /* Power OFF */
+            }
+        }
+    }
+    inqFlagsOld = USB_MIDI1_InqFlags;
+    cable = cable;
+    
+    // note command received
+    if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_ON)
+    {
+        note = midiMsg[USB_EVENT_BYTE1];
+        //index = note - 0x30;        // index in array
+        //notes[index].on = 1;        // note enablesnotes[index]
+        //notes[index].acc = 0;       // reset DDS accumulator (not necessary?)
+        //notes[index].env_acc = 0;   // reset envelope acc
+        //notecount++; if (notecount>0) isrDrq_Enable();
+        
+        Osc_0_Button.note_triggered = 1;
+        Osc_1_Button.note_triggered = 1;
+        Osc_2_Button.note_triggered = 1;
+        Osc_3_Button.note_triggered = 1;
+    }
+    else if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_OFF)
+    {
+        note = midiMsg[USB_EVENT_BYTE1];
+        //index = note - 0x30;        // index in array 
+        //notes[index].on = 0;        // note off
+        //notecount--; if (notecount==0) isrDrq_Disable();
+        
+        // can test CPU clocks spent in isr using StopWatch component // debug only
+        //sprintf(buff, "\r\n%lu ", StopWatch_Cycles);
+        MIDI1_UART_PutString(buff);
+        
+        Osc_0_Button.note_triggered = 0;
+        Osc_1_Button.note_triggered = 0;
+        Osc_2_Button.note_triggered = 0;
+        Osc_3_Button.note_triggered = 0;
+    }
+}    
+
+
+/*******************************************************************************
+* Function Name: USB_MIDI1_ProcessUsbOut_EntryCallback
+********************************************************************************
+* Summary:  Turn the LED_OutA on at the beginning of the function
+* USB_MIDI1_ProcessUsbOut() when data comes to be put in the UART1 out
+* buffer.
+* 
+*******************************************************************************/
+void USB_MIDI1_ProcessUsbOut_EntryCallback(void)
+{
+    //LED_OutA_Write(1);
+}
+
+
+/*******************************************************************************
+* Function Name: USB_MIDI1_ProcessUsbOut_ExitCallback
+********************************************************************************
+* Summary:  Turn the LED_OutA off at the end of the function  
+* USB_MIDI1_ProcessUsbOut() when data is put in the UART1 out-buffer.
+* 
+*******************************************************************************/
+void USB_MIDI1_ProcessUsbOut_ExitCallback(void)
+{
+    //LED_OutA_Write(0);
+}
+
+/*******************************************************************************
+* Function Name: MIDI1_UART_RXISR_EntryCallback
+********************************************************************************
+* Summary:  Turn the LED_InA on at the beginning of the MIDI1_UART_RXISR ISR  
+* when data comes to UART1 to be put in the USBFS_MIDI IN endpoint
+* buffer.
+*
+*******************************************************************************/
+void MIDI1_UART_RXISR_EntryCallback(void)
+{
+    /* These LEDs indicate MIDI input activity */
+    //LED_InA_Write(1);
+}
+
+
+/*******************************************************************************
+* Function Name: MIDI1_UART_RXISR_ExitCallback
+********************************************************************************
+* Summary:  Turn the LED_InA off at the end of the MIDI1_UART_RXISR ISR  
+* when data is put in the USBFS_MIDI IN endpoint buffer.
+*
+*******************************************************************************/
+void MIDI1_UART_RXISR_ExitCallback(void)
+{
+    #if (USB_EP_MANAGEMENT_DMA_AUTO) 
+        USB_MIDI_IN_Service();
+    #endif /* (USB_EP_MANAGEMENT_DMA_AUTO) */
+    
+    //LED_InA_Write(0);
+    main_osc_PWM_0_WritePeriod((uint16_t) 65535/10000);
+    main_osc_PWM_0_WriteCompare((uint16_t) (65535/10000)/(2000/pulse_width_0));
+}
+
 /* [] END OF FILE */
