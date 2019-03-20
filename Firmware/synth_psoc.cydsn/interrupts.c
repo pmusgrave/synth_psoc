@@ -34,23 +34,19 @@ CY_ISR_PROTO(OSC_3_OVF_VECT){
 }
 
 CY_ISR_PROTO(ENV_0_OVF_VECT){
-    envelope_PWM_0_WriteCompare((uint16_t) env0_pwm);
-    //envelope_PWM_0_WriteCompare((uint16_t) pwm);
+    envelope_PWM_0_WriteCompare((uint16_t) Osc_0_Envelope.env_pwm);
 }
 
 CY_ISR_PROTO(ENV_1_OVF_VECT){
-    envelope_PWM_1_WriteCompare((uint16_t) env1_pwm);
-    //envelope_PWM_1_WriteCompare((uint16_t) pwm);
+    envelope_PWM_1_WriteCompare((uint16_t) Osc_1_Envelope.env_pwm);
 }
 
 CY_ISR_PROTO(ENV_2_OVF_VECT){
-    envelope_PWM_2_WriteCompare((uint16_t) env2_pwm);
-    //envelope_PWM_2_WriteCompare((uint16_t) pwm);
+    envelope_PWM_2_WriteCompare((uint16_t) Osc_2_Envelope.env_pwm);
 }
 
 CY_ISR_PROTO(ENV_3_OVF_VECT){
-    envelope_PWM_3_WriteCompare((uint16_t) env3_pwm);
-    //envelope_PWM_3_WriteCompare((uint16_t) pwm);
+    envelope_PWM_3_WriteCompare((uint16_t) Osc_3_Envelope.env_pwm);
 }
 
 CY_ISR_PROTO(MIDI_RX_VECT){

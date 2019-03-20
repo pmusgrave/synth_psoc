@@ -9,8 +9,8 @@ struct oscillator {
 };
 
 struct envelope {
-    float *env_speed;
-    float *env_pwm;
+    float env_speed;
+    float env_pwm;
 };
     
 struct button {
@@ -25,23 +25,16 @@ struct button {
 extern volatile uint8_t current_mode;
 extern volatile uint8_t adc_update_flag;
 extern volatile uint8_t MIDI_RX_flag;
-extern float env0_pwm;
-extern float env1_pwm;
-extern float env2_pwm;
-extern float env3_pwm;
-extern volatile float freq_0;
-extern volatile float pulse_width_0;
-extern volatile float freq_1;
-extern volatile float pulse_width_1;
-extern volatile float freq_2;
-extern volatile float pulse_width_2;
-extern volatile float freq_3;
-extern volatile float pulse_width_3;
 
 extern volatile struct oscillator Osc_0;
 extern volatile struct oscillator Osc_1;
 extern volatile struct oscillator Osc_2;
 extern volatile struct oscillator Osc_3;
+
+extern volatile struct envelope Osc_0_Envelope;
+extern volatile struct envelope Osc_1_Envelope;
+extern volatile struct envelope Osc_2_Envelope;
+extern volatile struct envelope Osc_3_Envelope;
 
 extern volatile double music_notes[];
 

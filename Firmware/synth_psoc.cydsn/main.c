@@ -20,26 +20,16 @@
 * Global Variables
 *******************************************************************************/
 volatile uint8_t adc_update_flag = 0;
-float env0_pwm = 0;
-float env1_pwm = 0;
-float env2_pwm = 0;
-float env3_pwm = 0;
-
-float env0_speed = 0;
-float env1_speed = 0;
-float env2_speed = 0;
-float env3_speed = 0;
 
 volatile struct oscillator Osc_0 = {0, 0, &osc_0_quant_Read};
 volatile struct oscillator Osc_1 = {0, 0, &osc_1_quant_Read};
 volatile struct oscillator Osc_2 = {0, 0, &osc_2_quant_Read};
 volatile struct oscillator Osc_3 = {0, 0, &osc_3_quant_Read};
 
-struct envelope Osc_0_Envelope = {&env0_speed, &env0_pwm};
-struct envelope Osc_1_Envelope = {&env1_speed, &env1_pwm};
-struct envelope Osc_2_Envelope = {&env2_speed, &env2_pwm};
-struct envelope Osc_3_Envelope = {&env3_speed, &env3_pwm};
-
+volatile struct envelope Osc_0_Envelope = {0, 0};
+volatile struct envelope Osc_1_Envelope = {0, 0};
+volatile struct envelope Osc_2_Envelope = {0, 0};
+volatile struct envelope Osc_3_Envelope = {0, 0};
 
 struct button Osc_0_Button = {&osc_0_hold_Read, &osc_0_repeat_Read, 0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
 struct button Osc_1_Button = {&osc_1_hold_Read, &osc_1_repeat_Read, 0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
@@ -100,9 +90,9 @@ volatile uint8_t MIDI_RX_flag = 0;
 *******************************************************************************/
 
 void UpdateADCValues(uint8_t *AMux_ADC);
-void UpdateOscFreq(struct oscillator *oscillator, uint8_t ADC_chan);
-void UpdateOscPulseWidth(struct oscillator *oscillator, uint8_t ADC_chan);
-void UpdateEnvelope(struct envelope *envelope, struct button *button);
+void UpdateOscFreq(volatile struct oscillator *oscillator, uint8_t ADC_chan);
+void UpdateOscPulseWidth(volatile struct oscillator *oscillator, uint8_t ADC_chan);
+void UpdateEnvelope(volatile struct envelope *envelope, struct button *button);
 
 /******************************************************************************/
 
@@ -232,13 +222,13 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     CyDelayUs(10);
     switch(*AMux_ADC){
     case 0:
-        env0_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
+        Osc_0_Envelope.env_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
     case 1:
-        env1_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
+        Osc_1_Envelope.env_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
     case 2:
-        env2_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
+        Osc_2_Envelope.env_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
     case 3:
-        env3_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
+        Osc_3_Envelope.env_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
     }
     (*AMux_ADC) += 1;
     if (*AMux_ADC == 4){
@@ -247,41 +237,38 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     CyDelayUs(10);
 }
 
-void UpdateOscFreq(struct oscillator *oscillator, uint8_t ADC_chan){
+void UpdateOscFreq(volatile struct oscillator *oscillator, uint8_t ADC_chan){
     (*oscillator).freq = ADC_SAR_Seq_GetResult16(ADC_chan);
     if((*oscillator).quant_check_function() == 1){
         (*oscillator).freq = Quantize((*oscillator).freq);
     }
 }
 
-void UpdateOscPulseWidth(struct oscillator *oscillator, uint8_t ADC_chan){
+void UpdateOscPulseWidth(volatile struct oscillator *oscillator, uint8_t ADC_chan){
     (*oscillator).pulse_width = ADC_SAR_Seq_GetResult16(ADC_chan); 
 }
 
-void UpdateEnvelope(struct envelope *envelope, struct button *button){
-    if(*(*envelope).env_speed < 50){
-        //(*button).note_triggered = 1;
-        *(*envelope).env_speed = 50;
+void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
+    if((*envelope).env_speed < 50){
+        (*envelope).env_speed = 50;
     }
     if((*button).note_triggered == 1){
-        *(*envelope).env_pwm = *(*envelope).env_pwm + *(*envelope).env_speed * 0.002;
+        (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed * 0.002;
         if(!(*button).repeat_check_function() || (*button).hold_check_function()){
-            if (*(*envelope).env_pwm > 65000) {
-                *(*envelope).env_pwm  = 65000;
+            if ((*envelope).env_pwm > 65000) {
+                (*envelope).env_pwm  = 65000;
             }
         }
     }
    else {
-        if(*(*envelope).env_pwm > 0.5){
-            *(*envelope).env_pwm = *(*envelope).env_pwm - *(*envelope).env_speed * 0.002;
+        if((*envelope).env_pwm > 0.5){
+            (*envelope).env_pwm = (*envelope).env_pwm - (*envelope).env_speed * 0.002;
         }
-        if (*(*envelope).env_pwm < 0.5){
+        if ((*envelope).env_pwm < 0.5){
             (*button).osc_disable_function();
         }
     }
 }
-
-
 
 /*******************************************************************************
 * Function Name: USB_callbackLocalMidiEvent
