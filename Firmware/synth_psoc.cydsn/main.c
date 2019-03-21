@@ -301,6 +301,16 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
         note = midiMsg[USB_EVENT_BYTE1];
         //DispatchNote(note);
         
+        if (Osc_2_Button.MIDI_triggered == 1 && Osc_3_Button.MIDI_triggered == 0){
+            Osc_3.freq = DispatchNote(note);
+            Osc_3_Button.MIDI_triggered = 1;
+        }
+        
+        if (Osc_1_Button.MIDI_triggered == 1 && Osc_2_Button.MIDI_triggered == 0){
+            Osc_2.freq = DispatchNote(note);
+            Osc_2_Button.MIDI_triggered = 1;
+        }
+        
         if (Osc_0_Button.MIDI_triggered == 1 && Osc_1_Button.MIDI_triggered == 0){
             Osc_1.freq = DispatchNote(note);
             Osc_1_Button.MIDI_triggered = 1;
@@ -326,6 +336,12 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
         }
         if (Osc_1_Button.MIDI_triggered == 1){
             Osc_1_Button.MIDI_triggered = 0;
+        }
+        if (Osc_2_Button.MIDI_triggered == 1){
+            Osc_2_Button.MIDI_triggered = 0;
+        }
+        if (Osc_3_Button.MIDI_triggered == 1){
+            Osc_3_Button.MIDI_triggered = 0;
         }
                 
         //index = note - 0x30;        // index in array 
