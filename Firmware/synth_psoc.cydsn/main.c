@@ -80,7 +80,7 @@ char buff[32];//output UART buffer
 *******************************************************************************/
 
 void UpdateADCValues(uint8_t *AMux_ADC);
-void UpdateOscFreq(volatile struct oscillator *oscillator, uint8_t ADC_chan);
+void UpdateOscFreq(volatile struct oscillator *oscillator, struct button *button, uint8_t ADC_chan);
 void UpdateOscPulseWidth(volatile struct oscillator *oscillator, uint8_t ADC_chan);
 void UpdateEnvelope(volatile struct envelope *envelope, struct button *button);
 
@@ -195,22 +195,22 @@ int main(void)
 }
 
 void UpdateADCValues(uint8_t *AMux_ADC){
-    UpdateOscFreq(&Osc_0, FREQ_0_ADC_CHAN);
+    UpdateOscFreq(&Osc_0, &Osc_0_Button, FREQ_0_ADC_CHAN);
     UpdateOscPulseWidth(&Osc_0, PW_0_ADC_CHAN);
   
-    UpdateOscFreq(&Osc_1, FREQ_1_ADC_CHAN);
+    UpdateOscFreq(&Osc_1, &Osc_1_Button, FREQ_1_ADC_CHAN);
     UpdateOscPulseWidth(&Osc_1, PW_1_ADC_CHAN);
     
-    UpdateOscFreq(&Osc_2, FREQ_2_ADC_CHAN);
+    UpdateOscFreq(&Osc_2, &Osc_2_Button, FREQ_2_ADC_CHAN);
     UpdateOscPulseWidth(&Osc_2, PW_2_ADC_CHAN);
     
-    UpdateOscFreq(&Osc_3, FREQ_3_ADC_CHAN);
+    UpdateOscFreq(&Osc_3,&Osc_3_Button,  FREQ_3_ADC_CHAN);
     UpdateOscPulseWidth(&Osc_3, PW_3_ADC_CHAN);
 
     
     // envelope
     AMux_Select(*AMux_ADC);
-    CyDelayUs(50);
+    CyDelayUs(30);
     switch(*AMux_ADC){
     case 0:
         Osc_0_Envelope.env_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
@@ -225,11 +225,11 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     if (*AMux_ADC == 4){
         *AMux_ADC = 0;
     }
-    CyDelayUs(50);
+    CyDelayUs(30);
 }
 
-void UpdateOscFreq(volatile struct oscillator *oscillator, uint8_t ADC_chan){
-    if(Osc_0_Button.MIDI_triggered == 0){
+void UpdateOscFreq(volatile struct oscillator *oscillator, struct button *button, uint8_t ADC_chan){
+    if((*button).MIDI_triggered == 0){
         (*oscillator).freq = ADC_SAR_Seq_GetResult16(ADC_chan);
         if((*oscillator).quant_check_function() == 1){
             (*oscillator).freq = Quantize((*oscillator).freq);
@@ -246,7 +246,7 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
         (*envelope).env_speed = 50;
     }
     if((*button).note_triggered == 1 || (*button).MIDI_triggered == 1){
-        (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed/2;
+        (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed;
         if((*button).repeat_check_function() || !(*button).hold_check_function()){
             if ((*envelope).env_pwm > 65000) {
                 (*envelope).env_pwm  = 65000;
@@ -254,10 +254,10 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
         }
     }
    else {
-        if((*envelope).env_pwm > 0.5){
-            (*envelope).env_pwm = (*envelope).env_pwm - (*envelope).env_speed/2;
+        if((*envelope).env_pwm > 1){
+            (*envelope).env_pwm = (*envelope).env_pwm - (*envelope).env_speed;
         }
-        if ((*envelope).env_pwm < 0.5){
+        if ((*envelope).env_pwm < 1){
             (*button).osc_disable_function();
         }
     }
@@ -275,6 +275,7 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
     uint8_t note;
     
     /* Support General System On/Off Message. */
+    /*
     if((0u == (USB_MIDI1_InqFlags & USB_INQ_SYSEX_FLAG)) \
             && (0u != (inqFlagsOld & USB_INQ_SYSEX_FLAG)))
     {
@@ -282,14 +283,15 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
         {
             if(midiMsg[USB_EVENT_BYTE1] == USB_MIDI_SYSEX_SYSTEM_ON)
             {
-                //MIDI_PWR_Write(0u); /* Power ON */
+                MIDI_PWR_Write(0u); 
             }
             else if(midiMsg[USB_EVENT_BYTE1] == USB_MIDI_SYSEX_SYSTEM_OFF)
             {
-                //MIDI_PWR_Write(1u); /* Power OFF */
+                MIDI_PWR_Write(1u); 
             }
         }
     }
+    */
     inqFlagsOld = USB_MIDI1_InqFlags;
     cable = cable;
     
@@ -299,12 +301,15 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
         note = midiMsg[USB_EVENT_BYTE1];
         //DispatchNote(note);
         
-        Osc_0.freq = DispatchNote(note);
-        Osc_0_Button.MIDI_triggered = 1;
-        //Osc_0_Button.MIDI_triggered = 1;
-        //Osc_1_Button.MIDI_triggered = 1;
-        //Osc_2_Button.MIDI_triggered = 1;
-        //Osc_3_Button.MIDI_triggered = 1;
+        if (Osc_0_Button.MIDI_triggered == 1 && Osc_1_Button.MIDI_triggered == 0){
+            Osc_1.freq = DispatchNote(note);
+            Osc_1_Button.MIDI_triggered = 1;
+        }
+        
+        if (Osc_0_Button.MIDI_triggered == 0){
+            Osc_0.freq = DispatchNote(note);
+            Osc_0_Button.MIDI_triggered = 1;
+        }
         
         //index = note - 0x30;        // index in array
         //notes[index].on = 1;        // note enablesnotes[index]
@@ -316,11 +321,13 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
     {
         note = midiMsg[USB_EVENT_BYTE1];
         //NoteOff(note);
-        Osc_0_Button.MIDI_triggered = 0;
-        //Osc_1_Button.MIDI_triggered = 0;
-        //Osc_2_Button.MIDI_triggered = 0;
-        //Osc_3_Button.MIDI_triggered = 0;
-        
+        if (Osc_0_Button.MIDI_triggered == 1){
+            Osc_0_Button.MIDI_triggered = 0;
+        }
+        if (Osc_1_Button.MIDI_triggered == 1){
+            Osc_1_Button.MIDI_triggered = 0;
+        }
+                
         //index = note - 0x30;        // index in array 
         //notes[index].on = 0;        // note off
         //notecount--; if (notecount==0) isrDrq_Disable();

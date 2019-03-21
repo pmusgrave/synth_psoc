@@ -24,10 +24,25 @@
       <Data key="f0b83bb4-6a5d-4d8f-b978-af230014ad49" value="Clock_3" />
     </Group>
     <Group key="Interrupt">
-      <Data key="4b7c57e2-8943-4cd0-ba2f-bd457f186ba3/a1033dc5-f595-4313-8eee-ea9108ee36fd" value="ADC_SAR_Seq_1_IRQ" />
+      <Data key="0d776c25-0fda-4bff-af2b-9962432af301/2eefdc16-a97c-46b6-b868-c4c9faf87a63" value="USB_dp_int" />
+      <Data key="0d776c25-0fda-4bff-af2b-9962432af301/6b51ead7-af2a-4221-8324-aca55c87e9e3" value="USB_high_int" />
+      <Data key="0d776c25-0fda-4bff-af2b-9962432af301/6165c7d7-5e03-4fa5-b798-cd3cd2a26061" value="USB_lo_int" />
+      <Data key="0d776c25-0fda-4bff-af2b-9962432af301/dbb294dc-cc02-4cab-93bf-09c57b3a1b9b" value="USB_med_int" />
+      <Data key="4b7c57e2-8943-4cd0-ba2f-bd457f186ba3/a1033dc5-f595-4313-8eee-ea9108ee36fd" value="ADC_SAR_Seq_IRQ" />
+      <Data key="05e9844d-91d6-4f50-a7ff-7055284d29fc" value="envelope_0_ovf" />
       <Data key="22ecc0b6-c062-4a9d-9b43-9708d9ad45c4" value="ENVELOPE_TIMER_INT" />
+      <Data key="27bde1ac-4563-4a2e-b4b0-9d8cce793b4b/0ca9aba8-89ab-42da-b695-4b8355a1f1c1" value="CapSense_Buttons_ISR" />
       <Data key="3041a701-60d0-4f56-b4b9-aa76895c128b" value="envelope_trigger" />
+      <Data key="5320bd1a-4073-4cff-a244-95e7663436a1" value="envelope_2_ovf" />
+      <Data key="11414fd5-857a-4b80-981e-2286006fd126" value="osc_1_ovf" />
+      <Data key="81068b48-fded-4f75-94f5-e4db96e8affd" value="osc_0_ovf" />
+      <Data key="2025413f-0750-42e0-9433-afa38e5724db" value="envelope_3_ovf" />
+      <Data key="aad963f2-861c-49a7-9e8c-6dde8e3f7dc9" value="osc_2_ovf" />
+      <Data key="b0162966-0060-4af5-82d1-fcb491ad7619/10dce1ed-dd83-44c0-9cff-cc3ee25204cd" value="MIDI1_UART_RXInternalInterrupt" />
+      <Data key="b0162966-0060-4af5-82d1-fcb491ad7619/0758f7e0-b58c-4a6b-bb59-e7d003cac7de" value="MIDI1_UART_TXInternalInterrupt" />
+      <Data key="d6c617fd-b241-4805-b4fc-428e0a3a5f3a" value="osc_3_ovf" />
       <Data key="e1c31990-955b-4af0-8326-8711d5b2b7dc" value="ADC_EOC_INT" />
+      <Data key="ed76e9b8-b57a-43f2-8b70-9233641f8acd" value="envelope_1_ovf" />
     </Group>
     <Group key="Pin">
       <Data key="0c673af0-1c1f-4e93-95d8-f8c4140ef11e" value="osc_2_repeat" />
@@ -3199,10 +3214,66 @@
     </Group>
   </Group>
   <Group key="Interrupt">
+    <Group key="0d776c25-0fda-4bff-af2b-9962432af301/2eefdc16-a97c-46b6-b868-c4c9faf87a63">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="1" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="0d776c25-0fda-4bff-af2b-9962432af301/6b51ead7-af2a-4221-8324-aca55c87e9e3">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="1" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="0d776c25-0fda-4bff-af2b-9962432af301/6165c7d7-5e03-4fa5-b798-cd3cd2a26061">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="1" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="0d776c25-0fda-4bff-af2b-9962432af301/dbb294dc-cc02-4cab-93bf-09c57b3a1b9b">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="1" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
     <Group key="22ecc0b6-c062-4a9d-9b43-9708d9ad45c4">
       <Group key="CortexM0">
         <Data key="Assigned" value="True" />
         <Data key="Priority" value="3" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="27bde1ac-4563-4a2e-b4b0-9d8cce793b4b/0ca9aba8-89ab-42da-b695-4b8355a1f1c1">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="0" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="b0162966-0060-4af5-82d1-fcb491ad7619/10dce1ed-dd83-44c0-9cff-cc3ee25204cd">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="0" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="b0162966-0060-4af5-82d1-fcb491ad7619/0758f7e0-b58c-4a6b-bb59-e7d003cac7de">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="0" />
+        <Data key="Vector" value="-1" />
+      </Group>
+    </Group>
+    <Group key="e1c31990-955b-4af0-8326-8711d5b2b7dc">
+      <Group key="CortexM0">
+        <Data key="Assigned" value="True" />
+        <Data key="Priority" value="0" />
         <Data key="Vector" value="-1" />
       </Group>
     </Group>
