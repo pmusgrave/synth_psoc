@@ -128,7 +128,7 @@ int main(void)
     
     // Init USB and MIDI
     // references Cypress USB MIDI code example
-    //USB_Start(DEVICE, USB_5V_OPERATION); 
+    USB_Start(DEVICE, USB_5V_OPERATION); 
     //MIDI1_UART_Start();
     //MIDI_RX_StartEx(MIDI_RX_VECT);
     
@@ -165,7 +165,7 @@ int main(void)
         if(0u != USB_IsConfigurationChanged()){
             if(0u != USB_GetConfiguration())   // Initialize IN endpoints when device configured
             {
-                // USB_MIDI_Init(); // Enable output endpoint
+                USB_MIDI_Init(); // Enable output endpoint
             }
         }            
         
@@ -174,21 +174,21 @@ int main(void)
         {
             /* Call this API from UART RX ISR for Auto DMA mode */
             #if(!USB_EP_MANAGEMENT_DMA_AUTO) 
-                //USB_MIDI_IN_Service();
+                USB_MIDI_IN_Service();
             #endif
             /* In Manual EP Memory Management mode OUT_EP_Service() 
             *  may have to be called from main foreground or from OUT EP ISR
             */
             #if(!USB_EP_MANAGEMENT_DMA_AUTO) 
-                //USB_MIDI_OUT_Service();
+                USB_MIDI_OUT_Service();
             #endif
 
             /* Sending Identity Reply Universal System Exclusive message 
              * back to computer */
             if(0u != (USB_MIDI1_InqFlags & USB_INQ_IDENTITY_REQ_FLAG))
             {
-                //USB_PutUsbMidiIn(sizeof(MIDI_IDENTITY_REPLY), (uint8 *)MIDI_IDENTITY_REPLY, USB_MIDI_CABLE_00);
-                //USB_MIDI1_InqFlags &= ~USB_INQ_IDENTITY_REQ_FLAG;
+                USB_PutUsbMidiIn(sizeof(MIDI_IDENTITY_REPLY), (uint8 *)MIDI_IDENTITY_REPLY, USB_MIDI_CABLE_00);
+                USB_MIDI1_InqFlags &= ~USB_INQ_IDENTITY_REQ_FLAG;
             }
         }
     }
@@ -210,7 +210,7 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     
     // envelope
     AMux_Select(*AMux_ADC);
-    CyDelayUs(100);
+    CyDelayUs(50);
     switch(*AMux_ADC){
     case 0:
         Osc_0_Envelope.env_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
@@ -225,13 +225,15 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     if (*AMux_ADC == 4){
         *AMux_ADC = 0;
     }
-    CyDelayUs(100);
+    CyDelayUs(50);
 }
 
 void UpdateOscFreq(volatile struct oscillator *oscillator, uint8_t ADC_chan){
-    (*oscillator).freq = ADC_SAR_Seq_GetResult16(ADC_chan);
-    if((*oscillator).quant_check_function() == 1){
-        (*oscillator).freq = Quantize((*oscillator).freq);
+    if(Osc_0_Button.MIDI_triggered == 0){
+        (*oscillator).freq = ADC_SAR_Seq_GetResult16(ADC_chan);
+        if((*oscillator).quant_check_function() == 1){
+            (*oscillator).freq = Quantize((*oscillator).freq);
+        }
     }
 }
 
@@ -243,8 +245,8 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
     if((*envelope).env_speed < 50){
         (*envelope).env_speed = 50;
     }
-    if((*button).note_triggered == 1){
-        (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed * 0.004;
+    if((*button).note_triggered == 1 || (*button).MIDI_triggered == 1){
+        (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed/2;
         if((*button).repeat_check_function() || !(*button).hold_check_function()){
             if ((*envelope).env_pwm > 65000) {
                 (*envelope).env_pwm  = 65000;
@@ -253,7 +255,7 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
     }
    else {
         if((*envelope).env_pwm > 0.5){
-            (*envelope).env_pwm = (*envelope).env_pwm - (*envelope).env_speed * 0.004;
+            (*envelope).env_pwm = (*envelope).env_pwm - (*envelope).env_speed/2;
         }
         if ((*envelope).env_pwm < 0.5){
             (*button).osc_disable_function();
@@ -296,10 +298,13 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
     {
         note = midiMsg[USB_EVENT_BYTE1];
         //DispatchNote(note);
-        Osc_0_Button.note_triggered = 1;
-        Osc_1_Button.note_triggered = 1;
-        Osc_2_Button.note_triggered = 1;
-        Osc_3_Button.note_triggered = 1;
+        
+        Osc_0.freq = DispatchNote(note);
+        Osc_0_Button.MIDI_triggered = 1;
+        //Osc_0_Button.MIDI_triggered = 1;
+        //Osc_1_Button.MIDI_triggered = 1;
+        //Osc_2_Button.MIDI_triggered = 1;
+        //Osc_3_Button.MIDI_triggered = 1;
         
         //index = note - 0x30;        // index in array
         //notes[index].on = 1;        // note enablesnotes[index]
@@ -311,10 +316,10 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
     {
         note = midiMsg[USB_EVENT_BYTE1];
         //NoteOff(note);
-        Osc_0_Button.note_triggered = 0;
-        Osc_1_Button.note_triggered = 0;
-        Osc_2_Button.note_triggered = 0;
-        Osc_3_Button.note_triggered = 0;
+        Osc_0_Button.MIDI_triggered = 0;
+        //Osc_1_Button.MIDI_triggered = 0;
+        //Osc_2_Button.MIDI_triggered = 0;
+        //Osc_3_Button.MIDI_triggered = 0;
         
         //index = note - 0x30;        // index in array 
         //notes[index].on = 0;        // note off

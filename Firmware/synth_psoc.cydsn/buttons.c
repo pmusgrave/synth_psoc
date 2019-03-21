@@ -3,6 +3,11 @@
 #include "globals.h"
 
 void HandleButton(struct button *button){
+    if((*button).MIDI_triggered){
+        (*button).note_triggered = 1;
+        EnableSingleOscillator((*button).osc_enable_function);
+    }
+    
     if((*button).hold_check_function() && (*button).repeat_check_function()){
         (*button).note_triggered = 0;
     }
@@ -13,7 +18,7 @@ void HandleButton(struct button *button){
     else if(!(*button).repeat_check_function()){
         (*button).note_triggered = 0;
     }
-    else if((*button).hold_check_function() && (CapSense_Buttons_CheckIsWidgetActive((*button).capsense_widget || (*button).MIDI_triggered))){
+    else if((*button).hold_check_function() && (CapSense_Buttons_CheckIsWidgetActive((*button).capsense_widget))){
         (*button).note_triggered = 1;
         EnableSingleOscillator((*button).osc_enable_function);
     }

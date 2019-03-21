@@ -162,19 +162,23 @@ double Quantize(float unquantized_freq){
     return quantized_freq;
 }
 
-void DispatchNote(uint8 note){
+double DispatchNote(uint8 note){
     // MIDI note values correspond to the music_notes array offset
     // by 21. So MIDI note 21 should use music_notes[0].
 
+    /*
     struct button buttons[4] = {Osc_0_Button, Osc_1_Button, Osc_2_Button, Osc_3_Button};
     struct oscillator oscillators[4] = {Osc_0, Osc_1, Osc_2, Osc_3};
     
     for(int i = 0; i < 4; i++){
         if (buttons[i].MIDI_triggered == 0){
-            oscillators[i].freq = Quantize(note - 20);
+            oscillators[i].freq = Quantize(note - 21);
             buttons[i].MIDI_triggered = 1;
+            return;
         }
     }
+    */
+    return music_notes[note - 21];
 }
 
 void NoteOff(uint8 note){
@@ -182,8 +186,9 @@ void NoteOff(uint8 note){
     struct oscillator oscillators[4] = {Osc_0, Osc_1, Osc_2, Osc_3};
     
     for(int i = 0; i < 4; i++){
-        if (oscillators[i].freq == Quantize(note - 20)){
+        if (oscillators[i].freq == Quantize(note - 21)){
             buttons[i].MIDI_triggered = 0;
+            return;
         }
     }
 } 	
