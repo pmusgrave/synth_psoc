@@ -128,8 +128,7 @@ int main(void)
     
     // Init USB and MIDI
     // references Cypress USB MIDI code example
-    /* Start USBFS device 0 with VDDD operation */
-    USB_Start(DEVICE, USB_DWR_VDDD_OPERATION); 
+    USB_Start(DEVICE, USB_5V_OPERATION); 
     //MIDI1_UART_Start();
     //MIDI_RX_StartEx(MIDI_RX_VECT);
     
@@ -209,7 +208,7 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     
     // envelope
     AMux_Select(*AMux_ADC);
-    CyDelayUs(10);
+    CyDelayUs(100);
     switch(*AMux_ADC){
     case 0:
         Osc_0_Envelope.env_speed = ADC_SAR_Seq_GetResult16(ENV_MUX_ADC_CHAN);
@@ -224,7 +223,7 @@ void UpdateADCValues(uint8_t *AMux_ADC){
     if (*AMux_ADC == 4){
         *AMux_ADC = 0;
     }
-    CyDelayUs(10);
+    CyDelayUs(100);
 }
 
 void UpdateOscFreq(volatile struct oscillator *oscillator, uint8_t ADC_chan){
@@ -294,8 +293,11 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
     if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_ON)
     {
         note = midiMsg[USB_EVENT_BYTE1];
-        DispatchNote(note);
-        
+        //DispatchNote(note);
+        Osc_0_Button.note_triggered = 1;
+        Osc_1_Button.note_triggered = 1;
+        Osc_2_Button.note_triggered = 1;
+        Osc_3_Button.note_triggered = 1;
         
         //index = note - 0x30;        // index in array
         //notes[index].on = 1;        // note enablesnotes[index]
@@ -306,15 +308,15 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
     else if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_OFF)
     {
         note = midiMsg[USB_EVENT_BYTE1];
-        NoteOff(note);
+        //NoteOff(note);
+        Osc_0_Button.note_triggered = 0;
+        Osc_1_Button.note_triggered = 0;
+        Osc_2_Button.note_triggered = 0;
+        Osc_3_Button.note_triggered = 0;
         
         //index = note - 0x30;        // index in array 
         //notes[index].on = 0;        // note off
         //notecount--; if (notecount==0) isrDrq_Disable();
-        
-        // can test CPU clocks spent in isr using StopWatch component // debug only
-        //sprintf(buff, "\r\n%lu ", StopWatch_Cycles);
-        MIDI1_UART_PutString(buff);
     }
 }    
 
