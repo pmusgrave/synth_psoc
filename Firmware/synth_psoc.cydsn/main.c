@@ -72,7 +72,7 @@ uint8 inqFlagsOld = 0u;
 uint8 midiMsg[MIDI_MSG_SIZE];   
 char buff[32];//output UART buffer
 
-volatile uint8_t MIDI_RX_flag = 0;
+// volatile uint8_t MIDI_RX_flag = 0;
 
 
 /*******************************************************************************
@@ -128,9 +128,11 @@ int main(void)
     
     // Init USB and MIDI
     // references Cypress USB MIDI code example
-    USB_Start(DEVICE, USB_5V_OPERATION); 
+    //USB_Start(DEVICE, USB_5V_OPERATION); 
     //MIDI1_UART_Start();
     //MIDI_RX_StartEx(MIDI_RX_VECT);
+    
+    CyDelayUs(1000);
     
     while(1){
         if(adc_update_flag != 0) { 
@@ -163,7 +165,7 @@ int main(void)
         if(0u != USB_IsConfigurationChanged()){
             if(0u != USB_GetConfiguration())   // Initialize IN endpoints when device configured
             {
-                USB_MIDI_Init(); // Enable output endpoint
+                // USB_MIDI_Init(); // Enable output endpoint
             }
         }            
         
@@ -172,21 +174,21 @@ int main(void)
         {
             /* Call this API from UART RX ISR for Auto DMA mode */
             #if(!USB_EP_MANAGEMENT_DMA_AUTO) 
-                USB_MIDI_IN_Service();
+                //USB_MIDI_IN_Service();
             #endif
             /* In Manual EP Memory Management mode OUT_EP_Service() 
             *  may have to be called from main foreground or from OUT EP ISR
             */
             #if(!USB_EP_MANAGEMENT_DMA_AUTO) 
-                USB_MIDI_OUT_Service();
+                //USB_MIDI_OUT_Service();
             #endif
 
             /* Sending Identity Reply Universal System Exclusive message 
              * back to computer */
             if(0u != (USB_MIDI1_InqFlags & USB_INQ_IDENTITY_REQ_FLAG))
             {
-                USB_PutUsbMidiIn(sizeof(MIDI_IDENTITY_REPLY), (uint8 *)MIDI_IDENTITY_REPLY, USB_MIDI_CABLE_00);
-                USB_MIDI1_InqFlags &= ~USB_INQ_IDENTITY_REQ_FLAG;
+                //USB_PutUsbMidiIn(sizeof(MIDI_IDENTITY_REPLY), (uint8 *)MIDI_IDENTITY_REPLY, USB_MIDI_CABLE_00);
+                //USB_MIDI1_InqFlags &= ~USB_INQ_IDENTITY_REQ_FLAG;
             }
         }
     }
@@ -243,7 +245,7 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
     }
     if((*button).note_triggered == 1){
         (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed * 0.004;
-        if(!(*button).repeat_check_function() || (*button).hold_check_function()){
+        if((*button).repeat_check_function() || !(*button).hold_check_function()){
             if ((*envelope).env_pwm > 65000) {
                 (*envelope).env_pwm  = 65000;
             }
