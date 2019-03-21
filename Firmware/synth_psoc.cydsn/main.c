@@ -31,14 +31,14 @@ volatile struct envelope Osc_1_Envelope = {0, 0};
 volatile struct envelope Osc_2_Envelope = {0, 0};
 volatile struct envelope Osc_3_Envelope = {0, 0};
 
-struct button Osc_0_Button = {&osc_0_hold_Read, &osc_0_repeat_Read, 0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
-struct button Osc_1_Button = {&osc_1_hold_Read, &osc_1_repeat_Read, 0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
-struct button Osc_2_Button = {&osc_2_hold_Read, &osc_2_repeat_Read, 0, CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop};
-struct button Osc_3_Button = {&osc_3_hold_Read, &osc_3_repeat_Read, 0, CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop};
+struct button Osc_0_Button = {&osc_0_hold_Read, &osc_0_repeat_Read, 0, 0, CapSense_Buttons_BUTTON0__BTN, &main_osc_PWM_0_Start, &main_osc_PWM_0_Stop};
+struct button Osc_1_Button = {&osc_1_hold_Read, &osc_1_repeat_Read, 0, 0, CapSense_Buttons_BUTTON1__BTN, &main_osc_PWM_1_Start, &main_osc_PWM_1_Stop};
+struct button Osc_2_Button = {&osc_2_hold_Read, &osc_2_repeat_Read, 0, 0, CapSense_Buttons_BUTTON2__BTN, &main_osc_PWM_2_Start, &main_osc_PWM_2_Stop};
+struct button Osc_3_Button = {&osc_3_hold_Read, &osc_3_repeat_Read, 0, 0, CapSense_Buttons_BUTTON3__BTN, &main_osc_PWM_3_Start, &main_osc_PWM_3_Stop};
 
-    
 /*******************************************************************************
 * USB and MIDI stuff
+* references Cypress MIDI code examples
 *******************************************************************************/
 #define DEVICE                  (0u)
 #define MIDI_MSG_SIZE           (4u)
@@ -47,16 +47,6 @@ struct button Osc_3_Button = {&osc_3_hold_Read, &osc_3_repeat_Read, 0, CapSense_
 #define MIDI_MSG_TYPE           (0u)
 #define MIDI_NOTE_NUMBER        (1u)
 #define MIDI_NOTE_VELOCITY      (2u)
-
-/* MIDI Notes*/
-#define NOTE_72                 (72u)
-#define NOTE_76                 (76u)
-
-/* MIDI Notes Velocity*/
-#define VOLUME_OFF              (0u)
-#define VOLUME_ON               (100u)
-
-#define USB_SUSPEND_TIMEOUT     (2u)
 
 /* Identity Reply message */
 const uint8 CYCODE MIDI_IDENTITY_REPLY[] = {
@@ -253,7 +243,7 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
         (*envelope).env_speed = 50;
     }
     if((*button).note_triggered == 1){
-        (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed * 0.002;
+        (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed * 0.004;
         if(!(*button).repeat_check_function() || (*button).hold_check_function()){
             if ((*envelope).env_pwm > 65000) {
                 (*envelope).env_pwm  = 65000;
@@ -262,7 +252,7 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
     }
    else {
         if((*envelope).env_pwm > 0.5){
-            (*envelope).env_pwm = (*envelope).env_pwm - (*envelope).env_speed * 0.002;
+            (*envelope).env_pwm = (*envelope).env_pwm - (*envelope).env_speed * 0.004;
         }
         if ((*envelope).env_pwm < 0.5){
             (*button).osc_disable_function();
@@ -304,20 +294,20 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
     if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_ON)
     {
         note = midiMsg[USB_EVENT_BYTE1];
+        DispatchNote(note);
+        
+        
         //index = note - 0x30;        // index in array
         //notes[index].on = 1;        // note enablesnotes[index]
         //notes[index].acc = 0;       // reset DDS accumulator (not necessary?)
         //notes[index].env_acc = 0;   // reset envelope acc
         //notecount++; if (notecount>0) isrDrq_Enable();
-        
-        //Osc_0_Button.note_triggered = 1;
-        //Osc_1_Button.note_triggered = 1;
-        //Osc_2_Button.note_triggered = 1;
-        //Osc_3_Button.note_triggered = 1;
     }
     else if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_OFF)
     {
         note = midiMsg[USB_EVENT_BYTE1];
+        NoteOff(note);
+        
         //index = note - 0x30;        // index in array 
         //notes[index].on = 0;        // note off
         //notecount--; if (notecount==0) isrDrq_Disable();
@@ -325,11 +315,6 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
         // can test CPU clocks spent in isr using StopWatch component // debug only
         //sprintf(buff, "\r\n%lu ", StopWatch_Cycles);
         MIDI1_UART_PutString(buff);
-        
-        //Osc_0_Button.note_triggered = 0;
-        //Osc_1_Button.note_triggered = 0;
-        //Osc_2_Button.note_triggered = 0;
-        //Osc_3_Button.note_triggered = 0;
     }
 }    
 
