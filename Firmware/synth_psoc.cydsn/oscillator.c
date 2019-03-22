@@ -162,7 +162,7 @@ double Quantize(float unquantized_freq){
     return quantized_freq;
 }
 
-double DispatchNote(uint8 note){
+void DispatchNote(uint8 note){
     // MIDI note values correspond to the music_notes array offset
     // by 21. So MIDI note 21 should use music_notes[0].
 
@@ -178,19 +178,51 @@ double DispatchNote(uint8 note){
         }
     }
     */
-    return music_notes[note - 21];
+    
+    if (Osc_2_Button.MIDI_triggered == 1 && Osc_3_Button.MIDI_triggered == 0){
+        Osc_3.freq = music_notes[note - 21];
+        Osc_3_Button.MIDI_triggered = 1;
+    }
+    
+    if (Osc_1_Button.MIDI_triggered == 1 && Osc_2_Button.MIDI_triggered == 0){
+        Osc_2.freq = music_notes[note - 21];
+        Osc_2_Button.MIDI_triggered = 1;
+    }
+    
+    if (Osc_0_Button.MIDI_triggered == 1 && Osc_1_Button.MIDI_triggered == 0){
+        Osc_1.freq = music_notes[note - 21];
+        Osc_1_Button.MIDI_triggered = 1;
+    }
+    
+    if (Osc_0_Button.MIDI_triggered == 0){
+        Osc_0.freq = music_notes[note - 21];
+        Osc_0_Button.MIDI_triggered = 1;
+    }
 }
 
 void NoteOff(uint8 note){
-    struct button buttons[4] = {Osc_0_Button, Osc_1_Button, Osc_2_Button, Osc_3_Button};
-    struct oscillator oscillators[4] = {Osc_0, Osc_1, Osc_2, Osc_3};
-    
+    //struct button buttons[4] = {Osc_0_Button, Osc_1_Button, Osc_2_Button, Osc_3_Button};
+    //struct oscillator oscillators[4] = {Osc_0, Osc_1, Osc_2, Osc_3};
+    /*
     for(int i = 0; i < 4; i++){
         if (oscillators[i].freq == Quantize(note - 21)){
             buttons[i].MIDI_triggered = 0;
             return;
         }
     }
-} 	
+    */
+    if ((int)Osc_3.freq == (int)music_notes[note - 21]){
+        Osc_3_Button.MIDI_triggered = 0;
+    }
+    if ((int)Osc_2.freq == (int)music_notes[note - 21]){
+        Osc_2_Button.MIDI_triggered = 0;
+    }
+    if ((int)Osc_1.freq == (int)music_notes[note - 21]){
+        Osc_1_Button.MIDI_triggered = 0;
+    }
+    if ((int)Osc_0.freq == (int)music_notes[note - 21]){
+        Osc_0_Button.MIDI_triggered = 0;
+    }
+}
 
 /* [] END OF FILE */

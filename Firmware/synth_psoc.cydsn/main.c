@@ -128,7 +128,7 @@ int main(void)
     
     // Init USB and MIDI
     // references Cypress USB MIDI code example
-    USB_Start(DEVICE, USB_5V_OPERATION); 
+    USB_Start(DEVICE, USB_DWR_VDDD_OPERATION); 
     //MIDI1_UART_Start();
     //MIDI_RX_StartEx(MIDI_RX_VECT);
     
@@ -247,7 +247,7 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
     }
     if((*button).note_triggered == 1 || (*button).MIDI_triggered == 1){
         (*envelope).env_pwm = (*envelope).env_pwm + (*envelope).env_speed;
-        if((*button).repeat_check_function() || !(*button).hold_check_function()){
+        if( (*button).repeat_check_function() || !(*button).hold_check_function()){
             if ((*envelope).env_pwm > 65000) {
                 (*envelope).env_pwm  = 65000;
             }
@@ -272,7 +272,7 @@ void UpdateEnvelope(volatile struct envelope *envelope, struct button *button){
 *******************************************************************************/
 void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
 {
-    uint8_t note;
+    uint8 note;
     
     /* Support General System On/Off Message. */
     /*
@@ -295,58 +295,15 @@ void USB_callbackLocalMidiEvent(uint8 cable, uint8 *midiMsg) CYREENTRANT
     inqFlagsOld = USB_MIDI1_InqFlags;
     cable = cable;
     
-    // note command received
     if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_ON)
     {
         note = midiMsg[USB_EVENT_BYTE1];
-        //DispatchNote(note);
-        
-        if (Osc_2_Button.MIDI_triggered == 1 && Osc_3_Button.MIDI_triggered == 0){
-            Osc_3.freq = DispatchNote(note);
-            Osc_3_Button.MIDI_triggered = 1;
-        }
-        
-        if (Osc_1_Button.MIDI_triggered == 1 && Osc_2_Button.MIDI_triggered == 0){
-            Osc_2.freq = DispatchNote(note);
-            Osc_2_Button.MIDI_triggered = 1;
-        }
-        
-        if (Osc_0_Button.MIDI_triggered == 1 && Osc_1_Button.MIDI_triggered == 0){
-            Osc_1.freq = DispatchNote(note);
-            Osc_1_Button.MIDI_triggered = 1;
-        }
-        
-        if (Osc_0_Button.MIDI_triggered == 0){
-            Osc_0.freq = DispatchNote(note);
-            Osc_0_Button.MIDI_triggered = 1;
-        }
-        
-        //index = note - 0x30;        // index in array
-        //notes[index].on = 1;        // note enablesnotes[index]
-        //notes[index].acc = 0;       // reset DDS accumulator (not necessary?)
-        //notes[index].env_acc = 0;   // reset envelope acc
-        //notecount++; if (notecount>0) isrDrq_Enable();
+        DispatchNote(note);
     }
     else if (midiMsg[USB_EVENT_BYTE0] == USB_MIDI_NOTE_OFF)
     {
         note = midiMsg[USB_EVENT_BYTE1];
-        //NoteOff(note);
-        if (Osc_0_Button.MIDI_triggered == 1){
-            Osc_0_Button.MIDI_triggered = 0;
-        }
-        if (Osc_1_Button.MIDI_triggered == 1){
-            Osc_1_Button.MIDI_triggered = 0;
-        }
-        if (Osc_2_Button.MIDI_triggered == 1){
-            Osc_2_Button.MIDI_triggered = 0;
-        }
-        if (Osc_3_Button.MIDI_triggered == 1){
-            Osc_3_Button.MIDI_triggered = 0;
-        }
-                
-        //index = note - 0x30;        // index in array 
-        //notes[index].on = 0;        // note off
-        //notecount--; if (notecount==0) isrDrq_Disable();
+        NoteOff(note);
     }
 }    
 
