@@ -614,7 +614,7 @@ F 3 "" H 3100 4800 50  0001 C CNN
 $EndComp
 Text Label 1800 6000 2    60   ~ 0
 freq_fb_1
-Text Label 1800 6600 2    60   ~ 0
+Text Label 1800 6550 2    60   ~ 0
 freq_fb_2
 Text Label 1800 7050 2    60   ~ 0
 freq_fb_3
@@ -1797,14 +1797,7 @@ Wire Wire Line
 Wire Wire Line
 	1800 6300 2000 6300
 Wire Wire Line
-	1950 6050 2300 6050
-Connection ~ 1150 6300
-Wire Wire Line
 	1000 6300 1200 6300
-Wire Wire Line
-	1150 6050 1150 6300
-Wire Wire Line
-	1150 6050 1500 6050
 Wire Wire Line
 	8900 1700 9150 1700
 Wire Wire Line
@@ -1848,29 +1841,14 @@ Wire Wire Line
 Wire Wire Line
 	1400 6650 1400 6600
 Wire Wire Line
-	1400 6600 1050 6600
-Wire Wire Line
-	1050 6600 1050 6850
-Connection ~ 1050 6850
-Wire Wire Line
-	1800 6600 1800 6850
+	1800 6550 1800 6850
 Connection ~ 1800 6850
 Wire Wire Line
 	2250 6650 2250 6600
 Wire Wire Line
-	2250 6600 1900 6600
-Wire Wire Line
-	1900 6600 1900 6850
-Connection ~ 1900 6850
-Wire Wire Line
 	950  7350 1100 7350
 Wire Wire Line
 	1400 7150 1400 7100
-Wire Wire Line
-	1400 7100 1050 7100
-Wire Wire Line
-	1050 7100 1050 7350
-Connection ~ 1050 7350
 Wire Wire Line
 	1700 7350 1950 7350
 Wire Wire Line
@@ -1879,21 +1857,11 @@ Connection ~ 1800 7350
 Wire Wire Line
 	2250 7150 2250 7100
 Wire Wire Line
-	2250 7100 1900 7100
-Wire Wire Line
-	1900 7100 1900 7350
-Connection ~ 1900 7350
-Wire Wire Line
 	2550 7350 2750 7350
 Wire Wire Line
 	950  7800 1100 7800
 Wire Wire Line
 	1400 7600 1400 7550
-Wire Wire Line
-	1400 7550 1050 7550
-Wire Wire Line
-	1050 7550 1050 7800
-Connection ~ 1050 7800
 Wire Wire Line
 	1700 7800 1950 7800
 Wire Wire Line
@@ -1902,15 +1870,7 @@ Connection ~ 1800 7800
 Wire Wire Line
 	2250 7600 2250 7550
 Wire Wire Line
-	2250 7550 1900 7550
-Wire Wire Line
-	1900 7550 1900 7800
-Connection ~ 1900 7800
-Wire Wire Line
 	2550 7800 2750 7800
-Wire Wire Line
-	1950 6050 1950 6300
-Connection ~ 1950 6300
 $Comp
 L POT_DUAL RV17
 U 1 1 5C755D90
@@ -2562,4 +2522,36 @@ F 3 "" H 4300 1050 50  0001 C CNN
 $EndComp
 Text Notes 3650 7900 0    60   ~ 0
 Global FB knob
+Wire Wire Line
+	1500 6050 1800 6050
+Connection ~ 1800 6050
+Wire Wire Line
+	2300 6050 2650 6050
+Wire Wire Line
+	2650 6050 2650 6300
+Connection ~ 2650 6300
+Wire Wire Line
+	2250 6600 2650 6600
+Wire Wire Line
+	2650 6600 2650 6850
+Connection ~ 2650 6850
+Wire Wire Line
+	2250 7100 2650 7100
+Wire Wire Line
+	2650 7100 2650 7350
+Connection ~ 2650 7350
+Wire Wire Line
+	2250 7550 2650 7550
+Wire Wire Line
+	2650 7550 2650 7800
+Connection ~ 2650 7800
+Wire Wire Line
+	1400 7550 1800 7550
+Connection ~ 1800 7550
+Wire Wire Line
+	1400 7100 1800 7100
+Connection ~ 1800 7100
+Wire Wire Line
+	1400 6600 1800 6600
+Connection ~ 1800 6600
 $EndSCHEMATC

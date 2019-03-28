@@ -1388,9 +1388,9 @@ delay_time_in
 Text Label 5600 4950 0    60   ~ 0
 delay_time_out
 Text Label 5600 5050 0    60   ~ 0
-delay_in
+delay_mix_in
 Text Label 5600 5150 0    60   ~ 0
-delay_out
+delay_mix_out
 Text Label 5350 6950 2    60   ~ 0
 delay_fb_in
 Text Label 5350 7050 2    60   ~ 0
@@ -1400,9 +1400,9 @@ delay_time_in
 Text Label 5350 7250 2    60   ~ 0
 delay_time_out
 Text Label 5350 7350 2    60   ~ 0
-delay_in
+delay_mix_in
 Text Label 5350 7450 2    60   ~ 0
-delay_out
+delay_mix_out
 $Comp
 L Conn_02x13_Odd_Even J1
 U 1 1 5C746E83
@@ -2560,4 +2560,6 @@ F 3 "" H 4300 1050 50  0001 C CNN
 	1    4300 1050
 	1    0    0    -1  
 $EndComp
+Text Notes 3650 7900 0    60   ~ 0
+Global FB knob
 $EndSCHEMATC
